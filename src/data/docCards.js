@@ -6,7 +6,7 @@ const DocCardData = [
 		image: require('@site/static/img/shopping-cart.svg').default,
 		description:
 			'Learn the basics and get up and running quickly with our comprehensive getting started guide.',
-		docUrl: '/docs/shadowstore',
+		docUrl: '/docs/shadowStore',
 		color: 'blue',
 	},
 	{
@@ -14,7 +14,7 @@ const DocCardData = [
 		image: require('@site/static/img/community.svg').default,
 		description:
 			'Learn the basics and get up and running quickly with our comprehensive getting started guide.',
-		docUrl: '/docs/communitytemplate-v2',
+		docUrl: '/docs/communityTemplate-v2',
 		color: 'teal',
 	},
 ];

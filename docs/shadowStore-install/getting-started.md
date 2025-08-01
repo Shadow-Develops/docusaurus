@@ -13,7 +13,7 @@ We will also be using Cloudflare for all domain routing and SSL certificates.
 
 :::
 
-Make sure that you have read through our [prerequisites](/docs/shadowstore-install/prerequisites) to prevent any issues later on.\
+Make sure that you have read through our [prerequisites](/docs/shadowStore-install/prerequisites) to prevent any issues later on.\
 And if you haven't already, make sure you have an [A record](https://www.cloudflare.com/learning/dns/dns-records/dns-a-record/) on your domain pointed to the IP of your server.
 
 Before we begin, lets make sure everything is up to date and you have curl installed:
