@@ -1,0 +1,393 @@
+---
+sidebar_position: 1
+pagination_prev: null
+---
+
+# Community Template (Legacy)
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+This documentation goes over everything needed for our [Community Template](//shadowdevs.com/store/communitytemplate-legacy).
+Information about the configs and setup is all stated below.
+
+:::info[Important Notice]
+We do not recommended changing anything but the `config.php`, `json files`, and `application files` at any time.
+Also do NOT edit the very bottom lines of code in `config.php`!
+:::
+
+## Installation
+
+Once you have purchased the Community Template you will get access to download the bot.
+
+:::warning
+If you are running it on your home PC we recommend getting [xampp](https://www.apachefriends.org/index.html).
+If you are running it on a webserver then it should work fine.
+:::
+
+### Download / Extraction
+
+Go to your profile on our store page and you will see a download button. After you download you will get a `.zip` file.
+
+1. Place the `.zip` wherever you want the site's files to be.
+2. Create a another folder where you want the site's files to be located
+3. Open the `.zip` file and drag the contents into the other file you created.
+4. Finally, make sure that all the files from the `.zip` are in the folder where you want the site's files.
+
+## Configuring the Site
+
+This website template has a plethera of configurable elements built into the config files.
+You can find a default `config.php` in the [Resource](#resources) section of this page.
+
+### Site Settings
+
+<Tabs>
+	<TabItem value='siteName' label='siteName' default>
+		This defines the sites name. It only appears on the footer, search bar,
+		tabs, and link embeds. It will follow every page title after the "|".
+	</TabItem>
+	<TabItem value='siteLogo' label='siteLogo'>
+		This is the logo that will appear as the site favicon. It doesn't appear on
+		any page.
+	</TabItem>
+	<TabItem value='headerImage' label='headerImage'>
+		This appears on the navigation bar and the link embeds, if enabled.
+	</TabItem>
+	<TabItem value='siteDescription' label='siteDescription'>
+		This is appears on the link embeds, search engines, and can be the home page
+		text.
+	</TabItem>
+	<TabItem value='siteTags' label='siteTags'>
+		These are for SEO. They are not magic but can help with search resaults.
+		They need to be seperated by a comma, EXCEPT for the last one.
+	</TabItem>
+	<TabItem value='themeColor' label='themeColor'>
+		This is the main color that will be used across the website. Must be hex,
+		rgb, or rgba code. If using rgb or rgba you need to put the code like this:
+		`rgb(0, 0, 0)` | `rgba(0, 0, 0, .5)`, and hex codes must start with the `#`.
+	</TabItem>
+	<TabItem value='buttonColor' label='buttonColor'>
+		This is the color of all the buttons on the website. Must be hex, rgb, or
+		rgba code. If using rgb or rgba you need to put the code like this: `rgb(0,
+		0, 0)` | `rgba(0, 0, 0, .5)`, and hex codes must start with the `#`.
+	</TabItem>
+	<TabItem value='buttonHoverColor' label='buttonHoverColor'>
+		This is the color of all the buttons when a mouse hovers over them. Must be
+		hex, rgb, or rgba code. If using rgb or rgba you need to put the code like
+		this: `rgb(0, 0, 0)` | `rgba(0, 0, 0, .5)`, and hex codes must start with
+		the `#`.
+	</TabItem>
+	<TabItem value='linkColor' label='linkColor'>
+		This is the color of all the links on the website. Must be hex, rgb, or rgba
+		code. If using rgb or rgba you need to put the code like this: `rgb(0, 0,
+		0)` | `rgba(0, 0, 0, .5)`, and hex codes must start with the `#`.
+	</TabItem>
+	<TabItem value='textColor' label='textColor'>
+		This is the color of all the text on the website. Must be hex, rgb, or rgba
+		code. If using rgb or rgba you need to put the code like this: `rgb(0, 0,
+		0)` | `rgba(0, 0, 0, .5)`, and hex codes must start with the `#`.
+	</TabItem>
+	<TabItem value='embedColor' label='embedColor'>
+		This is the color that will appear on the left of link embeds. Must be hex,
+		rgb, or rgba code. If using rgb or rgba you need to put the code like this:
+		`rgb(0, 0, 0)` | `rgba(0, 0, 0, .5)`, and hex codes must start with the `#`.
+	</TabItem>
+	<TabItem value='embedImageActive' label='embedImageActive'>
+		If `true` then $headerImage will appear on link embeds; if `false`
+		`$headerImage` will not be on embeds. Value must be true or false.
+	</TabItem>
+	<TabItem value='socialIcon' label='socialIcon'>
+		This is the top button on the 404 / No application page. Avalible Icons:
+		discord, twitter, youtube, globe, facebook, tiktok, twitch An avalible icon
+		MUST be used and MUST be lowercase.
+	</TabItem>
+	<TabItem value='socialButtonName' label='socialButtonName'>
+		This is the text of the social button.
+	</TabItem>
+	<TabItem value='socialButtonLink' label='socialButtonLink'>
+		This is the link for the social button.
+	</TabItem>
+</Tabs>
+
+### Header Buttons
+
+<Tabs>
+	<TabItem value='button{number}Active' label='button{number}Active' default>
+		This defines if the button will show or hide. Must be true or false.
+	</TabItem>
+	<TabItem value='button{number}Link' label='button{number}Link'>
+		This is the link the button will take you to.
+	</TabItem>
+	<TabItem value='button{number}Text' label='button{number}Text'>
+		This is the text that appears as the button.
+	</TabItem>
+</Tabs>
+
+### Footer Buttons
+
+<Tabs>
+	<TabItem value='fbutton{number}Active' label='fbutton{number}Active' default>
+		This defines if the button will show or hide. Must be true or false.
+	</TabItem>
+	<TabItem value='fbutton{number}Link' label='fbutton{number}Link'>
+		This is the link the button will take you to.
+	</TabItem>
+	<TabItem value='fbutton{number}IconType' label='fbutton{number}IconType'>
+		This is the type of icon that shows up. IconTypes are either `social`,
+		`internal`, and `external` If `social` then the Avalible Icons options:
+		`discord`, `twitter`, `youtube`, `globe`, `facebook`, `tiktok`, `twitch` If
+		`internal` the path must be within `assets/img/`, but do not add
+		`assets/img/` If `external` it must be a img link from the enternet
+	</TabItem>
+	<TabItem value='fbutton{number}Text' label='fbutton{number}Text'>
+		This is the text that appears on the button.
+	</TabItem>
+</Tabs>
+
+### Home Page Settings
+
+<Tabs>
+	<TabItem value='buttonHomePageActive' label='buttonHomePageActive' default>
+		If `true` the button under the hero text will be on, if `false`, it will
+		not. Must be true or false.
+	</TabItem>
+	<TabItem value='buttonHomePageLink' label='buttonHomePageLink'>
+		The link for the button on the home page.
+	</TabItem>
+	<TabItem value='buttonHomePageText' label='buttonHomePageText'>
+		The text on the home page button.
+	</TabItem>
+	<TabItem value='heroText' label='heroText'>
+		The title that appears on the home page at the very top.
+	</TabItem>
+	<TabItem value='heroDescription' label='heroDescription'>
+		The text under the title on the top of the home page. Leave as `""` for it
+		to be $siteDescription.
+	</TabItem>
+</Tabs>
+
+#### Info Section
+
+<Tabs>
+	<TabItem value='buttonHomePageActive' label='buttonHomePageActive' default>
+		If `true` the button under the hero text will be on, if `false`, it will
+		not. Must be true or false.
+	</TabItem>
+	<TabItem value='buttonHomePageLink' label='buttonHomePageLink'>
+		The link for the button on the home page.
+	</TabItem>
+	<TabItem value='buttonHomePageText' label='buttonHomePageText'>
+		The text on the home page button.
+	</TabItem>
+	<TabItem value='heroText' label='heroText'>
+		The title that appears on the home page at the very top.
+	</TabItem>
+	<TabItem value='heroDescription' label='heroDescription'>
+		The text under the title on the top of the home page. Leave as `""` for it
+		to be $siteDescription.
+	</TabItem>
+</Tabs>
+
+#### Links Section
+
+<Tabs>
+	<TabItem value='infoSectionActive' label='infoSectionActive' default>
+		If `true` the button under the info section will be shown, if `false`, it
+		will not. Must be true or false.
+	</TabItem>
+	<TabItem value='infoSectionTitle' label='infoSectionTitle'>
+		The title of the info section. Leave as `""` to disable.
+	</TabItem>
+	<TabItem value='col{number}Image' label='col{number}Image'>
+		The image above the text for the colum.
+	</TabItem>
+	<TabItem value='col{number}Text' label='col{number}Text'>
+		The text for the colum.
+	</TabItem>
+</Tabs>
+
+#### Gallery Section
+
+<Tabs>
+	<TabItem value='linkSectionActive' label='linkSectionActive' default>
+		If `true` the button under the link section will be shown, if `false`, it
+		will not. Must be true or false.
+	</TabItem>
+	<TabItem value='linkSectionTitle' label='linkSectionTitle'>
+		The title of the link section. Leave as `""` to disable.
+	</TabItem>
+	<TabItem value='link{number}Active' label='link{number}Active'>
+		If the link will appear or not. Must be true or false.
+	</TabItem>
+	<TabItem value='link{number}Link' label='link{number}Link'>
+		The link that users will be directed to.
+	</TabItem>
+	<TabItem value='link{number}Text' label='link{number}Text'>
+		The text that appears as the link.
+	</TabItem>
+</Tabs>
+
+#### Team Section
+
+<Tabs>
+	<TabItem value='gallerySectionActive' label='gallerySectionActive' default>
+		If `true` the button under the gallery section will be shown, if `false`, it
+		will not. Must be true or false.
+	</TabItem>
+	<TabItem value='gallerySectionTitle' label='gallerySectionTitle'>
+		The title of the gallery section. Leave as `""` to disable.
+	</TabItem>
+	<TabItem value='gallery{number}Active' label='gallery{number}Active'>
+		If the image will appear or not. Must be true or false.
+	</TabItem>
+	<TabItem value='gallery{number}Link' label='gallery{number}Link'>
+		The link to the image. Can be an internal or external link.
+	</TabItem>
+</Tabs>
+
+### Apply Page Settings
+
+<Tabs>
+	<TabItem value='appsPageTitle' label='appsPageTitle' default>
+		The title on the top left of the apply page.
+	</TabItem>
+	<TabItem value='appsPageDesc' label='appsPageDesc'>
+		The description to the right of the title.
+	</TabItem>
+	<TabItem
+		value='{section}ApplicationsActive'
+		label='{section}ApplicationsActive'
+	>
+		If the section of applications will be active. Must be true or false.
+	</TabItem>
+	<TabItem
+		value='{section}ApplicationsTitle'
+		label='{section}ApplicationsTitle'
+	>
+		The title for that section of applications.
+	</TabItem>
+	<TabItem value='{section}ApplicationsDesc' label='{section}ApplicationsDesc'>
+		The Description for that section. Leave as `""` to disable.
+	</TabItem>
+</Tabs>
+
+#### applications.json
+
+Information below is to help with editing the applications.json file found in the json folder.
+This is where all the actual application data is stored for the apply page.
+If you need a default copy head to the [resources](#resources) section.
+
+Each section follows the same parameteres. Also, do not edit the section names (ie `"mainApplication"`) and adding more sections will not do anything but possibly break something.
+If you have more then one a `,` must be at the end of each {}, except the last.
+
+```json
+{
+	"name": "Name of Application",
+	"fileName": "The name of the file within the apps folder (no file extention)",
+	"status": "Either Open or Closed (Caps don't matter)"
+}
+```
+
+:::info
+For information on the apps files, head to [App Files](#application-file-editing).
+:::
+
+### Gallery Page Settings
+
+<Tabs>
+	<TabItem value='galleryTitle' label='galleryTitle' default>
+		The title on the top left of the gallery page.
+	</TabItem>
+	<TabItem value='galleryDesc' label='galleryDesc'>
+		The description to the right of the title.
+	</TabItem>
+	<TabItem value='galleryImages' label='galleryImages'>
+		The images that appear on the gallery page. They can be external or internal
+		links. The `""` must be arround the link, if the link has a quotation mark
+		in it, put `\` infront of it. And a comma must be at the end of all the
+		link, outside the quote, except for the last.
+	</TabItem>
+</Tabs>
+
+### Team Page Settings
+
+<Tabs>
+	<TabItem value='teamTitle' label='teamTitle' default>
+		The title on the top left of the team page.
+	</TabItem>
+	<TabItem value='teamDesc' label='teamDesc'>
+		The description to the right of the title.
+	</TabItem>
+</Tabs>
+
+#### teamMembers.json
+
+Information below is to help with editing the teamMembers.json file found in the json folder.
+This is where all the actual team member data is stored for the team page.
+If you need a default copy head to the [resources](#resources) section.
+
+Each grouping follows the same parameteres. Also, do not edit the section names (`"teammembers"`) and adding more sections will not do anything but possibly break something.
+If you have more then one a `,` must be at the end of each {}, except the last.
+
+```json
+    {
+      "name": "Their Name",
+      "rank": "Thier Rank (Appears under the name)",
+      "desc": "The description that appears under the name / rank.",
+      "imgLink": "An internal or external link to their picture (Appears at the top of the member box)"
+    },
+```
+
+## Application File Editing
+
+This section goes over how to edit, add, and remove application files.
+All information is relevent to files within the `apps` folder, except the `applcations.json` as that is in the `json` folder.
+
+:::warning
+NEVER EDIT THE `grabber.php`!
+:::
+
+An example of a application file:
+
+```php
+<?php
+$appTitle = "First App";
+$appDesc = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, dolorem quisquam quas architecto, ut porro molestiae nihil reprehenderit, nulla facilis quam aperiam consectetur odit. Quidem laudantium nemo animi consequatur deleniti.";
+$appLink = "https://docs.google.com/forms/d/e/1FAIpQLSc81OBt2FKIHBrw-Ob5WkI5Eg8G6oTpczOEvXDy3D96X7bGsQ/viewform";
+?>
+
+<div class="container">
+    <h1 class="header"><?= $appTitle ?></h1>
+    <p><?= $appDesc ?></p>
+    <div class="frame">
+        <iframe src="<?= $appLink ?>?embedded=true" allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
+    </div>
+</div>
+```
+
+### Adding
+
+To add a new application file simple do the following steps:
+
+1. Create a new file within the `apps` folder with whatever name you want (must be all lowercase) and make sure the extention is `.php`.
+1. Go into the file and add the [example code](https://gist.github.com/AgentBUB/30002187b36ed22b43941d07407f482d#file-application-example-php) or code from another app file.
+1. Add the application information to the `applications.json` file with the new file name.
+
+### Removing
+
+1. Delete the file of the app you want to remove.
+1. Remove the file name / application data from `applications.json`.
+
+### Editing
+
+Editing is not to hard, just be careful.
+
+1. Enter the app file you want to edit.
+1. Change the information at the top of the page within the `<?php ?>` phrase.
+1. Your Done!
+
+## Resources
+
+Below are all the configs used for this bot. A default and blank version is provided incase you break something, want to start over, or need to look at the original configs.
+
+[View on Gist](https://gist.github.com/AgentBUB/30002187b36ed22b43941d07407f482d)

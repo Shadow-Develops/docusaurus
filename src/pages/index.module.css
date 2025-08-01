@@ -1,0 +1,243 @@
+/* Section Styles */
+.docCardsSection {
+	padding: 4rem 0;
+	background: var(--ifm-background-color);
+}
+
+.docCardsHeader {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.docCardsTitle {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	color: var(--ifm-heading-color);
+}
+
+.docCardsSubtitle {
+	font-size: 1.25rem;
+	color: var(--ifm-color-emphasis-700);
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+/* Card Wrapper */
+.docCardWrapper {
+	margin-bottom: 2rem;
+	padding: 0 1rem;
+}
+
+/* Card Link */
+.docCardLink {
+	text-decoration: none !important;
+	color: inherit;
+	display: block;
+	height: 100%;
+}
+
+.docCardLink:hover {
+	text-decoration: none !important;
+}
+
+/* Main Card Styles */
+.docCard {
+	background: var(--ifm-card-background-color);
+	border: 1px solid var(--ifm-color-emphasis-200);
+	border-radius: 12px;
+	padding: 1.5rem;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.docCard:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+	border-color: var(--ifm-color-primary);
+}
+
+.docCard::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background: linear-gradient(
+		90deg,
+		var(--card-accent-color, var(--ifm-color-primary)),
+		var(--card-accent-light, var(--ifm-color-primary-light))
+	);
+	transition: height 0.3s ease;
+}
+
+.docCard:hover::before {
+	height: 6px;
+}
+
+/* Card Header */
+.docCardHeader {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.docCardIcon {
+	font-size: 2rem;
+	margin-right: 1rem;
+	width: 3rem;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--card-icon-bg, var(--ifm-color-primary-lightest));
+	border-radius: 8px;
+	transition: transform 0.3s ease;
+	padding: 0.25rem;
+}
+
+.docCard:hover .docCardIcon {
+	transform: scale(1.1);
+}
+
+.docCardTitle {
+	margin: 0;
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: var(--ifm-heading-color);
+}
+
+/* Card Body */
+.docCardBody {
+	flex: 1;
+	margin-bottom: 1rem;
+}
+
+.docCardDescription {
+	margin: 0;
+	color: var(--ifm-color-emphasis-700);
+	line-height: 1.6;
+}
+
+/* Card Footer */
+.docCardFooter {
+	margin-top: auto;
+}
+
+.docCardArrow {
+	color: var(--card-accent-color, var(--ifm-color-primary));
+	font-weight: 500;
+	font-size: 0.9rem;
+	transition: transform 0.3s ease;
+	display: inline-block;
+}
+
+.docCard:hover .docCardArrow {
+	transform: translateX(4px);
+}
+
+/* Color Variants */
+.docCard--blue {
+	--card-accent-color: #2e8de6;
+	--card-accent-light: #84c5ff;
+	--card-icon-bg: #e7f3ff;
+}
+
+.docCard--green {
+	--card-accent-color: #00d084;
+	--card-accent-light: #7fffd4;
+	--card-icon-bg: #e6fff5;
+}
+
+.docCard--purple {
+	--card-accent-color: #9333ea;
+	--card-accent-light: #c084fc;
+	--card-icon-bg: #f3e8ff;
+}
+
+.docCard--orange {
+	--card-accent-color: #f59e0b;
+	--card-accent-light: #fbbf24;
+	--card-icon-bg: #fef3c7;
+}
+
+.docCard--red {
+	--card-accent-color: #ef4444;
+	--card-accent-light: #f87171;
+	--card-icon-bg: #fee2e2;
+}
+
+.docCard--teal {
+	--card-accent-color: #14b8a6;
+	--card-accent-light: #5eead4;
+	--card-icon-bg: #ccfbf1;
+}
+
+/* Dark Mode Adjustments */
+[data-theme='dark'] .docCard {
+	background: var(--ifm-background-surface-color);
+	border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .docCard:hover {
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .docCard--blue {
+	--card-icon-bg: rgba(46, 141, 230, 0.1);
+}
+
+[data-theme='dark'] .docCard--green {
+	--card-icon-bg: rgba(0, 208, 132, 0.1);
+}
+
+[data-theme='dark'] .docCard--purple {
+	--card-icon-bg: rgba(147, 51, 234, 0.1);
+}
+
+[data-theme='dark'] .docCard--orange {
+	--card-icon-bg: rgba(245, 158, 11, 0.1);
+}
+
+[data-theme='dark'] .docCard--red {
+	--card-icon-bg: rgba(239, 68, 68, 0.1);
+}
+
+[data-theme='dark'] .docCard--teal {
+	--card-icon-bg: rgba(20, 184, 166, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.docCardsSection {
+		padding: 2rem 0;
+	}
+
+	.docCardsTitle {
+		font-size: 2rem;
+	}
+
+	.docCardsSubtitle {
+		font-size: 1.1rem;
+	}
+
+	.docCard {
+		padding: 1.25rem;
+	}
+
+	.docCardIcon {
+		font-size: 1.5rem;
+		width: 2.5rem;
+		height: 2.5rem;
+		margin-right: 0.75rem;
+	}
+
+	.docCardTitle {
+		font-size: 1.1rem;
+	}
+}
