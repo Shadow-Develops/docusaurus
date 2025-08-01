@@ -5,9 +5,7 @@ sidebar_position: 1
 # Prerequisites
 
 :::info[Hosting Notice]
-
 Shadow Store is a Node.Js based application, so it requires a VPS or Dedicated server to operate. Shared hosting will NOT work.
-
 :::
 
 With Shadow Store being a Node.Js based website in mind, this document covers the assets that are needed and recommended to run everything smoothly.

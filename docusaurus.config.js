@@ -51,8 +51,7 @@ const config = {
 					sidebarPath: './sidebars.js',
 					// Please change this to your repo.
 					// Remove this to remove the "edit this page" links.
-					editUrl:
-						'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+					editUrl: 'https://github.com/Shadow-Develops/docusaurus/',
 				},
 				theme: {
 					customCss: './src/css/custom.css',
@@ -102,8 +101,12 @@ const config = {
 						title: 'Docs',
 						items: [
 							{
-								label: 'Tutorial',
-								to: '/docs/intro',
+								label: 'Shadow Store',
+								to: '/docs/shadowStore',
+							},
+							{
+								label: 'Community Templates',
+								to: '/docs/communityTemplate-v2',
 							},
 						],
 					},
@@ -111,29 +114,12 @@ const config = {
 						title: 'Community',
 						items: [
 							{
-								label: 'Stack Overflow',
-								href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-							},
-							{
 								label: 'Discord',
-								href: 'https://discordapp.com/invite/docusaurus',
-							},
-							{
-								label: 'X',
-								href: 'https://x.com/docusaurus',
-							},
-						],
-					},
-					{
-						title: 'More',
-						items: [
-							{
-								label: 'Blog',
-								to: '/blog',
+								href: 'https://discord.gg/shadowdevs',
 							},
 							{
 								label: 'GitHub',
-								href: 'https://github.com/facebook/docusaurus',
+								href: 'https://github.com/Shadow-Develops',
 							},
 						],
 					},
