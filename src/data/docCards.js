@@ -5,15 +5,23 @@ const DocCardData = [
 		title: 'Shadow Store',
 		image: require('@site/static/img/shopping-cart.svg').default,
 		description:
-			'Learn the basics and get up and running quickly with our comprehensive getting started guide.',
+			'Learn how to install and manage the settings for Shadow Store, and all its addons.',
 		docUrl: '/docs/shadowStore',
 		color: 'blue',
+	},
+	{
+		title: 'SPARK Vehicle Control',
+		icon: '⚡',
+		description:
+			'Installation and configuration guide for SPARK Vehicle Control.',
+		docUrl: '/docs/spark',
+		color: 'red',
 	},
 	{
 		title: 'Community Templates',
 		image: require('@site/static/img/community.svg').default,
 		description:
-			'Learn the basics and get up and running quickly with our comprehensive getting started guide.',
+			'Details on how to install and manage both the Legacy and V2 Community Template.',
 		docUrl: '/docs/communityTemplate-v2',
 		color: 'teal',
 	},

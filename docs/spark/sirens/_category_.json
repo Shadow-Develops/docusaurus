@@ -1,0 +1,8 @@
+{
+	"label": "Siren Settings",
+	"position": 36,
+	"link": {
+		"type": "generated-index",
+		"description": "The guide on how to configure sirens and handle server side sirens."
+	}
+}

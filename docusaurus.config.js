@@ -52,7 +52,7 @@ const config = {
 					sidebarPath: './sidebars.js',
 					// Please change this to your repo.
 					// Remove this to remove the "edit this page" links.
-					editUrl: 'https://github.com/Shadow-Develops/docusaurus/',
+					editUrl: 'https://github.com/Shadow-Develops/docusaurus/tree/main',
 				},
 				theme: {
 					customCss: './src/css/custom.css',
@@ -87,6 +87,12 @@ const config = {
 						sidebarId: 'communityTemplate',
 						position: 'left',
 						label: 'Community Templates',
+					},
+					{
+						type: 'docSidebar',
+						sidebarId: 'spark',
+						position: 'left',
+						label: 'SPARK',
 					},
 					{
 						href: 'https://shadowdevs.com',
@@ -125,7 +131,7 @@ const config = {
 						],
 					},
 				],
-				copyright: `Copyright © ${new Date().getFullYear()} <a href="/">Shadow Development</a>. <i>Built with Docusaurus.</i>`,
+				copyright: `Copyright © ${new Date().getFullYear()} <a href="https://shadowdevs.com">Shadow Development</a>. <i>Built with Docusaurus.</i>`,
 			},
 			prism: {
 				theme: prismThemes.github,

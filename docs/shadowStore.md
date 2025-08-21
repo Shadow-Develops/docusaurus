@@ -5,7 +5,7 @@ sidebar_position: 1
 # Shadow Store
 
 :::warning[Notice]
-These documentation are still WIP, we plan to continue to fill them out over the next few days as of Aug 1st, 2025.
+These documentation are still WIP, we plan to continue to fill them out.
 :::
 
 This is the official documentation for [Shadow Store](https://shadowdevs.com/store/shadowstore). Here you can find information on how to install it and manage settings.
