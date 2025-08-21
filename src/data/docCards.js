@@ -14,7 +14,7 @@ const DocCardData = [
 		icon: '⚡',
 		description:
 			'Installation and configuration guide for SPARK Vehicle Control.',
-		docUrl: '/docs/spark',
+		docUrl: '/docs/spark/getting-started',
 		color: 'red',
 	},
 	{
