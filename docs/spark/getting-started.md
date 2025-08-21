@@ -1,12 +1,9 @@
 ---
 sidebar_position: 1
+description: Information on how to install and configure SPARK Vehicle Control.
 ---
 
 # SPARK Vehicle Control
-
-:::warning[Notice]
-These documentation are still Work in Progress.
-:::
 
 This is the official documentation for [SPARK Vehicle Control](https://github.com/AgentBUB/spark). Here you can find information on how to install and configure it.
 
