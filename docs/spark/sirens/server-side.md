@@ -7,7 +7,15 @@ description: Stream custom sirens from the server to SPARK
 
 ## Introduction
 
-> [Youtube Video Tutorial: https://www.youtube.com/watch?v=KSEyeDQf5VQ](https://www.youtube.com/watch?v=KSEyeDQf5VQ)
+<iframe 
+  width="560" 
+  height="315" 
+  src="https://www.youtube.com/embed/KSEyeDQf5VQ" 
+  title="YouTube video player" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen>
+</iframe>
 
 Below are two third-party resources that allow for streaming of R\* audio files from server to client. These audio files can be for various things but some people use them for sirens.
 

@@ -84,12 +84,6 @@ const config = {
 					},
 					{
 						type: 'docSidebar',
-						sidebarId: 'communityTemplate',
-						position: 'left',
-						label: 'Community Templates',
-					},
-					{
-						type: 'docSidebar',
 						sidebarId: 'spark',
 						position: 'left',
 						label: 'SPARK',
