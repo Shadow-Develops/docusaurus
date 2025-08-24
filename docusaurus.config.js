@@ -106,8 +106,12 @@ const config = {
 								to: '/docs/shadowStore',
 							},
 							{
+								label: 'SPARK',
+								to: '/docs/spark/getting-started',
+							},
+							{
 								label: 'Community Templates',
-								to: '/docs/communityTemplate-v2',
+								to: '/docs/communityTemplates/v2',
 							},
 						],
 					},
