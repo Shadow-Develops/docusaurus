@@ -22,7 +22,7 @@ const DocCardData = [
 		image: require('@site/static/img/community.svg').default,
 		description:
 			'Details on how to install and manage both the Legacy and V2 Community Template.',
-		docUrl: '/docs/communityTemplate-v2',
+		docUrl: '/docs/communityTemplates/v2',
 		color: 'teal',
 	},
 ];
