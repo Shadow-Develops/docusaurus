@@ -60,3 +60,9 @@ Examples:
   ```bash
   730191102706974823,730191823102706974,102706974823730191
   ```
+
+## Release Notifications
+
+Within Admin Panel > Integration > Discord you will see notifications at the bottom. These are the default channel ID and ping for release notifications. Each release notification can be configured with a different channel & ping, but the default will autofill for easy.
+
+Ping Role ID must be a role ID (`1088352657938317372`) or the word `everyone`/`here` for @everyone/@here.
