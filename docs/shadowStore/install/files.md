@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Files & Nginx
+# Files & Nginx & Discord
 
 Now it is time to actually install the files, database, and setup Nginx! Please ensure you have completed the steps within [Getting Started](/docs/shadowStore/install/getting-started) first!
 
