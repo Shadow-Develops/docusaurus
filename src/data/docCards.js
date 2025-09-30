@@ -10,6 +10,14 @@ const DocCardData = [
 		color: 'blue',
 	},
 	{
+		title: 'License System',
+		image: require('@site/static/img/licenseManage.svg').default,
+		description:
+			'Learn how to install and manage the settings for Shadow License System.',
+		docUrl: '/docs/licenseSystem',
+		color: 'blue',
+	},
+	{
 		title: 'SPARK Vehicle Control',
 		icon: '⚡',
 		description:

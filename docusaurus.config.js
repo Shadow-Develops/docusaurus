@@ -84,6 +84,12 @@ const config = {
 					},
 					{
 						type: 'docSidebar',
+						sidebarId: 'licenseSystem',
+						position: 'left',
+						label: 'License System',
+					},
+					{
+						type: 'docSidebar',
 						sidebarId: 'spark',
 						position: 'left',
 						label: 'SPARK',
@@ -104,6 +110,10 @@ const config = {
 							{
 								label: 'Shadow Store',
 								to: '/docs/shadowStore',
+							},
+							{
+								label: 'License System',
+								to: '/docs/licenseSystem',
 							},
 							{
 								label: 'SPARK',

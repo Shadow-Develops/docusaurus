@@ -1,0 +1,91 @@
+---
+sidebar_position: 3
+---
+
+# Files & Nginx & Discord
+
+Now it is time to actually install the files, database, and setup Nginx! Please ensure you have completed the steps within [Getting Started](/docs/shadowStore/install/getting-started) first!
+
+:::info
+We will be using [WinSCP](https://winscp.net/eng/index.php) to all file viewing, editing, and transferring. You may use another SFTP viewer if you prefer.
+:::
+
+## Files
+
+This is likely the easiest part of the guide, as it is just creating some folders and dragging files.
+
+1. Open your `/home` folder and create a new folder called `shadowlicense`. _(You may call it anything you like, just keep in mind the guide will refer to it as `shadowlicense`.)_
+2. Using WinSCP, copy and paste the contents of the zip you downloaded from our website into `/home/shadowlicense`.
+   ![shadowstore-WinSCP](/img/docs/shadowstore-WinSCP.png)
+
+## Nginx Configuration
+
+Using WinSCP please head to `/etc/nginx/sites-available/default` as it is the default Nginx site configuration file.\
+Delete all the default contents from the file, if you haven't made any changes to it before.
+
+Replace the contents with the below and ensure you set the correct `port` and `domain` based on your needs.
+
+```nginx
+server {
+
+  server_name license.example.com; # Change domain to your domain
+
+  location / {
+    proxy_pass http://localhost:5174; # Change the port if needed.
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection 'upgrade';
+    proxy_set_header Host $host;
+    proxy_cache_bypass $http_upgrade;
+    proxy_set_header X-Real-IP $remote_addr;
+  }
+    error_page 502 =500 /502.html;
+    location = /502.html {
+        root  /home/shadowlicense/static;
+    }
+}
+```
+
+Once you've set everything correctly, save the file, and then restart Nginx:
+
+```bash
+sudo systemctl restart nginx
+```
+
+You can check the status with `sudo systemctl status nginx` if you want!
+
+### Issue SSL Certificate
+
+We will be using Certbot to issue a SSL certificate, so we want to run the following command but make sure to replace `license.example.com` with your domain.
+
+```bash
+sudo certbot --nginx -d example.com
+```
+
+You will get asked for some details, like your email (but it isn't shown to the public).\
+When asked about a redirect method, select option `2`.\
+Now that you have issued a certificate, we will want to make sure it self renews:
+
+```bash
+sudo certbot renew --dry-run
+```
+
+## Discord App
+
+By default, Shadow License System comes with a built in Discord Bot. Currently it is required for the login method; however, it optionally has logging features.
+
+We will want to create a fresh Discord Application via the Discord Developer Portal.\
+Create a new application and add a bot profile.\
+In the bot tab, you must **enable ALL gateway intents**.\
+_Also, we recommend you go to the Installation tab and disable `User Install` and set `Install Link` to `None`._\
+After that, you can invite your bot to your server, use the link below but replace `CLIENT_ID_HERE` with your bot's ID.
+
+```bash
+https://discord.com/oauth2/authorize?client_id=CLIENT_ID_HERE&permissions=8&integration_type=0&scope=bot
+```
+
+[![bot setup](/img/docs/setup-bot.gif)](/img/docs/setup-bot.mp4)
+
+## Database
+
+This is 100% the easiest part of the install process, since you have to do NOTHING! Within the `server.js` file, we have written code to automatically populate the database. This means, as long as you have MongoDB running properly then once you configure Shadow License System, the database will get automatically populate with the base data, and if you ever break the database the script will automatically fix any major errors.
