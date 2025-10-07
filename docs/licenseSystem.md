@@ -4,10 +4,6 @@ sidebar_position: 1
 
 # License System
 
-:::warning[Notice]
-These documentation are still WIP.
-:::
-
 This is the official documentation for [Shadow License System](https://shadowdevs.com/store/licensesystem). Here you can find information on how to install it and manage settings.
 
 ## FAQ

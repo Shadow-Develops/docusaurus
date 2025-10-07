@@ -1,8 +1,0 @@
-{
-	"label": "License System",
-	"position": 1,
-	"link": {
-		"type": "generated-index",
-		"description": "Guide for integrating the license system with Shadow Store."
-	}
-}
