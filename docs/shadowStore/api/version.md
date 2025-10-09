@@ -181,7 +181,7 @@ if (!versionData.success) {
 	console.log('✅ Running Latest Version.');
 } else {
 	console.log(
-		`⚠  Update Required! Latest Version: ${versionData.data.latest.version} via https://shadowdevs.com/releases/${PRODUCT_ID}`
+		`⚠  Update Required! Latest Version: ${versionData.data.latest.version} via https://example.com/releases/${PRODUCT_ID}`
 	);
 }
 ```
@@ -218,7 +218,7 @@ https
 					console.log('✅ Running Latest Version.');
 				} else {
 					console.log(
-						`⚠  Update Required! Latest Version: ${versionData.data.latest.version} via https://shadowdevs.com/releases/${PRODUCT_ID}`
+						`⚠  Update Required! Latest Version: ${versionData.data.latest.version} via https://example.com/releases/${PRODUCT_ID}`
 					);
 				}
 			});
@@ -253,7 +253,7 @@ if not versionData.success then
 elseif versionData.success and versionData.latest then
 	print("✅ Running Latest Version.")
 else
-	print(string.format("⚠  Update Required! Latest Version: %s via https://shadowdevs.com/releases/%s",
+	print(string.format("⚠  Update Required! Latest Version: %s via https://example.com/releases/%s",
 		versionData.data.latest.version, PRODUCT_ID))
 end
 ```
@@ -281,7 +281,7 @@ if (!$versionData['success']) {
 	echo "✅ Running Latest Version.\n";
 } else {
 	echo "⚠  Update Required! Latest Version: " . $versionData['data']['latest']['version'] .
-		 " via https://shadowdevs.com/releases/" . $PRODUCT_ID . "\n";
+		 " via https://example.com/releases/" . $PRODUCT_ID . "\n";
 }
 ```
 
@@ -309,7 +309,7 @@ elif versionData['success'] and versionData['latest']:
 	print("✅ Running Latest Version.")
 else:
 	print(f"⚠  Update Required! Latest Version: {versionData['data']['latest']['version']} "
-		  f"via https://shadowdevs.com/releases/{PRODUCT_ID}")
+		  f"via https://example.com/releases/{PRODUCT_ID}")
 ```
 
 ### Python using requests
@@ -328,7 +328,7 @@ try:
 		print("✅ Running Latest Version.")
 	else:
 		print(f"⚠  Update Required! Latest Version: {versionData['data']['latest']['version']} "
-			  f"via https://shadowdevs.com/releases/{PRODUCT_ID}")
+			  f"via https://example.com/releases/{PRODUCT_ID}")
 
 except requests.RequestException as e:
 	print(f"❌ Version Check Error: {str(e)}")
@@ -353,10 +353,157 @@ try {
 		Write-Host "✅ Running Latest Version."
 	}
 	else {
-		Write-Host "⚠  Update Required! Latest Version: $($versionData.data.latest.version) via https://shadowdevs.com/releases/$PRODUCT_ID"
+		Write-Host "⚠  Update Required! Latest Version: $($versionData.data.latest.version) via https://example.com/releases/$PRODUCT_ID"
 	}
 }
 catch {
 	Write-Host "❌ Version Check Error: $($_.Exception.Message)"
 }
 ```
+
+## Live/Editable Example
+
+```jsx live
+function VersionChecker(props) {
+	const [versionStatus, setVersionStatus] = useState(null);
+	const [loading, setLoading] = useState(false);
+	const [error, setError] = useState(null);
+
+	const domain = 'shadowdevs.com';
+	const PRODUCT_ID = '24';
+	const version = ''; // Adding a value will run the match query
+
+	useEffect(() => {
+		checkVersion();
+	}, []);
+
+	async function checkVersion() {
+		setLoading(true);
+		setError(null);
+
+		try {
+			const response = await fetch(
+				`https://${domain}/api/version/${PRODUCT_ID}${
+					match.length > 0 ? `?match=${version}` : ''
+				}`,
+				{
+					method: 'GET',
+					headers: {
+						'content-type': 'application/json',
+					},
+				}
+			);
+
+			if (!response.ok) {
+				const errorMsg = `Version Check Error: ${response.status}: ${response.statusText}`;
+				setError(errorMsg);
+				console.log(`❌ ${errorMsg}`);
+				setLoading(false);
+				return;
+			}
+
+			const versionData = await response.json();
+
+			if (!versionData.success) {
+				const errorMsg = `Version Check Error: ${
+					versionData.message || 'Unknown Error'
+				}`;
+				setError(errorMsg);
+			} else if (versionData.success && versionData.latest) {
+				setVersionStatus({
+					type: 'latest',
+					message: 'Running Latest Version.',
+				});
+			} else {
+				setVersionStatus({
+					type: 'update',
+					message: `Update Required! Latest Version: ${versionData.data.latest.version}`,
+					url: `https://${domain}/releases/${PRODUCT_ID}`,
+				});
+			}
+		} catch (err) {
+			const errorMsg = `Network Error: ${err.message}`;
+			setError(errorMsg);
+		}
+
+		setLoading(false);
+	}
+
+	return (
+		<div
+			style={{ padding: '20px', border: '1px solid #ccc', borderRadius: '8px' }}
+		>
+			<h2>Version Check Status</h2>
+
+			{loading && <div style={{ color: '#666' }}>🔄 Checking version...</div>}
+
+			{error && (
+				<div
+					style={{
+						color: '#dc3545',
+						padding: '10px',
+						background: '#f8d7da',
+						borderRadius: '4px',
+					}}
+				>
+					❌ {error}
+				</div>
+			)}
+
+			{versionStatus && versionStatus.type === 'latest' && (
+				<div
+					style={{
+						color: '#28a745',
+						padding: '10px',
+						background: '#d4edda',
+						borderRadius: '4px',
+					}}
+				>
+					✅ {versionStatus.message}
+				</div>
+			)}
+
+			{versionStatus && versionStatus.type === 'update' && (
+				<div
+					style={{
+						color: '#856404',
+						padding: '10px',
+						background: '#fff3cd',
+						borderRadius: '4px',
+					}}
+				>
+					⚠️ {versionStatus.message}
+					<br />
+					<a
+						href={versionStatus.url}
+						target='_blank'
+						rel='noopener noreferrer'
+						style={{ color: '#004085' }}
+					>
+						Download Latest Version
+					</a>
+				</div>
+			)}
+
+			<button
+				onClick={checkVersion}
+				disabled={loading}
+				style={{
+					marginTop: '15px',
+					padding: '8px 16px',
+					background: '#007bff',
+					color: 'white',
+					border: 'none',
+					borderRadius: '4px',
+					cursor: loading ? 'not-allowed' : 'pointer',
+					opacity: loading ? 0.6 : 1,
+				}}
+			>
+				{loading ? 'Checking...' : 'Check Again'}
+			</button>
+		</div>
+	);
+}
+```
+
+### Result

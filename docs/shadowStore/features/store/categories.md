@@ -1,8 +1,9 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
+pagination_next: null
 ---
 
-# Feature Page
+# Categories
 
 :::warning[Notice]
 These documentation are still WIP.

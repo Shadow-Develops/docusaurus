@@ -1,24 +1,13 @@
 ---
 sidebar_position: 3
 pagination_next: null
+pagination_prev: null
 ---
 
-# Email: SendGrid & SMTP
+# Discounts & Sales
 
 :::warning[Notice]
 These documentation are still WIP.
 :::
-
-## SMTP
-
-### Basic
-
-Information....
-
-### Google Suit
-
-Information....
-
-## SendGrid
 
 Information....

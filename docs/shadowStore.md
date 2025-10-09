@@ -5,7 +5,7 @@ sidebar_position: 1
 # Shadow Store
 
 :::warning[Notice]
-The following pages / sections are still WIP: [Email Configuration](/docs/shadowStore/integrations/email), [Features Guide](/docs/category/features), and [Update Instructions](/docs/shadowStore/update)
+The following pages / sections are still WIP: [Email Configuration](/docs/shadowStore/integrations/email) & [Features Guide](/docs/shadowStore/features)
 :::
 
 This is the official documentation for [Shadow Store](https://shadowdevs.com/store/shadowstore). Here you can find information on how to install it and manage settings.
