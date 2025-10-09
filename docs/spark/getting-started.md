@@ -41,11 +41,11 @@ Some content from [LVC V3's documentation](https://docs.luxartengineering.com/v3
 
 **Some content Copied:**
 
-- [Settings](/docs/spark/settings)
-- [Advanced Configuration](/docs/spark/adv-config)
+- [Settings](/spark/settings)
+- [Advanced Configuration](/spark/adv-config)
 
 **Direct Copy:**
 
-- [Configure Sirens](/docs/spark/sirens/config)
-- [Assign Sirens](/docs/spark/sirens/assign)
-- [Server Sided Siren Integration](/docs/spark/sirens/server-side)
+- [Configure Sirens](/spark/sirens/config)
+- [Assign Sirens](/spark/sirens/assign)
+- [Server Sided Siren Integration](/spark/sirens/server-side)

@@ -28,7 +28,7 @@ Any setting that includes `default` within the name means players can change it 
 
 ## Configured Vehicles
 
-Ensure any vehicle you have added a [vehicle configuration file](/docs/spark/config.md) is within this array. If you configure a vehicle and don't add it to this list, the configuration will NOT work.
+Ensure any vehicle you have added a [vehicle configuration file](/spark/config.md) is within this array. If you configure a vehicle and don't add it to this list, the configuration will NOT work.
 
 > Should like: `{'f150gw', 'arrowp'}`
 

@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Files & Nginx & Discord
 
-Now it is time to actually install the files, database, and setup Nginx! Please ensure you have completed the steps within [Getting Started](/docs/shadowStore/install/getting-started) first!
+Now it is time to actually install the files, database, and setup Nginx! Please ensure you have completed the steps within [Getting Started](/shadowStore/install/getting-started) first!
 
 :::info
 We will be using [WinSCP](https://winscp.net/eng/index.php) to all file viewing, editing, and transferring. You may use another SFTP viewer if you prefer.

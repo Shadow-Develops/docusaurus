@@ -158,7 +158,7 @@ Please note that the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/AP
 
 ```js
 const response = await fetch(
-	`https://example.com/api/version/${PRODUCT_ID}}$?match=${version}`,
+	`https://example.com/api/version/${PRODUCT_ID}?match=${version}`,
 	{
 		method: 'GET',
 		headers: {
@@ -361,7 +361,8 @@ catch {
 }
 ```
 
-## Live/Editable Example
+<!-- TODO: Fix -->
+<!-- ## Live/Editable Example
 
 ```jsx live
 function VersionChecker(props) {
@@ -504,6 +505,4 @@ function VersionChecker(props) {
 		</div>
 	);
 }
-```
-
-### Result
+``` -->

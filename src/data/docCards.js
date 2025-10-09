@@ -6,7 +6,7 @@ const DocCardData = [
 		image: require('@site/static/img/shopping-cart.svg').default,
 		description:
 			'Learn how to install and manage the settings for Shadow Store, and all its addons.',
-		docUrl: '/docs/shadowStore',
+		docUrl: '/shadowStore',
 		color: 'blue',
 	},
 	{
@@ -14,7 +14,7 @@ const DocCardData = [
 		image: require('@site/static/img/licenseManage.svg').default,
 		description:
 			'Learn how to install and manage the settings for Shadow License System.',
-		docUrl: '/docs/licenseSystem',
+		docUrl: '/licenseSystem',
 		color: 'blue',
 	},
 	{
@@ -22,7 +22,7 @@ const DocCardData = [
 		icon: '⚡',
 		description:
 			'Installation and configuration guide for SPARK Vehicle Control.',
-		docUrl: '/docs/spark/getting-started',
+		docUrl: '/spark/getting-started',
 		color: 'red',
 	},
 	{
@@ -30,7 +30,7 @@ const DocCardData = [
 		image: require('@site/static/img/community.svg').default,
 		description:
 			'Details on how to install and manage both the Legacy and V2 Community Template.',
-		docUrl: '/docs/communityTemplates/v2',
+		docUrl: '/communityTemplates/v2',
 		color: 'teal',
 	},
 ];

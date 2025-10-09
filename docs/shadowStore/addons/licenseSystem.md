@@ -19,7 +19,7 @@ The License System is available in two versions:
 6. Define if force IP lock is enabled/disabled
 7. Click save settings
 
-Once activated, the License System enables the `/api/verify` endpoint for license verification. For detailed information about using this endpoint, see the [Verify API documentation](/docs/shadowStore/api/verify).
+Once activated, the License System enables the `/api/verify` endpoint for license verification. For detailed information about using this endpoint, see the [Verify API documentation](/shadowStore/api/verify).
 
 ## Features
 

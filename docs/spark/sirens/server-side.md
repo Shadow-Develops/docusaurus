@@ -106,7 +106,7 @@ Now that we have told GTA V to load the requested audio banks from Step 1, we no
 
 - To add additional tones copy & paste additional lines into the SIRENS table.
   - Take note of the incrementing numbers, they are the siren IDs and we will need them to assign sirens later. These are not generated so you may have to manually renumber lines.
-  - You can change the name to your desired siren name such as 'Wail', 'Yelp', '295-Wail', 'FSS-Rumbler'. See: [configure-sirens](/docs/spark/sirens/config) for more information.
+  - You can change the name to your desired siren name such as 'Wail', 'Yelp', '295-Wail', 'FSS-Rumbler'. See: [configure-sirens](/spark/sirens/config) for more information.
 
 <details>
 
