@@ -1,6 +1,6 @@
 // Colors: blue, green, purple, orange, red, teal
 
-const DocCardData = [
+export default [
 	{
 		title: 'Shadow Store',
 		image: require('@site/static/img/shopping-cart.svg').default,
@@ -26,13 +26,11 @@ const DocCardData = [
 		color: 'red',
 	},
 	{
-		title: 'Community Templates',
+		title: 'Legacy Products',
 		image: require('@site/static/img/community.svg').default,
 		description:
-			'Details on how to install and manage both the Legacy and V2 Community Template.',
-		docUrl: '/communityTemplates/v2',
-		color: 'teal',
+			'All legacy or deprecated products for those that still own them.',
+		docUrl: '/legacy',
+		color: 'purple',
 	},
 ];
-
-export default DocCardData;

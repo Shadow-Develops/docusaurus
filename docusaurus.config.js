@@ -44,6 +44,10 @@ export default {
 					editUrl: 'https://github.com/Shadow-Develops/docusaurus/tree/main',
 					showLastUpdateTime: true,
 				},
+				pages: {
+					editUrl: 'https://github.com/Shadow-Develops/docusaurus/tree/main',
+					showLastUpdateTime: true,
+				},
 				theme: {
 					customCss: './src/css/custom.css',
 				},
@@ -124,8 +128,8 @@ export default {
 							to: '/spark/getting-started',
 						},
 						{
-							label: 'Community Templates',
-							to: '/communityTemplates/v2',
+							label: 'Legacy Products',
+							to: '/legacy',
 						},
 					],
 				},
