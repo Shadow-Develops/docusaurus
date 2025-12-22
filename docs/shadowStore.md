@@ -15,13 +15,16 @@ This is the official documentation for [Shadow Store](https://shadowdevs.com/sto
   - MongoDB is the database used. You just need the database URL within your `.env`.
 - What payment processors can I use?
   - Both PayPal / Stripe are currently the only options for payment processing.
-- Do I have to use Discord for login and logs?
-  - Currently for login, yes Discord is the only option; however, this will change in the future!
-  - For logs, no using them is up to you.
+- What login methods are there?
+- No, we offer passwordless email authentication, Google, Discord, and Github.
+- Is there a Discord Bot?
+  - Yes, Shadow Store has a built in Discord bot that is used to handle the Discord OAuth2 (if enabled) and automatically post things such as releases, audit logs, and notifications (if enabled).
 - Can I send emails for notifications?
   - Yes, both SendGrid and SMTP server based emails are currently supported.
 - What do I do with a bug I found?
   - Please report it in the [Shadow Development Discord](https://shadowdevs.com/discord) or via our [Website Bug Report Form](https://shadowdevs.com/form/bug-report).
+
+_Note: Not all questions may be answered above, as some FAQ are on the [product's page](https://shadowdevs.com/store/shadowstore)._
 
 ## Addons
 
