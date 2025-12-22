@@ -2,10 +2,10 @@
 <html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-shadowStore/install/config" data-has-hydrated="false">
 <head>
 <meta charset="UTF-8">
-<meta name="generator" content="Docusaurus v3.9.1">
-<title data-rh="true">Configuration | Shadow Devs Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.shadowdevs.com/img/Banner.png"><meta data-rh="true" name="twitter:image" content="https://docs.shadowdevs.com/img/Banner.png"><meta data-rh="true" property="og:url" content="https://docs.shadowdevs.com/shadowStore/install/config"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Configuration | Shadow Devs Docs"><meta data-rh="true" name="description" content="You now have the server and files setup, so we can get to configuring the basics. So, we will go over every line of the .env file.\"><meta data-rh="true" property="og:description" content="You now have the server and files setup, so we can get to configuring the basics. So, we will go over every line of the .env file.\"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.shadowdevs.com/shadowStore/install/config"><link data-rh="true" rel="alternate" href="https://docs.shadowdevs.com/shadowStore/install/config" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.shadowdevs.com/shadowStore/install/config" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://KQKEAMJ226-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Install","item":"https://docs.shadowdevs.com/shadowStore/install/"},{"@type":"ListItem","position":2,"name":"Configuration","item":"https://docs.shadowdevs.com/shadowStore/install/config"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="Shadow Devs Docs" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.b1aa1ae8.css">
-<script src="/assets/js/runtime~main.81799ffa.js" defer="defer"></script>
-<script src="/assets/js/main.f0dc84b8.js" defer="defer"></script>
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Configuration | Shadow Devs Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.shadowdevs.com/img/Banner.png"><meta data-rh="true" name="twitter:image" content="https://docs.shadowdevs.com/img/Banner.png"><meta data-rh="true" property="og:url" content="https://docs.shadowdevs.com/shadowStore/install/config"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Configuration | Shadow Devs Docs"><meta data-rh="true" name="description" content="You now have the server and files setup, so we can get to configuring the basics. So, we will go over every line of the .env file.\"><meta data-rh="true" property="og:description" content="You now have the server and files setup, so we can get to configuring the basics. So, we will go over every line of the .env file.\"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.shadowdevs.com/shadowStore/install/config"><link data-rh="true" rel="alternate" href="https://docs.shadowdevs.com/shadowStore/install/config" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.shadowdevs.com/shadowStore/install/config" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://KQKEAMJ226-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Install","item":"https://docs.shadowdevs.com/shadowStore/install/"},{"@type":"ListItem","position":2,"name":"Configuration","item":"https://docs.shadowdevs.com/shadowStore/install/config"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="Shadow Devs Docs" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.85a54cfc.css">
+<script src="/assets/js/runtime~main.0f3de2bd.js" defer="defer"></script>
+<script src="/assets/js/main.736209ed.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -14,79 +14,79 @@
 <script>document.documentElement.setAttribute("data-theme","dark"),document.documentElement.setAttribute("data-theme-choice","dark"),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/Logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Shadow Dev Docs</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/shadowStore">Shadow Store</a><a class="navbar__item navbar__link" href="/licenseSystem">License System</a><a class="navbar__item navbar__link" href="/spark/getting-started">SPARK</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://shadowdevs.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-home-link" aria-label="Home Site"></a><a href="https://github.com/Shadow-Develops/docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><div class="navbarSearchContainer_Bca1"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search (Meta+k)" aria-keyshortcuts="Meta+k"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" fill="none" stroke-width="1.4"></circle><path d="m21 21-4.3-4.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"></span></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd sidebarWithHideableNavbar_wUlq"><a tabindex="-1" class="sidebarLogo_isFc" href="/"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"><b>Shadow Dev Docs</b></a><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/shadowStore"><span title="Shadow Store" class="linkLabel_WmDU">Shadow Store</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href="/shadowStore/install"><span title="Install" class="categoryLinkLabel_W154">Install</span></a><button aria-label="Collapse sidebar category &#x27;Install&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/shadowStore/install/prerequisites"><span title="Prerequisites" class="linkLabel_WmDU">Prerequisites</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/shadowStore/install/getting-started"><span title="Getting Started" class="linkLabel_WmDU">Getting Started</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/shadowStore/install/files"><span title="Files &amp; Nginx &amp; Discord" class="linkLabel_WmDU">Files &amp; Nginx &amp; Discord</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/shadowStore/install/config"><span title="Configuration" class="linkLabel_WmDU">Configuration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/shadowStore/install/starting"><span title="Staring Shadow Store" class="linkLabel_WmDU">Staring Shadow Store</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/shadowStore/integrations"><span title="Integrations" class="categoryLinkLabel_W154">Integrations</span></a><button aria-label="Expand sidebar category &#x27;Integrations&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/shadowStore/features"><span title="Features" class="categoryLinkLabel_W154">Features</span></a><button aria-label="Expand sidebar category &#x27;Features&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/shadowStore/api"><span title="API" class="categoryLinkLabel_W154">API</span></a><button aria-label="Expand sidebar category &#x27;API&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/shadowStore/addons"><span title="Addons" class="categoryLinkLabel_W154">Addons</span></a><button aria-label="Expand sidebar category &#x27;Addons&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/shadowStore/update"><span title="Updating Shadow Store" class="linkLabel_WmDU">Updating Shadow Store</span></a></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/shadowStore/install"><span>Install</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Configuration</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Configuration</h1></header>
 <p>You now have the server and files setup, so we can get to configuring the basics. So, we will go over every line of the <code>.env</code> file.<br>
 Since we use keys for payment processors, login methods, and similar we want to store them safely within your <code>.env</code> file rather then the database.</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="basics">Basics<a href="#basics" class="hash-link" aria-label="Direct link to Basics" title="Direct link to Basics" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="basics">Basics<a href="#basics" class="hash-link" aria-label="Direct link to Basics" title="Direct link to Basics" translate="no">​</a></h2>
 <ol>
-<li><code>LICENSE_KEY=</code>
+<li class=""><code>LICENSE_KEY=</code>
 <ol>
-<li>You get this from <a href="https://shadowdevs.com/license" target="_blank" rel="noopener noreferrer">https://shadowdevs.com/license</a> and should be a simple string. This your license from us to use Shadow Store.</li>
+<li class="">You get this from <a href="https://shadowdevs.com/license" target="_blank" rel="noopener noreferrer" class="">https://shadowdevs.com/license</a> and should be a simple string. This your license from us to use Shadow Store.</li>
 </ol>
 </li>
-<li><code>PORT=</code>
+<li class=""><code>PORT=</code>
 <ol>
-<li>By default its <code>5173</code>, but you can change it to any 4 character number.</li>
+<li class="">By default its <code>5173</code>, but you can change it to any 4 character number.</li>
 </ol>
 </li>
-<li><code>MONGO_URL=</code>
+<li class=""><code>MONGO_URL=</code>
 <ol>
-<li>The MongoDB URL for your database. If you do not add any password lock to your database and leave it as local only, you can use something like this: <code>mongodb://127.0.0.1:27017/shadowstore</code></li>
+<li class="">The MongoDB URL for your database. If you do not add any password lock to your database and leave it as local only, you can use something like this: <code>mongodb://127.0.0.1:27017/shadowstore</code></li>
 </ol>
 </li>
-<li><code>ORIGIN=</code>
+<li class=""><code>ORIGIN=</code>
 <ol>
-<li>Your full domain, include the <code>https://</code>. Ex: <code>https://shadowdevs.com</code></li>
+<li class="">Your full domain, include the <code>https://</code>. Ex: <code>https://shadowdevs.com</code></li>
 </ol>
 </li>
-<li><code>PUBLIC_DOMAIN=</code>
+<li class=""><code>PUBLIC_DOMAIN=</code>
 <ol>
-<li>Just your domain name for the website. Ex: <code>shadowdevs.com</code></li>
+<li class="">Just your domain name for the website. Ex: <code>shadowdevs.com</code></li>
 </ol>
 </li>
 </ol>
-<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="discord">Discord<a href="#discord" class="hash-link" aria-label="Direct link to Discord" title="Direct link to Discord" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="discord">Discord<a href="#discord" class="hash-link" aria-label="Direct link to Discord" title="Direct link to Discord" translate="no">​</a></h2>
 <ol start="6">
-<li><code>DISCORD_CLIENT_ID=</code>
+<li class=""><code>DISCORD_CLIENT_ID=</code>
 <ol>
-<li>You can find this on the <a href="https://discord.com/developers/applications" target="_blank" rel="noopener noreferrer">Discord Developer Application</a> &gt; General Information. It would be the <code>Application ID</code>.</li>
+<li class="">You can find this on the <a href="https://discord.com/developers/applications" target="_blank" rel="noopener noreferrer" class="">Discord Developer Application</a> &gt; General Information. It would be the <code>Application ID</code>.</li>
 </ol>
 </li>
-<li><code>DISCORD_CLIENT_SECRET=</code>
+<li class=""><code>DISCORD_CLIENT_SECRET=</code>
 <ol>
-<li>You can find this on the <a href="https://discord.com/developers/applications" target="_blank" rel="noopener noreferrer">Discord Developer Application</a> &gt; OAuth2. It will be the <code>Client Secret</code>.</li>
+<li class="">You can find this on the <a href="https://discord.com/developers/applications" target="_blank" rel="noopener noreferrer" class="">Discord Developer Application</a> &gt; OAuth2. It will be the <code>Client Secret</code>.</li>
 </ol>
 </li>
-<li><code>BOT_TOKEN=</code>
+<li class=""><code>BOT_TOKEN=</code>
 <ol>
-<li>You can find this on the <a href="https://discord.com/developers/applications" target="_blank" rel="noopener noreferrer">Discord Developer Application</a> &gt; Bot. It is the <code>Token</code>.</li>
+<li class="">You can find this on the <a href="https://discord.com/developers/applications" target="_blank" rel="noopener noreferrer" class="">Discord Developer Application</a> &gt; Bot. It is the <code>Token</code>.</li>
 </ol>
 </li>
-<li><code>OWNERS=[&quot;&quot;]</code>
+<li class=""><code>OWNERS=[&quot;&quot;]</code>
 <ol>
-<li>This must always be an array (<code>[&quot;&quot;]</code>), and should contain the Discord User IDs for people you want to login with owner permissions.</li>
+<li class="">This must always be an array (<code>[&quot;&quot;]</code>), and should contain the Discord User IDs for people you want to login with owner permissions.</li>
 </ol>
 </li>
 </ol>
-<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="payment-processors">Payment Processors<a href="#payment-processors" class="hash-link" aria-label="Direct link to Payment Processors" title="Direct link to Payment Processors" translate="no">​</a></h2>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="paypal">PayPal<a href="#paypal" class="hash-link" aria-label="Direct link to PayPal" title="Direct link to PayPal" translate="no">​</a></h3>
-<p>This required you to have a <a href="https://www.paypal.com/business/getting-started" target="_blank" rel="noopener noreferrer">PayPal Business Account</a> to be able to use their API in the required ways by Shadow Store.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="payment-processors">Payment Processors<a href="#payment-processors" class="hash-link" aria-label="Direct link to Payment Processors" title="Direct link to Payment Processors" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="paypal">PayPal<a href="#paypal" class="hash-link" aria-label="Direct link to PayPal" title="Direct link to PayPal" translate="no">​</a></h3>
+<p>This required you to have a <a href="https://www.paypal.com/business/getting-started" target="_blank" rel="noopener noreferrer" class="">PayPal Business Account</a> to be able to use their API in the required ways by Shadow Store.</p>
 <ol start="10">
-<li><code>PAYPAL_PUBLIC=</code>
+<li class=""><code>PAYPAL_PUBLIC=</code>
 <ol>
-<li>PayPal API Client ID</li>
+<li class="">PayPal API Client ID</li>
 </ol>
 </li>
-<li><code>PAYPAL_SECRET=</code>
+<li class=""><code>PAYPAL_SECRET=</code>
 <ol>
-<li>PayPal API Secret Key</li>
+<li class="">PayPal API Secret Key</li>
 </ol>
 </li>
 </ol>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Instructions for getting PayPal API Keys</summary><div><div class="collapsibleContent_i85q">
   <!-- -->
 <ol>
-<li>Head to the <a href="https://developer.paypal.com/dashboard/" target="_blank" rel="noopener noreferrer">PayPal Developers Panel</a>, select live mode, and create a new app.
+<li class="">Head to the <a href="https://developer.paypal.com/dashboard/" target="_blank" rel="noopener noreferrer" class="">PayPal Developers Panel</a>, select live mode, and create a new app.
 <img decoding="async" loading="lazy" alt="paypal-createApp" src="/assets/images/paypal-createApp-1456653db138b4e9fa78cbf51ef8c7d8.png" width="1481" height="456" class="img_ev3q"></li>
-<li>Put in your app name and hit create app.</li>
-<li>Grab the <code>Client ID</code> &amp; <code>Secret 1</code> and paste them into the <code>.env</code> in their respective place.
+<li class="">Put in your app name and hit create app.</li>
+<li class="">Grab the <code>Client ID</code> &amp; <code>Secret 1</code> and paste them into the <code>.env</code> in their respective place.
 <img decoding="async" loading="lazy" alt="paypal-grabKey" src="/assets/images/paypal-grabKey-a4b54c68b4b21ebf1dda5ead282e8fc6.png" width="1500" height="721" class="img_ev3q"></li>
 </ol>
 <blockquote>
@@ -94,31 +94,31 @@ Since we use keys for payment processors, login methods, and similar we want to 
 </blockquote>
 <p>Now that have the keys and have put them into your <code>.env</code>, you are ready to go. Once you turn on your site and login to the admin panel, head to the settings page and hit the &quot;Payment Details&quot; button to enable PayPal or review/edit the keys (you can review/edit them via the <code>.env</code> file at anytime as well). <em>Note that editing the keys will require a site restart to go into effect.</em></p>
 </div></div></details>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="stripe">Stripe<a href="#stripe" class="hash-link" aria-label="Direct link to Stripe" title="Direct link to Stripe" translate="no">​</a></h3>
-<p>You will need a <a href="https://stripe.com/" target="_blank" rel="noopener noreferrer">Stripe</a> account if you wish to use this processor.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="stripe">Stripe<a href="#stripe" class="hash-link" aria-label="Direct link to Stripe" title="Direct link to Stripe" translate="no">​</a></h3>
+<p>You will need a <a href="https://stripe.com/" target="_blank" rel="noopener noreferrer" class="">Stripe</a> account if you wish to use this processor.</p>
 <ol start="12">
-<li><code>STRIPE_PUBLIC=</code>
+<li class=""><code>STRIPE_PUBLIC=</code>
 <ol>
-<li>Stripe API Publishable key</li>
+<li class="">Stripe API Publishable key</li>
 </ol>
 </li>
-<li><code>STRIPE_SECRET=</code>
+<li class=""><code>STRIPE_SECRET=</code>
 <ol>
-<li>Stripe API Secret Key</li>
+<li class="">Stripe API Secret Key</li>
 </ol>
 </li>
 </ol>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Instructions for getting Stripe API Keys</summary><div><div class="collapsibleContent_i85q">
   <!-- -->
 <ol>
-<li>Head to the &quot;Developers&quot; tab in the bottom right then the &quot;API Keys&quot; tab.</li>
-<li>Click create secret key and give it a name.
+<li class="">Head to the &quot;Developers&quot; tab in the bottom right then the &quot;API Keys&quot; tab.</li>
+<li class="">Click create secret key and give it a name.
 <ol>
-<li>You can only view your secret key once, so ensure you save it.</li>
+<li class="">You can only view your secret key once, so ensure you save it.</li>
 </ol>
 </li>
-<li>You will also need to grab the <code>Publishable Key</code>, so ensure you create it if it isn&#x27;t already created.</li>
-<li>Once you have them both, head to your <code>.env</code> file and paste the keys into your respective slots.
+<li class="">You will also need to grab the <code>Publishable Key</code>, so ensure you create it if it isn&#x27;t already created.</li>
+<li class="">Once you have them both, head to your <code>.env</code> file and paste the keys into your respective slots.
 <img decoding="async" loading="lazy" alt="stripe" src="/assets/images/stripe-96dfad87804890ab9315f6c5c57ee482.png" width="1728" height="941" class="img_ev3q"></li>
 </ol>
 <blockquote>
@@ -126,58 +126,58 @@ Since we use keys for payment processors, login methods, and similar we want to 
 </blockquote>
 <p>Now that have the keys and have put them into your <code>.env</code>, you are ready to go. Once you turn on your site and login to the admin panel, head to the settings page and hit the &quot;Payment Details&quot; button to enable Stripe or review/edit the keys (you can review/edit them via the <code>.env</code> file at anytime as well). <em>Note that editing the keys will require a site restart to go into effect.</em></p>
 </div></div></details>
-<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="emails">Emails<a href="#emails" class="hash-link" aria-label="Direct link to Emails" title="Direct link to Emails" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="emails">Emails<a href="#emails" class="hash-link" aria-label="Direct link to Emails" title="Direct link to Emails" translate="no">​</a></h2>
 <ol start="14">
-<li><code>SENDGRID_KEY=</code>
+<li class=""><code>SENDGRID_KEY=</code>
 <ol>
-<li>Head to the <a href="https://app.sendgrid.com/settings/api_keys" target="_blank" rel="noopener noreferrer">SendGrid API Keys</a> page, create an API key, and then copy the key.</li>
-<li>If using SendGrid, then you don&#x27;t need to put anything into the SMTP options.</li>
+<li class="">Head to the <a href="https://app.sendgrid.com/settings/api_keys" target="_blank" rel="noopener noreferrer" class="">SendGrid API Keys</a> page, create an API key, and then copy the key.</li>
+<li class="">If using SendGrid, then you don&#x27;t need to put anything into the SMTP options.</li>
 </ol>
 </li>
-<li><code>SMTP_HOST=</code>
+<li class=""><code>SMTP_HOST=</code>
 <ol>
-<li>The host address for your SMTP server.</li>
-<li>Set to <code>null</code> if using Gmail SMTP.</li>
+<li class="">The host address for your SMTP server.</li>
+<li class="">Set to <code>null</code> if using Gmail SMTP.</li>
 </ol>
 </li>
-<li><code>SMTP_PORT=</code>
+<li class=""><code>SMTP_PORT=</code>
 <ol>
-<li>The port for your SMTP server.</li>
-<li>Set to <code>null</code> if using Gmail SMTP.</li>
+<li class="">The port for your SMTP server.</li>
+<li class="">Set to <code>null</code> if using Gmail SMTP.</li>
 </ol>
 </li>
-<li><code>SMTP_USER=</code>
+<li class=""><code>SMTP_USER=</code>
 <ol>
-<li>The email user for your SMTP server. Ex: <code>support@example.com</code></li>
+<li class="">The email user for your SMTP server. Ex: <code>support@example.com</code></li>
 </ol>
 </li>
-<li><code>SMTP_PASS=</code>
+<li class=""><code>SMTP_PASS=</code>
 <ol>
-<li>The password or key for your SMTP server.</li>
+<li class="">The password or key for your SMTP server.</li>
 </ol>
 </li>
 </ol>
-<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="license-system">License System<a href="#license-system" class="hash-link" aria-label="Direct link to License System" title="Direct link to License System" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="license-system">License System<a href="#license-system" class="hash-link" aria-label="Direct link to License System" title="Direct link to License System" translate="no">​</a></h2>
 <ol start="19">
-<li><code>LICENSE_SYSTEM_KEY=</code>
+<li class=""><code>LICENSE_SYSTEM_KEY=</code>
 <ol>
-<li>Use the <a href="https://shadowdevs.com/license" target="_blank" rel="noopener noreferrer">license key from our site</a> that is given once you purchase the <a href="https://shadowdevs.com/store/shadowstore-licensesystem" target="_blank" rel="noopener noreferrer">Internal License System</a> or <a href="https://shadowdevs.com/store/licensesystem" target="_blank" rel="noopener noreferrer">External License System</a>.</li>
+<li class="">Use the <a href="https://shadowdevs.com/license" target="_blank" rel="noopener noreferrer" class="">license key from our site</a> that is given once you purchase the <a href="https://shadowdevs.com/store/shadowstore-licensesystem" target="_blank" rel="noopener noreferrer" class="">Internal License System</a> or <a href="https://shadowdevs.com/store/licensesystem" target="_blank" rel="noopener noreferrer" class="">External License System</a>.</li>
 </ol>
 </li>
 </ol>
-<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="advanced">Advanced<a href="#advanced" class="hash-link" aria-label="Direct link to Advanced" title="Direct link to Advanced" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="advanced">Advanced<a href="#advanced" class="hash-link" aria-label="Direct link to Advanced" title="Direct link to Advanced" translate="no">​</a></h2>
 <p>These settings should remain the same way as seen below / provided in the download, unless you know what you are doing.</p>
 <ol start="20">
-<li><code>BODY_SIZE_LIMIT=5368709120</code>
+<li class=""><code>BODY_SIZE_LIMIT=5368709120</code>
 <ol>
-<li>This increases the base SvelteKit body size limit to 10gbs.</li>
+<li class="">This increases the base SvelteKit body size limit to 10gbs.</li>
 </ol>
 </li>
-<li><code>HOST=localhost</code>
+<li class=""><code>HOST=localhost</code>
 <ol>
-<li>This modifies how SvelteKit interacts with itself.</li>
+<li class="">This modifies how SvelteKit interacts with itself.</li>
 </ol>
 </li>
-</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/Shadow-Develops/docusaurus/tree/main/docs/shadowStore/install/config.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">Last updated<!-- --> on <b><time datetime="2025-08-24T00:46:40.000Z" itemprop="dateModified">Aug 24, 2025</time></b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/shadowStore/install/files"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Files &amp; Nginx &amp; Discord</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/shadowStore/install/starting"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Staring Shadow Store</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#basics" class="table-of-contents__link toc-highlight">Basics</a></li><li><a href="#discord" class="table-of-contents__link toc-highlight">Discord</a></li><li><a href="#payment-processors" class="table-of-contents__link toc-highlight">Payment Processors</a><ul><li><a href="#paypal" class="table-of-contents__link toc-highlight">PayPal</a></li><li><a href="#stripe" class="table-of-contents__link toc-highlight">Stripe</a></li></ul></li><li><a href="#emails" class="table-of-contents__link toc-highlight">Emails</a></li><li><a href="#license-system" class="table-of-contents__link toc-highlight">License System</a></li><li><a href="#advanced" class="table-of-contents__link toc-highlight">Advanced</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/shadowStore">Shadow Store</a></li><li class="footer__item"><a class="footer__link-item" href="/licenseSystem">License System</a></li><li class="footer__item"><a class="footer__link-item" href="/spark/getting-started">SPARK</a></li><li class="footer__item"><a class="footer__link-item" href="/legacy">Legacy Products</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.gg/shadowdevs" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/Shadow-Develops" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 <a href="https://shadowdevs.com">Shadow Development</a>. <i>Built with Docusaurus.</i></div></div></div></footer></div>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/Shadow-Develops/docusaurus/tree/main/docs/shadowStore/install/config.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">Last updated<!-- --> on <b><time datetime="2025-08-24T00:46:40.000Z" itemprop="dateModified">Aug 24, 2025</time></b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/shadowStore/install/files"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Files &amp; Nginx &amp; Discord</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/shadowStore/install/starting"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Staring Shadow Store</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#basics" class="table-of-contents__link toc-highlight">Basics</a></li><li><a href="#discord" class="table-of-contents__link toc-highlight">Discord</a></li><li><a href="#payment-processors" class="table-of-contents__link toc-highlight">Payment Processors</a><ul><li><a href="#paypal" class="table-of-contents__link toc-highlight">PayPal</a></li><li><a href="#stripe" class="table-of-contents__link toc-highlight">Stripe</a></li></ul></li><li><a href="#emails" class="table-of-contents__link toc-highlight">Emails</a></li><li><a href="#license-system" class="table-of-contents__link toc-highlight">License System</a></li><li><a href="#advanced" class="table-of-contents__link toc-highlight">Advanced</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/shadowStore">Shadow Store</a></li><li class="footer__item"><a class="footer__link-item" href="/licenseSystem">License System</a></li><li class="footer__item"><a class="footer__link-item" href="/spark/getting-started">SPARK</a></li><li class="footer__item"><a class="footer__link-item" href="/legacy">Legacy Products</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.gg/shadowdevs" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/Shadow-Develops" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 <a href="https://shadowdevs.com">Shadow Development</a>. <i>Built with Docusaurus.</i></div></div></div></footer></div>
 </body>
 </html>
