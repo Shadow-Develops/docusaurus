@@ -4,17 +4,13 @@ sidebar_position: 1
 
 # Shadow Store
 
-:::warning[Notice]
-The following pages / sections are still WIP: [Email Configuration](/shadowStore/integrations/email) & [Features Guide](/shadowStore/features)
-:::
-
 This is the official documentation for [Shadow Store](https://shadowdevs.com/store/shadowstore). Here you can find information on how to install it and manage settings.
 
 ## FAQ
 
 - What is required to host it?
   - You need to have a VPS, as Shadow Store is a node application it will not work on "shared hosting" type plans. We recommend a Linux VPS.
-  - _Our friends over at [Nexus Hosting](https://nexushosting.io/cloud) have wonderful hosting options._
+  - _Our friends over at [Nexus Hosting](https://nexushosts.com/vps) have wonderful hosting options._
 - What Database is used?
   - MongoDB is the database used. You just need the database URL within your `.env`.
 - What payment processors can I use?
@@ -25,7 +21,7 @@ This is the official documentation for [Shadow Store](https://shadowdevs.com/sto
 - Can I send emails for notifications?
   - Yes, both SendGrid and SMTP server based emails are currently supported.
 - What do I do with a bug I found?
-  - Please report it in the [Shadow Development Discord](https://shadowdevs.com/discord) or via our [Website Contact Form](https://shadowdevs.com/form/contactus).
+  - Please report it in the [Shadow Development Discord](https://shadowdevs.com/discord) or via our [Website Bug Report Form](https://shadowdevs.com/form/bug-report).
 
 ## Addons
 

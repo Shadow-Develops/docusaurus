@@ -41,4 +41,4 @@ With Shadow Store being a Node.Js based website in mind, this document covers th
 
 ### Need a Server?
 
-If you are looking for quality and reliable hosting then check out [Nexus Hosting](https://nexushosting.io/)! They are what we use and recommend with their amazing reliability, quality, and affordability.
+If you are looking for quality and reliable hosting then check out [Nexus Hosting](https://nexushosts.com/vps)! They are what we use and recommend with their amazing reliability, quality, and affordability.

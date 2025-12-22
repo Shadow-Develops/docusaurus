@@ -15,9 +15,8 @@ The License System is available in two versions:
 2. Access your Shadow Store Admin Panel
 3. Navigate to Integration > License System
 4. Enter your license key
-5. Select which type is being used
-6. Define if force IP lock is enabled/disabled
-7. Click save settings
+5. Define if force IP lock is enabled/disabled
+6. Click save settings
 
 Once activated, the License System enables the `/api/verify` endpoint for license verification. For detailed information about using this endpoint, see the [Verify API documentation](/shadowStore/api/verify).
 

@@ -1,10 +1,10 @@
 ---
-sidebar_position: 7
+sidebar_position: 8
 pagination_next: null
 pagination_prev: null
 ---
 
-# Custom Pages
+# Reviews
 
 :::warning[Notice]
 These documentation are still WIP.

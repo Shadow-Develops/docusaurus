@@ -1,10 +1,9 @@
 ---
-sidebar_position: 7
+sidebar_position: 4
 pagination_next: null
-pagination_prev: null
 ---
 
-# Custom Pages
+# Global Product Layout
 
 :::warning[Notice]
 These documentation are still WIP.

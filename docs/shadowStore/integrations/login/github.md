@@ -1,10 +1,9 @@
 ---
-sidebar_position: 7
+sidebar_position: 2
 pagination_next: null
-pagination_prev: null
 ---
 
-# Custom Pages
+# Github
 
 :::warning[Notice]
 These documentation are still WIP.

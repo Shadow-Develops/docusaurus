@@ -70,22 +70,6 @@ Now that you have issued a certificate, we will want to make sure it self renews
 sudo certbot renew --dry-run
 ```
 
-## Discord App
-
-By default, Shadow Store comes with a built in Discord Bot. Currently it is required for the login method; however, it optionally has logging features.
-
-We will want to create a fresh Discord Application via the Discord Developer Portal.\
-Create a new application and add a bot profile.\
-In the bot tab, you must **enable ALL gateway intents**.\
-_Also, we recommend you go to the Installation tab and disable `User Install` and set `Install Link` to `None`._\
-After that, you can invite your bot to your server, use the link below but replace `CLIENT_ID_HERE` with your bot's ID.
-
-```bash
-https://discord.com/oauth2/authorize?client_id=CLIENT_ID_HERE&permissions=8&integration_type=0&scope=bot
-```
-
-[![bot setup](/img/docs/setup-bot.gif)](/img/docs/setup-bot.mp4)
-
 ## Database
 
 This is 100% the easiest part of the install process, since you have to do NOTHING! Within the `server.js` file, we have written code to automatically populate the database. This means, as long as you have MongoDB running properly then once you configure Shadow Store, the database will get automatically populate with the base data, and if you ever break the database the script will automatically fix any major errors.

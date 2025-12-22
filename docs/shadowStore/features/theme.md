@@ -4,7 +4,7 @@ pagination_next: null
 pagination_prev: null
 ---
 
-# Custom Pages
+# Theme & Branding
 
 :::warning[Notice]
 These documentation are still WIP.

@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Discord
 
-By default, Shadow Store comes with a built in Discord Bot. Currently it is required for the login method; however, it optionally has logging features.
+By default, Shadow Store comes with a built in Discord Bot. It is one of the login method and it has logging features.
 
 :::info[Notice]
 The Discord Bot Token within your Admin Panel > Integration is the same key saved within your `.env`, so this is NOT a separate bot.
@@ -41,6 +41,7 @@ Logs Types:
 - Invoices
 - Admin
   - Audit Logs & Admin Actions
+- Low Stock Alerts
 
 Example:\
 ![Log Example](/img/docs/shadowStore-intDiscord.png)
@@ -61,8 +62,9 @@ Examples:
   730191102706974823,730191823102706974,102706974823730191
   ```
 
-## Release Notifications
+## Auto Notifications
 
-Within Admin Panel > Integration > Discord you will see notifications at the bottom. These are the default channel ID and ping for release notifications. Each release notification can be configured with a different channel & ping, but the default will autofill for easy.
+Within Admin Panel > Integration > Discord you will see notifications at the bottom. These are the default channel ID and ping for release and discount notifications respectively.\
+_Release notification can be configured with a different channel & ping, but the default will autofill for easy._
 
 Ping Role ID must be a role ID (`1088352657938317372`) or the word `everyone`/`here` for @everyone/@here.
