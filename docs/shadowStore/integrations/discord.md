@@ -24,6 +24,15 @@ https://discord.com/oauth2/authorize?client_id=CLIENT_ID_HERE&permissions=8&inte
 
 [![bot setup](/img/docs/setup-bot.gif)](/img/docs/setup-bot.mp4)
 
+## Login method
+
+If you plan to use Discord as a login method, then you will need to make sure you put your domain with the discord auth callback inside the Discord Redirects.\
+On the [Discord Developer Page](https://discord.com/developers/applications) for your application, head to: `OAuth2` tab and put the following (with your domain name) into the redirects section:
+
+```bash
+https://yourdomain.com/auth/discord/callback
+```
+
 ## Auto Join server
 
 If an user logs in using Discord, then they will automatically join the server.\
