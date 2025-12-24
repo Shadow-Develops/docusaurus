@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Files & Nginx & Discord
+# Files & Nginx
 
 Now it is time to actually install the files, database, and setup Nginx! Please ensure you have completed the steps within [Getting Started](/shadowStore/install/getting-started) first!
 
@@ -31,7 +31,7 @@ server {
   server_name example.com; # Change domain to your domain
 
   location / {
-    proxy_pass http://localhost:5173; # Change the port if needed.
+    proxy_pass http://localhost:3000; # Change the port if needed.
     proxy_http_version 1.1;
     proxy_set_header Upgrade $http_upgrade;
     proxy_set_header Connection 'upgrade';
