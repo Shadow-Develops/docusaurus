@@ -1,0 +1,164 @@
+---
+sidebar_position: 2
+---
+
+# Getting Started
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+This document will help you get your server setup and ready to get Shopify Bot running on it!
+
+:::warning[Reminders]
+Keep in mind all install guides are for an Ubuntu 24.04 LTS Linux VPS.
+:::
+
+Make sure that you have read through our [prerequisites](/shopifyBot/install/prerequisites) to prevent any issues later on.\
+And if you haven't already, make sure you have an [A record](https://www.cloudflare.com/learning/dns/dns-records/dns-a-record/) on your domain pointed to the IP of your server.
+
+Before we begin, lets make sure everything is up to date and you have curl installed:
+
+```bash
+sudo apt update
+sudo apt install curl
+```
+
+---
+
+## Install Node.Js
+
+[Node.Js](https://nodejs.org) is a very popular framework for Javascript used to manage many different types of applications. Shopify Bot is a Discord.JS and ExpressJS application that requires it to be run, and since Node.Js has many versions we will be using Node Package Manager (NVM) to ensure the correct version is installed and running on our system.
+
+Install NVM and the correct Node.Js version:
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+nvm install 24.11.1
+```
+
+You will likely need to reopen the console after installing NVM to actually be able to run the install command.\
+If you want to see if it has installed and is running the correct node version (24.11), you can run: `node --version` in your console.
+
+## Install Nginx
+
+[Nginx](https://nginx.org/) is the program that we will use to route and proxy the Shopify Bot's ExpressJS web server so it properly appears on your domain.
+
+```bash
+sudo apt install nginx
+```
+
+You will be prompted to press `Y` while installing, do it.\
+Once it is installed, you should be able to navigate to your servers IP and you will be met with the default nginx page (seen below).\
+`http://server_IP`
+
+![nginx_default](https://shadowdevs.com/img/showcase/nginx_default.png)\
+If you see this, you've got nginx install correctly! _Congrats!_
+
+## Installing Certbot
+
+[Certbot](https://certbot.eff.org/) will allow you to automatically issue and install SLL certificates onto your domains.
+
+```bash
+sudo apt install certbot python3-certbot-nginx
+```
+
+## MongoDB
+
+[MongoDB](https://www.mongodb.com/) is the database program which Shopify Bot uses to store all its data. MongoDB is a JSON based database which makes it easy to read and understand.
+
+### Install MongoDB
+
+1. Import the public key
+
+   1. From a terminal, install gnupg and curl if they are not already available:
+
+   ```bash
+   sudo apt-get install gnupg curl
+   ```
+
+   2. To import the MongoDB public GPG key, run the following command:
+
+   ```bash
+   curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \
+   --dearmor
+   ```
+
+   <Tabs
+   	defaultValue='Noble'
+   	values={[
+   		{ label: 'Ubuntu 24.04 (Noble)', value: 'Noble' },
+   		{ label: 'Ubuntu 22.04 (Jammy)', value: 'Jammy' },
+   		{ label: 'Ubuntu 20.04 (Focal)', value: 'Focal' },
+   	]}
+   >
+   	<TabItem value='Noble'>
+   		```bash 
+         echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+         ```
+   	</TabItem>
+   	<TabItem value='Focal'>
+   		```bash 
+         echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+         ```
+   	</TabItem>
+   	<TabItem value='Jammy'>
+   		```bash 
+         echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+         ```
+   	</TabItem>
+   </Tabs>
+
+2. Verify list file was created
+   1. Navigate to `/etc/apt/sources.list.d/` and verify that `mongodb-org-8.0.list` exists.
+
+3. Reload the package database
+
+   1. Issue the following command to reload the local package database:
+
+   ```bash
+   sudo apt-get update
+   ```
+
+4. Install MongoDB Community Server
+   1. You can install the latest stable version of MongoDB.
+   
+   ```bash
+   sudo apt-get install -y mongodb-org
+   ```
+
+### Run MongoDB
+
+We will be using `systemd` to run and manage MongoDB. You may use `init` if you wish, but this guide will not teach that.
+
+1. Start MongoDB
+   1. You can start the `mongod` process by issuing the following command:
+
+   ```bash
+   sudo systemctl start mongod
+   ```
+   
+   2. If you receive an error similar to the following when starting `mongod`: 
+   `Failed to start mongod.service: Unit mongod.service not found.`
+   Run this command:
+
+   ```bash
+   sudo systemctl daemon-reload
+   ```
+
+   Then run the start command again.
+
+2. Verify that MongoDB has started successfully
+   
+   ```bash
+   sudo systemctl status mongod
+   ```
+
+3. Ensure that MongoDB will start following a system reboot
+
+   ```bash
+   sudo systemctl enable mongod
+   ```
+
+

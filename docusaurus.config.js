@@ -78,24 +78,6 @@ export default {
 			},
 			items: [
 				{
-					type: 'docSidebar',
-					sidebarId: 'shadowStore',
-					position: 'left',
-					label: 'Shadow Store',
-				},
-				{
-					type: 'docSidebar',
-					sidebarId: 'licenseSystem',
-					position: 'left',
-					label: 'License System',
-				},
-				{
-					type: 'docSidebar',
-					sidebarId: 'spark',
-					position: 'left',
-					label: 'SPARK',
-				},
-				{
 					href: 'https://shadowdevs.com',
 					position: 'right',
 					className: 'header-home-link',

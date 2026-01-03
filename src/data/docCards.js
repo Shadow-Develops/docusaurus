@@ -18,6 +18,14 @@ export default [
 		color: 'blue',
 	},
 	{
+		title: 'Shopify Bot',
+		icon: '🏪',
+		description:
+			'Learn how to install and integrate the Shopify Bot with your Discord & Shopify',
+		docUrl: '/shopifyBot',
+		color: 'green',
+	},
+	{
 		title: 'SPARK Vehicle Control',
 		icon: '⚡',
 		description:

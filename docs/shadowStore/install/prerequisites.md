@@ -17,7 +17,6 @@ With Shadow Store being a Node.Js based website in mind, this document covers th
 - VPS or Dedicated Server (Ubuntu is recommended OS)
 - Your own Domain (EX: `shadowdevs.com`)
 - PayPal business or Stripe account for payment processing
-- Discord for user Authentication (and optionally logging)
 
 ### System Requirements
 
