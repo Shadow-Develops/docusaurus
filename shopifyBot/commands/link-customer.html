@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-shopifyBot/commands/link-customer" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Link Customer (Staff) | Shadow Devs Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.shadowdevs.com/img/Banner.png"><meta data-rh="true" name="twitter:image" content="https://docs.shadowdevs.com/img/Banner.png"><meta data-rh="true" property="og:url" content="https://docs.shadowdevs.com/shopifyBot/commands/link-customer"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Link Customer (Staff) | Shadow Devs Docs"><meta data-rh="true" name="description" content="The /link-customer command allows staff members to manually link a Discord user to a Shopify customer account. This command requires Manage Roles permissions and is only accessible to staff members."><meta data-rh="true" property="og:description" content="The /link-customer command allows staff members to manually link a Discord user to a Shopify customer account. This command requires Manage Roles permissions and is only accessible to staff members."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.shadowdevs.com/shopifyBot/commands/link-customer"><link data-rh="true" rel="alternate" href="https://docs.shadowdevs.com/shopifyBot/commands/link-customer" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.shadowdevs.com/shopifyBot/commands/link-customer" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://KQKEAMJ226-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Commands","item":"https://docs.shadowdevs.com/shopifyBot/commands/"},{"@type":"ListItem","position":2,"name":"Link Customer (Staff)","item":"https://docs.shadowdevs.com/shopifyBot/commands/link-customer"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="Shadow Devs Docs" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.85a54cfc.css">
+<script src="/assets/js/runtime~main.cb667401.js" defer="defer"></script>
+<script src="/assets/js/main.4fee72a5.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>document.documentElement.setAttribute("data-theme","dark"),document.documentElement.setAttribute("data-theme-choice","dark"),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/Logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Shadow Dev Docs</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://shadowdevs.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-home-link" aria-label="Home Site"></a><a href="https://github.com/Shadow-Develops/docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><div class="navbarSearchContainer_Bca1"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search (Meta+k)" aria-keyshortcuts="Meta+k"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" fill="none" stroke-width="1.4"></circle><path d="m21 21-4.3-4.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"></span></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd sidebarWithHideableNavbar_wUlq"><a tabindex="-1" class="sidebarLogo_isFc" href="/"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"><b>Shadow Dev Docs</b></a><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/shopifyBot"><span title="Shopify Bot" class="linkLabel_WmDU">Shopify Bot</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/shopifyBot/install"><span title="Install" class="categoryLinkLabel_W154">Install</span></a><button aria-label="Expand sidebar category &#x27;Install&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href="/shopifyBot/commands"><span title="Commands" class="categoryLinkLabel_W154">Commands</span></a><button aria-label="Collapse sidebar category &#x27;Commands&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/shopifyBot/commands/settings"><span title="Settings" class="linkLabel_WmDU">Settings</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/shopifyBot/commands/faq-manager"><span title="FAQ Manager" class="linkLabel_WmDU">FAQ Manager</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/shopifyBot/commands/link"><span title="Link" class="linkLabel_WmDU">Link</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/shopifyBot/commands/link-customer"><span title="Link Customer (Staff)" class="linkLabel_WmDU">Link Customer (Staff)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/shopifyBot/commands/embed"><span title="Embed" class="linkLabel_WmDU">Embed</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/shopifyBot/commands/discount"><span title="Discount" class="linkLabel_WmDU">Discount</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/shopifyBot/commands/checkout"><span title="Checkout" class="linkLabel_WmDU">Checkout</span></a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/shopifyBot/update"><span title="Updating Shopify Bot" class="linkLabel_WmDU">Updating Shopify Bot</span></a></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/shopifyBot/commands"><span>Commands</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Link Customer (Staff)</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Link Customer (Staff)</h1></header>
+<p>The <code>/link-customer</code> command allows staff members to manually link a Discord user to a Shopify customer account. This command requires <strong>Manage Roles</strong> permissions and is only accessible to staff members.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<p>This is the administrative version of the <code>/link</code> command. Use it when:</p>
+<ul>
+<li class="">A customer needs help linking their account</li>
+<li class="">The automated linking process fails</li>
+<li class="">You need to link accounts on behalf of users</li>
+<li class="">Troubleshooting linking issues</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-to-use">How to Use<a href="#how-to-use" class="hash-link" aria-label="Direct link to How to Use" title="Direct link to How to Use" translate="no">​</a></h2>
+<p><strong>Command:</strong> <code>/link-customer</code></p>
+<p><strong>Required Options:</strong></p>
+<ul>
+<li class=""><code>user</code> - The Discord user to link (mention or select)</li>
+<li class=""><code>email</code> - The customer&#x27;s email address from Shopify</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token plain">/link-customer user: @JohnDoe email: john@example.com</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-linking-process">The Linking Process<a href="#the-linking-process" class="hash-link" aria-label="Direct link to The Linking Process" title="Direct link to The Linking Process" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-1-validate-email">Step 1: Validate Email<a href="#step-1-validate-email" class="hash-link" aria-label="Direct link to Step 1: Validate Email" title="Direct link to Step 1: Validate Email" translate="no">​</a></h3>
+<p>The bot checks:</p>
+<ul>
+<li class="">Email format is valid</li>
+<li class="">Email exists in your Shopify store</li>
+<li class="">A customer account is associated with that email</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-2-search-shopify">Step 2: Search Shopify<a href="#step-2-search-shopify" class="hash-link" aria-label="Direct link to Step 2: Search Shopify" title="Direct link to Step 2: Search Shopify" translate="no">​</a></h3>
+<p>The command searches your Shopify customer database for an exact email match.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-3-link-accounts">Step 3: Link Accounts<a href="#step-3-link-accounts" class="hash-link" aria-label="Direct link to Step 3: Link Accounts" title="Direct link to Step 3: Link Accounts" translate="no">​</a></h3>
+<p>Once found, the bot:</p>
+<ul>
+<li class="">Links the Discord user ID to the Shopify customer ID</li>
+<li class="">Stores the customer&#x27;s email address</li>
+<li class="">Records the link timestamp</li>
+<li class="">Saves Discord information to Shopify metafields (if possible)</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-4-role-assignment">Step 4: Role Assignment<a href="#step-4-role-assignment" class="hash-link" aria-label="Direct link to Step 4: Role Assignment" title="Direct link to Step 4: Role Assignment" translate="no">​</a></h3>
+<p>If configured in settings:</p>
+<ul>
+<li class="">Automatically assigns the <strong>client role</strong> to the user</li>
+<li class="">Only if the customer has at least one order</li>
+<li class="">Only if <strong>auto-assign on join</strong> is enabled</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-5-confirmation">Step 5: Confirmation<a href="#step-5-confirmation" class="hash-link" aria-label="Direct link to Step 5: Confirmation" title="Direct link to Step 5: Confirmation" translate="no">​</a></h3>
+<p>You receive a detailed confirmation embed showing:</p>
+<ul>
+<li class="">Discord username</li>
+<li class="">Shopify customer name</li>
+<li class="">Email address (redacted if PII protection is enabled)</li>
+<li class="">Total orders</li>
+<li class="">Total amount spent</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="response-examples">Response Examples<a href="#response-examples" class="hash-link" aria-label="Direct link to Response Examples" title="Direct link to Response Examples" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="success">Success<a href="#success" class="hash-link" aria-label="Direct link to Success" title="Direct link to Success" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token plain">✅ Customer Linked</span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">Discord User: JohnDoe#1234</span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">Shopify Customer: John Doe</span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">Email: john@example.com (or ||REDACTED||)</span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">Total Orders: 15</span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">Total Spent: $1,245.50</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="email-not-found">Email Not Found<a href="#email-not-found" class="hash-link" aria-label="Direct link to Email Not Found" title="Direct link to Email Not Found" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token plain">❌ Error</span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">No customer found with that email address.</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="invalid-email-format">Invalid Email Format<a href="#invalid-email-format" class="hash-link" aria-label="Direct link to Invalid Email Format" title="Direct link to Invalid Email Format" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token plain">❌ Error</span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">Invalid email address format.</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="logging-and-auditing">Logging and Auditing<a href="#logging-and-auditing" class="hash-link" aria-label="Direct link to Logging and Auditing" title="Direct link to Logging and Auditing" translate="no">​</a></h2>
+<p>When a customer is linked:</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="database-log">Database Log<a href="#database-log" class="hash-link" aria-label="Direct link to Database Log" title="Direct link to Database Log" translate="no">​</a></h3>
+<p>A log entry is created with:</p>
+<ul>
+<li class="">Type: <code>customer_link</code></li>
+<li class="">Action: <code>link</code></li>
+<li class="">Staff member who performed the action</li>
+<li class="">Target user (Discord ID)</li>
+<li class="">Shopify customer ID</li>
+<li class="">Email address</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="channel-log">Channel Log<a href="#channel-log" class="hash-link" aria-label="Direct link to Channel Log" title="Direct link to Channel Log" translate="no">​</a></h3>
+<p>If configured, a message is sent to the <strong>Shopify Commands</strong> log channel:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token plain">🔗 Customer Linked</span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">@StaffMember linked @JohnDoe to Shopify customer</span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">Customer ID: 1234567890</span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">Email: john@example.com</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="shopify-metafields">Shopify Metafields<a href="#shopify-metafields" class="hash-link" aria-label="Direct link to Shopify Metafields" title="Direct link to Shopify Metafields" translate="no">​</a></h2>
+<p>The bot attempts to save Discord information to the Shopify customer record as metafields:</p>
+<ul>
+<li class="">Discord User ID</li>
+<li class="">Discord Username</li>
+<li class="">Discord Server ID</li>
+</ul>
+<p>This allows you to see Discord information directly in your Shopify admin panel.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>If metafield saving fails, the linking process will still complete successfully. Metafields are optional and used for convenience only.</p></div></div>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="privacy-and-pii">Privacy and PII<a href="#privacy-and-pii" class="hash-link" aria-label="Direct link to Privacy and PII" title="Direct link to Privacy and PII" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="pii-protection">PII Protection<a href="#pii-protection" class="hash-link" aria-label="Direct link to PII Protection" title="Direct link to PII Protection" translate="no">​</a></h3>
+<p>If <strong>Show PII</strong> is disabled in settings:</p>
+<ul>
+<li class="">Email addresses appear as <code>||REDACTED||</code> in your response</li>
+<li class="">Full details are still logged in the log channel</li>
+<li class="">This protects customer privacy in public channels</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="best-practices">Best Practices<a href="#best-practices" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices" translate="no">​</a></h3>
+<ul>
+<li class="">Always verify you have the correct user before linking</li>
+<li class="">Use private/staff channels when running this command</li>
+<li class="">Keep customer email addresses confidential</li>
+<li class="">Enable PII protection if using in semi-public channels</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="troubleshooting">Troubleshooting<a href="#troubleshooting" class="hash-link" aria-label="Direct link to Troubleshooting" title="Direct link to Troubleshooting" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="invalid-email-address-format">&quot;Invalid email address format&quot;<a href="#invalid-email-address-format" class="hash-link" aria-label="Direct link to &quot;Invalid email address format&quot;" title="Direct link to &quot;Invalid email address format&quot;" translate="no">​</a></h3>
+<p>Make sure the email:</p>
+<ul>
+<li class="">Contains an <code>@</code> symbol</li>
+<li class="">Has a valid domain</li>
+<li class="">Has no extra spaces or typos</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="no-customer-found-with-that-email-address">&quot;No customer found with that email address&quot;<a href="#no-customer-found-with-that-email-address" class="hash-link" aria-label="Direct link to &quot;No customer found with that email address&quot;" title="Direct link to &quot;No customer found with that email address&quot;" translate="no">​</a></h3>
+<p>Verify that:</p>
+<ul>
+<li class="">The email is spelled correctly</li>
+<li class="">The customer has an account in your Shopify store</li>
+<li class="">You&#x27;re using the exact email from Shopify (check in admin panel)</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="failed-to-link-customer">&quot;Failed to link customer&quot;<a href="#failed-to-link-customer" class="hash-link" aria-label="Direct link to &quot;Failed to link customer&quot;" title="Direct link to &quot;Failed to link customer&quot;" translate="no">​</a></h3>
+<p>This could happen if:</p>
+<ul>
+<li class="">The Shopify API is unavailable</li>
+<li class="">The bot lacks necessary permissions</li>
+<li class="">There&#x27;s a database connection issue</li>
+</ul>
+<p>Check the bot&#x27;s console logs for detailed error information.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="user-already-linked">User Already Linked<a href="#user-already-linked" class="hash-link" aria-label="Direct link to User Already Linked" title="Direct link to User Already Linked" translate="no">​</a></h3>
+<p>If the Discord user is already linked to a different customer:</p>
+<ol>
+<li class="">Use <code>/unlink-customer</code> first</li>
+<li class="">Then run <code>/link-customer</code> again</li>
+</ol>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="related-commands">Related Commands<a href="#related-commands" class="hash-link" aria-label="Direct link to Related Commands" title="Direct link to Related Commands" translate="no">​</a></h2>
+<ul>
+<li class=""><code>/link</code> - User-initiated linking process</li>
+<li class=""><code>/unlink-customer</code> - Manually unlink a customer (staff only)</li>
+<li class=""><code>/customer</code> - View customer information</li>
+<li class=""><code>/settings</code> - Configure client role and auto-assign behavior</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="permissions-required">Permissions Required<a href="#permissions-required" class="hash-link" aria-label="Direct link to Permissions Required" title="Direct link to Permissions Required" translate="no">​</a></h2>
+<p>To use this command, you need:</p>
+<ul>
+<li class=""><strong>Manage Roles</strong> permission (Discord)</li>
+<li class="">A <strong>staff role</strong> configured in bot settings</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="tips-for-staff">Tips for Staff<a href="#tips-for-staff" class="hash-link" aria-label="Direct link to Tips for Staff" title="Direct link to Tips for Staff" translate="no">​</a></h2>
+<ul>
+<li class="">Double-check the email before linking to avoid mistakes</li>
+<li class="">Verify with the user that the email is correct</li>
+<li class="">Use this command when users have trouble with <code>/link</code></li>
+<li class="">Keep a log channel configured for accountability</li>
+<li class="">Link customers proactively during onboarding if needed</li>
+<li class="">Always respect customer privacy when handling email addresses</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="common-use-cases">Common Use Cases<a href="#common-use-cases" class="hash-link" aria-label="Direct link to Common Use Cases" title="Direct link to Common Use Cases" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="customer-support-scenario">Customer Support Scenario<a href="#customer-support-scenario" class="hash-link" aria-label="Direct link to Customer Support Scenario" title="Direct link to Customer Support Scenario" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token plain">Customer: &quot;I tried /link but the verification link isn&#x27;t working&quot;</span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">Staff: *Asks for their email*</span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">Staff: /link-customer user: @Customer email: their@email.com</span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">Staff: &quot;All set! You&#x27;re now linked and should have your customer role.&quot;</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="bulk-onboarding">Bulk Onboarding<a href="#bulk-onboarding" class="hash-link" aria-label="Direct link to Bulk Onboarding" title="Direct link to Bulk Onboarding" translate="no">​</a></h3>
+<p>For existing customers joining your Discord:</p>
+<ol>
+<li class="">Ask them to provide their Shopify email</li>
+<li class="">Use <code>/link-customer</code> to link each account</li>
+<li class="">They automatically receive the customer role</li>
+<li class="">They can immediately access customer-only channels</li>
+</ol>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="troubleshooting-1">Troubleshooting<a href="#troubleshooting-1" class="hash-link" aria-label="Direct link to Troubleshooting" title="Direct link to Troubleshooting" translate="no">​</a></h3>
+<p>When automated linking fails:</p>
+<ol>
+<li class="">Ask the user to try <code>/unlink</code> first</li>
+<li class="">Have them try <code>/link</code> again</li>
+<li class="">If still failing, manually link with <code>/link-customer</code></li>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/Shadow-Develops/docusaurus/tree/main/docs/shopifyBot/commands/link-customer.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">Last updated<!-- --> on <b><time datetime="2026-01-03T05:33:04.000Z" itemprop="dateModified">Jan 3, 2026</time></b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#how-to-use" class="table-of-contents__link toc-highlight">How to Use</a></li><li><a href="#the-linking-process" class="table-of-contents__link toc-highlight">The Linking Process</a><ul><li><a href="#step-1-validate-email" class="table-of-contents__link toc-highlight">Step 1: Validate Email</a></li><li><a href="#step-2-search-shopify" class="table-of-contents__link toc-highlight">Step 2: Search Shopify</a></li><li><a href="#step-3-link-accounts" class="table-of-contents__link toc-highlight">Step 3: Link Accounts</a></li><li><a href="#step-4-role-assignment" class="table-of-contents__link toc-highlight">Step 4: Role Assignment</a></li><li><a href="#step-5-confirmation" class="table-of-contents__link toc-highlight">Step 5: Confirmation</a></li></ul></li><li><a href="#response-examples" class="table-of-contents__link toc-highlight">Response Examples</a><ul><li><a href="#success" class="table-of-contents__link toc-highlight">Success</a></li><li><a href="#email-not-found" class="table-of-contents__link toc-highlight">Email Not Found</a></li><li><a href="#invalid-email-format" class="table-of-contents__link toc-highlight">Invalid Email Format</a></li></ul></li><li><a href="#logging-and-auditing" class="table-of-contents__link toc-highlight">Logging and Auditing</a><ul><li><a href="#database-log" class="table-of-contents__link toc-highlight">Database Log</a></li><li><a href="#channel-log" class="table-of-contents__link toc-highlight">Channel Log</a></li></ul></li><li><a href="#shopify-metafields" class="table-of-contents__link toc-highlight">Shopify Metafields</a></li><li><a href="#privacy-and-pii" class="table-of-contents__link toc-highlight">Privacy and PII</a><ul><li><a href="#pii-protection" class="table-of-contents__link toc-highlight">PII Protection</a></li><li><a href="#best-practices" class="table-of-contents__link toc-highlight">Best Practices</a></li></ul></li><li><a href="#troubleshooting" class="table-of-contents__link toc-highlight">Troubleshooting</a><ul><li><a href="#invalid-email-address-format" class="table-of-contents__link toc-highlight">&quot;Invalid email address format&quot;</a></li><li><a href="#no-customer-found-with-that-email-address" class="table-of-contents__link toc-highlight">&quot;No customer found with that email address&quot;</a></li><li><a href="#failed-to-link-customer" class="table-of-contents__link toc-highlight">&quot;Failed to link customer&quot;</a></li><li><a href="#user-already-linked" class="table-of-contents__link toc-highlight">User Already Linked</a></li></ul></li><li><a href="#related-commands" class="table-of-contents__link toc-highlight">Related Commands</a></li><li><a href="#permissions-required" class="table-of-contents__link toc-highlight">Permissions Required</a></li><li><a href="#tips-for-staff" class="table-of-contents__link toc-highlight">Tips for Staff</a></li><li><a href="#common-use-cases" class="table-of-contents__link toc-highlight">Common Use Cases</a><ul><li><a href="#customer-support-scenario" class="table-of-contents__link toc-highlight">Customer Support Scenario</a></li><li><a href="#bulk-onboarding" class="table-of-contents__link toc-highlight">Bulk Onboarding</a></li><li><a href="#troubleshooting-1" class="table-of-contents__link toc-highlight">Troubleshooting</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/shadowStore">Shadow Store</a></li><li class="footer__item"><a class="footer__link-item" href="/licenseSystem">License System</a></li><li class="footer__item"><a class="footer__link-item" href="/spark/getting-started">SPARK</a></li><li class="footer__item"><a class="footer__link-item" href="/legacy">Legacy Products</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.gg/shadowdevs" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/Shadow-Develops" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 <a href="https://shadowdevs.com">Shadow Development</a>. <i>Built with Docusaurus.</i></div></div></div></footer></div>
+</body>
+</html>
