@@ -5,18 +5,18 @@ sidebar_position: 1
 # Prerequisites
 
 :::info[Hosting Notice]
-Shadow Store is a Node.Js based application, so it requires a VPS or Dedicated server to operate. Shared hosting will NOT work.
+CDN Manager is a Node.Js based application, so it requires a VPS or Dedicated server to operate. Shared hosting will NOT work.
 :::
 
-With Shadow Store being a Node.Js based website in mind, this document covers the assets that are needed and recommended to run everything smoothly.
+With CDN Manager being a Node.Js based website in mind, this document covers the assets that are needed and recommended to run everything smoothly.
 
 > Keep in mind all documentation for installation are designed around using an Ubuntu 24.04 LTS Linux VPS. Ubuntu 22.04 LTS or similar are likely to work just the same as well; however, we do not currently offer documentation for any other OS.
 
 ## What is needed?
 
 - VPS or Dedicated Server (Ubuntu is recommended OS)
-- Your own Domain (EX: `shadowdevs.com`)
-- PayPal business or Stripe account for payment processing
+- Your own Domain (EX: `cdn.shadowdevs.com`)
+- SMTP or SendGrind for email (Will fall back on our SMTP server)
 
 ### System Requirements
 
@@ -29,8 +29,8 @@ With Shadow Store being a Node.Js based website in mind, this document covers th
   </thead>
   <tbody>
     <tr>
-      <td><b>OS:</b> Ubuntu 24.04 LTS<br/><b>CPU Cores:</b> 1<br/><b>RAM:</b> 2gb<br/><b>Storage:</b> 15gb</td>
-      <td><b>OS:</b> Ubuntu 24.04 LTS<br/><b>CPU Cores:</b> 2<br/><b>RAM:</b> 4gb<br/><b>Storage:</b> 45gb</td>
+      <td><b>OS:</b> Ubuntu 24.04 LTS<br/><b>CPU Cores:</b> 1<br/><b>RAM:</b> 2gb<br/><b>Storage:</b> 20gb</td>
+      <td><b>OS:</b> Ubuntu 24.04 LTS<br/><b>CPU Cores:</b> 2<br/><b>RAM:</b> 4gb<br/><b>Storage:</b> 80gb</td>
     </tr>
   </tbody>
 </table>

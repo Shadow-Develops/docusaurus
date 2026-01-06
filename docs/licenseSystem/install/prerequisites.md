@@ -31,9 +31,9 @@ With Shadow License System being a Node.Js based website in mind, this document 
   </thead>
   <tbody>
     <tr>
-      <td>**OS:** Ubuntu 24.04 LTS<br/>**CPU Cores:** 1<br/>**RAM:** 2gb<br/>**Storage:** 5gb</td>
-      <td>**OS:** Ubuntu 24.04 LTS<br/>**CPU Cores:** 2<br/>**RAM:** 4gb<br/>**Storage:** 10gb</td>
-    </tr>
+      <td><b>OS:</b> Ubuntu 24.04 LTS<br/><b>CPU Cores:</b> 1<br/><b>RAM:</b> 2gb<br/><b>Storage:</b> 5gb</td>
+      <td><b>OS:</b> Ubuntu 24.04 LTS<br/><b>CPU Cores:</b> 2<br/><b>RAM:</b> 4gb<br/><b>Storage:</b> 10gb</td>
+</tr>
   </tbody>
 </table>
 *These specs may very depending on your traffic, general resource usage, file upload size, and similar. So these specs are not one size fits all.*

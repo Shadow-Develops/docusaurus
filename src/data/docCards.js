@@ -18,6 +18,13 @@ export default [
 		color: 'blue',
 	},
 	{
+		title: 'CDN Manager',
+		icon: '🖼️',
+		description: 'Learn how to setup and manage the CDN Manager,',
+		docUrl: '/cdnManager',
+		color: 'teal',
+	},
+	{
 		title: 'Shopify Bot',
 		icon: '🏪',
 		description:

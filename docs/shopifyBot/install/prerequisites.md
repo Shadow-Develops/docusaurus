@@ -30,8 +30,8 @@ With Shopify Bot being a Node.JS application utilizing Discord.JS and ExpressJS,
   </thead>
   <tbody>
     <tr>
-      <td>**OS:** Ubuntu 24.04 LTS<br/>**CPU Cores:** 1<br/>**RAM:** 512mb<br/>**Storage:** 5gb</td>
-      <td>**OS:** Ubuntu 24.04 LTS<br/>**CPU Cores:** 1<br/>**RAM:** 1gb<br/>**Storage:** 10gb</td>
+      <td><b>OS:</b> Ubuntu 24.04 LTS<br/><b>CPU Cores:</b> 1<br/><b>RAM:</b> 2gb<br/><b>Storage:</b> 5gb</td>
+      <td><b>OS:</b> Ubuntu 24.04 LTS<br/><b>CPU Cores:</b> 2<br/><b>RAM:</b> 4gb<br/><b>Storage:</b> 10gb</td>
     </tr>
   </tbody>
 </table>
