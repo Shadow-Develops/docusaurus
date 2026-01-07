@@ -15,8 +15,9 @@ With CDN Manager being a Node.Js based website in mind, this document covers the
 ## What is needed?
 
 - VPS or Dedicated Server (Ubuntu is recommended OS)
-- Your own Domain (EX: `cdn.shadowdevs.com`)
-- SMTP or SendGrind for email (Will fall back on our SMTP server)
+- Your own Domain (e.g., `cdn.yourdomain.com`)
+- SMTP or SendGrid for email (optional - will fall back to Shadow Devs SMTP server)
+- Valid CDN Manager license key from Shadow Devs
 
 ### System Requirements
 
@@ -34,7 +35,8 @@ With CDN Manager being a Node.Js based website in mind, this document covers the
     </tr>
   </tbody>
 </table>
-*These specs may very depending on your traffic, general resource usage, file upload size, and similar. So these specs are not one size fits all.*
+
+_These specs may very depending on your traffic, general resource usage, file upload size, and similar. So these specs are not one size fits all._
 
 ---
 

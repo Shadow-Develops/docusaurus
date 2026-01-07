@@ -1,0 +1,60 @@
+---
+sidebar_position: 4
+pagination_next: null
+pagination_prev: null
+---
+
+# Features
+
+Information about all major features of CDN Manager. This section covers the powerful capabilities that make CDN Manager a comprehensive file management and delivery solution.
+
+## Core Features
+
+### File Management
+- **Upload Files** - Support for single and multiple file uploads with chunked upload for large files (50MB+ chunks)
+- **Organize Files** - Create folders, move files, rename items, and maintain a structured directory hierarchy
+- **Delete Files** - Remove individual files or entire folders with recursive deletion
+- **Download Files** - Direct downloads with permission controls
+- **View Files** - In-browser viewing for supported file types (images, videos, text, PDFs)
+
+### Access Control
+- **Role-Based Permissions** - Granular permission system with roles (Owner, CDN Manager, Uploader, Viewer)
+- **Directory Permissions** - Set access controls at the folder level
+- **File Permissions** - Override directory permissions for specific files
+- **Four Access Modes**:
+  - **Public** - Accessible to everyone
+  - **Users-only** - Requires authentication
+  - **CDN-only** - Only accessible via CDN routes
+  - **Whitelist** - Restricted to whitelisted IPs/domains
+
+### Security Features
+- **Email Authentication** - Passwordless login with 6-digit verification codes
+- **IP & Domain Whitelisting** - Control access by IP address or domain (CIDR support)
+- **Blacklisting** - Block specific IPs, domains, users, or emails
+- **Ban System** - Temporary or permanent bans with expiration dates
+- **Audit Logging** - Complete activity tracking for compliance and security
+
+### Advanced Features
+- **Automatic Thumbnails** - Image thumbnails generated on upload using Sharp
+- **Bulk Operations** - Select multiple files for mass actions (move, delete)
+- **File Export** - Export file lists in multiple formats (comma-separated, newline-separated, JSON)
+- **Search & Filter** - Find files quickly by name or type
+- **Sorting** - Sort by type, name, size, or date
+- **Statistics Dashboard** - View total users, directories, files, and storage usage
+- **CDN Routes** - Public file serving at `/cdn/[...path]` with access control
+- **View/Download Tracking** - Monitor file access statistics
+
+### Admin Features
+- **User Management** - Create, edit, and manage user accounts and permissions
+- **Settings Management** - Configure site settings, email settings, and footer content
+- **Directory Settings** - Manage access modes and permissions for directories
+- **File Settings** - Configure file-level access controls
+- **Maintenance Mode** - Temporarily disable access for maintenance
+- **Ban List Management** - View and manage all active bans
+- **Audit Logs** - Review all user actions and system events
+
+```mdx-code-block
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
+```

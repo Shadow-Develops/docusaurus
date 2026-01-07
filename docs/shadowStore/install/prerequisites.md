@@ -34,7 +34,8 @@ With Shadow Store being a Node.Js based website in mind, this document covers th
     </tr>
   </tbody>
 </table>
-*These specs may very depending on your traffic, general resource usage, file upload size, and similar. So these specs are not one size fits all.*
+
+_These specs may very depending on your traffic, general resource usage, file upload size, and similar. So these specs are not one size fits all._
 
 ---
 

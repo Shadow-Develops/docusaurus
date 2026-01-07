@@ -35,7 +35,8 @@ With Shopify Bot being a Node.JS application utilizing Discord.JS and ExpressJS,
     </tr>
   </tbody>
 </table>
-*These specs may vary depending on your bot usage, number of servers, and command frequency. These specs should be sufficient for most use cases.*
+
+_These specs may vary depending on your bot usage, number of servers, and command frequency. These specs should be sufficient for most use cases._
 
 ---
 
