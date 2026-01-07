@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-cdnManager/features/admin-guide" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Admin Guide | Shadow Devs Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.shadowdevs.com/img/Banner.png"><meta data-rh="true" name="twitter:image" content="https://docs.shadowdevs.com/img/Banner.png"><meta data-rh="true" property="og:url" content="https://docs.shadowdevs.com/cdnManager/features/admin-guide"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Admin Guide | Shadow Devs Docs"><meta data-rh="true" name="description" content="This guide is for administrators and owners who manage CDN Manager installations. Learn how to manage users, configure settings, and maintain your CDN Manager instance."><meta data-rh="true" property="og:description" content="This guide is for administrators and owners who manage CDN Manager installations. Learn how to manage users, configure settings, and maintain your CDN Manager instance."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.shadowdevs.com/cdnManager/features/admin-guide"><link data-rh="true" rel="alternate" href="https://docs.shadowdevs.com/cdnManager/features/admin-guide" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.shadowdevs.com/cdnManager/features/admin-guide" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://KQKEAMJ226-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Features","item":"https://docs.shadowdevs.com/cdnManager/features/"},{"@type":"ListItem","position":2,"name":"Admin Guide","item":"https://docs.shadowdevs.com/cdnManager/features/admin-guide"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="Shadow Devs Docs" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.85a54cfc.css">
+<script src="/assets/js/runtime~main.36f8e570.js" defer="defer"></script>
+<script src="/assets/js/main.b9180096.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>document.documentElement.setAttribute("data-theme","dark"),document.documentElement.setAttribute("data-theme-choice","dark"),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/Logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Shadow Dev Docs</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://shadowdevs.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-home-link" aria-label="Home Site"></a><a href="https://github.com/Shadow-Develops/docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><div class="navbarSearchContainer_Bca1"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search (Meta+k)" aria-keyshortcuts="Meta+k"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" fill="none" stroke-width="1.4"></circle><path d="m21 21-4.3-4.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"></span></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd sidebarWithHideableNavbar_wUlq"><a tabindex="-1" class="sidebarLogo_isFc" href="/"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"><b>Shadow Dev Docs</b></a><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/cdnManager"><span title="CDN Manager" class="linkLabel_WmDU">CDN Manager</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/cdnManager/install"><span title="Install" class="categoryLinkLabel_W154">Install</span></a><button aria-label="Expand sidebar category &#x27;Install&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href="/cdnManager/features"><span title="Features" class="categoryLinkLabel_W154">Features</span></a><button aria-label="Collapse sidebar category &#x27;Features&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/cdnManager/features/permissions"><span title="Permissions System" class="linkLabel_WmDU">Permissions System</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/cdnManager/features/file-management"><span title="File Management" class="linkLabel_WmDU">File Management</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/cdnManager/features/admin-guide"><span title="Admin Guide" class="linkLabel_WmDU">Admin Guide</span></a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/cdnManager/update"><span title="Updating Shadow Store" class="linkLabel_WmDU">Updating Shadow Store</span></a></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/cdnManager/features"><span>Features</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Admin Guide</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Admin Guide</h1></header>
+<p>This guide is for administrators and owners who manage CDN Manager installations. Learn how to manage users, configure settings, and maintain your CDN Manager instance.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="accessing-the-admin-panel">Accessing the Admin Panel<a href="#accessing-the-admin-panel" class="hash-link" aria-label="Direct link to Accessing the Admin Panel" title="Direct link to Accessing the Admin Panel" translate="no">​</a></h2>
+<p>Only users with <code>OWNER</code> or specific admin permissions can access the admin panel.</p>
+<p><strong>To Access:</strong></p>
+<ol>
+<li class="">Log in to your CDN Manager instance</li>
+<li class="">Navigate to <code>/admin</code> or click the &quot;Admin&quot; link in the navigation</li>
+<li class="">The admin dashboard will display system statistics and quick links</li>
+</ol>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="dashboard-overview">Dashboard Overview<a href="#dashboard-overview" class="hash-link" aria-label="Direct link to Dashboard Overview" title="Direct link to Dashboard Overview" translate="no">​</a></h2>
+<p>The admin dashboard shows key metrics:</p>
+<ul>
+<li class=""><strong>Total Users:</strong> Number of registered users</li>
+<li class=""><strong>Total Directories:</strong> Number of folders in the system</li>
+<li class=""><strong>Total Files:</strong> Number of uploaded files</li>
+<li class=""><strong>Total Storage Used:</strong> Disk space consumed by files</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="user-management">User Management<a href="#user-management" class="hash-link" aria-label="Direct link to User Management" title="Direct link to User Management" translate="no">​</a></h2>
+<p>Manage user accounts and their permissions.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="understanding-the-permission-system">Understanding the Permission System<a href="#understanding-the-permission-system" class="hash-link" aria-label="Direct link to Understanding the Permission System" title="Direct link to Understanding the Permission System" translate="no">​</a></h3>
+<p>CDN Manager uses a <strong>fully granular permission system</strong>:</p>
+<ul>
+<li class=""><strong>Individual permissions</strong> are granted to users (e.g., <code>cdn.upload</code>, <code>cdn.delete</code>, <code>admin.users.manage</code>)</li>
+<li class=""><strong>Roles are automatically assigned</strong> internally based on which permissions are granted</li>
+<li class="">This allows complete flexibility to create custom access levels beyond predefined roles</li>
+<li class="">You can grant any combination of permissions to match your specific requirements</li>
+</ul>
+<p><strong>Example:</strong> If you grant a user <code>cdn.view</code>, <code>cdn.upload</code>, and <code>cdn.folder.create</code>, the system will internally recognize them as having the CDN_UPLOADER role. However, you can also grant them additional permissions like <code>cdn.download</code> to customize their access further.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="viewing-users">Viewing Users<a href="#viewing-users" class="hash-link" aria-label="Direct link to Viewing Users" title="Direct link to Viewing Users" translate="no">​</a></h3>
+<p><strong>Navigate to:</strong> Admin Panel &gt; Users</p>
+<p>You&#x27;ll see a list of all users with:</p>
+<ul>
+<li class="">Email address</li>
+<li class="">Registration date</li>
+<li class="">Permission roles</li>
+<li class="">Last login</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="creating-users">Creating Users<a href="#creating-users" class="hash-link" aria-label="Direct link to Creating Users" title="Direct link to Creating Users" translate="no">​</a></h3>
+<p>CDN Manager uses email-based authentication, so users are created automatically when they log in for the first time. You can then assign permissions.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="assigning-permissions">Assigning Permissions<a href="#assigning-permissions" class="hash-link" aria-label="Direct link to Assigning Permissions" title="Direct link to Assigning Permissions" translate="no">​</a></h3>
+<p>CDN Manager uses a <strong>fully granular permission system</strong> where you grant individual permissions to users. The system automatically assigns role labels based on the permissions granted.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="assigning-individual-permissions">Assigning Individual Permissions<a href="#assigning-individual-permissions" class="hash-link" aria-label="Direct link to Assigning Individual Permissions" title="Direct link to Assigning Individual Permissions" translate="no">​</a></h4>
+<ol>
+<li class="">Navigate to Admin Panel &gt; Users</li>
+<li class="">Find the user in the list</li>
+<li class="">Click &quot;Edit&quot; or &quot;Permissions&quot;</li>
+<li class="">Grant specific permissions from the following categories:</li>
+</ol>
+<p><strong>General Admin Permissions:</strong></p>
+<ul>
+<li class=""><code>owner</code> - Full system access (bypasses all restrictions)</li>
+<li class=""><code>admin.settings.manage</code> - Manage system settings</li>
+<li class=""><code>admin.audit.view</code> - View audit logs</li>
+</ul>
+<p><strong>CDN/File Management Permissions:</strong></p>
+<ul>
+<li class=""><code>cdn.admin</code> - CDN administrator access</li>
+<li class=""><code>cdn.view</code> - View files and folders</li>
+<li class=""><code>cdn.download</code> - Download files</li>
+<li class=""><code>cdn.upload</code> - Upload files</li>
+<li class=""><code>cdn.delete</code> - Delete files</li>
+<li class=""><code>cdn.edit</code> - Edit file contents</li>
+<li class=""><code>cdn.move</code> - Move/rename files</li>
+<li class=""><code>cdn.folder.create</code> - Create new folders</li>
+<li class=""><code>cdn.folder.delete</code> - Delete folders</li>
+<li class=""><code>cdn.directory.permissions</code> - Manage directory permissions</li>
+<li class=""><code>cdn.file.permissions</code> - Manage file permissions</li>
+</ul>
+<p><strong>User Management Permissions:</strong></p>
+<ul>
+<li class=""><code>admin.users.manage</code> - Manage user accounts</li>
+<li class=""><code>admin.users.permissions</code> - Assign permissions to users</li>
+<li class=""><code>users.ban</code> - Ban/remove bans from users</li>
+</ul>
+<ol start="5">
+<li class="">Click Save</li>
+</ol>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="using-predefined-roles">Using Predefined Roles<a href="#using-predefined-roles" class="hash-link" aria-label="Direct link to Using Predefined Roles" title="Direct link to Using Predefined Roles" translate="no">​</a></h4>
+<p>For convenience, you can also grant permissions using standard role combinations:</p>
+<ul>
+<li class=""><strong>OWNER</strong> - <code>owner</code> permission (full access)</li>
+<li class=""><strong>CDN_MANAGER</strong> - All CDN management permissions</li>
+<li class=""><strong>CDN_UPLOADER</strong> - <code>cdn.view</code>, <code>cdn.upload</code>, <code>cdn.folder.create</code></li>
+<li class=""><strong>CDN_VIEWER</strong> - <code>cdn.view</code> only</li>
+<li class=""><strong>USER_MODERATOR</strong> - User management permissions</li>
+</ul>
+<p>These roles are automatically recognized based on the individual permissions granted.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="permission-tips">Permission Tips<a href="#permission-tips" class="hash-link" aria-label="Direct link to Permission Tips" title="Direct link to Permission Tips" translate="no">​</a></h4>
+<p><strong>For Read-Only Users:</strong></p>
+<ul>
+<li class="">Grant: <code>cdn.view</code></li>
+<li class="">Optionally add: <code>cdn.download</code></li>
+</ul>
+<p><strong>For Content Contributors:</strong></p>
+<ul>
+<li class="">Grant: <code>cdn.view</code>, <code>cdn.upload</code>, <code>cdn.folder.create</code></li>
+<li class="">Optionally add: <code>cdn.download</code></li>
+</ul>
+<p><strong>For Team Leaders:</strong></p>
+<ul>
+<li class="">Grant all CDN permissions (CDN_MANAGER role)</li>
+<li class="">Consider adding: <code>cdn.directory.permissions</code>, <code>cdn.file.permissions</code></li>
+</ul>
+<p><strong>For Administrators:</strong></p>
+<ul>
+<li class="">Reserve <code>owner</code> permission for system administrators</li>
+<li class="">Use specific admin permissions for limited admin roles</li>
+</ul>
+<p><strong>Custom Access Levels:</strong></p>
+<ul>
+<li class="">Mix and match individual permissions to create custom access levels</li>
+<li class="">Example: Grant only <code>cdn.view</code> + <code>cdn.edit</code> for editors who shouldn&#x27;t delete</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="permission-priority-system">Permission Priority System<a href="#permission-priority-system" class="hash-link" aria-label="Direct link to Permission Priority System" title="Direct link to Permission Priority System" translate="no">​</a></h3>
+<p>Permissions can be set at three levels, with a clear priority order:</p>
+<p><strong>Priority Order (Highest to Lowest):</strong></p>
+<ol>
+<li class=""><strong>File-Level Permissions</strong> - Specific to individual files</li>
+<li class=""><strong>Directory-Level Permissions</strong> - Applied to folders and their contents</li>
+<li class=""><strong>General User Permissions</strong> - User&#x27;s baseline permissions</li>
+</ol>
+<p><strong>How It Works:</strong></p>
+<ul>
+<li class="">More specific permissions <strong>completely override</strong> less specific ones</li>
+<li class="">File permissions override directory permissions</li>
+<li class="">Directory permissions override general user permissions</li>
+<li class="">The system does not merge permissions; it uses the most specific level available</li>
+</ul>
+<p><strong>Example Scenarios:</strong></p>
+<p><strong>Granting Extra Access to a Directory:</strong></p>
+<ul>
+<li class="">User&#x27;s general permissions: <code>cdn.view</code></li>
+<li class="">Directory permission: <code>cdn.view</code>, <code>cdn.upload</code>, <code>cdn.delete</code></li>
+<li class="">Result: User can upload and delete in that directory only</li>
+</ul>
+<p><strong>Restricting Access to a File:</strong></p>
+<ul>
+<li class="">User&#x27;s general permissions: <code>cdn.view</code>, <code>cdn.upload</code>, <code>cdn.delete</code></li>
+<li class="">File permission: <code>cdn.view</code> only</li>
+<li class="">Result: User can only view that file, cannot delete it</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="directory-specific-permissions">Directory-Specific Permissions<a href="#directory-specific-permissions" class="hash-link" aria-label="Direct link to Directory-Specific Permissions" title="Direct link to Directory-Specific Permissions" translate="no">​</a></h3>
+<p>Set permissions for specific directories to override general user permissions:</p>
+<ol>
+<li class="">Navigate to the file manager</li>
+<li class="">Right-click on a folder</li>
+<li class="">Select &quot;Directory Permissions&quot;</li>
+<li class="">Grant specific permissions to users for this folder</li>
+<li class="">Optionally sync to all child folders</li>
+<li class="">Click Save</li>
+</ol>
+<p><strong>Note:</strong> Directory permissions will apply to all files and subfolders unless overridden by file-level permissions.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="file-specific-permissions">File-Specific Permissions<a href="#file-specific-permissions" class="hash-link" aria-label="Direct link to File-Specific Permissions" title="Direct link to File-Specific Permissions" translate="no">​</a></h3>
+<p>Set permissions for specific files to override both directory and general permissions:</p>
+<ol>
+<li class="">Locate the file in the file manager</li>
+<li class="">Right-click and select &quot;File Permissions&quot;</li>
+<li class="">Grant specific permissions to users for this file</li>
+<li class="">Click Save</li>
+</ol>
+<p><strong>Note:</strong> File permissions have the highest priority and will completely override directory and general user permissions for that specific file.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="settings-management">Settings Management<a href="#settings-management" class="hash-link" aria-label="Direct link to Settings Management" title="Direct link to Settings Management" translate="no">​</a></h2>
+<p>Configure site-wide settings.</p>
+<p><strong>Navigate to:</strong> Admin Panel &gt; Settings</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="site-settings">Site Settings<a href="#site-settings" class="hash-link" aria-label="Direct link to Site Settings" title="Direct link to Site Settings" translate="no">​</a></h3>
+<p>Configure basic site information:</p>
+<ul>
+<li class=""><strong>Site Name:</strong> Display name for your CDN</li>
+<li class=""><strong>Site Description:</strong> Brief description</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="restriction-modes">Restriction Modes<a href="#restriction-modes" class="hash-link" aria-label="Direct link to Restriction Modes" title="Direct link to Restriction Modes" translate="no">​</a></h4>
+<p>We have 3 different types of modes you can put the site into:</p>
+<ul>
+<li class=""><strong>Staff Only:</strong> Anyone with a single general permission can access the site&#x27;s content</li>
+<li class=""><strong>Admin Only:</strong> Only those with <code>cdn.admin</code> and <code>owner</code> permissions can access the site&#x27;s content</li>
+<li class=""><strong>Maintenance Mode:</strong> Only those with staff permissions can access the site, and a maintenance error will be displayed to normal users</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="email-settings">Email Settings<a href="#email-settings" class="hash-link" aria-label="Direct link to Email Settings" title="Direct link to Email Settings" translate="no">​</a></h3>
+<p>Configure email service for authentication:</p>
+<ul>
+<li class=""><strong>Type:</strong> Set if SMTP or SendGrid is being used</li>
+<li class=""><strong>SMTP Mode:</strong> If type is SMTP, then you can set if the service should be default (normal smtp servers) or gmail (Google Workspace servers)</li>
+<li class=""><strong>From Email:</strong> Sender email address</li>
+<li class=""><strong>Header:</strong> HTML code that will be applied above the email content</li>
+<li class=""><strong>Footer:</strong> HTML code that will be applied below the email content</li>
+</ul>
+<p><strong>Note:</strong> Actual SMTP/SendGrid credentials are configured in the <code>.env</code> file.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="footer-settings">Footer Settings<a href="#footer-settings" class="hash-link" aria-label="Direct link to Footer Settings" title="Direct link to Footer Settings" translate="no">​</a></h3>
+<p>Customize the footer content:</p>
+<ul>
+<li class=""><strong>Footer Text:</strong> Copyright notice or additional info</li>
+<li class=""><strong>Links:</strong> Add custom links to the footer (appears above the text)</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="directory-settings">Directory Settings<a href="#directory-settings" class="hash-link" aria-label="Direct link to Directory Settings" title="Direct link to Directory Settings" translate="no">​</a></h2>
+<p>Configure access control for directories.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="access-modes">Access Modes<a href="#access-modes" class="hash-link" aria-label="Direct link to Access Modes" title="Direct link to Access Modes" translate="no">​</a></h3>
+<p>Set how directories can be accessed:</p>
+<p><strong>Public:</strong></p>
+<ul>
+<li class="">No authentication required</li>
+<li class="">Anyone with the link can access</li>
+<li class="">Useful for publicly shared assets</li>
+</ul>
+<p><strong>Users-only:</strong></p>
+<ul>
+<li class="">Requires user login</li>
+<li class="">Any authenticated user can access</li>
+<li class="">Role permissions still apply</li>
+</ul>
+<p><strong>CDN-only:</strong></p>
+<ul>
+<li class="">Only accessible via <code>/cdn/</code> routes</li>
+<li class="">Not visible in file manager to restricted users</li>
+<li class="">Useful for embedded assets</li>
+</ul>
+<p><strong>Whitelist:</strong></p>
+<ul>
+<li class="">Restricted to specific IPs or domains</li>
+<li class="">Configure whitelist in directory settings</li>
+<li class="">Blocks all other access</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="configuring-directory-access">Configuring Directory Access<a href="#configuring-directory-access" class="hash-link" aria-label="Direct link to Configuring Directory Access" title="Direct link to Configuring Directory Access" translate="no">​</a></h3>
+<ol>
+<li class="">Navigate to the director you wish to configure</li>
+<li class="">Select &quot;Directory Permissions&quot;</li>
+<li class="">Choose an access mode</li>
+<li class="">Configure whitelist/blacklist if needed</li>
+<li class="">Set separate download permissions if desired</li>
+<li class="">Click Save</li>
+</ol>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="ip-and-domain-whitelisting">IP and Domain Whitelisting<a href="#ip-and-domain-whitelisting" class="hash-link" aria-label="Direct link to IP and Domain Whitelisting" title="Direct link to IP and Domain Whitelisting" translate="no">​</a></h3>
+<p><strong>For Whitelist mode:</strong></p>
+<p>Add allowed IPs:</p>
+<ul>
+<li class="">Individual IPs: <code>192.168.1.100</code></li>
+<li class="">CIDR ranges: <code>192.168.1.0/24</code></li>
+<li class="">IPv6 supported</li>
+</ul>
+<p>Add allowed domains:</p>
+<ul>
+<li class=""><code>example.com</code></li>
+<li class=""><code>www.example.com</code></li>
+<li class="">Subdomains are matched separately</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="file-settings">File Settings<a href="#file-settings" class="hash-link" aria-label="Direct link to File Settings" title="Direct link to File Settings" translate="no">​</a></h2>
+<p>Configure access control for individual files.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="file-access-modes">File Access Modes<a href="#file-access-modes" class="hash-link" aria-label="Direct link to File Access Modes" title="Direct link to File Access Modes" translate="no">​</a></h3>
+<p>Same options as directories:</p>
+<ul>
+<li class="">Public</li>
+<li class="">Users-only</li>
+<li class="">CDN-only</li>
+<li class="">Whitelist</li>
+</ul>
+<p>File settings override directory settings.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="download-permissions">Download Permissions<a href="#download-permissions" class="hash-link" aria-label="Direct link to Download Permissions" title="Direct link to Download Permissions" translate="no">​</a></h3>
+<p>Set separate permissions for downloading vs. viewing:</p>
+<ol>
+<li class="">Navigate to the file&#x27;s directory</li>
+<li class="">Hit &quot;Permissions&quot; in the file&#x27;s actions</li>
+<li class="">Set view access mode</li>
+<li class="">Set download access mode (can be more restrictive)</li>
+<li class="">Click Save</li>
+</ol>
+<p><strong>Example Use Case:</strong></p>
+<ul>
+<li class="">View mode: Public (anyone can view)</li>
+<li class="">Download mode: Whitelist (only specific IPs can download)</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="ban-list-management">Ban List Management<a href="#ban-list-management" class="hash-link" aria-label="Direct link to Ban List Management" title="Direct link to Ban List Management" translate="no">​</a></h2>
+<p>Block access for specific IPs, domains, users, or emails.</p>
+<p><strong>Navigate to:</strong> Admin Panel &gt; Ban List</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="creating-a-ban">Creating a Ban<a href="#creating-a-ban" class="hash-link" aria-label="Direct link to Creating a Ban" title="Direct link to Creating a Ban" translate="no">​</a></h3>
+<ol>
+<li class="">Click &quot;Add Ban&quot;</li>
+<li class="">Select ban type:
+<ul>
+<li class=""><strong>IP Address:</strong> Block specific IP or CIDR range</li>
+<li class=""><strong>Domain:</strong> Block requests from specific domain</li>
+<li class=""><strong>User:</strong> Block specific user account</li>
+<li class=""><strong>Email:</strong> Block email address (prevents login)</li>
+</ul>
+</li>
+<li class="">Enter the value to ban</li>
+<li class="">Add a reason (optional but recommended)</li>
+<li class="">Set expiration (optional - leave blank for permanent)</li>
+<li class="">Click Save</li>
+</ol>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="managing-bans">Managing Bans<a href="#managing-bans" class="hash-link" aria-label="Direct link to Managing Bans" title="Direct link to Managing Bans" translate="no">​</a></h3>
+<p>View all active bans:</p>
+<ul>
+<li class="">Ban type and value</li>
+<li class="">Reason</li>
+<li class="">Created date</li>
+<li class="">Expiration date</li>
+<li class="">Created by (admin who added it)</li>
+</ul>
+<p><strong>Actions:</strong></p>
+<ul>
+<li class=""><strong>Edit:</strong> Modify ban details or expiration</li>
+<li class=""><strong>Delete:</strong> Remove the ban immediately</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="ban-behavior">Ban Behavior<a href="#ban-behavior" class="hash-link" aria-label="Direct link to Ban Behavior" title="Direct link to Ban Behavior" translate="no">​</a></h3>
+<p>Banned entities are:</p>
+<ul>
+<li class="">Blocked from all endpoints</li>
+<li class="">Prevented from accessing CDN routes</li>
+<li class="">Unable to log in (for user/email bans)</li>
+<li class="">Shown an access denied message</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="audit-logs">Audit Logs<a href="#audit-logs" class="hash-link" aria-label="Direct link to Audit Logs" title="Direct link to Audit Logs" translate="no">​</a></h2>
+<p>Review all system activity for security and compliance.</p>
+<p><strong>Navigate to:</strong> Admin Panel &gt; Audit Logs</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-logged">What is Logged<a href="#what-is-logged" class="hash-link" aria-label="Direct link to What is Logged" title="Direct link to What is Logged" translate="no">​</a></h3>
+<ul>
+<li class="">File uploads, downloads, views</li>
+<li class="">File/folder deletions, renames, moves</li>
+<li class="">Permission changes</li>
+<li class="">User logins</li>
+<li class="">Settings modifications</li>
+<li class="">Ban list changes</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="log-information">Log Information<a href="#log-information" class="hash-link" aria-label="Direct link to Log Information" title="Direct link to Log Information" translate="no">​</a></h3>
+<p>Each entry includes:</p>
+<ul>
+<li class=""><strong>Timestamp:</strong> When the action occurred</li>
+<li class=""><strong>User:</strong> Who performed the action (if authenticated)</li>
+<li class=""><strong>IP Address:</strong> Source IP</li>
+<li class=""><strong>Action:</strong> Type of action performed</li>
+<li class=""><strong>Target:</strong> File, folder, or user affected</li>
+<li class=""><strong>Status:</strong> Success or failure</li>
+<li class=""><strong>Details:</strong> Additional context</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="filtering-logs">Filtering Logs<a href="#filtering-logs" class="hash-link" aria-label="Direct link to Filtering Logs" title="Direct link to Filtering Logs" translate="no">​</a></h3>
+<p>Filter by:</p>
+<ul>
+<li class="">Date range</li>
+<li class="">User</li>
+<li class="">Action type</li>
+<li class="">Target resource</li>
+<li class="">Success/failure</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="backup-and-maintenance">Backup and Maintenance<a href="#backup-and-maintenance" class="hash-link" aria-label="Direct link to Backup and Maintenance" title="Direct link to Backup and Maintenance" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="database-backup">Database Backup<a href="#database-backup" class="hash-link" aria-label="Direct link to Database Backup" title="Direct link to Database Backup" translate="no">​</a></h3>
+<p>Regularly backup your MongoDB database:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token plain">mongodump </span><span class="token parameter variable" style="color:#f8f8f2">--uri</span><span class="token operator" style="color:#66d9ef">=</span><span class="token string" style="color:#a6e22e">&quot;mongodb://127.0.0.1:27017/cdnmanager&quot;</span><span class="token plain"> </span><span class="token parameter variable" style="color:#f8f8f2">--out</span><span class="token operator" style="color:#66d9ef">=</span><span class="token plain">/path/to/backup</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="file-backup">File Backup<a href="#file-backup" class="hash-link" aria-label="Direct link to File Backup" title="Direct link to File Backup" translate="no">​</a></h3>
+<p>Backup the <code>cdn-files</code> directory:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token function" style="color:#e6db74">cp</span><span class="token plain"> </span><span class="token parameter variable" style="color:#f8f8f2">-r</span><span class="token plain"> /path/to/cdn-files /path/to/backup/</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="cleanup-tasks">Cleanup Tasks<a href="#cleanup-tasks" class="hash-link" aria-label="Direct link to Cleanup Tasks" title="Direct link to Cleanup Tasks" translate="no">​</a></h3>
+<p><strong>Orphaned Chunks:</strong></p>
+<ul>
+<li class="">Automatically cleaned every 30 minutes</li>
+<li class="">Can manually do via FTP</li>
+</ul>
+<p><strong>Orphaned Thumbnails:</strong></p>
+<ul>
+<li class="">Removed when parent file is deleted</li>
+<li class="">Check for orphans periodically</li>
+</ul>
+<p><strong>Old Sessions:</strong></p>
+<ul>
+<li class="">Automatically cleaned by MongoDB TTL index</li>
+<li class="">Sessions expire after 30 days</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="monitoring">Monitoring<a href="#monitoring" class="hash-link" aria-label="Direct link to Monitoring" title="Direct link to Monitoring" translate="no">​</a></h3>
+<p>Monitor these metrics:</p>
+<ul>
+<li class="">Disk space usage</li>
+<li class="">MongoDB performance</li>
+<li class="">API response times</li>
+<li class="">Error logs</li>
+<li class="">Failed login attempts</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="security-best-practices">Security Best Practices<a href="#security-best-practices" class="hash-link" aria-label="Direct link to Security Best Practices" title="Direct link to Security Best Practices" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="owner-accounts">Owner Accounts<a href="#owner-accounts" class="hash-link" aria-label="Direct link to Owner Accounts" title="Direct link to Owner Accounts" translate="no">​</a></h3>
+<ul>
+<li class="">Limit the number of owner accounts</li>
+<li class="">Use strong, unique email passwords</li>
+<li class="">Review owner list in <code>.env</code> regularly</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="email-security">Email Security<a href="#email-security" class="hash-link" aria-label="Direct link to Email Security" title="Direct link to Email Security" translate="no">​</a></h3>
+<ul>
+<li class="">Use a dedicated email service</li>
+<li class="">Enable SPF/DKIM for your domain</li>
+<li class="">Monitor for suspicious login attempts</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="permission-management">Permission Management<a href="#permission-management" class="hash-link" aria-label="Direct link to Permission Management" title="Direct link to Permission Management" translate="no">​</a></h3>
+<ul>
+<li class="">Follow principle of least privilege</li>
+<li class="">Regularly audit user permissions</li>
+<li class="">Remove permissions for inactive users</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="access-control">Access Control<a href="#access-control" class="hash-link" aria-label="Direct link to Access Control" title="Direct link to Access Control" translate="no">​</a></h3>
+<ul>
+<li class="">Use whitelist mode for sensitive files</li>
+<li class="">Enable CDN-only mode for embedded assets</li>
+<li class="">Review ban list periodically</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="regular-audits">Regular Audits<a href="#regular-audits" class="hash-link" aria-label="Direct link to Regular Audits" title="Direct link to Regular Audits" translate="no">​</a></h3>
+<ul>
+<li class="">Review audit logs weekly</li>
+<li class="">Check for unusual access patterns</li>
+<li class="">Monitor file upload activity</li>
+<li class="">Verify permission changes</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="updates">Updates<a href="#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h3>
+<ul>
+<li class="">Keep Node.js updated</li>
+<li class="">Update MongoDB regularly</li>
+<li class="">Monitor for CDN Manager updates from Shadow Devs</li>
+<li class="">Test updates in staging first</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="troubleshooting">Troubleshooting<a href="#troubleshooting" class="hash-link" aria-label="Direct link to Troubleshooting" title="Direct link to Troubleshooting" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="users-cannot-log-in">Users Cannot Log In<a href="#users-cannot-log-in" class="hash-link" aria-label="Direct link to Users Cannot Log In" title="Direct link to Users Cannot Log In" translate="no">​</a></h3>
+<ol>
+<li class="">Check email configuration in <code>.env</code></li>
+<li class="">Verify SendGrid/SMTP is working</li>
+<li class="">Check if user is banned</li>
+<li class="">Review audit logs for failed attempts</li>
+<li class="">Check maintenance mode status</li>
+</ol>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="files-not-uploading">Files Not Uploading<a href="#files-not-uploading" class="hash-link" aria-label="Direct link to Files Not Uploading" title="Direct link to Files Not Uploading" translate="no">​</a></h3>
+<ol>
+<li class="">Check disk space</li>
+<li class="">Verify <code>BODY_SIZE_LIMIT</code> in <code>.env</code></li>
+<li class="">Check user permissions</li>
+<li class="">Review server logs for errors</li>
+<li class="">Check MongoDB connection</li>
+</ol>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="performance-issues">Performance Issues<a href="#performance-issues" class="hash-link" aria-label="Direct link to Performance Issues" title="Direct link to Performance Issues" translate="no">​</a></h3>
+<ol>
+<li class="">Monitor MongoDB performance</li>
+<li class="">Check disk I/O</li>
+<li class="">Review file sizes (thumbnails generating?)</li>
+<li class="">Check number of concurrent uploads</li>
+<li class="">Consider increasing server resources</li>
+</ol>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="permission-issues">Permission Issues<a href="#permission-issues" class="hash-link" aria-label="Direct link to Permission Issues" title="Direct link to Permission Issues" translate="no">​</a></h3>
+<ol>
+<li class="">Verify user has required role</li>
+<li class="">Check directory/file settings</li>
+<li class="">Review access mode configuration</li>
+<li class="">Check if user is banned</li>
+<li class="">Verify whitelist/blacklist rules</li>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/Shadow-Develops/docusaurus/tree/main/docs/cdnManager/features/admin-guide.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">Last updated<!-- --> on <b><time datetime="2026-01-07T00:02:30.000Z" itemprop="dateModified">Jan 7, 2026</time></b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/cdnManager/features/file-management"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">File Management</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/cdnManager/update"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Updating Shadow Store</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#accessing-the-admin-panel" class="table-of-contents__link toc-highlight">Accessing the Admin Panel</a></li><li><a href="#dashboard-overview" class="table-of-contents__link toc-highlight">Dashboard Overview</a></li><li><a href="#user-management" class="table-of-contents__link toc-highlight">User Management</a><ul><li><a href="#understanding-the-permission-system" class="table-of-contents__link toc-highlight">Understanding the Permission System</a></li><li><a href="#viewing-users" class="table-of-contents__link toc-highlight">Viewing Users</a></li><li><a href="#creating-users" class="table-of-contents__link toc-highlight">Creating Users</a></li><li><a href="#assigning-permissions" class="table-of-contents__link toc-highlight">Assigning Permissions</a></li><li><a href="#permission-priority-system" class="table-of-contents__link toc-highlight">Permission Priority System</a></li><li><a href="#directory-specific-permissions" class="table-of-contents__link toc-highlight">Directory-Specific Permissions</a></li><li><a href="#file-specific-permissions" class="table-of-contents__link toc-highlight">File-Specific Permissions</a></li></ul></li><li><a href="#settings-management" class="table-of-contents__link toc-highlight">Settings Management</a><ul><li><a href="#site-settings" class="table-of-contents__link toc-highlight">Site Settings</a></li><li><a href="#email-settings" class="table-of-contents__link toc-highlight">Email Settings</a></li><li><a href="#footer-settings" class="table-of-contents__link toc-highlight">Footer Settings</a></li></ul></li><li><a href="#directory-settings" class="table-of-contents__link toc-highlight">Directory Settings</a><ul><li><a href="#access-modes" class="table-of-contents__link toc-highlight">Access Modes</a></li><li><a href="#configuring-directory-access" class="table-of-contents__link toc-highlight">Configuring Directory Access</a></li><li><a href="#ip-and-domain-whitelisting" class="table-of-contents__link toc-highlight">IP and Domain Whitelisting</a></li></ul></li><li><a href="#file-settings" class="table-of-contents__link toc-highlight">File Settings</a><ul><li><a href="#file-access-modes" class="table-of-contents__link toc-highlight">File Access Modes</a></li><li><a href="#download-permissions" class="table-of-contents__link toc-highlight">Download Permissions</a></li></ul></li><li><a href="#ban-list-management" class="table-of-contents__link toc-highlight">Ban List Management</a><ul><li><a href="#creating-a-ban" class="table-of-contents__link toc-highlight">Creating a Ban</a></li><li><a href="#managing-bans" class="table-of-contents__link toc-highlight">Managing Bans</a></li><li><a href="#ban-behavior" class="table-of-contents__link toc-highlight">Ban Behavior</a></li></ul></li><li><a href="#audit-logs" class="table-of-contents__link toc-highlight">Audit Logs</a><ul><li><a href="#what-is-logged" class="table-of-contents__link toc-highlight">What is Logged</a></li><li><a href="#log-information" class="table-of-contents__link toc-highlight">Log Information</a></li><li><a href="#filtering-logs" class="table-of-contents__link toc-highlight">Filtering Logs</a></li></ul></li><li><a href="#backup-and-maintenance" class="table-of-contents__link toc-highlight">Backup and Maintenance</a><ul><li><a href="#database-backup" class="table-of-contents__link toc-highlight">Database Backup</a></li><li><a href="#file-backup" class="table-of-contents__link toc-highlight">File Backup</a></li><li><a href="#cleanup-tasks" class="table-of-contents__link toc-highlight">Cleanup Tasks</a></li><li><a href="#monitoring" class="table-of-contents__link toc-highlight">Monitoring</a></li></ul></li><li><a href="#security-best-practices" class="table-of-contents__link toc-highlight">Security Best Practices</a><ul><li><a href="#owner-accounts" class="table-of-contents__link toc-highlight">Owner Accounts</a></li><li><a href="#email-security" class="table-of-contents__link toc-highlight">Email Security</a></li><li><a href="#permission-management" class="table-of-contents__link toc-highlight">Permission Management</a></li><li><a href="#access-control" class="table-of-contents__link toc-highlight">Access Control</a></li><li><a href="#regular-audits" class="table-of-contents__link toc-highlight">Regular Audits</a></li><li><a href="#updates" class="table-of-contents__link toc-highlight">Updates</a></li></ul></li><li><a href="#troubleshooting" class="table-of-contents__link toc-highlight">Troubleshooting</a><ul><li><a href="#users-cannot-log-in" class="table-of-contents__link toc-highlight">Users Cannot Log In</a></li><li><a href="#files-not-uploading" class="table-of-contents__link toc-highlight">Files Not Uploading</a></li><li><a href="#performance-issues" class="table-of-contents__link toc-highlight">Performance Issues</a></li><li><a href="#permission-issues" class="table-of-contents__link toc-highlight">Permission Issues</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/shadowStore">Shadow Store</a></li><li class="footer__item"><a class="footer__link-item" href="/licenseSystem">License System</a></li><li class="footer__item"><a class="footer__link-item" href="/spark/getting-started">SPARK</a></li><li class="footer__item"><a class="footer__link-item" href="/legacy">Legacy Products</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.gg/shadowdevs" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/Shadow-Develops" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 <a href="https://shadowdevs.com">Shadow Development</a>. <i>Built with Docusaurus.</i></div></div></div></footer></div>
+</body>
+</html>

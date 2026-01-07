@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-cdnManager/features/file-management" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">File Management | Shadow Devs Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.shadowdevs.com/img/Banner.png"><meta data-rh="true" name="twitter:image" content="https://docs.shadowdevs.com/img/Banner.png"><meta data-rh="true" property="og:url" content="https://docs.shadowdevs.com/cdnManager/features/file-management"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="File Management | Shadow Devs Docs"><meta data-rh="true" name="description" content="This guide covers all the file management features in CDN Manager, from uploading files to organizing your content library."><meta data-rh="true" property="og:description" content="This guide covers all the file management features in CDN Manager, from uploading files to organizing your content library."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.shadowdevs.com/cdnManager/features/file-management"><link data-rh="true" rel="alternate" href="https://docs.shadowdevs.com/cdnManager/features/file-management" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.shadowdevs.com/cdnManager/features/file-management" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://KQKEAMJ226-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Features","item":"https://docs.shadowdevs.com/cdnManager/features/"},{"@type":"ListItem","position":2,"name":"File Management","item":"https://docs.shadowdevs.com/cdnManager/features/file-management"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="Shadow Devs Docs" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.85a54cfc.css">
+<script src="/assets/js/runtime~main.36f8e570.js" defer="defer"></script>
+<script src="/assets/js/main.b9180096.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>document.documentElement.setAttribute("data-theme","dark"),document.documentElement.setAttribute("data-theme-choice","dark"),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/Logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Shadow Dev Docs</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://shadowdevs.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-home-link" aria-label="Home Site"></a><a href="https://github.com/Shadow-Develops/docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><div class="navbarSearchContainer_Bca1"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search (Meta+k)" aria-keyshortcuts="Meta+k"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" fill="none" stroke-width="1.4"></circle><path d="m21 21-4.3-4.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"></span></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd sidebarWithHideableNavbar_wUlq"><a tabindex="-1" class="sidebarLogo_isFc" href="/"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"><b>Shadow Dev Docs</b></a><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/cdnManager"><span title="CDN Manager" class="linkLabel_WmDU">CDN Manager</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/cdnManager/install"><span title="Install" class="categoryLinkLabel_W154">Install</span></a><button aria-label="Expand sidebar category &#x27;Install&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href="/cdnManager/features"><span title="Features" class="categoryLinkLabel_W154">Features</span></a><button aria-label="Collapse sidebar category &#x27;Features&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/cdnManager/features/permissions"><span title="Permissions System" class="linkLabel_WmDU">Permissions System</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/cdnManager/features/file-management"><span title="File Management" class="linkLabel_WmDU">File Management</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/cdnManager/features/admin-guide"><span title="Admin Guide" class="linkLabel_WmDU">Admin Guide</span></a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/cdnManager/update"><span title="Updating Shadow Store" class="linkLabel_WmDU">Updating Shadow Store</span></a></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/cdnManager/features"><span>Features</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">File Management</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>File Management</h1></header>
+<p>This guide covers all the file management features in CDN Manager, from uploading files to organizing your content library.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="uploading-files">Uploading Files<a href="#uploading-files" class="hash-link" aria-label="Direct link to Uploading Files" title="Direct link to Uploading Files" translate="no">​</a></h2>
+<p>CDN Manager supports multiple methods for uploading files:</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="single-file-upload">Single File Upload<a href="#single-file-upload" class="hash-link" aria-label="Direct link to Single File Upload" title="Direct link to Single File Upload" translate="no">​</a></h3>
+<ol>
+<li class="">Navigate to the desired directory</li>
+<li class="">Click the &quot;Upload&quot; button</li>
+<li class="">Select a file from your computer</li>
+<li class="">Wait for the upload to complete</li>
+<li class="">The file will appear in your current directory</li>
+</ol>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="multiple-file-upload">Multiple File Upload<a href="#multiple-file-upload" class="hash-link" aria-label="Direct link to Multiple File Upload" title="Direct link to Multiple File Upload" translate="no">​</a></h3>
+<ol>
+<li class="">Click the &quot;Upload&quot; button</li>
+<li class="">Select multiple files using Ctrl/Cmd+Click or Shift+Click</li>
+<li class="">All selected files will upload simultaneously</li>
+<li class="">Progress is shown for each file</li>
+</ol>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="large-file-upload-chunked">Large File Upload (Chunked)<a href="#large-file-upload-chunked" class="hash-link" aria-label="Direct link to Large File Upload (Chunked)" title="Direct link to Large File Upload (Chunked)" translate="no">​</a></h3>
+<p>For files larger than a certain threshold, CDN Manager automatically uses chunked uploading:</p>
+<ul>
+<li class="">Files are split into 50MB+ chunks</li>
+<li class="">Each chunk uploads separately</li>
+<li class="">Chunks are automatically combined after upload completes</li>
+<li class="">More reliable for large files and slow connections</li>
+<li class="">Resumable if connection is interrupted</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="creating-folders">Creating Folders<a href="#creating-folders" class="hash-link" aria-label="Direct link to Creating Folders" title="Direct link to Creating Folders" translate="no">​</a></h2>
+<p>Organize your files with folders:</p>
+<ol>
+<li class="">Click the &quot;New Folder&quot; button</li>
+<li class="">Enter a folder name</li>
+<li class="">Click Create</li>
+<li class="">The folder appears in your current directory</li>
+</ol>
+<p><strong>Folder Naming Tips:</strong></p>
+<ul>
+<li class="">Use descriptive names</li>
+<li class="">Avoid special characters</li>
+<li class="">Use hyphens or underscores instead of spaces</li>
+<li class="">Keep names concise but meaningful</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="viewing-files">Viewing Files<a href="#viewing-files" class="hash-link" aria-label="Direct link to Viewing Files" title="Direct link to Viewing Files" translate="no">​</a></h2>
+<p>CDN Manager can display many file types directly in the browser:</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="supported-file-types">Supported File Types<a href="#supported-file-types" class="hash-link" aria-label="Direct link to Supported File Types" title="Direct link to Supported File Types" translate="no">​</a></h3>
+<p><strong>Images:</strong></p>
+<ul>
+<li class="">JPEG, PNG, GIF, WebP, SVG</li>
+<li class="">Automatic thumbnail generation</li>
+<li class="">Full-size preview on click</li>
+</ul>
+<p><strong>Videos:</strong></p>
+<ul>
+<li class="">MP4, WebM, OGG</li>
+<li class="">Built-in video player</li>
+<li class="">Streaming support</li>
+</ul>
+<p><strong>Documents:</strong></p>
+<ul>
+<li class="">PDF files (in-browser PDF viewer)</li>
+<li class="">Text files (TXT, MD, JSON, etc.)</li>
+<li class="">Code files with syntax highlighting</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-to-view-files">How to View Files<a href="#how-to-view-files" class="hash-link" aria-label="Direct link to How to View Files" title="Direct link to How to View Files" translate="no">​</a></h3>
+<ol>
+<li class="">Click on a file in the file manager</li>
+<li class="">Or click the &quot;View&quot; button/icon</li>
+<li class="">File opens in a preview modal or new tab</li>
+<li class="">For images, click to zoom</li>
+</ol>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="downloading-files">Downloading Files<a href="#downloading-files" class="hash-link" aria-label="Direct link to Downloading Files" title="Direct link to Downloading Files" translate="no">​</a></h2>
+<p>Download files directly to your computer:</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="single-file-download">Single File Download<a href="#single-file-download" class="hash-link" aria-label="Direct link to Single File Download" title="Direct link to Single File Download" translate="no">​</a></h3>
+<ol>
+<li class="">Right-click on a file</li>
+<li class="">Select &quot;Download&quot;</li>
+<li class="">Or click the download icon/button</li>
+<li class="">File downloads to your browser&#x27;s download folder</li>
+</ol>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="multiple-file-download">Multiple File Download<a href="#multiple-file-download" class="hash-link" aria-label="Direct link to Multiple File Download" title="Direct link to Multiple File Download" translate="no">​</a></h3>
+<p>CDN Manager does not currently support bulk downloads, but you can:</p>
+<ul>
+<li class="">Download files individually</li>
+<li class="">Use the CDN routes to access files programmatically</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="moving-files">Moving Files<a href="#moving-files" class="hash-link" aria-label="Direct link to Moving Files" title="Direct link to Moving Files" translate="no">​</a></h2>
+<p>Reorganize your content by moving files and folders:</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="move-single-item">Move Single Item<a href="#move-single-item" class="hash-link" aria-label="Direct link to Move Single Item" title="Direct link to Move Single Item" translate="no">​</a></h3>
+<ol>
+<li class="">Right-click on a file or folder</li>
+<li class="">Select &quot;Move&quot;</li>
+<li class="">Choose the destination folder</li>
+<li class="">Click Confirm</li>
+<li class="">Item moves to the new location</li>
+</ol>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="move-multiple-items">Move Multiple Items<a href="#move-multiple-items" class="hash-link" aria-label="Direct link to Move Multiple Items" title="Direct link to Move Multiple Items" translate="no">​</a></h3>
+<ol>
+<li class="">Enable selection mode</li>
+<li class="">Select multiple files/folders</li>
+<li class="">Click &quot;Move Selected&quot;</li>
+<li class="">Choose destination folder</li>
+<li class="">All selected items move together</li>
+</ol>
+<p><strong>Important Notes:</strong></p>
+<ul>
+<li class="">Moving a folder moves all its contents</li>
+<li class="">Thumbnails and child paths are automatically updated</li>
+<li class="">Update any hardcoded links if you&#x27;ve shared CDN URLs</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="renaming-files">Renaming Files<a href="#renaming-files" class="hash-link" aria-label="Direct link to Renaming Files" title="Direct link to Renaming Files" translate="no">​</a></h2>
+<p>Change file or folder names:</p>
+<ol>
+<li class="">Right-click on the item</li>
+<li class="">Select &quot;Rename&quot;</li>
+<li class="">Enter the new name</li>
+<li class="">Press Enter or click Save</li>
+</ol>
+<p><strong>Renaming Tips:</strong></p>
+<ul>
+<li class="">Keep the same file extension</li>
+<li class="">Avoid special characters</li>
+<li class="">Update any hardcoded links if you&#x27;ve shared CDN URLs</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="deleting-files">Deleting Files<a href="#deleting-files" class="hash-link" aria-label="Direct link to Deleting Files" title="Direct link to Deleting Files" translate="no">​</a></h2>
+<p>Remove unwanted files or folders:</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="delete-single-item">Delete Single Item<a href="#delete-single-item" class="hash-link" aria-label="Direct link to Delete Single Item" title="Direct link to Delete Single Item" translate="no">​</a></h3>
+<ol>
+<li class="">Right-click on a file or folder</li>
+<li class="">Select &quot;Delete&quot;</li>
+<li class="">Confirm the deletion</li>
+<li class="">Item is permanently removed</li>
+</ol>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="delete-multiple-items">Delete Multiple Items<a href="#delete-multiple-items" class="hash-link" aria-label="Direct link to Delete Multiple Items" title="Direct link to Delete Multiple Items" translate="no">​</a></h3>
+<ol>
+<li class="">Enable selection mode</li>
+<li class="">Select multiple files/folders</li>
+<li class="">Click &quot;Delete Selected&quot;</li>
+<li class="">Confirm the deletion</li>
+<li class="">All selected items are removed</li>
+</ol>
+<p><strong>Warning:</strong></p>
+<ul>
+<li class="">Deletion is permanent and cannot be undone</li>
+<li class="">Deleting a folder deletes all contents recursively</li>
+<li class="">Thumbnails are also removed</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="bulk-operations">Bulk Operations<a href="#bulk-operations" class="hash-link" aria-label="Direct link to Bulk Operations" title="Direct link to Bulk Operations" translate="no">​</a></h2>
+<p>Manage multiple files at once:</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="mass-selection">Mass Selection<a href="#mass-selection" class="hash-link" aria-label="Direct link to Mass Selection" title="Direct link to Mass Selection" translate="no">​</a></h3>
+<ol>
+<li class="">Click the checkbox icon to enable selection mode</li>
+<li class="">Click individual items to select them</li>
+<li class="">Or use &quot;Select All&quot; to select everything in current view</li>
+</ol>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="bulk-actions-available">Bulk Actions Available<a href="#bulk-actions-available" class="hash-link" aria-label="Direct link to Bulk Actions Available" title="Direct link to Bulk Actions Available" translate="no">​</a></h3>
+<p><strong>Move:</strong> Move all selected items to a new folder</p>
+<p><strong>Delete:</strong> Remove all selected items at once</p>
+<p><strong>Name List:</strong> Export selected file paths in various formats:</p>
+<ul>
+<li class="">Comma-separated</li>
+<li class="">Newline-separated</li>
+<li class="">JSON array</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="name-file-lists">Name File Lists<a href="#name-file-lists" class="hash-link" aria-label="Direct link to Name File Lists" title="Direct link to Name File Lists" translate="no">​</a></h3>
+<ol>
+<li class="">Select files you want to export</li>
+<li class="">Click &quot;Name List&quot;</li>
+<li class="">Choose format:
+<ul>
+<li class=""><strong>Comma-separated:</strong> <code>file1.jpg, file2.png, file3.pdf</code></li>
+<li class=""><strong>Newline-separated:</strong> One file per line</li>
+<li class=""><strong>JSON array:</strong> <code>[&quot;file1.jpg&quot;, &quot;file2.png&quot;, &quot;file3.pdf&quot;]</code></li>
+</ul>
+</li>
+<li class="">Copy the output to your clipboard</li>
+<li class="">Use in scripts, documentation, or external tools</li>
+</ol>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="searching-and-filtering">Searching and Filtering<a href="#searching-and-filtering" class="hash-link" aria-label="Direct link to Searching and Filtering" title="Direct link to Searching and Filtering" translate="no">​</a></h2>
+<p>Find files quickly in large libraries:</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="search-by-name">Search by Name<a href="#search-by-name" class="hash-link" aria-label="Direct link to Search by Name" title="Direct link to Search by Name" translate="no">​</a></h3>
+<ol>
+<li class="">Use the search box at the top</li>
+<li class="">Type part of a filename</li>
+<li class="">Results filter in real-time</li>
+<li class="">Search is case-insensitive</li>
+</ol>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="sorting">Sorting<a href="#sorting" class="hash-link" aria-label="Direct link to Sorting" title="Direct link to Sorting" translate="no">​</a></h3>
+<p>Sort your files by:</p>
+<ul>
+<li class=""><strong>Name</strong> (alphabetical)</li>
+<li class=""><strong>Type</strong> (groups by file extension)</li>
+<li class=""><strong>Size</strong> (smallest to largest or reverse)</li>
+<li class=""><strong>Date</strong> (newest first or oldest first)</li>
+</ul>
+<p>Click column headers to change sort order.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="thumbnails">Thumbnails<a href="#thumbnails" class="hash-link" aria-label="Direct link to Thumbnails" title="Direct link to Thumbnails" translate="no">​</a></h2>
+<p>Images automatically get thumbnail previews:</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="automatic-generation">Automatic Generation<a href="#automatic-generation" class="hash-link" aria-label="Direct link to Automatic Generation" title="Direct link to Automatic Generation" translate="no">​</a></h3>
+<ul>
+<li class="">Thumbnails created on upload</li>
+<li class="">Generated using Sharp (high quality)</li>
+<li class="">Stored separately from original files</li>
+<li class="">Faster loading in file manager</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="thumbnail-sizes">Thumbnail Sizes<a href="#thumbnail-sizes" class="hash-link" aria-label="Direct link to Thumbnail Sizes" title="Direct link to Thumbnail Sizes" translate="no">​</a></h3>
+<ul>
+<li class="">Optimized for grid view</li>
+<li class="">Click thumbnail to see full-size image</li>
+<li class="">Original files remain unchanged</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="file-information">File Information<a href="#file-information" class="hash-link" aria-label="Direct link to File Information" title="Direct link to File Information" translate="no">​</a></h2>
+<p>View detailed information about files:</p>
+<ol>
+<li class="">Click on a file</li>
+<li class="">View metadata:
+<ul>
+<li class="">File name</li>
+<li class="">File size</li>
+<li class="">File type</li>
+<li class="">Upload date</li>
+<li class="">Last modified</li>
+<li class="">View/download count (if enabled)</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="cdn-links">CDN Links<a href="#cdn-links" class="hash-link" aria-label="Direct link to CDN Links" title="Direct link to CDN Links" translate="no">​</a></h2>
+<p>Every file has a CDN link:</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="getting-cdn-links">Getting CDN Links<a href="#getting-cdn-links" class="hash-link" aria-label="Direct link to Getting CDN Links" title="Direct link to Getting CDN Links" translate="no">​</a></h3>
+<ol>
+<li class="">Click the file name</li>
+<li class="">Link is copied to clipboard</li>
+</ol>
+<p>Or</p>
+<ol>
+<li class="">Hit &quot;View&quot; button for a file</li>
+<li class="">Select the URL in the address bar</li>
+<li class="">Copy</li>
+</ol>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="cdn-link-format">CDN Link Format<a href="#cdn-link-format" class="hash-link" aria-label="Direct link to CDN Link Format" title="Direct link to CDN Link Format" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token plain">https://yourdomain.com/cdn/path/to/file.jpg</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="cdn-link-options">CDN Link Options<a href="#cdn-link-options" class="hash-link" aria-label="Direct link to CDN Link Options" title="Direct link to CDN Link Options" translate="no">​</a></h3>
+<p><strong>View:</strong> Default action (view in browser)</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token plain">https://yourdomain.com/cdn/path/to/file.jpg</span><br></span></code></pre></div></div>
+<p><strong>Download:</strong> Force download</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token plain">https://yourdomain.com/cdn/path/to/file.jpg?action=download</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="access-control">Access Control<a href="#access-control" class="hash-link" aria-label="Direct link to Access Control" title="Direct link to Access Control" translate="no">​</a></h3>
+<p>CDN links respect permissions:</p>
+<ul>
+<li class="">Public files: accessible to anyone</li>
+<li class="">Users-only: requires login</li>
+<li class="">Whitelist: only from whitelisted IPs/domains</li>
+<li class="">File permissions override directory permissions</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="best-practices">Best Practices<a href="#best-practices" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="organize-with-folders">Organize with Folders<a href="#organize-with-folders" class="hash-link" aria-label="Direct link to Organize with Folders" title="Direct link to Organize with Folders" translate="no">​</a></h3>
+<ul>
+<li class="">Create a clear folder structure</li>
+<li class="">Group related files together</li>
+<li class="">Use descriptive folder names</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="use-consistent-naming">Use Consistent Naming<a href="#use-consistent-naming" class="hash-link" aria-label="Direct link to Use Consistent Naming" title="Direct link to Use Consistent Naming" translate="no">​</a></h3>
+<ul>
+<li class="">Develop a naming convention</li>
+<li class="">Include dates or versions if needed</li>
+<li class="">Avoid spaces (use hyphens or underscores)</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="regular-cleanup">Regular Cleanup<a href="#regular-cleanup" class="hash-link" aria-label="Direct link to Regular Cleanup" title="Direct link to Regular Cleanup" translate="no">​</a></h3>
+<ul>
+<li class="">Delete unused files periodically</li>
+<li class="">Review file statistics to find unused content</li>
+<li class="">Keep your CDN organized and efficient</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="large-files">Large Files<a href="#large-files" class="hash-link" aria-label="Direct link to Large Files" title="Direct link to Large Files" translate="no">​</a></h3>
+<ul>
+<li class="">Let chunked upload handle large files</li>
+<li class="">Don&#x27;t interrupt large uploads</li>
+<li class="">Check file size before uploading</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="thumbnails-1">Thumbnails<a href="#thumbnails-1" class="hash-link" aria-label="Direct link to Thumbnails" title="Direct link to Thumbnails" translate="no">​</a></h3>
+<ul>
+<li class="">Let CDN Manager generate thumbnails automatically</li>
+<li class="">Don&#x27;t upload separate thumbnail versions</li>
+<li class="">Thumbnails are optimized for performance</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="troubleshooting">Troubleshooting<a href="#troubleshooting" class="hash-link" aria-label="Direct link to Troubleshooting" title="Direct link to Troubleshooting" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="upload-fails">Upload Fails<a href="#upload-fails" class="hash-link" aria-label="Direct link to Upload Fails" title="Direct link to Upload Fails" translate="no">​</a></h3>
+<ul>
+<li class="">Check file size limits (configured in <code>.env</code>)</li>
+<li class="">Verify you have upload permissions</li>
+<li class="">Check available disk space</li>
+<li class="">Try a smaller file first</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="cannot-view-file">Cannot View File<a href="#cannot-view-file" class="hash-link" aria-label="Direct link to Cannot View File" title="Direct link to Cannot View File" translate="no">​</a></h3>
+<ul>
+<li class="">Check if file type is supported for preview</li>
+<li class="">Try downloading instead</li>
+<li class="">Verify file isn&#x27;t corrupted</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="cannot-delete-file">Cannot Delete File<a href="#cannot-delete-file" class="hash-link" aria-label="Direct link to Cannot Delete File" title="Direct link to Cannot Delete File" translate="no">​</a></h3>
+<ul>
+<li class="">Verify you have delete permissions</li>
+<li class="">Check if file is locked or in use</li>
+<li class="">Contact an administrator</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="missing-files">Missing Files<a href="#missing-files" class="hash-link" aria-label="Direct link to Missing Files" title="Direct link to Missing Files" translate="no">​</a></h3>
+<ul>
+<li class="">Check you&#x27;re in the correct directory</li>
+<li class="">Use search to locate files</li>
+<li class="">Review audit logs for deletion events</li>
+<li class="">Verify permissions allow you to see the file</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/Shadow-Develops/docusaurus/tree/main/docs/cdnManager/features/file-management.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">Last updated<!-- --> on <b><time datetime="2026-01-07T00:02:30.000Z" itemprop="dateModified">Jan 7, 2026</time></b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/cdnManager/features/permissions"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Permissions System</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/cdnManager/features/admin-guide"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Admin Guide</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#uploading-files" class="table-of-contents__link toc-highlight">Uploading Files</a><ul><li><a href="#single-file-upload" class="table-of-contents__link toc-highlight">Single File Upload</a></li><li><a href="#multiple-file-upload" class="table-of-contents__link toc-highlight">Multiple File Upload</a></li><li><a href="#large-file-upload-chunked" class="table-of-contents__link toc-highlight">Large File Upload (Chunked)</a></li></ul></li><li><a href="#creating-folders" class="table-of-contents__link toc-highlight">Creating Folders</a></li><li><a href="#viewing-files" class="table-of-contents__link toc-highlight">Viewing Files</a><ul><li><a href="#supported-file-types" class="table-of-contents__link toc-highlight">Supported File Types</a></li><li><a href="#how-to-view-files" class="table-of-contents__link toc-highlight">How to View Files</a></li></ul></li><li><a href="#downloading-files" class="table-of-contents__link toc-highlight">Downloading Files</a><ul><li><a href="#single-file-download" class="table-of-contents__link toc-highlight">Single File Download</a></li><li><a href="#multiple-file-download" class="table-of-contents__link toc-highlight">Multiple File Download</a></li></ul></li><li><a href="#moving-files" class="table-of-contents__link toc-highlight">Moving Files</a><ul><li><a href="#move-single-item" class="table-of-contents__link toc-highlight">Move Single Item</a></li><li><a href="#move-multiple-items" class="table-of-contents__link toc-highlight">Move Multiple Items</a></li></ul></li><li><a href="#renaming-files" class="table-of-contents__link toc-highlight">Renaming Files</a></li><li><a href="#deleting-files" class="table-of-contents__link toc-highlight">Deleting Files</a><ul><li><a href="#delete-single-item" class="table-of-contents__link toc-highlight">Delete Single Item</a></li><li><a href="#delete-multiple-items" class="table-of-contents__link toc-highlight">Delete Multiple Items</a></li></ul></li><li><a href="#bulk-operations" class="table-of-contents__link toc-highlight">Bulk Operations</a><ul><li><a href="#mass-selection" class="table-of-contents__link toc-highlight">Mass Selection</a></li><li><a href="#bulk-actions-available" class="table-of-contents__link toc-highlight">Bulk Actions Available</a></li><li><a href="#name-file-lists" class="table-of-contents__link toc-highlight">Name File Lists</a></li></ul></li><li><a href="#searching-and-filtering" class="table-of-contents__link toc-highlight">Searching and Filtering</a><ul><li><a href="#search-by-name" class="table-of-contents__link toc-highlight">Search by Name</a></li><li><a href="#sorting" class="table-of-contents__link toc-highlight">Sorting</a></li></ul></li><li><a href="#thumbnails" class="table-of-contents__link toc-highlight">Thumbnails</a><ul><li><a href="#automatic-generation" class="table-of-contents__link toc-highlight">Automatic Generation</a></li><li><a href="#thumbnail-sizes" class="table-of-contents__link toc-highlight">Thumbnail Sizes</a></li></ul></li><li><a href="#file-information" class="table-of-contents__link toc-highlight">File Information</a></li><li><a href="#cdn-links" class="table-of-contents__link toc-highlight">CDN Links</a><ul><li><a href="#getting-cdn-links" class="table-of-contents__link toc-highlight">Getting CDN Links</a></li><li><a href="#cdn-link-format" class="table-of-contents__link toc-highlight">CDN Link Format</a></li><li><a href="#cdn-link-options" class="table-of-contents__link toc-highlight">CDN Link Options</a></li><li><a href="#access-control" class="table-of-contents__link toc-highlight">Access Control</a></li></ul></li><li><a href="#best-practices" class="table-of-contents__link toc-highlight">Best Practices</a><ul><li><a href="#organize-with-folders" class="table-of-contents__link toc-highlight">Organize with Folders</a></li><li><a href="#use-consistent-naming" class="table-of-contents__link toc-highlight">Use Consistent Naming</a></li><li><a href="#regular-cleanup" class="table-of-contents__link toc-highlight">Regular Cleanup</a></li><li><a href="#large-files" class="table-of-contents__link toc-highlight">Large Files</a></li><li><a href="#thumbnails-1" class="table-of-contents__link toc-highlight">Thumbnails</a></li></ul></li><li><a href="#troubleshooting" class="table-of-contents__link toc-highlight">Troubleshooting</a><ul><li><a href="#upload-fails" class="table-of-contents__link toc-highlight">Upload Fails</a></li><li><a href="#cannot-view-file" class="table-of-contents__link toc-highlight">Cannot View File</a></li><li><a href="#cannot-delete-file" class="table-of-contents__link toc-highlight">Cannot Delete File</a></li><li><a href="#missing-files" class="table-of-contents__link toc-highlight">Missing Files</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/shadowStore">Shadow Store</a></li><li class="footer__item"><a class="footer__link-item" href="/licenseSystem">License System</a></li><li class="footer__item"><a class="footer__link-item" href="/spark/getting-started">SPARK</a></li><li class="footer__item"><a class="footer__link-item" href="/legacy">Legacy Products</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.gg/shadowdevs" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/Shadow-Develops" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 <a href="https://shadowdevs.com">Shadow Development</a>. <i>Built with Docusaurus.</i></div></div></div></footer></div>
+</body>
+</html>
