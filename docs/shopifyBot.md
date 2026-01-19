@@ -11,7 +11,7 @@ This is the official documentation for [Shopify Bot](https://shadowdevs.com/stor
 - What is required to host it?
   - This is a simple Discord.JS bot and NodeJS/ExpressJs web server, so you will need an environment to handle both. We recommend a simple Linux server.
   - "Bot Hosting" services may work, but we can not ensure it as we have a web server built in as well.
-  - _Our friends over at [Nexus Hosting](https://nexushosts.com/vps) have wonderful hosting options._
+  - _Our friends over at [Nexus Hosting](https://billing.nexushosts.com/aff.php?aff=9) have wonderful hosting options._
 - What Database is used?
   - MongoDB is the database used. You just need the database URL within your `.env`.
 - How does linking work?

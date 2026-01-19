@@ -10,7 +10,7 @@ This is the official documentation for [Shadow License System](https://shadowdev
 
 - What is required to host it?
   - You need to have a VPS, as Shadow Store is a node application it will not work on "shared hosting" type plans. We recommend a Linux VPS.
-  - _Our friends over at [Nexus Hosting](https://nexushosts.com/vps) have wonderful hosting options._
+  - _Our friends over at [Nexus Hosting](https://billing.nexushosts.com/aff.php?aff=9) have wonderful hosting options._
 - What Database is used?
   - MongoDB is the database used. You just need the database URL within your `.env`.
 - Do I have to use Discord for login and logs?

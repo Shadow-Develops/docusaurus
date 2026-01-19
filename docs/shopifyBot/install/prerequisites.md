@@ -42,4 +42,4 @@ _These specs may vary depending on your bot usage, number of servers, and comman
 
 ### Need a Server?
 
-If you are looking for quality and reliable hosting then check out [Nexus Hosting](https://nexushosts.com/vps)! They are what we use and recommend with their amazing reliability, quality, and affordability.
+If you are looking for quality and reliable hosting then check out [Nexus Hosting](https://billing.nexushosts.com/aff.php?aff=9)! They are what we use and recommend with their amazing reliability, quality, and affordability.
