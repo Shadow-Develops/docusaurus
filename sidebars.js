@@ -20,6 +20,7 @@ export default {
 			dirName: 'cdnManager',
 		},
 	],
+	shadowStatus: ['shadowStatus'],
 	shopifyBot: [
 		'shopifyBot',
 		{

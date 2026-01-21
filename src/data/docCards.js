@@ -20,15 +20,22 @@ export default [
 	{
 		title: 'CDN Manager',
 		icon: '🖼️',
-		description: 'Learn how to setup and manage the CDN Manager,',
+		description: 'Learn how to setup and manage the CDN Manager.',
 		docUrl: '/cdnManager',
 		color: 'teal',
+	},
+	{
+		title: 'Shadow Status',
+		icon: '🛜',
+		description: "Learn how to setup and run your Github Page's Status page.",
+		docUrl: '/shadowStatus',
+		color: 'blue',
 	},
 	{
 		title: 'Shopify Bot',
 		icon: '🏪',
 		description:
-			'Learn how to install and integrate the Shopify Bot with your Discord & Shopify',
+			'Learn how to install and integrate the Shopify Bot with your Discord & Shopify.',
 		docUrl: '/shopifyBot',
 		color: 'green',
 	},
