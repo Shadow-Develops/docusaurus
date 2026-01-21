@@ -1,0 +1,195 @@
+---
+sidebar_position: 1
+---
+
+# Install & Setup
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+This guide will walk you through setting up your Shadow Status page from scratch.
+
+## Step 1: Get the Repository
+
+<Tabs>
+  <TabItem value="fork" label="Fork (Recommended)" default>
+
+Forking is the easiest way to get started and allows you to receive updates.
+
+1. Go to the [Shadow Status repository](https://github.com/Shadow-Develops/ShadowStatus)
+2. Click the **Fork** button in the top right
+3. Select your account or organization
+4. Wait for the fork to complete
+
+  </TabItem>
+  <TabItem value="template" label="Use as Template">
+
+Using as a template creates a fresh repository without the commit history.
+
+1. Go to the [Shadow Status repository](https://github.com/Shadow-Develops/ShadowStatus)
+2. Click **Use this template** > **Create a new repository**
+3. Name your repository (e.g., `status` or `my-status-page`)
+4. Choose public or private visibility
+5. Click **Create repository**
+
+  </TabItem>
+  <TabItem value="clone" label="Clone Locally">
+
+For local development and manual deployment.
+
+```bash
+git clone https://github.com/Shadow-Develops/ShadowStatus.git my-status-page
+cd my-status-page
+npm install
+```
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Step 2: Configure GitHub Secrets
+
+Your status page needs a GitHub token to fetch issues (for incidents) and commit status updates.
+
+### Create a Personal Access Token
+
+1. Go to [GitHub Settings > Developer settings > Personal access tokens > Tokens (classic)](https://github.com/settings/tokens)
+2. Click **Generate new token** > **Generate new token (classic)**
+3. Give it a descriptive name (e.g., "Shadow Status")
+4. Set expiration (or "No expiration" for convenience)
+5. Select these scopes:
+   - `repo` (Full control of private repositories) — or just `public_repo` if your repo is public
+6. Click **Generate token**
+7. **Copy the token immediately** — you won't see it again!
+
+### Add the Secret to Your Repository
+
+1. Go to your forked/created repository
+2. Navigate to **Settings** > **Secrets and variables** > **Actions**
+3. Click **New repository secret**
+4. Name: `GIT_TOKEN`
+5. Value: Paste your personal access token
+6. Click **Add secret**
+
+:::tip[Optional Secrets]
+You can also add these optional secrets for notifications:
+
+- `DISCORD_WEBHOOK` — For Discord notifications ([How to create a webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks))
+- `WEBHOOK_URL` — For generic webhook notifications
+  :::
+
+---
+
+## Step 3: Configure Your Status Page
+
+You'll need to edit two main configuration files:
+
+### config.json
+
+This file controls your site's appearance and behavior. At minimum, update:
+
+```json title="config.json"
+{
+	"domain": "https://your-username.github.io/your-repo-name",
+	"siteSettings": {
+		"siteName": "Your Status Page",
+		"siteDescription": "Service status for Your Company"
+	},
+	"github": {
+		"owner": "your-username",
+		"repo": "your-repo-name"
+	}
+}
+```
+
+See the [Configuration guide](./configuration) for all available options.
+
+### monitors.json
+
+This file defines what services to monitor. Here's a simple example:
+
+```json title="monitors.json"
+{
+	"groups": [
+		{
+			"name": "Web Services",
+			"defaultOpen": true,
+			"monitors": [
+				{
+					"name": "Main Website",
+					"type": "http",
+					"target": "https://example.com",
+					"expectedStatus": [200]
+				},
+				{
+					"name": "API",
+					"type": "http",
+					"target": "https://api.example.com/health",
+					"expectedStatus": [200]
+				}
+			]
+		}
+	],
+	"monitors": []
+}
+```
+
+See the [Monitors guide](./monitors) for all monitor types and options.
+
+---
+
+## Step 4: Enable GitHub Pages
+
+1. Go to your repository's **Settings**
+2. Navigate to **Pages** in the sidebar
+3. Under "Build and deployment":
+   - **Source**: Select "Deploy from a branch"
+   - **Branch**: Select `gh-pages` and `/ (root)`
+4. Click **Save**
+
+:::note
+The `gh-pages` branch is created automatically when the deploy workflow runs for the first time.
+:::
+
+---
+
+## Step 5: Enable GitHub Actions
+
+If Actions aren't already enabled:
+
+1. Go to your repository's **Actions** tab
+2. If prompted, click **I understand my workflows, go ahead and enable them**
+3. The workflows should now be active
+
+### Trigger the First Build
+
+The monitor checks run automatically every 5 minutes, but you can trigger them manually:
+
+1. Go to **Actions** > **Monitor Checks**
+2. Click **Run workflow** > **Run workflow**
+
+Similarly, trigger the deploy:
+
+1. Go to **Actions** > **Deploy**
+2. Click **Run workflow** > **Run workflow**
+
+---
+
+## Step 6: View Your Status Page
+
+After the workflows complete, your status page will be available at:
+
+```
+https://your-username.github.io/your-repo-name/
+```
+
+:::tip[Custom Domain]
+To use a custom domain:
+
+1. Add a `CNAME` file to `static/` with your domain (e.g., `status.example.com`)
+2. Configure your DNS with a CNAME record pointing to `your-username.github.io`
+3. Update the `domain` field in `config.json`
+   :::
+
+---

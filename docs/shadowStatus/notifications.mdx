@@ -1,0 +1,400 @@
+---
+sidebar_position: 5
+---
+
+# Notifications
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Get alerted when your services go down with Discord webhooks or generic HTTP webhooks.
+
+## Quick Setup
+
+<Tabs>
+  <TabItem value="discord" label="Discord" default>
+
+1. **Create a Discord webhook:**
+   - Go to your Discord server settings
+   - Navigate to **Integrations** > **Webhooks**
+   - Click **New Webhook**
+   - Choose a channel and name
+   - Copy the webhook URL
+
+2. **Add the secret to GitHub:**
+   - Go to your repository's **Settings** > **Secrets and variables** > **Actions**
+   - Click **New repository secret**
+   - Name: `DISCORD_WEBHOOK`
+   - Value: Your webhook URL
+   - Click **Add secret**
+
+3. **Enable in config.json:**
+   ```json
+   {
+   	"notifications": {
+   		"discord": {
+   			"enabled": true
+   		}
+   	}
+   }
+   ```
+
+  </TabItem>
+  <TabItem value="webhook" label="Generic Webhook">
+
+1. **Get your webhook endpoint** from your notification service (Slack, PagerDuty, custom endpoint, etc.)
+
+2. **Add the secret to GitHub:**
+   - Go to your repository's **Settings** > **Secrets and variables** > **Actions**
+   - Click **New repository secret**
+   - Name: `WEBHOOK_URL`
+   - Value: Your webhook endpoint
+   - Click **Add secret**
+
+3. **Enable in config.json:**
+   ```json
+   {
+   	"notifications": {
+   		"webhook": true
+   	}
+   }
+   ```
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Configuration Options
+
+```json title="config.json"
+{
+	"notifications": {
+		"defaultEnabled": true,
+		"numberOfDown": 1,
+		"discord": {
+			"enabled": true,
+			"defaultPingRole": "",
+			"pingForReturn": false
+		},
+		"webhook": false
+	}
+}
+```
+
+| Property                  | Type    | Default | Description                                      |
+| ------------------------- | ------- | ------- | ------------------------------------------------ |
+| `defaultEnabled`          | boolean | `true`  | Enable notifications by default for all monitors |
+| `numberOfDown`            | number  | `1`     | Consecutive failures before sending notification |
+| `discord.enabled`         | boolean | `false` | Enable Discord notifications                     |
+| `discord.defaultPingRole` | string  | `""`    | Default role to ping (see below)                 |
+| `discord.pingForReturn`   | boolean | `false` | Also ping when service recovers                  |
+| `webhook`                 | boolean | `false` | Enable generic webhook notifications             |
+
+---
+
+## Discord Configuration
+
+### Role Pings
+
+Configure who gets notified when services go down:
+
+| Value         | Result                  |
+| ------------- | ----------------------- |
+| `""`          | No ping                 |
+| `"everyone"`  | @everyone               |
+| `"here"`      | @here                   |
+| `"123456789"` | @RoleID (specific role) |
+
+**To get a role ID:**
+
+1. Enable Developer Mode in Discord (Settings > Advanced > Developer Mode)
+2. Right-click the role in Server Settings > Roles
+3. Click "Copy Role ID"
+
+### Per-Monitor Overrides
+
+Override the default ping role for specific monitors:
+
+```json title="monitors.json"
+{
+	"name": "Critical API",
+	"type": "http",
+	"target": "https://api.example.com",
+	"discordPingRole": "everyone"
+}
+```
+
+### Discord Message Format
+
+When a service goes down, you'll receive an embed like this:
+
+```
+🔴 Monitor Down
+━━━━━━━━━━━━━━━━━━━━━━━━
+Critical API is experiencing issues
+
+Status: Major Outage
+Previous Status: Operational
+Target: https://api.example.com
+Details: Connection timeout
+
+━━━━━━━━━━━━━━━━━━━━━━━━
+My Status Page • Today at 2:45 PM
+```
+
+Recovery notifications (if `pingForReturn` is enabled):
+
+```
+🟢 Monitor Recovered
+━━━━━━━━━━━━━━━━━━━━━━━━
+Critical API is back online
+
+Status: Operational
+Previous Status: Major Outage
+Response Time: 245ms
+
+━━━━━━━━━━━━━━━━━━━━━━━━
+My Status Page • Today at 3:12 PM
+```
+
+---
+
+## Generic Webhook
+
+For services other than Discord, enable the generic webhook to receive JSON payloads.
+
+### Payload Format
+
+**Service Down:**
+
+```json
+{
+	"event": "monitor.down",
+	"monitor": {
+		"name": "Critical API",
+		"type": "http",
+		"target": "https://api.example.com"
+	},
+	"status": {
+		"current": "major",
+		"currentLabel": "Major Outage",
+		"previous": "operational",
+		"previousLabel": "Operational"
+	},
+	"message": "Connection timeout",
+	"responseTime": 10000,
+	"timestamp": "2024-02-15T14:45:00.000Z",
+	"siteName": "My Status Page"
+}
+```
+
+**Service Recovered:**
+
+```json
+{
+	"event": "monitor.up",
+	"monitor": {
+		"name": "Critical API",
+		"type": "http",
+		"target": "https://api.example.com"
+	},
+	"status": {
+		"current": "operational",
+		"currentLabel": "Operational",
+		"previous": "major",
+		"previousLabel": "Major Outage"
+	},
+	"message": null,
+	"responseTime": 245,
+	"timestamp": "2024-02-15T15:12:00.000Z",
+	"siteName": "My Status Page"
+}
+```
+
+### Integration Examples
+
+<Tabs>
+  <TabItem value="slack" label="Slack" default>
+
+Use a Slack Incoming Webhook with a transformation service, or create a simple serverless function:
+
+```javascript
+// Example AWS Lambda / Cloudflare Worker
+export async function handler(event) {
+	const data = JSON.parse(event.body);
+
+	const slackMessage = {
+		text:
+			data.event === 'monitor.down'
+				? `🔴 ${data.monitor.name} is down!`
+				: `🟢 ${data.monitor.name} recovered`,
+		attachments: [
+			{
+				color: data.event === 'monitor.down' ? 'danger' : 'good',
+				fields: [
+					{ title: 'Status', value: data.status.currentLabel, short: true },
+					{ title: 'Target', value: data.monitor.target, short: true },
+				],
+			},
+		],
+	};
+
+	await fetch(process.env.SLACK_WEBHOOK, {
+		method: 'POST',
+		body: JSON.stringify(slackMessage),
+	});
+
+	return { statusCode: 200 };
+}
+```
+
+  </TabItem>
+  <TabItem value="pagerduty" label="PagerDuty">
+
+Forward to PagerDuty Events API v2:
+
+```javascript
+export async function handler(event) {
+	const data = JSON.parse(event.body);
+
+	const pdEvent = {
+		routing_key: process.env.PAGERDUTY_KEY,
+		event_action: data.event === 'monitor.down' ? 'trigger' : 'resolve',
+		dedup_key: `shadowstatus-${data.monitor.name}`,
+		payload: {
+			summary: `${data.monitor.name}: ${data.status.currentLabel}`,
+			source: data.siteName,
+			severity: data.event === 'monitor.down' ? 'critical' : 'info',
+			custom_details: {
+				target: data.monitor.target,
+				type: data.monitor.type,
+				message: data.message,
+			},
+		},
+	};
+
+	await fetch('https://events.pagerduty.com/v2/enqueue', {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify(pdEvent),
+	});
+
+	return { statusCode: 200 };
+}
+```
+
+  </TabItem>
+  <TabItem value="email" label="Email (via SendGrid)">
+
+```javascript
+export async function handler(event) {
+	const data = JSON.parse(event.body);
+
+	const subject =
+		data.event === 'monitor.down'
+			? `🔴 Alert: ${data.monitor.name} is DOWN`
+			: `🟢 Resolved: ${data.monitor.name} is back up`;
+
+	await fetch('https://api.sendgrid.com/v3/mail/send', {
+		method: 'POST',
+		headers: {
+			Authorization: `Bearer ${process.env.SENDGRID_KEY}`,
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({
+			personalizations: [{ to: [{ email: 'alerts@example.com' }] }],
+			from: { email: 'status@example.com' },
+			subject: subject,
+			content: [
+				{
+					type: 'text/plain',
+					value: `Monitor: ${data.monitor.name}\nStatus: ${data.status.currentLabel}\nTarget: ${data.monitor.target}\n\nMessage: ${data.message || 'N/A'}`,
+				},
+			],
+		}),
+	});
+
+	return { statusCode: 200 };
+}
+```
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Notification Logic
+
+### When Notifications Are Sent
+
+1. **First Failure:** If `numberOfDown` is 1, notify immediately on first failure
+2. **Consecutive Failures:** If `numberOfDown` is 2+, notify only after that many consecutive failures
+3. **Recovery:** Notify when a monitor returns to operational (if enabled)
+4. **No Duplicates:** Same status won't trigger multiple notifications
+
+### Notification State
+
+The system tracks notification state in `data/notification-state.json`:
+
+```json
+{
+	"Critical API": {
+		"lastStatus": "major",
+		"consecutiveDown": 3,
+		"notified": true
+	}
+}
+```
+
+This prevents duplicate notifications and tracks consecutive failure counts.
+
+---
+
+## Per-Monitor Settings
+
+Disable notifications for specific monitors:
+
+```json title="monitors.json"
+{
+	"name": "Third-Party Service",
+	"type": "statuspage",
+	"target": "https://status.example.com",
+	"notify": false
+}
+```
+
+This is useful for:
+
+- Third-party status page monitors
+- Non-critical services
+- Services with known intermittent issues
+
+---
+
+## Troubleshooting
+
+### Discord Notifications Not Sending
+
+1. **Check the secret:** Verify `DISCORD_WEBHOOK` is set correctly in repository secrets
+2. **Verify webhook URL:** Make sure it starts with `https://discord.com/api/webhooks/`
+3. **Check config:** Ensure `notifications.discord.enabled` is `true`
+4. **Check monitor setting:** Verify the monitor has `notify: true` (or uses default)
+5. **Check workflow logs:** Look at GitHub Actions logs for error messages
+
+### Webhook Not Receiving Events
+
+1. **Check the secret:** Verify `WEBHOOK_URL` is set in repository secrets
+2. **Check config:** Ensure `notifications.webhook` is `true`
+3. **Test your endpoint:** Use a service like [webhook.site](https://webhook.site) to verify it receives requests
+4. **Check for HTTPS:** Your endpoint must support HTTPS
+
+### Getting Too Many Notifications
+
+1. **Increase threshold:** Set `numberOfDown` to 2 or higher
+2. **Disable for flaky monitors:** Set `notify: false` on monitors with known issues
+3. **Check for network issues:** Ensure GitHub Actions can reliably reach your services
+
+### Not Getting Recovery Notifications
+
+Make sure `discord.pingForReturn` is set to `true` if you want to be notified when services recover.

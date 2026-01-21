@@ -55,7 +55,7 @@ export default {
 		],
 	],
 
-	themes: ['@docusaurus/theme-live-codeblock'],
+	themes: ['@docusaurus/theme-live-codeblock', '@docusaurus/theme-mermaid'],
 
 	themeConfig: {
 		image: 'img/Banner.png',
