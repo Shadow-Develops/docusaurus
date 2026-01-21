@@ -66,7 +66,7 @@ Only if they're accessible from GitHub's Actions runners (public internet). For 
 
 ### How do I report an incident?
 
-Create a GitHub Issue in your repository with the `incident` label. The status page will automatically display it. See the [Incidents guide](./shadowStatus/install/incidents) for details.
+Create a GitHub Issue in your repository with the `incident` label. The status page will automatically display it. See the [Incidents guide](./shadowStatus/incidents) for details.
 
 ### Can I use a custom domain?
 
