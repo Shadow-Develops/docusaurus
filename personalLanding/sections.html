@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-personalLanding/sections" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Sections Reference | Shadow Devs Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.shadowdevs.com/img/Banner.png"><meta data-rh="true" name="twitter:image" content="https://docs.shadowdevs.com/img/Banner.png"><meta data-rh="true" property="og:url" content="https://docs.shadowdevs.com/personalLanding/sections"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Sections Reference | Shadow Devs Docs"><meta data-rh="true" name="description" content="Complete guide to all section types and their configuration options. Each section can be customized through config.json."><meta data-rh="true" property="og:description" content="Complete guide to all section types and their configuration options. Each section can be customized through config.json."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.shadowdevs.com/personalLanding/sections"><link data-rh="true" rel="alternate" href="https://docs.shadowdevs.com/personalLanding/sections" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.shadowdevs.com/personalLanding/sections" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://KQKEAMJ226-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Sections Reference","item":"https://docs.shadowdevs.com/personalLanding/sections"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="Shadow Devs Docs" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.6a31a0c1.css">
+<script src="/assets/js/runtime~main.2c1e4a08.js" defer="defer"></script>
+<script src="/assets/js/main.784bef6b.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>document.documentElement.setAttribute("data-theme","dark"),document.documentElement.setAttribute("data-theme-choice","dark"),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/Logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Shadow Dev Docs</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://shadowdevs.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-home-link" aria-label="Home Site"></a><a href="https://github.com/Shadow-Develops/docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><div class="navbarSearchContainer_Bca1"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search (Meta+k)" aria-keyshortcuts="Meta+k"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" fill="none" stroke-width="1.4"></circle><path d="m21 21-4.3-4.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"></span></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd sidebarWithHideableNavbar_wUlq"><a tabindex="-1" class="sidebarLogo_isFc" href="/"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/Logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"><b>Shadow Dev Docs</b></a><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/personalLanding"><span title="Personal Landing" class="linkLabel_WmDU">Personal Landing</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/personalLanding/getting-started"><span title="Getting Started" class="linkLabel_WmDU">Getting Started</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/personalLanding/configuration"><span title="Configuration Guide" class="linkLabel_WmDU">Configuration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/personalLanding/sections"><span title="Sections Reference" class="linkLabel_WmDU">Sections Reference</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/personalLanding/customization"><span title="Customization" class="linkLabel_WmDU">Customization</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/personalLanding/deployment"><span title="Deployment" class="linkLabel_WmDU">Deployment</span></a></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Sections Reference</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Sections Reference</h1></header>
+<p>Complete guide to all section types and their configuration options. Each section can be customized through <code>config.json</code>.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="hero-section">Hero Section<a href="#hero-section" class="hash-link" aria-label="Direct link to Hero Section" title="Direct link to Hero Section" translate="no">​</a></h2>
+<p>The hero section is typically the first thing visitors see. It features your name, tagline, and optional avatar.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="variants">Variants<a href="#variants" class="hash-link" aria-label="Direct link to Variants" title="Direct link to Variants" translate="no">​</a></h3>
+<p>Hero comes with <strong>6 variants</strong>, each with a different layout and style:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Variant</th><th>Description</th></tr></thead><tbody><tr><td><code>centered</code></td><td>Classic centered layout with avatar and text</td></tr><tr><td><code>split</code></td><td>Side-by-side layout with avatar on one side</td></tr><tr><td><code>minimal</code></td><td>Text-only, ultra-minimal design</td></tr><tr><td><code>bold</code></td><td>Large, attention-grabbing typography</td></tr><tr><td><code>card</code></td><td>Content in a card with subtle shadow</td></tr><tr><td><code>links</code></td><td>Includes social links directly in the hero</td></tr></tbody></table>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="configuration">Configuration<a href="#configuration" class="hash-link" aria-label="Direct link to Configuration" title="Direct link to Configuration" translate="no">​</a></h3>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;type&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;hero&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;enabled&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;variant&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;centered&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;name&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Your Name&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;tagline&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Your professional tagline&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;avatar&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;/img/avatar.png&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;showAvatar&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;links&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">[</span><span class="token punctuation" style="color:#f8f8f2">]</span><span class="token plain"> </span><span class="token comment" style="color:#8292a2;font-style:italic">// Only for &quot;links&quot; variant</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>variant</code></td><td>string</td><td>Yes</td><td>One of: centered, split, minimal, bold, card, links</td></tr><tr><td><code>name</code></td><td>string</td><td>Yes</td><td>Your name or headline</td></tr><tr><td><code>tagline</code></td><td>string</td><td>Yes</td><td>Subtitle or professional tagline</td></tr><tr><td><code>avatar</code></td><td>string</td><td>No</td><td>Path to avatar image (e.g., &quot;/img/avatar.png&quot;)</td></tr><tr><td><code>showAvatar</code></td><td>boolean</td><td>No</td><td>Display avatar (default: true)</td></tr><tr><td><code>links</code></td><td>array</td><td>No</td><td>Social links (required for &quot;links&quot; variant)</td></tr></tbody></table>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="links-format-for-links-variant">Links Format (for &quot;links&quot; variant)<a href="#links-format-for-links-variant" class="hash-link" aria-label="Direct link to Links Format (for &quot;links&quot; variant)" title="Direct link to Links Format (for &quot;links&quot; variant)" translate="no">​</a></h4>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;links&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;name&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;GitHub&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;url&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;https://github.com/username&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;icon&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;github&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">}</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;name&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;LinkedIn&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;url&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;https://linkedin.com/in/username&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;icon&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;linkedin&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token punctuation" style="color:#f8f8f2">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="example">Example<a href="#example" class="hash-link" aria-label="Direct link to Example" title="Direct link to Example" translate="no">​</a></h3>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;type&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;hero&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;enabled&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;variant&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;centered&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;name&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Alex Smith&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;tagline&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Full-stack Developer &amp; Designer&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;avatar&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;/img/avatar.png&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;showAvatar&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="about-section">About Section<a href="#about-section" class="hash-link" aria-label="Direct link to About Section" title="Direct link to About Section" translate="no">​</a></h2>
+<p>Share your bio, background, and skills.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="variants-1">Variants<a href="#variants-1" class="hash-link" aria-label="Direct link to Variants" title="Direct link to Variants" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Variant</th><th>Description</th></tr></thead><tbody><tr><td><code>centered</code></td><td>Centered text with skill badges</td></tr><tr><td><code>split</code></td><td>Two-column layout with content and skills</td></tr><tr><td><code>card</code></td><td>Content in a card container</td></tr><tr><td><code>minimal</code></td><td>Simple, text-focused design</td></tr></tbody></table>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="configuration-1">Configuration<a href="#configuration-1" class="hash-link" aria-label="Direct link to Configuration" title="Direct link to Configuration" translate="no">​</a></h3>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;type&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;about&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;enabled&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;variant&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;centered&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;title&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;About Me&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;content&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Your bio text here...&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;skills&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">[</span><span class="token string" style="color:#a6e22e">&quot;Skill 1&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Skill 2&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Skill 3&quot;</span><span class="token punctuation" style="color:#f8f8f2">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>variant</code></td><td>string</td><td>Yes</td><td>One of: centered, split, card, minimal</td></tr><tr><td><code>title</code></td><td>string</td><td>Yes</td><td>Section heading</td></tr><tr><td><code>content</code></td><td>string</td><td>Yes</td><td>Your biography or description</td></tr><tr><td><code>skills</code></td><td>array</td><td>No</td><td>Array of skill names to display as badges</td></tr></tbody></table>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="example-1">Example<a href="#example-1" class="hash-link" aria-label="Direct link to Example" title="Direct link to Example" translate="no">​</a></h3>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;type&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;about&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;enabled&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;variant&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;split&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;title&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;About Me&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;content&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;I&#x27;m a passionate developer who loves creating elegant solutions to complex problems. With expertise in modern web technologies, I help bring ideas to life through clean code and thoughtful design.&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;skills&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token string" style="color:#a6e22e">&quot;JavaScript&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token string" style="color:#a6e22e">&quot;TypeScript&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token string" style="color:#a6e22e">&quot;Svelte&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token string" style="color:#a6e22e">&quot;React&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token string" style="color:#a6e22e">&quot;Node.js&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token string" style="color:#a6e22e">&quot;PostgreSQL&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token punctuation" style="color:#f8f8f2">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="links-section">Links Section<a href="#links-section" class="hash-link" aria-label="Direct link to Links Section" title="Direct link to Links Section" translate="no">​</a></h2>
+<p>Display social media links and other important URLs.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="variants-2">Variants<a href="#variants-2" class="hash-link" aria-label="Direct link to Variants" title="Direct link to Variants" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Variant</th><th>Description</th></tr></thead><tbody><tr><td><code>default</code></td><td>Vertical list of link buttons</td></tr><tr><td><code>grid</code></td><td>Grid layout for links</td></tr><tr><td><code>card</code></td><td>Links as cards with icons</td></tr><tr><td><code>minimal</code></td><td>Simple text links</td></tr></tbody></table>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="configuration-2">Configuration<a href="#configuration-2" class="hash-link" aria-label="Direct link to Configuration" title="Direct link to Configuration" translate="no">​</a></h3>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;type&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;links&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;enabled&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;variant&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;default&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;title&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Connect With Me&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;items&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"> </span><span class="token property" style="color:#f92672">&quot;name&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;GitHub&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"> </span><span class="token property" style="color:#f92672">&quot;url&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;https://github.com/username&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"> </span><span class="token property" style="color:#f92672">&quot;icon&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;github&quot;</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token punctuation" style="color:#f8f8f2">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>variant</code></td><td>string</td><td>Yes</td><td>One of: default, grid, card, minimal</td></tr><tr><td><code>title</code></td><td>string</td><td>Yes</td><td>Section heading</td></tr><tr><td><code>items</code></td><td>array</td><td>Yes</td><td>Array of link objects</td></tr></tbody></table>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="item-format">Item Format<a href="#item-format" class="hash-link" aria-label="Direct link to Item Format" title="Direct link to Item Format" translate="no">​</a></h4>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;name&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;GitHub&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;url&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;https://github.com/username&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;icon&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;github&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code></td><td>string</td><td>Yes</td><td>Display name for the link</td></tr><tr><td><code>url</code></td><td>string</td><td>Yes</td><td>Full URL (including https://)</td></tr><tr><td><code>icon</code></td><td>string</td><td>Yes</td><td>Icon identifier</td></tr></tbody></table>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="supported-icons">Supported Icons<a href="#supported-icons" class="hash-link" aria-label="Direct link to Supported Icons" title="Direct link to Supported Icons" translate="no">​</a></h4>
+<ul>
+<li class=""><code>github</code> — GitHub</li>
+<li class=""><code>linkedin</code> — LinkedIn</li>
+<li class=""><code>twitter</code> — Twitter/X</li>
+<li class=""><code>discord</code> — Discord</li>
+<li class=""><code>email</code> — Email</li>
+<li class=""><code>blog</code> — Blog/Website</li>
+<li class="">Custom icons can be added by editing the component</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="example-2">Example<a href="#example-2" class="hash-link" aria-label="Direct link to Example" title="Direct link to Example" translate="no">​</a></h3>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;type&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;links&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;enabled&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;variant&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;card&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;title&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Find Me Online&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;items&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;name&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;GitHub&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;url&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;https://github.com/alexsmith&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;icon&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;github&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">}</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;name&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;LinkedIn&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;url&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;https://linkedin.com/in/alexsmith&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;icon&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;linkedin&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">}</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"> </span><span class="token property" style="color:#f92672">&quot;name&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Email&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"> </span><span class="token property" style="color:#f92672">&quot;url&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;mailto:alex@example.com&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"> </span><span class="token property" style="color:#f92672">&quot;icon&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;email&quot;</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token punctuation" style="color:#f8f8f2">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="contact-section">Contact Section<a href="#contact-section" class="hash-link" aria-label="Direct link to Contact Section" title="Direct link to Contact Section" translate="no">​</a></h2>
+<p>Add a contact button and/or form.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="configuration-3">Configuration<a href="#configuration-3" class="hash-link" aria-label="Direct link to Configuration" title="Direct link to Configuration" translate="no">​</a></h3>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;type&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;contact&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;enabled&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;title&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Get In Touch&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;description&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Have a project in mind? Let&#x27;s talk!&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;button&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token property" style="color:#f92672">&quot;enabled&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token property" style="color:#f92672">&quot;type&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;email&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token property" style="color:#f92672">&quot;value&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;alex@example.com&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token property" style="color:#f92672">&quot;text&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Send Email&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token punctuation" style="color:#f8f8f2">}</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;form&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token property" style="color:#f92672">&quot;enabled&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">false</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token punctuation" style="color:#f8f8f2">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code></td><td>string</td><td>Yes</td><td>Section heading</td></tr><tr><td><code>description</code></td><td>string</td><td>No</td><td>Introductory text</td></tr><tr><td><code>button</code></td><td>object</td><td>No</td><td>Contact button configuration</td></tr><tr><td><code>form</code></td><td>object</td><td>No</td><td>Contact form configuration</td></tr></tbody></table>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="button-configuration">Button Configuration<a href="#button-configuration" class="hash-link" aria-label="Direct link to Button Configuration" title="Direct link to Button Configuration" translate="no">​</a></h4>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;enabled&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;type&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;email&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;value&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;alex@example.com&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;text&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Send Email&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>enabled</code></td><td>boolean</td><td>Show the button</td></tr><tr><td><code>type</code></td><td>string</td><td>Button type: &quot;email&quot; or &quot;link&quot;</td></tr><tr><td><code>value</code></td><td>string</td><td>Email address or URL</td></tr><tr><td><code>text</code></td><td>string</td><td>Button text</td></tr></tbody></table>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="form-configuration">Form Configuration<a href="#form-configuration" class="hash-link" aria-label="Direct link to Form Configuration" title="Direct link to Form Configuration" translate="no">​</a></h4>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;enabled&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;email&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;alex@example.com&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;subject&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Contact Form Submission&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;successMessage&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Thanks! I&#x27;ll get back to you soon.&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;namePlaceholder&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Your Name&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;emailPlaceholder&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;your@email.com&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;messagePlaceholder&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Your message...&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;submitText&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Send Message&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+<p>Note: The form uses <code>mailto:</code> links. For a true backend form, you&#x27;ll need to integrate a service like Formspree, Netlify Forms, or similar.</p>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="services-section">Services Section<a href="#services-section" class="hash-link" aria-label="Direct link to Services Section" title="Direct link to Services Section" translate="no">​</a></h2>
+<p>Showcase services or offerings you provide.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="configuration-4">Configuration<a href="#configuration-4" class="hash-link" aria-label="Direct link to Configuration" title="Direct link to Configuration" translate="no">​</a></h3>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;type&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;services&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;enabled&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;title&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;What I Do&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;items&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;name&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Web Development&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;description&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Building modern web applications...&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;icon&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;code&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token punctuation" style="color:#f8f8f2">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code></td><td>string</td><td>Yes</td><td>Section heading</td></tr><tr><td><code>items</code></td><td>array</td><td>Yes</td><td>Array of service objects</td></tr></tbody></table>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="item-format-1">Item Format<a href="#item-format-1" class="hash-link" aria-label="Direct link to Item Format" title="Direct link to Item Format" translate="no">​</a></h4>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;name&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Service Name&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;description&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Description of the service&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;icon&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;code&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code></td><td>string</td><td>Yes</td><td>Service name</td></tr><tr><td><code>description</code></td><td>string</td><td>Yes</td><td>Service description</td></tr><tr><td><code>icon</code></td><td>string</td><td>Yes</td><td>Icon identifier (code, design, api, consulting, etc.)</td></tr></tbody></table>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="example-3">Example<a href="#example-3" class="hash-link" aria-label="Direct link to Example" title="Direct link to Example" translate="no">​</a></h3>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;type&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;services&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;enabled&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;title&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;What I Do&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;items&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;name&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Web Development&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;description&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Building responsive, performant web applications with modern frameworks&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;icon&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;code&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">}</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;name&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;UI/UX Design&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;description&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Creating intuitive and beautiful user interfaces&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;icon&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;design&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token punctuation" style="color:#f8f8f2">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="projects-section">Projects Section<a href="#projects-section" class="hash-link" aria-label="Direct link to Projects Section" title="Direct link to Projects Section" translate="no">​</a></h2>
+<p>Display portfolio projects with descriptions and tags.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="configuration-5">Configuration<a href="#configuration-5" class="hash-link" aria-label="Direct link to Configuration" title="Direct link to Configuration" translate="no">​</a></h3>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;type&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;projects&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;enabled&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;title&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Featured Projects&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;items&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;name&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Project Name&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;description&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Brief project description&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;url&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;https://github.com/username/project&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;tags&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">[</span><span class="token string" style="color:#a6e22e">&quot;Svelte&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;TypeScript&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;PostgreSQL&quot;</span><span class="token punctuation" style="color:#f8f8f2">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token punctuation" style="color:#f8f8f2">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code></td><td>string</td><td>Yes</td><td>Section heading</td></tr><tr><td><code>items</code></td><td>array</td><td>Yes</td><td>Array of project objects</td></tr></tbody></table>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="item-format-2">Item Format<a href="#item-format-2" class="hash-link" aria-label="Direct link to Item Format" title="Direct link to Item Format" translate="no">​</a></h4>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;name&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Project Name&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;description&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Brief description&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;url&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;https://github.com/username/project&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;tags&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">[</span><span class="token string" style="color:#a6e22e">&quot;Tag1&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Tag2&quot;</span><span class="token punctuation" style="color:#f8f8f2">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code></td><td>string</td><td>Yes</td><td>Project name</td></tr><tr><td><code>description</code></td><td>string</td><td>Yes</td><td>Brief description</td></tr><tr><td><code>url</code></td><td>string</td><td>No</td><td>Link to project (GitHub, live demo, etc.)</td></tr><tr><td><code>tags</code></td><td>array</td><td>Yes</td><td>Technology/category tags</td></tr></tbody></table>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="timeline-section">Timeline Section<a href="#timeline-section" class="hash-link" aria-label="Direct link to Timeline Section" title="Direct link to Timeline Section" translate="no">​</a></h2>
+<p>Show your work experience, education, or career milestones.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="configuration-6">Configuration<a href="#configuration-6" class="hash-link" aria-label="Direct link to Configuration" title="Direct link to Configuration" translate="no">​</a></h3>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;type&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;timeline&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;enabled&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;title&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Experience&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;items&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;date&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;2023 - Present&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;title&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Senior Software Engineer&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;subtitle&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Company Name&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;description&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Brief description of role and achievements&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token punctuation" style="color:#f8f8f2">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code></td><td>string</td><td>Yes</td><td>Section heading</td></tr><tr><td><code>items</code></td><td>array</td><td>Yes</td><td>Array of timeline items</td></tr></tbody></table>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="item-format-3">Item Format<a href="#item-format-3" class="hash-link" aria-label="Direct link to Item Format" title="Direct link to Item Format" translate="no">​</a></h4>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;date&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;2023 - Present&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;title&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Job Title&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;subtitle&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Company Name&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;description&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Role description&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code></td><td>string</td><td>Yes</td><td>Date range or time period</td></tr><tr><td><code>title</code></td><td>string</td><td>Yes</td><td>Position or event title</td></tr><tr><td><code>subtitle</code></td><td>string</td><td>No</td><td>Company, school, or location</td></tr><tr><td><code>description</code></td><td>string</td><td>Yes</td><td>Details about the role/event</td></tr></tbody></table>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="gallery-section">Gallery Section<a href="#gallery-section" class="hash-link" aria-label="Direct link to Gallery Section" title="Direct link to Gallery Section" translate="no">​</a></h2>
+<p>Display images in various layouts.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="variants-3">Variants<a href="#variants-3" class="hash-link" aria-label="Direct link to Variants" title="Direct link to Variants" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Variant</th><th>Description</th></tr></thead><tbody><tr><td><code>grid</code></td><td>Uniform grid layout</td></tr><tr><td><code>masonry</code></td><td>Pinterest-style masonry grid</td></tr><tr><td><code>lightbox</code></td><td>Grid with lightbox modal on click</td></tr><tr><td><code>carousel</code></td><td>Sliding carousel</td></tr></tbody></table>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="configuration-7">Configuration<a href="#configuration-7" class="hash-link" aria-label="Direct link to Configuration" title="Direct link to Configuration" translate="no">​</a></h3>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;type&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;gallery&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;enabled&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;variant&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;grid&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;title&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Gallery&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;items&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;image&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;/img/photo1.jpg&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;caption&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Image caption&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;url&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token punctuation" style="color:#f8f8f2">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>variant</code></td><td>string</td><td>Yes</td><td>One of: grid, masonry, lightbox, carousel</td></tr><tr><td><code>title</code></td><td>string</td><td>Yes</td><td>Section heading</td></tr><tr><td><code>items</code></td><td>array</td><td>Yes</td><td>Array of image objects</td></tr></tbody></table>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="item-format-4">Item Format<a href="#item-format-4" class="hash-link" aria-label="Direct link to Item Format" title="Direct link to Item Format" translate="no">​</a></h4>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;image&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;/img/photo.jpg&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;caption&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Photo caption&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;url&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;https://example.com&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>image</code></td><td>string</td><td>Yes</td><td>Path to image file</td></tr><tr><td><code>caption</code></td><td>string</td><td>No</td><td>Image caption/description</td></tr><tr><td><code>url</code></td><td>string</td><td>No</td><td>Link when image is clicked (optional)</td></tr></tbody></table>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="testimonials-section">Testimonials Section<a href="#testimonials-section" class="hash-link" aria-label="Direct link to Testimonials Section" title="Direct link to Testimonials Section" translate="no">​</a></h2>
+<p>Display client testimonials or reviews.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="configuration-8">Configuration<a href="#configuration-8" class="hash-link" aria-label="Direct link to Configuration" title="Direct link to Configuration" translate="no">​</a></h3>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;type&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;testimonials&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;enabled&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;title&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;What People Say&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;items&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;quote&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Great developer to work with!&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;name&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;John Doe&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;role&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;CEO, Example Inc.&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;avatar&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token punctuation" style="color:#f8f8f2">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code></td><td>string</td><td>Yes</td><td>Section heading</td></tr><tr><td><code>items</code></td><td>array</td><td>Yes</td><td>Array of testimonial objects</td></tr></tbody></table>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="item-format-5">Item Format<a href="#item-format-5" class="hash-link" aria-label="Direct link to Item Format" title="Direct link to Item Format" translate="no">​</a></h4>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;quote&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;The testimonial text goes here&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;name&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Client Name&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;role&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Title, Company&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;avatar&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;/img/client-avatar.jpg&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>quote</code></td><td>string</td><td>Yes</td><td>Testimonial text</td></tr><tr><td><code>name</code></td><td>string</td><td>Yes</td><td>Client name</td></tr><tr><td><code>role</code></td><td>string</td><td>Yes</td><td>Client title and company</td></tr><tr><td><code>avatar</code></td><td>string</td><td>No</td><td>Path to client photo</td></tr></tbody></table>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="faq-section">FAQ Section<a href="#faq-section" class="hash-link" aria-label="Direct link to FAQ Section" title="Direct link to FAQ Section" translate="no">​</a></h2>
+<p>Frequently asked questions with expandable answers.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="configuration-9">Configuration<a href="#configuration-9" class="hash-link" aria-label="Direct link to Configuration" title="Direct link to Configuration" translate="no">​</a></h3>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;type&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;faq&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;enabled&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;title&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Frequently Asked Questions&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;items&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;question&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Your question here?&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;answer&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Your answer here.&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token punctuation" style="color:#f8f8f2">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code></td><td>string</td><td>Yes</td><td>Section heading</td></tr><tr><td><code>items</code></td><td>array</td><td>Yes</td><td>Array of Q&amp;A objects</td></tr></tbody></table>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="item-format-6">Item Format<a href="#item-format-6" class="hash-link" aria-label="Direct link to Item Format" title="Direct link to Item Format" translate="no">​</a></h4>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;question&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;What is your question?&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;answer&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;This is the answer to the question.&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="stats-section">Stats Section<a href="#stats-section" class="hash-link" aria-label="Direct link to Stats Section" title="Direct link to Stats Section" translate="no">​</a></h2>
+<p>Display key numbers or achievements.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="configuration-10">Configuration<a href="#configuration-10" class="hash-link" aria-label="Direct link to Configuration" title="Direct link to Configuration" translate="no">​</a></h3>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;type&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;stats&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;enabled&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token boolean" style="color:#ae81ff">true</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;title&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;By the Numbers&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;items&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;label&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Projects&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;value&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;50+&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">			</span><span class="token property" style="color:#f92672">&quot;description&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Completed&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token punctuation" style="color:#f8f8f2">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code></td><td>string</td><td>Yes</td><td>Section heading</td></tr><tr><td><code>items</code></td><td>array</td><td>Yes</td><td>Array of stat objects</td></tr></tbody></table>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="item-format-7">Item Format<a href="#item-format-7" class="hash-link" aria-label="Direct link to Item Format" title="Direct link to Item Format" translate="no">​</a></h4>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;label&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Projects&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;value&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;50+&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;description&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Completed&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>label</code></td><td>string</td><td>Yes</td><td>Stat category</td></tr><tr><td><code>value</code></td><td>string</td><td>Yes</td><td>Numeric value (can include +, ∞, etc.)</td></tr><tr><td><code>description</code></td><td>string</td><td>Yes</td><td>Additional context</td></tr></tbody></table>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="tips-for-using-sections">Tips for Using Sections<a href="#tips-for-using-sections" class="hash-link" aria-label="Direct link to Tips for Using Sections" title="Direct link to Tips for Using Sections" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="section-order">Section Order<a href="#section-order" class="hash-link" aria-label="Direct link to Section Order" title="Direct link to Section Order" translate="no">​</a></h3>
+<p>Sections render in the order they appear in your config. A common pattern:</p>
+<ol>
+<li class="">Hero (first impression)</li>
+<li class="">About (introduce yourself)</li>
+<li class="">Services or Projects (showcase work)</li>
+<li class="">Timeline (experience)</li>
+<li class="">Testimonials (social proof)</li>
+<li class="">Links (social media)</li>
+<li class="">Contact (call to action)</li>
+</ol>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="using-multiple-instances">Using Multiple Instances<a href="#using-multiple-instances" class="hash-link" aria-label="Direct link to Using Multiple Instances" title="Direct link to Using Multiple Instances" translate="no">​</a></h3>
+<p>You can use the same section type multiple times:</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#f8f8f2;--prism-background-color:#272822"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#f8f8f2;background-color:#272822"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#f8f8f2"><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token property" style="color:#f92672">&quot;sections&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"> </span><span class="token property" style="color:#f92672">&quot;type&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;gallery&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"> </span><span class="token property" style="color:#f92672">&quot;variant&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;grid&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"> </span><span class="token property" style="color:#f92672">&quot;title&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Photos&quot;</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">}</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">		</span><span class="token punctuation" style="color:#f8f8f2">{</span><span class="token plain"> </span><span class="token property" style="color:#f92672">&quot;type&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;gallery&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"> </span><span class="token property" style="color:#f92672">&quot;variant&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;carousel&quot;</span><span class="token punctuation" style="color:#f8f8f2">,</span><span class="token plain"> </span><span class="token property" style="color:#f92672">&quot;title&quot;</span><span class="token operator" style="color:#66d9ef">:</span><span class="token plain"> </span><span class="token string" style="color:#a6e22e">&quot;Featured&quot;</span><span class="token plain"> </span><span class="token punctuation" style="color:#f8f8f2">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain">	</span><span class="token punctuation" style="color:#f8f8f2">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#f8f8f2"><span class="token plain"></span><span class="token punctuation" style="color:#f8f8f2">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="disable-vs-remove">Disable vs. Remove<a href="#disable-vs-remove" class="hash-link" aria-label="Direct link to Disable vs. Remove" title="Direct link to Disable vs. Remove" translate="no">​</a></h3>
+<ul>
+<li class="">Set <code>&quot;enabled&quot;: false</code> to temporarily hide a section while keeping the configuration</li>
+<li class="">Delete the section object entirely if you&#x27;re sure you won&#x27;t need it</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/Shadow-Develops/docusaurus/tree/main/docs/personalLanding/sections.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">Last updated<!-- --> on <b><time datetime="2026-02-07T01:09:25.000Z" itemprop="dateModified">Feb 7, 2026</time></b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/personalLanding/configuration"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Configuration Guide</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/personalLanding/customization"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Customization</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#hero-section" class="table-of-contents__link toc-highlight">Hero Section</a><ul><li><a href="#variants" class="table-of-contents__link toc-highlight">Variants</a></li><li><a href="#configuration" class="table-of-contents__link toc-highlight">Configuration</a></li><li><a href="#example" class="table-of-contents__link toc-highlight">Example</a></li></ul></li><li><a href="#about-section" class="table-of-contents__link toc-highlight">About Section</a><ul><li><a href="#variants-1" class="table-of-contents__link toc-highlight">Variants</a></li><li><a href="#configuration-1" class="table-of-contents__link toc-highlight">Configuration</a></li><li><a href="#example-1" class="table-of-contents__link toc-highlight">Example</a></li></ul></li><li><a href="#links-section" class="table-of-contents__link toc-highlight">Links Section</a><ul><li><a href="#variants-2" class="table-of-contents__link toc-highlight">Variants</a></li><li><a href="#configuration-2" class="table-of-contents__link toc-highlight">Configuration</a></li><li><a href="#example-2" class="table-of-contents__link toc-highlight">Example</a></li></ul></li><li><a href="#contact-section" class="table-of-contents__link toc-highlight">Contact Section</a><ul><li><a href="#configuration-3" class="table-of-contents__link toc-highlight">Configuration</a></li></ul></li><li><a href="#services-section" class="table-of-contents__link toc-highlight">Services Section</a><ul><li><a href="#configuration-4" class="table-of-contents__link toc-highlight">Configuration</a></li><li><a href="#example-3" class="table-of-contents__link toc-highlight">Example</a></li></ul></li><li><a href="#projects-section" class="table-of-contents__link toc-highlight">Projects Section</a><ul><li><a href="#configuration-5" class="table-of-contents__link toc-highlight">Configuration</a></li></ul></li><li><a href="#timeline-section" class="table-of-contents__link toc-highlight">Timeline Section</a><ul><li><a href="#configuration-6" class="table-of-contents__link toc-highlight">Configuration</a></li></ul></li><li><a href="#gallery-section" class="table-of-contents__link toc-highlight">Gallery Section</a><ul><li><a href="#variants-3" class="table-of-contents__link toc-highlight">Variants</a></li><li><a href="#configuration-7" class="table-of-contents__link toc-highlight">Configuration</a></li></ul></li><li><a href="#testimonials-section" class="table-of-contents__link toc-highlight">Testimonials Section</a><ul><li><a href="#configuration-8" class="table-of-contents__link toc-highlight">Configuration</a></li></ul></li><li><a href="#faq-section" class="table-of-contents__link toc-highlight">FAQ Section</a><ul><li><a href="#configuration-9" class="table-of-contents__link toc-highlight">Configuration</a></li></ul></li><li><a href="#stats-section" class="table-of-contents__link toc-highlight">Stats Section</a><ul><li><a href="#configuration-10" class="table-of-contents__link toc-highlight">Configuration</a></li></ul></li><li><a href="#tips-for-using-sections" class="table-of-contents__link toc-highlight">Tips for Using Sections</a><ul><li><a href="#section-order" class="table-of-contents__link toc-highlight">Section Order</a></li><li><a href="#using-multiple-instances" class="table-of-contents__link toc-highlight">Using Multiple Instances</a></li><li><a href="#disable-vs-remove" class="table-of-contents__link toc-highlight">Disable vs. Remove</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/shadowStore">Shadow Store</a></li><li class="footer__item"><a class="footer__link-item" href="/licenseSystem">License System</a></li><li class="footer__item"><a class="footer__link-item" href="/spark/getting-started">SPARK</a></li><li class="footer__item"><a class="footer__link-item" href="/legacy">Legacy Products</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.gg/shadowdevs" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/Shadow-Develops" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 <a href="https://shadowdevs.com">Shadow Development</a>. <i>Built with Docusaurus.</i></div></div></div></footer></div>
+</body>
+</html>
