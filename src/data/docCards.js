@@ -40,6 +40,13 @@ export default [
 		color: 'green',
 	},
 	{
+		title: 'Personal Landing',
+		icon: '🏠',
+		description: 'Learn how to setup and run your Personal Landing page.',
+		docUrl: '/personalLanding',
+		color: 'purple',
+	},
+	{
 		title: 'SPARK Vehicle Control',
 		icon: '⚡',
 		description:
