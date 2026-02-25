@@ -5,7 +5,7 @@ pagination_next: null
 
 # Discord
 
-Discord login setup is covered on the [Discord Integration](../discord) page, which also covers the Discord bot, audit logging, and other Discord features.
+Discord login setup is covered on the [Discord Integration](/communityTemplate/integrations/discord) page, which also covers the Discord bot, audit logging, and other Discord features.
 
 <head>
     <title>Discord Login</title>
