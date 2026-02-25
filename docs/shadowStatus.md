@@ -4,17 +4,17 @@ sidebar_position: 1
 
 # Shadow Status
 
-A lightweight, fully static status page platform designed for GitHub Pages. Monitor your services, manage incidents, and keep your users informed — all without a database or backend server.
+A lightweight, fully static status page platform designed for GitHub Pages. Monitor your services, manage incidents, and keep your users informed - all without a database or backend server.
 
 ## Features
 
-- **Fully Static** — Deploys directly to GitHub Pages with zero server requirements
-- **9 Monitor Types** — HTTP, Ping, TCP, DNS, JSON, StatusPage, Steam, Minecraft, and Manual
-- **GitHub-Integrated Incidents** — Manage incidents, maintenance windows, and announcements via GitHub Issues
-- **Discord & Webhook Notifications** — Get alerted when services go down or recover
-- **90-Day Uptime History** — Track historical performance with visual charts
-- **Customizable Design** — Configure branding, colors, and layout to match your style
-- **Grouped Monitors** — Organize services into collapsible groups
+- **Fully Static** - Deploys directly to GitHub Pages with zero server requirements
+- **9 Monitor Types** - HTTP, Ping, TCP, DNS, JSON, StatusPage, Steam, Minecraft, and Manual
+- **GitHub-Integrated Incidents** - Manage incidents, maintenance windows, and announcements via GitHub Issues
+- **Discord & Webhook Notifications** - Get alerted when services go down or recover
+- **90-Day Uptime History** - Track historical performance with visual charts
+- **Customizable Design** - Configure branding, colors, and layout to match your style
+- **Grouped Monitors** - Organize services into collapsible groups
 
 ## Tech Stack
 
@@ -50,7 +50,7 @@ graph LR
 
 ### Is this really free to host?
 
-Yes! Shadow Status is designed to run entirely on GitHub Pages (free) with GitHub Actions (free tier includes 2,000 minutes/month). For a status page checking every 5 minutes, you'll use about 1,440 minutes/month — well within the free tier.
+Yes! Shadow Status is designed to run entirely on GitHub Pages (free) with GitHub Actions (free tier includes 2,000 minutes/month). For a status page checking every 5 minutes, you'll use about 1,440 minutes/month - well within the free tier.
 
 ### Do I need a server or database?
 

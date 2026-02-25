@@ -10,9 +10,9 @@ This guide covers running ShadowStatus locally for development and testing.
 
 ## Prerequisites
 
-- **Node.js 20+** — [Download here](https://nodejs.org/)
-- **npm** — Comes with Node.js
-- **Git** — For cloning the repository
+- **Node.js 20+** - [Download here](https://nodejs.org/)
+- **npm** - Comes with Node.js
+- **Git** - For cloning the repository
 
 ## Clone and Install
 

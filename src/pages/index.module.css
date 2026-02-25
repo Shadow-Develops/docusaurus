@@ -178,6 +178,78 @@
 	--card-icon-bg: #ccfbf1;
 }
 
+.docCard--pink {
+	--card-accent-color: #ec4899;
+	--card-accent-light: #f9a8d4;
+	--card-icon-bg: #fce7f3;
+}
+
+.docCard--indigo {
+	--card-accent-color: #6366f1;
+	--card-accent-light: #a5b4fc;
+	--card-icon-bg: #e0e7ff;
+}
+
+.docCard--yellow {
+	--card-accent-color: #eab308;
+	--card-accent-light: #fde047;
+	--card-icon-bg: #fef9c3;
+}
+
+.docCard--cyan {
+	--card-accent-color: #06b6d4;
+	--card-accent-light: #67e8f9;
+	--card-icon-bg: #cffafe;
+}
+
+.docCard--rose {
+	--card-accent-color: #f43f5e;
+	--card-accent-light: #fb7185;
+	--card-icon-bg: #ffe4e6;
+}
+
+.docCard--amber {
+	--card-accent-color: #f97316;
+	--card-accent-light: #fdba74;
+	--card-icon-bg: #ffedd5;
+}
+
+.docCard--lime {
+	--card-accent-color: #84cc16;
+	--card-accent-light: #bef264;
+	--card-icon-bg: #f7fee7;
+}
+
+.docCard--emerald {
+	--card-accent-color: #10b981;
+	--card-accent-light: #6ee7b7;
+	--card-icon-bg: #d1fae5;
+}
+
+.docCard--sky {
+	--card-accent-color: #0ea5e9;
+	--card-accent-light: #7dd3fc;
+	--card-icon-bg: #e0f2fe;
+}
+
+.docCard--violet {
+	--card-accent-color: #7c3aed;
+	--card-accent-light: #c4b5fd;
+	--card-icon-bg: #ede9fe;
+}
+
+.docCard--fuchsia {
+	--card-accent-color: #d946ef;
+	--card-accent-light: #f0abfc;
+	--card-icon-bg: #fae8ff;
+}
+
+.docCard--slate {
+	--card-accent-color: #64748b;
+	--card-accent-light: #94a3b8;
+	--card-icon-bg: #f1f5f9;
+}
+
 /* Dark Mode Adjustments */
 [data-theme='dark'] .docCard {
 	background: var(--ifm-background-surface-color);
@@ -210,6 +282,54 @@
 
 [data-theme='dark'] .docCard--teal {
 	--card-icon-bg: rgba(20, 184, 166, 0.1);
+}
+
+[data-theme='dark'] .docCard--pink {
+	--card-icon-bg: rgba(236, 72, 153, 0.1);
+}
+
+[data-theme='dark'] .docCard--indigo {
+	--card-icon-bg: rgba(99, 102, 241, 0.1);
+}
+
+[data-theme='dark'] .docCard--yellow {
+	--card-icon-bg: rgba(234, 179, 8, 0.1);
+}
+
+[data-theme='dark'] .docCard--cyan {
+	--card-icon-bg: rgba(6, 182, 212, 0.1);
+}
+
+[data-theme='dark'] .docCard--rose {
+	--card-icon-bg: rgba(244, 63, 94, 0.1);
+}
+
+[data-theme='dark'] .docCard--amber {
+	--card-icon-bg: rgba(249, 115, 22, 0.1);
+}
+
+[data-theme='dark'] .docCard--lime {
+	--card-icon-bg: rgba(132, 204, 22, 0.1);
+}
+
+[data-theme='dark'] .docCard--emerald {
+	--card-icon-bg: rgba(16, 185, 129, 0.1);
+}
+
+[data-theme='dark'] .docCard--sky {
+	--card-icon-bg: rgba(14, 165, 233, 0.1);
+}
+
+[data-theme='dark'] .docCard--violet {
+	--card-icon-bg: rgba(124, 58, 237, 0.1);
+}
+
+[data-theme='dark'] .docCard--fuchsia {
+	--card-icon-bg: rgba(217, 70, 239, 0.1);
+}
+
+[data-theme='dark'] .docCard--slate {
+	--card-icon-bg: rgba(100, 116, 139, 0.1);
 }
 
 /* Responsive Design */

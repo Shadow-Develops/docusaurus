@@ -6,11 +6,11 @@ pagination_prev: null
 
 # Markdown
 
-Shadow Store provides comprehensive markdown support across blog posts, custom pages, and other content areas. This guide details all supported markdown syntax and features available in the system.
+Community Template provides comprehensive markdown support across blog posts, custom pages, and other content areas. This guide details all supported markdown syntax and features available in the system.
 
 ## What is Markdown?
 
-Markdown is a lightweight markup language that allows you to format text using simple, readable syntax. Shadow Store converts your markdown into beautifully styled HTML automatically.
+Markdown is a lightweight markup language that allows you to format text using simple, readable syntax. Community Template converts your markdown into beautifully styled HTML automatically.
 
 **Where Markdown is Supported:**
 
@@ -210,7 +210,7 @@ Display images using the image syntax.
 
 ```markdown
 ![Alt text](https://example.com/image.jpg)
-![Shadow Store Logo](https://shadowdevelopment.net/logo.png)
+![Community Template Logo](https://shadowdevelopment.net/logo.png)
 ```
 
 **Components:**
@@ -353,7 +353,7 @@ Create visual separators using three or more dashes, asterisks, or underscores.
 
 ## Custom Alerts
 
-Shadow Store supports special alert boxes for highlighting important information.
+Community Template supports special alert boxes for highlighting important information.
 
 **Info Alert:**
 
@@ -427,7 +427,7 @@ All markdown works inside alerts.
 
 ## HTML Support
 
-Shadow Store allows inline HTML for advanced formatting.
+Community Template allows inline HTML for advanced formatting.
 
 **Common HTML Elements:**
 
@@ -640,7 +640,7 @@ code here
 ## Additional Resources
 
 <details>
-  <summary>Markdown Examples (From Shadow Store)</summary>
+  <summary>Markdown Examples (From Community Template)</summary>
 
 [![md-examples](/img/docs/shadowstore-md-examples.png)](/img/docs/shadowstore-md-examples.png)
 
@@ -662,4 +662,4 @@ _Not all of these will apply 1:1 because we have some custom stuff; however, the
 
 **Need Help?**
 
-Join the [Shadow Development Discord](https://discord.gg/shadowdevs) for support and tips on using markdown effectively in Shadow Store.
+Join the [Shadow Development Discord](https://discord.gg/shadowdevs) for support and tips on using markdown effectively in Community Template.

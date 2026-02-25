@@ -355,10 +355,10 @@ If you get permission errors:
 
 Your site is automatically optimized during build:
 
-✓ **Pre-rendered HTML** — Fast initial load
-✓ **Minified JS/CSS** — Smaller file sizes
-✓ **Code splitting** — Only loads what's needed
-✓ **Static generation** — No server required
+✓ **Pre-rendered HTML** - Fast initial load
+✓ **Minified JS/CSS** - Smaller file sizes
+✓ **Code splitting** - Only loads what's needed
+✓ **Static generation** - No server required
 
 ### Further Optimization
 

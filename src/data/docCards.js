@@ -1,4 +1,9 @@
-// Colors: blue, green, purple, orange, red, teal
+/*
+ * Color Variants:
+ *   blue      green     purple    orange    red       teal
+ *   pink      indigo    yellow    cyan      rose      amber
+ *   lime      emerald   sky       violet    fuchsia   slate
+ */
 
 export default [
 	{
@@ -22,14 +27,22 @@ export default [
 		icon: '🖼️',
 		description: 'Learn how to setup and manage the CDN Manager.',
 		docUrl: '/cdnManager',
-		color: 'teal',
+		color: 'amber',
 	},
 	{
 		title: 'Shadow Status',
 		icon: '🛜',
 		description: "Learn how to setup and run your Github Page's Status page.",
 		docUrl: '/shadowStatus',
-		color: 'blue',
+		color: 'lime',
+	},
+	{
+		title: 'Community Template',
+		image: require('@site/static/img/community.svg').default,
+		description:
+			'Learn how to install and manage the settings for your Community Template.',
+		docUrl: '/communityTemplate',
+		color: 'teal',
 	},
 	{
 		title: 'Shopify Bot',
@@ -56,10 +69,10 @@ export default [
 	},
 	{
 		title: 'Legacy Products',
-		image: require('@site/static/img/community.svg').default,
+		image: require('@site/static/img/history.svg').default,
 		description:
 			'All legacy or deprecated products for those that still own them.',
 		docUrl: '/legacy',
-		color: 'purple',
+		color: 'slate',
 	},
 ];

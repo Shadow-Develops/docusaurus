@@ -83,18 +83,18 @@ You'll need to manually apply updates since there's no direct link to the origin
 
 **Always keep your customizations in:**
 
-- `config.json` — Your site settings
-- `monitors.json` — Your monitor definitions
-- `static/CNAME` — Your custom domain (if set)
-- `static/img/` — Your custom images/logo
-- `data/` — Your history and state files
+- `config.json` - Your site settings
+- `monitors.json` - Your monitor definitions
+- `static/CNAME` - Your custom domain (if set)
+- `static/img/` - Your custom images/logo
+- `data/` - Your history and state files
 
 **Files that may need updating:**
 
-- `scripts/check-monitors.js` — Monitor checking logic
-- `src/` — Frontend components
-- `package.json` — Dependencies
-- `.github/workflows/` — GitHub Actions workflows
+- `scripts/check-monitors.js` - Monitor checking logic
+- `src/` - Frontend components
+- `package.json` - Dependencies
+- `.github/workflows/` - GitHub Actions workflows
 
 ---
 

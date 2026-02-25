@@ -13,22 +13,22 @@ Configure what services to monitor in `monitors.json`. ShadowStatus supports 9 d
 
 ```json title="monitors.json"
 {
-  "groups": [
-    {
-      "name": "Group Name",
-      "monitors": [
-        { "name": "Monitor 1", "type": "http", "target": "https://example.com" }
-      ]
-    }
-  ],
-  "monitors": [
-    { "name": "Ungrouped Monitor", "type": "ping", "target": "1.2.3.4" }
-  ]
+	"groups": [
+		{
+			"name": "Group Name",
+			"monitors": [
+				{ "name": "Monitor 1", "type": "http", "target": "https://example.com" }
+			]
+		}
+	],
+	"monitors": [
+		{ "name": "Ungrouped Monitor", "type": "ping", "target": "1.2.3.4" }
+	]
 }
 ```
 
-- **groups** — Array of monitor groups (collapsible sections)
-- **monitors** — Array of ungrouped monitors (shown at top level)
+- **groups** - Array of monitor groups (collapsible sections)
+- **monitors** - Array of ungrouped monitors (shown at top level)
 
 ---
 
@@ -38,23 +38,23 @@ Groups let you organize related monitors into collapsible sections.
 
 ```json
 {
-  "name": "Web Services",
-  "description": "Core web applications",
-  "defaultOpen": true,
-  "showGroupStatus": true,
-  "showGroupHistory": false,
-  "monitors": []
+	"name": "Web Services",
+	"description": "Core web applications",
+	"defaultOpen": true,
+	"showGroupStatus": true,
+	"showGroupHistory": false,
+	"monitors": []
 }
 ```
 
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| `name` | string | **Required** | Group display name |
-| `description` | string | `null` | Optional description tooltip |
-| `defaultOpen` | boolean | `true` | Start expanded or collapsed |
-| `showGroupStatus` | boolean | `true` | Show aggregate status indicator |
-| `showGroupHistory` | boolean | `false` | Show 90-day history for the group |
-| `monitors` | array | **Required** | Array of monitors in this group |
+| Property           | Type    | Default      | Description                       |
+| ------------------ | ------- | ------------ | --------------------------------- |
+| `name`             | string  | **Required** | Group display name                |
+| `description`      | string  | `null`       | Optional description tooltip      |
+| `defaultOpen`      | boolean | `true`       | Start expanded or collapsed       |
+| `showGroupStatus`  | boolean | `true`       | Show aggregate status indicator   |
+| `showGroupHistory` | boolean | `false`      | Show 90-day history for the group |
+| `monitors`         | array   | **Required** | Array of monitors in this group   |
 
 ---
 
@@ -64,31 +64,31 @@ These options apply to all monitor types:
 
 ```json
 {
-  "name": "My Service",
-  "type": "http",
-  "target": "https://example.com",
-  "description": "Main website",
-  "showTarget": true,
-  "showHistory": true,
-  "notify": true,
-  "inverse": false,
-  "applyToOverall": true,
-  "discordPingRole": "123456789"
+	"name": "My Service",
+	"type": "http",
+	"target": "https://example.com",
+	"description": "Main website",
+	"showTarget": true,
+	"showHistory": true,
+	"notify": true,
+	"inverse": false,
+	"applyToOverall": true,
+	"discordPingRole": "123456789"
 }
 ```
 
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| `name` | string | **Required** | Display name for the monitor |
-| `type` | string | **Required** | Monitor type (see below) |
-| `target` | string | **Required*** | What to monitor (*not required for `manual`) |
-| `description` | string | `null` | Tooltip description |
-| `showTarget` | boolean | `true` | Display the target URL publicly |
-| `showHistory` | boolean | `true` | Show 90-day uptime history |
-| `notify` | boolean | (from config) | Send notifications for this monitor |
-| `inverse` | boolean | `false` | Reverse logic (down = operational) |
-| `applyToOverall` | boolean | `true` | Include in overall status calculation |
-| `discordPingRole` | string | (from config) | Override Discord ping role for this monitor |
+| Property          | Type    | Default        | Description                                   |
+| ----------------- | ------- | -------------- | --------------------------------------------- |
+| `name`            | string  | **Required**   | Display name for the monitor                  |
+| `type`            | string  | **Required**   | Monitor type (see below)                      |
+| `target`          | string  | **Required\*** | What to monitor (\*not required for `manual`) |
+| `description`     | string  | `null`         | Tooltip description                           |
+| `showTarget`      | boolean | `true`         | Display the target URL publicly               |
+| `showHistory`     | boolean | `true`         | Show 90-day uptime history                    |
+| `notify`          | boolean | (from config)  | Send notifications for this monitor           |
+| `inverse`         | boolean | `false`        | Reverse logic (down = operational)            |
+| `applyToOverall`  | boolean | `true`         | Include in overall status calculation         |
+| `discordPingRole` | string  | (from config)  | Override Discord ping role for this monitor   |
 
 ---
 
@@ -100,25 +100,27 @@ Check HTTP/HTTPS endpoints for specific status codes.
 
 ```json
 {
-  "name": "Website",
-  "type": "http",
-  "target": "https://example.com",
-  "expectedStatus": [200, 301, 302],
-  "timeout": 10000
+	"name": "Website",
+	"type": "http",
+	"target": "https://example.com",
+	"expectedStatus": [200, 301, 302],
+	"timeout": 10000
 }
 ```
 
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| `target` | string | **Required** | Full URL to check |
-| `expectedStatus` | array | `[200]` | HTTP status codes to consider "operational" |
-| `timeout` | number | `10000` | Request timeout in milliseconds |
+| Property         | Type   | Default      | Description                                 |
+| ---------------- | ------ | ------------ | ------------------------------------------- |
+| `target`         | string | **Required** | Full URL to check                           |
+| `expectedStatus` | array  | `[200]`      | HTTP status codes to consider "operational" |
+| `timeout`        | number | `10000`      | Request timeout in milliseconds             |
 
 :::tip
 For APIs that return 404 on their root path, add `404` to `expectedStatus`:
+
 ```json
 "expectedStatus": [200, 404]
 ```
+
 :::
 
 ---
@@ -129,17 +131,17 @@ ICMP ping to check host availability.
 
 ```json
 {
-  "name": "Server",
-  "type": "ping",
-  "target": "192.168.1.1",
-  "timeout": 15
+	"name": "Server",
+	"type": "ping",
+	"target": "192.168.1.1",
+	"timeout": 15
 }
 ```
 
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| `target` | string | **Required** | IP address or hostname |
-| `timeout` | number | `10` | Ping timeout in seconds |
+| Property  | Type   | Default      | Description             |
+| --------- | ------ | ------------ | ----------------------- |
+| `target`  | string | **Required** | IP address or hostname  |
+| `timeout` | number | `10`         | Ping timeout in seconds |
 
 :::note
 For IPv6 addresses, use bracket notation: `[2001:db8::1]`
@@ -153,17 +155,17 @@ Check if a TCP port is open and accepting connections.
 
 ```json
 {
-  "name": "Database",
-  "type": "tcp",
-  "target": "db.example.com:5432",
-  "timeout": 5000
+	"name": "Database",
+	"type": "tcp",
+	"target": "db.example.com:5432",
+	"timeout": 5000
 }
 ```
 
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| `target` | string | **Required** | Host and port in `host:port` format |
-| `timeout` | number | `10000` | Connection timeout in milliseconds |
+| Property  | Type   | Default      | Description                         |
+| --------- | ------ | ------------ | ----------------------------------- |
+| `target`  | string | **Required** | Host and port in `host:port` format |
+| `timeout` | number | `10000`      | Connection timeout in milliseconds  |
 
 ---
 
@@ -173,21 +175,21 @@ Verify DNS resolution and optionally check for expected IP.
 
 ```json
 {
-  "name": "Domain DNS",
-  "type": "dns",
-  "target": "example.com",
-  "recordType": "A",
-  "expectedIp": "93.184.216.34",
-  "timeout": 5000
+	"name": "Domain DNS",
+	"type": "dns",
+	"target": "example.com",
+	"recordType": "A",
+	"expectedIp": "93.184.216.34",
+	"timeout": 5000
 }
 ```
 
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| `target` | string | **Required** | Domain name to resolve |
-| `recordType` | string | `"A"` | DNS record type: `A`, `AAAA`, `MX`, `TXT`, `CNAME`, `NS` |
-| `expectedIp` | string | `null` | Expected IP address (optional validation) |
-| `timeout` | number | `5000` | Resolution timeout in milliseconds |
+| Property     | Type   | Default      | Description                                              |
+| ------------ | ------ | ------------ | -------------------------------------------------------- |
+| `target`     | string | **Required** | Domain name to resolve                                   |
+| `recordType` | string | `"A"`        | DNS record type: `A`, `AAAA`, `MX`, `TXT`, `CNAME`, `NS` |
+| `expectedIp` | string | `null`       | Expected IP address (optional validation)                |
+| `timeout`    | number | `5000`       | Resolution timeout in milliseconds                       |
 
 ---
 
@@ -197,26 +199,27 @@ Check JSON API responses for specific values.
 
 ```json
 {
-  "name": "API Health",
-  "type": "json",
-  "target": "https://api.example.com/health",
-  "jsonPath": "status",
-  "expectedValue": "ok",
-  "timeout": 10000
+	"name": "API Health",
+	"type": "json",
+	"target": "https://api.example.com/health",
+	"jsonPath": "status",
+	"expectedValue": "ok",
+	"timeout": 10000
 }
 ```
 
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| `target` | string | **Required** | API endpoint URL |
-| `jsonPath` | string | `"status"` | Path to the JSON value (dot notation supported) |
-| `expectedValue` | any | `null` | Expected value (`null` = just check existence) |
-| `timeout` | number | `10000` | Request timeout in milliseconds |
+| Property        | Type   | Default      | Description                                     |
+| --------------- | ------ | ------------ | ----------------------------------------------- |
+| `target`        | string | **Required** | API endpoint URL                                |
+| `jsonPath`      | string | `"status"`   | Path to the JSON value (dot notation supported) |
+| `expectedValue` | any    | `null`       | Expected value (`null` = just check existence)  |
+| `timeout`       | number | `10000`      | Request timeout in milliseconds                 |
 
 **JSONPath Examples:**
-- `"status"` — Top-level `status` field
-- `"data.health"` — Nested `data.health` field
-- `"services.0.status"` — First item in `services` array
+
+- `"status"` - Top-level `status` field
+- `"data.health"` - Nested `data.health` field
+- `"services.0.status"` - First item in `services` array
 
 ---
 
@@ -226,19 +229,20 @@ Monitor third-party Atlassian StatusPage-powered status pages.
 
 ```json
 {
-  "name": "GitHub",
-  "type": "statuspage",
-  "target": "https://www.githubstatus.com",
-  "applyToOverall": false,
-  "notify": false
+	"name": "GitHub",
+	"type": "statuspage",
+	"target": "https://www.githubstatus.com",
+	"applyToOverall": false,
+	"notify": false
 }
 ```
 
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
+| Property | Type   | Default      | Description                        |
+| -------- | ------ | ------------ | ---------------------------------- |
 | `target` | string | **Required** | StatusPage URL (Atlassian-powered) |
 
 **Supported StatusPages include:**
+
 - GitHub: `https://www.githubstatus.com`
 - Cloudflare: `https://www.cloudflarestatus.com`
 - Discord: `https://discordstatus.com`
@@ -257,19 +261,19 @@ Monitor Steam game servers using A2S_INFO protocol.
 
 ```json
 {
-  "name": "Game Server",
-  "type": "steam",
-  "target": "192.168.1.100",
-  "port": 27015,
-  "timeout": 5000
+	"name": "Game Server",
+	"type": "steam",
+	"target": "192.168.1.100",
+	"port": 27015,
+	"timeout": 5000
 }
 ```
 
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| `target` | string | **Required** | Server IP or hostname |
-| `port` | number | `27015` | Query port (usually game port or game port + 1) |
-| `timeout` | number | `5000` | Query timeout in milliseconds |
+| Property  | Type   | Default      | Description                                     |
+| --------- | ------ | ------------ | ----------------------------------------------- |
+| `target`  | string | **Required** | Server IP or hostname                           |
+| `port`    | number | `27015`      | Query port (usually game port or game port + 1) |
+| `timeout` | number | `5000`       | Query timeout in milliseconds                   |
 
 ---
 
@@ -279,19 +283,19 @@ Monitor Minecraft Java Edition servers.
 
 ```json
 {
-  "name": "Minecraft Server",
-  "type": "minecraft",
-  "target": "mc.example.com",
-  "port": 25565,
-  "timeout": 5000
+	"name": "Minecraft Server",
+	"type": "minecraft",
+	"target": "mc.example.com",
+	"port": 25565,
+	"timeout": 5000
 }
 ```
 
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| `target` | string | **Required** | Server IP or hostname |
-| `port` | number | `25565` | Server port |
-| `timeout` | number | `5000` | Connection timeout in milliseconds |
+| Property  | Type   | Default      | Description                        |
+| --------- | ------ | ------------ | ---------------------------------- |
+| `target`  | string | **Required** | Server IP or hostname              |
+| `port`    | number | `25565`      | Server port                        |
+| `timeout` | number | `5000`       | Connection timeout in milliseconds |
 
 ---
 
@@ -301,8 +305,8 @@ Manually control status via GitHub Issues.
 
 ```json
 {
-  "name": "External Service",
-  "type": "manual"
+	"name": "External Service",
+	"type": "manual"
 }
 ```
 
@@ -317,6 +321,7 @@ Manual monitors don't have a `target`. Their status is controlled by creating Gi
 
 ```markdown
 <!-- status: degraded -->
+
 We're investigating reports of slowness with this service.
 ```
 
@@ -333,20 +338,20 @@ Close the issue to return to `operational` status.
 
 ```json
 {
-  "groups": [
-    {
-      "name": "Web",
-      "defaultOpen": true,
-      "monitors": [
-        {
-          "name": "Website",
-          "type": "http",
-          "target": "https://example.com"
-        }
-      ]
-    }
-  ],
-  "monitors": []
+	"groups": [
+		{
+			"name": "Web",
+			"defaultOpen": true,
+			"monitors": [
+				{
+					"name": "Website",
+					"type": "http",
+					"target": "https://example.com"
+				}
+			]
+		}
+	],
+	"monitors": []
 }
 ```
 
@@ -355,47 +360,47 @@ Close the issue to return to `operational` status.
 
 ```json
 {
-  "groups": [
-    {
-      "name": "API Services",
-      "defaultOpen": true,
-      "monitors": [
-        {
-          "name": "REST API",
-          "type": "http",
-          "target": "https://api.example.com/v1/health",
-          "expectedStatus": [200]
-        },
-        {
-          "name": "GraphQL API",
-          "type": "json",
-          "target": "https://graphql.example.com/health",
-          "jsonPath": "status",
-          "expectedValue": "healthy"
-        }
-      ]
-    },
-    {
-      "name": "Infrastructure",
-      "defaultOpen": false,
-      "showGroupStatus": true,
-      "monitors": [
-        {
-          "name": "Primary Database",
-          "type": "tcp",
-          "target": "db1.example.com:5432",
-          "showTarget": false
-        },
-        {
-          "name": "Redis Cache",
-          "type": "tcp",
-          "target": "redis.example.com:6379",
-          "showTarget": false
-        }
-      ]
-    }
-  ],
-  "monitors": []
+	"groups": [
+		{
+			"name": "API Services",
+			"defaultOpen": true,
+			"monitors": [
+				{
+					"name": "REST API",
+					"type": "http",
+					"target": "https://api.example.com/v1/health",
+					"expectedStatus": [200]
+				},
+				{
+					"name": "GraphQL API",
+					"type": "json",
+					"target": "https://graphql.example.com/health",
+					"jsonPath": "status",
+					"expectedValue": "healthy"
+				}
+			]
+		},
+		{
+			"name": "Infrastructure",
+			"defaultOpen": false,
+			"showGroupStatus": true,
+			"monitors": [
+				{
+					"name": "Primary Database",
+					"type": "tcp",
+					"target": "db1.example.com:5432",
+					"showTarget": false
+				},
+				{
+					"name": "Redis Cache",
+					"type": "tcp",
+					"target": "redis.example.com:6379",
+					"showTarget": false
+				}
+			]
+		}
+	],
+	"monitors": []
 }
 ```
 
@@ -404,38 +409,38 @@ Close the issue to return to `operational` status.
 
 ```json
 {
-  "groups": [
-    {
-      "name": "Minecraft Servers",
-      "defaultOpen": true,
-      "monitors": [
-        {
-          "name": "Survival",
-          "type": "minecraft",
-          "target": "mc.example.com",
-          "port": 25565
-        },
-        {
-          "name": "Creative",
-          "type": "minecraft",
-          "target": "mc.example.com",
-          "port": 25566
-        }
-      ]
-    },
-    {
-      "name": "Steam Servers",
-      "monitors": [
-        {
-          "name": "CS2 Server",
-          "type": "steam",
-          "target": "cs.example.com",
-          "port": 27015
-        }
-      ]
-    }
-  ],
-  "monitors": []
+	"groups": [
+		{
+			"name": "Minecraft Servers",
+			"defaultOpen": true,
+			"monitors": [
+				{
+					"name": "Survival",
+					"type": "minecraft",
+					"target": "mc.example.com",
+					"port": 25565
+				},
+				{
+					"name": "Creative",
+					"type": "minecraft",
+					"target": "mc.example.com",
+					"port": 25566
+				}
+			]
+		},
+		{
+			"name": "Steam Servers",
+			"monitors": [
+				{
+					"name": "CS2 Server",
+					"type": "steam",
+					"target": "cs.example.com",
+					"port": 27015
+				}
+			]
+		}
+	],
+	"monitors": []
 }
 ```
 
@@ -444,49 +449,49 @@ Close the issue to return to `operational` status.
 
 ```json
 {
-  "groups": [
-    {
-      "name": "Our Services",
-      "defaultOpen": true,
-      "monitors": [
-        {
-          "name": "Website",
-          "type": "http",
-          "target": "https://example.com"
-        }
-      ]
-    },
-    {
-      "name": "Third-Party Services",
-      "description": "External services we depend on",
-      "defaultOpen": false,
-      "showGroupStatus": true,
-      "monitors": [
-        {
-          "name": "GitHub",
-          "type": "statuspage",
-          "target": "https://www.githubstatus.com",
-          "applyToOverall": false,
-          "notify": false
-        },
-        {
-          "name": "Cloudflare",
-          "type": "statuspage",
-          "target": "https://www.cloudflarestatus.com",
-          "applyToOverall": false,
-          "notify": false
-        },
-        {
-          "name": "Stripe",
-          "type": "statuspage",
-          "target": "https://status.stripe.com",
-          "applyToOverall": false,
-          "notify": false
-        }
-      ]
-    }
-  ],
-  "monitors": []
+	"groups": [
+		{
+			"name": "Our Services",
+			"defaultOpen": true,
+			"monitors": [
+				{
+					"name": "Website",
+					"type": "http",
+					"target": "https://example.com"
+				}
+			]
+		},
+		{
+			"name": "Third-Party Services",
+			"description": "External services we depend on",
+			"defaultOpen": false,
+			"showGroupStatus": true,
+			"monitors": [
+				{
+					"name": "GitHub",
+					"type": "statuspage",
+					"target": "https://www.githubstatus.com",
+					"applyToOverall": false,
+					"notify": false
+				},
+				{
+					"name": "Cloudflare",
+					"type": "statuspage",
+					"target": "https://www.cloudflarestatus.com",
+					"applyToOverall": false,
+					"notify": false
+				},
+				{
+					"name": "Stripe",
+					"type": "statuspage",
+					"target": "https://status.stripe.com",
+					"applyToOverall": false,
+					"notify": false
+				}
+			]
+		}
+	],
+	"monitors": []
 }
 ```
 

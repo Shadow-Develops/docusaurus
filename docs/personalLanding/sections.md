@@ -188,12 +188,12 @@ Display social media links and other important URLs.
 
 #### Supported Icons
 
-- `github` — GitHub
-- `linkedin` — LinkedIn
-- `twitter` — Twitter/X
-- `discord` — Discord
-- `email` — Email
-- `blog` — Blog/Website
+- `github` - GitHub
+- `linkedin` - LinkedIn
+- `twitter` - Twitter/X
+- `discord` - Discord
+- `email` - Email
+- `blog` - Blog/Website
 - Custom icons can be added by editing the component
 
 ### Example

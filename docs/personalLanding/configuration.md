@@ -77,8 +77,8 @@ Configure the footer that appears at the bottom of your page.
 
 You can use these variables in the `text` field:
 
-- `{date}` — Current year (e.g., 2024)
-- `{siteName}` — Value from `siteSettings.siteName`
+- `{date}` - Current year (e.g., 2024)
+- `{siteName}` - Value from `siteSettings.siteName`
 
 ### Markdown Links in Footer
 

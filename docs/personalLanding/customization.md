@@ -10,8 +10,8 @@ Learn how to customize the look and feel of your Personal Landing page beyond co
 
 Personal Landing is built with:
 
-- **Tailwind CSS 4** — Utility-first CSS framework
-- **daisyUI 5** — Component library with theming support
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **daisyUI 5** - Component library with theming support
 
 Most customization can be done without touching code, using Tailwind's utility classes and daisyUI's theming system.
 
@@ -167,10 +167,10 @@ Edit the section components directly in `src/lib/components/sections/` to change
 
 Common daisyUI color classes:
 
-- `bg-base-100`, `bg-base-200`, `bg-base-300` — Backgrounds
-- `bg-primary`, `bg-secondary`, `bg-accent` — Themed backgrounds
-- `text-base-content` — Body text
-- `text-primary`, `text-secondary` — Themed text
+- `bg-base-100`, `bg-base-200`, `bg-base-300` - Backgrounds
+- `bg-primary`, `bg-secondary`, `bg-accent` - Themed backgrounds
+- `text-base-content` - Body text
+- `text-primary`, `text-secondary` - Themed text
 
 ## Changing Fonts
 

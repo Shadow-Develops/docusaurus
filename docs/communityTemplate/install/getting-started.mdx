@@ -1,0 +1,149 @@
+---
+sidebar_position: 2
+---
+
+# Getting Started
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+This guide will walk you through setting up your server and installing all the dependencies needed to run Community Template.
+
+:::warning[Reminders]
+You must run this on a VPS or dedicated server. All steps are written for an Ubuntu 24.04 LTS Linux VPS.
+:::
+
+Before starting, make sure you have read through [Prerequisites](./prerequisites) and that your domain's [A record](https://www.cloudflare.com/learning/dns/dns-records/dns-a-record/) is pointed to your server's IP.
+
+Update your system and install curl:
+
+```bash
+sudo apt update
+sudo apt install curl
+```
+
+---
+
+## Install Node.js
+
+[Node.js](https://nodejs.org) is required to run Community Template. We use [NVM](https://github.com/nvm-sh/nvm) (Node Version Manager) to ensure the correct version is installed.
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+nvm install 24.11.1
+```
+
+You may need to reopen your terminal after installing NVM before the `nvm` command is available.\
+Verify Node.js is working: `node --version` should output `v24.x.x`.
+
+### Install Forever (Optional)
+
+[Forever](https://www.npmjs.com/package/forever) keeps Community Template running in the background and automatically restarts it if it crashes. It also writes all console output to a log file.
+
+_This is optional - you can also use PM2 or run the app directly with `node .`. This guide assumes you're using Forever._
+
+```bash
+npm i -g forever
+```
+
+Verify it's installed: `forever list`
+
+## Install Nginx
+
+[Nginx](https://nginx.org/) is used to proxy requests from your domain to Community Template.
+
+```bash
+sudo apt install nginx
+```
+
+Press `Y` when prompted. Once installed, navigate to `http://your_server_ip` in a browser - you should see the default Nginx welcome page.
+
+## Install Certbot
+
+[Certbot](https://certbot.eff.org/) issues and manages free SSL certificates for your domain.
+
+```bash
+sudo apt install certbot python3-certbot-nginx
+```
+
+## Install MongoDB
+
+[MongoDB](https://www.mongodb.com/) is the database Community Template uses to store all data.
+
+### Install
+
+1. Install `gnupg` and `curl` if not already available:
+
+   ```bash
+   sudo apt-get install gnupg curl
+   ```
+
+2. Import the MongoDB public GPG key:
+
+   ```bash
+   curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \
+   --dearmor
+   ```
+
+3. Add the MongoDB repository for your Ubuntu version:
+
+   <Tabs
+   	defaultValue='Noble'
+   	values={[
+   		{ label: 'Ubuntu 24.04 (Noble)', value: 'Noble' },
+   		{ label: 'Ubuntu 22.04 (Jammy)', value: 'Jammy' },
+   		{ label: 'Ubuntu 20.04 (Focal)', value: 'Focal' },
+   	]}
+   >
+   	<TabItem value='Noble'>
+   		```bash
+         echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+         ```
+   	</TabItem>
+   	<TabItem value='Jammy'>
+   		```bash
+         echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+         ```
+   	</TabItem>
+   	<TabItem value='Focal'>
+   		```bash
+         echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+         ```
+   	</TabItem>
+   </Tabs>
+
+4. Reload the package database:
+
+   ```bash
+   sudo apt-get update
+   ```
+
+5. Install MongoDB:
+
+   ```bash
+   sudo apt-get install -y mongodb-org
+   ```
+
+### Start MongoDB
+
+1. Start the MongoDB service:
+
+   ```bash
+   sudo systemctl start mongod
+   ```
+
+   If you see `Failed to start mongod.service: Unit mongod.service not found.`, run `sudo systemctl daemon-reload` and try again.
+
+2. Verify it's running:
+
+   ```bash
+   sudo systemctl status mongod
+   ```
+
+3. Enable MongoDB to start on reboot:
+
+   ```bash
+   sudo systemctl enable mongod
+   ```

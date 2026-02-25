@@ -72,9 +72,9 @@ Your site will be available at `http://localhost:5173`
 
 The dev server includes:
 
-- **Hot Module Replacement (HMR)** — See changes instantly
-- **Error Overlay** — Clear error messages during development
-- **Fast Refresh** — Component state is preserved during updates
+- **Hot Module Replacement (HMR)** - See changes instantly
+- **Error Overlay** - Clear error messages during development
+- **Fast Refresh** - Component state is preserved during updates
 
 ### 4. Initialize Git (If Not Already Done)
 
@@ -261,10 +261,10 @@ This serves the `build/` folder to ensure everything looks correct.
 
 Now that your site is running locally, here's what to do next:
 
-1. **[Deployment Guide](./deployment)** — Set up automated GitHub Pages deployment with GitHub Actions
-2. **[Configuration Reference](./configuration)** — Learn about all configuration options
-3. **[Sections Reference](./sections)** — Explore all available section types and variants
-4. **[Customization Guide](./customization)** — Customize colors, themes, and styles
+1. **[Deployment Guide](./deployment)** - Set up automated GitHub Pages deployment with GitHub Actions
+2. **[Configuration Reference](./configuration)** - Learn about all configuration options
+3. **[Sections Reference](./sections)** - Explore all available section types and variants
+4. **[Customization Guide](./customization)** - Customize colors, themes, and styles
 
 **Ready to go live?** Follow the [Deployment Guide](./deployment) to set up automated GitHub Pages deployment. Every push to your main branch will automatically update your live site!
 

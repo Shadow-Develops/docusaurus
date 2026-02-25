@@ -93,42 +93,7 @@ export default {
 		},
 		footer: {
 			style: 'dark',
-			links: [
-				{
-					title: 'Docs',
-					items: [
-						{
-							label: 'Shadow Store',
-							to: '/shadowStore',
-						},
-						{
-							label: 'License System',
-							to: '/licenseSystem',
-						},
-						{
-							label: 'SPARK',
-							to: '/spark/getting-started',
-						},
-						{
-							label: 'Legacy Products',
-							to: '/legacy',
-						},
-					],
-				},
-				{
-					title: 'Community',
-					items: [
-						{
-							label: 'Discord',
-							href: 'https://discord.gg/shadowdevs',
-						},
-						{
-							label: 'GitHub',
-							href: 'https://github.com/Shadow-Develops',
-						},
-					],
-				},
-			],
+			links: [],
 			copyright: `Copyright © ${new Date().getFullYear()} <a href="https://shadowdevs.com">Shadow Development</a>. <i>Built with Docusaurus.</i>`,
 		},
 		prism: {
