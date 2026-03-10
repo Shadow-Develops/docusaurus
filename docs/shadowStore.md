@@ -4,6 +4,10 @@ sidebar_position: 1
 
 # Shadow Store
 
+:::warning
+Shadow Store v1.6.5 has been released recently and completely refreshed somethings. We are working to update the docs, but give us a few days.
+:::
+
 This is the official documentation for [Shadow Store](https://shadowdevs.com/store/shadowstore). Here you can find information on how to install it and manage settings.
 
 ## FAQ
