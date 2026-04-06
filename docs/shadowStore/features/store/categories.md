@@ -112,5 +112,7 @@ Each category has a dedicated page showing:
 
 ## Permissions
 
-- `owner` - Full category management
-- `manageProducts` - Create and edit categories
+| Permission       | Access                     |
+| ---------------- | -------------------------- |
+| `owner`          | Full access                |
+| `manageProducts` | Create and edit categories |

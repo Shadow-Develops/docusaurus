@@ -182,7 +182,7 @@ Discord notifications include:
 
 ## Permissions
 
-To manage discounts and sales, users must have:
-
-- `owner` - Full store owner access
-- `manageDiscounts` - Discount management permissions
+| Permission        | Access                                                      |
+| ----------------- | ----------------------------------------------------------- |
+| `owner`           | Full access                                                 |
+| `manageDiscounts` | Create and manage discount codes, sales, and referral codes |

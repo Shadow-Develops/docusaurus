@@ -416,10 +416,10 @@ _You can find a full list of our supported markdown via the [Markdown page](/sha
 
 ## Permissions
 
-**Required Permissions:**
-
-- `owner` - Full access
-- `managePages` - Homepage editing access
+| Permission    | Access                      |
+| ------------- | --------------------------- |
+| `owner`       | Full access                 |
+| `managePages` | Edit and configure homepage |
 
 ## Troubleshooting
 

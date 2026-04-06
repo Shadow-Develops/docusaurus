@@ -200,18 +200,9 @@ Access history from the review detail page in the admin panel.
 
 ## Permissions
 
-### Admin Permissions
+| Permission      | Access                                                                     |
+| --------------- | -------------------------------------------------------------------------- |
+| `owner`         | Full access                                                                |
+| `manageReviews` | Approve/reject reviews, handle reports, configure settings, view analytics |
 
-To moderate reviews, users must have:
-
-- `owner` - Full store owner access
-- `manageReviews` - Review moderation permissions
-
-### Customer Permissions
-
-Customers can:
-
-- Leave reviews on purchased products
-- Edit their own reviews (if enabled)
-- Report inappropriate reviews
-- View all approved reviews
+Customers can leave reviews on purchased products, report inappropriate reviews, and view all approved reviews.

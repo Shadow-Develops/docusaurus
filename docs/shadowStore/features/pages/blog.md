@@ -299,10 +299,10 @@ Category-filtered post listings:
 
 ## Permissions
 
-To manage blog content, users must have:
-
-- `owner` - Full store owner access
-- `managePages` - Page management permissions
+| Permission    | Access                                        |
+| ------------- | --------------------------------------------- |
+| `owner`       | Full access                                   |
+| `managePages` | Create, edit, and delete posts and categories |
 
 Post authors can edit their own posts even without admin permissions.
 

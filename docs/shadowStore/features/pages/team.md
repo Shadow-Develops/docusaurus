@@ -254,10 +254,10 @@ Each team member card typically shows:
 
 ## Permissions
 
-To manage team members, users must have:
-
-- `owner` - Full store owner access
-- `managePages` - Page management permissions
+| Permission    | Access                                |
+| ------------- | ------------------------------------- |
+| `owner`       | Full access                           |
+| `managePages` | Create, edit, and delete team members |
 
 ## Troubleshooting
 

@@ -6,6 +6,8 @@ pagination_prev: null
 
 # Theme & Branding
 
+import ThemePreview from '@site/src/components/ThemePreview';
+
 Customize your Shadow Store's appearance with powerful theming options. Shadow Store uses daisyUI themes and provides both preset themes and complete custom theme control.
 
 ## Accessing Theme Settings
@@ -40,9 +42,9 @@ Choose from 29 professionally designed daisyUI themes:
 4. Click "Save Theme Settings"
 5. Refresh the page to see changes
 
-:::info
-Preview all daisyUI themes at [daisyui.com/docs/themes/](https://daisyui.com/docs/themes/)
-:::
+**Preview of Themes**
+
+<ThemePreview />
 
 ### Custom Themes
 
@@ -355,10 +357,10 @@ Switching from Custom to Preset will not delete your custom theme data - it will
 
 ## Permissions
 
-**Required Permissions:**
-
-- `owner` - Full access
-- `manageTheme` - Theme customization access
+| Permission    | Access                                             |
+| ------------- | -------------------------------------------------- |
+| `owner`       | Full access                                        |
+| `manageTheme` | Theme customization, custom CSS, branding settings |
 
 ## Troubleshooting
 

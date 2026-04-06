@@ -71,10 +71,10 @@ When a new release is created, Shadow Store can automatically send notifications
 
 ## Permissions
 
-To manage releases, users must have one of the following permissions:
-
-- `owner` - Full store owner access
-- `manageProducts` - Product management permissions
+| Permission       | Access                                          |
+| ---------------- | ----------------------------------------------- |
+| `owner`          | Full access                                     |
+| `manageProducts` | Create, edit, and delete releases; manage files |
 
 Regular customers can only view releases for products they own.
 

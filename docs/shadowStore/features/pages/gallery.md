@@ -257,10 +257,10 @@ The gallery can display in different formats:
 
 ## Permissions
 
-To manage the gallery, users must have:
-
-- `owner` - Full store owner access
-- `managePages` - Page management permissions
+| Permission    | Access                                  |
+| ------------- | --------------------------------------- |
+| `owner`       | Full access                             |
+| `managePages` | Upload, edit, and delete gallery images |
 
 ## Troubleshooting
 

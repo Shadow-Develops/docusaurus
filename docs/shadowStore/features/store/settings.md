@@ -96,5 +96,7 @@ Giftcards function as special products that credit customer accounts.
 
 ## Permissions
 
-- `owner` - Full settings access
-- `manageProducts` - Modify store settings
+| Permission       | Access                |
+| ---------------- | --------------------- |
+| `owner`          | Full access           |
+| `manageProducts` | Modify store settings |

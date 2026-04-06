@@ -6,21 +6,18 @@ pagination_prev: null
 
 # Markdown
 
-Community Template provides comprehensive markdown support across blog posts, custom pages, and other content areas. This guide details all supported markdown syntax and features available in the system.
+Blog Builder provides markdown support in the blog post editor and in the Text section type on pages. This guide details all supported markdown syntax and features.
 
 _Please note, that the examples seen here may differ from what is actually on the site, as the markdown system on our documentation is different._
 
 ## What is Markdown?
 
-Markdown is a lightweight markup language that allows you to format text using simple, readable syntax. Community Template converts your markdown into beautifully styled HTML automatically.
+Markdown is a lightweight markup language that allows you to format text using simple, readable syntax. Blog Builder converts your markdown into beautifully styled HTML automatically.
 
 **Where Markdown is Supported:**
 
 - Blog posts
-- Custom pages
-- Newsletter content
-- Product descriptions
-- Some page sections
+- Text sections on landing pages and custom pages
 
 ## Basic Text Formatting
 
@@ -212,7 +209,7 @@ Display images using the image syntax.
 
 ```markdown
 ![Alt text](https://example.com/image.jpg)
-![Community Template Logo](https://shadowdevelopment.net/logo.png)
+![Blog Builder Logo](https://shadowdevelopment.net/logo.png)
 ```
 
 **Components:**
@@ -355,7 +352,7 @@ Create visual separators using three or more dashes, asterisks, or underscores.
 
 ## Custom Alerts
 
-Community Template supports special alert boxes for highlighting important information.
+Blog Builder supports special alert boxes for highlighting important information.
 
 **Info Alert:**
 
@@ -429,7 +426,7 @@ All markdown works inside alerts.
 
 ## HTML Support
 
-Community Template allows inline HTML for advanced formatting.
+Blog Builder allows inline HTML for advanced formatting.
 
 **Common HTML Elements:**
 
@@ -657,4 +654,4 @@ _Not all of these will apply 1:1 because we have some custom stuff; however, the
 
 **Need Help?**
 
-Join the [Shadow Development Discord](https://discord.gg/shadowdevs) for support and tips on using markdown effectively in Community Template.
+Join the [Shadow Development Discord](https://discord.gg/shadowdevs) for support and tips on using markdown effectively in Blog Builder.

@@ -4,10 +4,6 @@ sidebar_position: 1
 
 # Shadow Store
 
-:::warning
-Shadow Store v1.6.5 has been released recently and completely refreshed somethings. We are working to update the docs, but give us a few days.
-:::
-
 This is the official documentation for [Shadow Store](https://shadowdevs.com/store/shadowstore). Here you can find information on how to install it and manage settings.
 
 ## FAQ
@@ -20,11 +16,13 @@ This is the official documentation for [Shadow Store](https://shadowdevs.com/sto
 - What payment processors can I use?
   - Both PayPal / Stripe are currently the only options for payment processing.
 - What login methods are there?
-- No, we offer passwordless email authentication, Google, Discord, and Github.
+  - We offer passwordless email authentication, Google, Discord, and GitHub.
 - Is there a Discord Bot?
   - Yes, Shadow Store has a built in Discord bot that is used to handle the Discord OAuth2 (if enabled) and automatically post things such as releases, audit logs, and notifications (if enabled).
 - Can I send emails for notifications?
   - Yes, both SendGrid and SMTP server based emails are currently supported.
+- Is there a loyalty/rewards program?
+  - Yes, Shadow Store includes a built-in loyalty points system. Customers earn points for purchases, subscriptions, account actions, and reviews, then redeem them for store credit.
 - What do I do with a bug I found?
   - Please report it in the [Shadow Development Discord](https://shadowdevs.com/discord) or via our [Website Bug Report Form](https://shadowdevs.com/form/bug-report).
 

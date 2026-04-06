@@ -261,28 +261,13 @@ Users with editing permissions can modify partner content directly from the publ
 
 ## Permissions
 
-### Admin Permissions
+| Permission     | Access                                                             |
+| -------------- | ------------------------------------------------------------------ |
+| `owner`        | Full access                                                        |
+| `managePages`  | Create, edit, and delete partners                                  |
+| Editor (by ID) | Edit the partner's About content; cannot delete or create partners |
 
-To manage partners, users must have:
-
-- `owner` - Full store owner access
-- `managePages` - Page management permissions
-
-### Editor Permissions
-
-Users added to Editor User IDs can:
-
-- Edit the partner's About content
-- View the edit interface on the partner's page
-- Cannot delete partners or create new ones
-
-### Public Access
-
-All visitors can:
-
-- View the partner directory at `/partners`
-- View individual partner pages
-- Click external website links
+All visitors can view the partner directory and individual partner pages without any permissions.
 
 ## Troubleshooting
 

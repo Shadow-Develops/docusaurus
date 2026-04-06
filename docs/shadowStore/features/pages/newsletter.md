@@ -340,6 +340,13 @@ This month we're featuring...
 Join us for upcoming...
 ```
 
+## Permissions
+
+| Permission    | Access                           |
+| ------------- | -------------------------------- |
+| `owner`       | Full access                      |
+| `managePages` | Create and edit newsletter posts |
+
 ## Metrics and Analytics
 
 ### Track Performance

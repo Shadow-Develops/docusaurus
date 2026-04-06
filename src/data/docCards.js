@@ -45,6 +45,13 @@ export default [
 		color: 'teal',
 	},
 	{
+		title: 'Blog Builder',
+		image: require('@site/static/img/blog.svg').default,
+		description: 'Start drafting your blog after setting up the Blog Builder.',
+		docUrl: '/blogBuilder',
+		color: 'yellow',
+	},
+	{
 		title: 'Shopify Bot',
 		icon: '🏪',
 		description:

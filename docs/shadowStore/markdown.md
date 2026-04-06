@@ -8,6 +8,8 @@ pagination_prev: null
 
 Shadow Store provides comprehensive markdown support across blog posts, custom pages, and other content areas. This guide details all supported markdown syntax and features available in the system.
 
+_Please note, that the examples seen here may differ from what is actually on the site, as the markdown system on our documentation is different._
+
 ## What is Markdown?
 
 Markdown is a lightweight markup language that allows you to format text using simple, readable syntax. Shadow Store converts your markdown into beautifully styled HTML automatically.
@@ -502,6 +504,26 @@ Use backslashes to display markdown syntax literally.
   ! exclamation mark
 ```
 
+## Tables
+
+Create structured data with tables using pipes and dashes.
+
+**Syntax:**
+
+```markdown
+| Column 1      | Column 2      |
+| ------------- | ------------- |
+| Cell 1, Row 1 | Cell 2, Row 1 |
+| Cell 1, Row 2 | Cell 2, Row 2 |
+```
+
+**Renders as:**
+
+| Column 1      | Column 2      |
+| ------------- | ------------- |
+| Cell 1, Row 1 | Cell 2, Row 1 |
+| Cell 1, Row 2 | Cell 2, Row 2 |
+
 ## Markdown Best Practices
 
 ### Structure
@@ -638,13 +660,6 @@ code here
 ````
 
 ## Additional Resources
-
-<details>
-  <summary>Markdown Examples (From Shadow Store)</summary>
-
-[![md-examples](/img/docs/shadowstore-md-examples.png)](/img/docs/shadowstore-md-examples.png)
-
-</details>
 
 _Not all of these will apply 1:1 because we have some custom stuff; however, they are still good to reference._
 

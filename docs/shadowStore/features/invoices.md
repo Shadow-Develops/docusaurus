@@ -33,6 +33,10 @@ Invoices can have the following statuses:
    - Total amount
 5. Click "Create Invoice"
 
+:::tip
+Quotes can be converted directly into invoices. See the [Quotes](./quotes) documentation for details.
+:::
+
 ### Invoice Components
 
 **Customer Information:**
@@ -172,15 +176,37 @@ Track complete invoice lifecycle:
 
 Access history from the invoice detail page.
 
+## Custom Client Details
+
+When creating or editing an invoice, admins can attach optional client-specific information that appears on the invoice and PDF:
+
+- **Company Name**: The client's business name
+- **Billing Address**: Full multi-line address
+- **Phone Number**: Client contact number
+- **Tax ID / VAT Number**: For tax-exempt or international clients
+- **Internal Notes**: Admin-only notes not visible to the customer
+
+These details are stored per-invoice and are independent of the customer's account profile, so they can be customized for each invoice.
+
+## PDF Export
+
+Any invoice can be exported as a professionally formatted PDF at `/invoice/[id]/pdf`.
+
+The PDF includes:
+
+- Business name and email (from your store settings)
+- Client billing details (company, address, phone, tax ID)
+- Itemized line items table with unit prices and totals
+- Invoice status badge (Pending, Paid, Due, Cancelled)
+- Memo and terms of service (if set)
+
+Multi-currency symbols are correctly formatted across all supported currencies.
+
 ## Permissions
 
-To manage invoices, users must have:
+| Permission       | Access                                                           |
+| ---------------- | ---------------------------------------------------------------- |
+| `owner`          | Full access                                                      |
+| `manageInvoices` | Create and edit invoices, process payments, view invoice history |
 
-- `owner` - Full store owner access
-- `manageInvoices` - Invoice management permissions
-
-Customers can:
-
-- View their own invoices
-- Make payments on their invoices
-- Access payment history
+Customers can view their own invoices, make payments, and access their payment history.

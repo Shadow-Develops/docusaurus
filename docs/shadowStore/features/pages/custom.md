@@ -342,10 +342,10 @@ To exchange an item...
 
 ## Permissions
 
-To manage custom pages, users must have:
-
-- `owner` - Full store owner access
-- `managePages` - Page management permissions
+| Permission    | Access                          |
+| ------------- | ------------------------------- |
+| `owner`       | Full access                     |
+| `managePages` | Create, edit, and delete pages  |
 
 ## Troubleshooting
 

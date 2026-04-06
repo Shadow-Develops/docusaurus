@@ -1,0 +1,147 @@
+---
+sidebar_position: 8
+---
+
+# Settings
+
+import ThemePreview from '@site/src/components/ThemePreview';
+
+The Settings panel controls all site-wide configuration for Blog Builder. Settings are organized into sections, each with its own permission requirement.
+
+## Admin Panel
+
+- **Location:** Admin Panel > Settings (`/admin/settings`)
+
+---
+
+## General
+
+**Required permission:** `manageSettings`
+
+| Setting             | Description                                                                                                         |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Site Name           | The name of your site, used in titles and metadata                                                                  |
+| Site Description    | Short description used for SEO                                                                                      |
+| Meta Color          | Browser theme color (shown in mobile browsers)                                                                      |
+| Cookie Banner       | Toggle the cookie consent banner on/off                                                                             |
+| Show Sign-In Button | Show or hide the sign-in button in the public navbar                                                                |
+| Embed Image         | Control whether images are embeddable from external sites                                                           |
+| Site Logo           | The logo used on the site, mainly in the navbar                                                                     |
+| Banner Image        | The banner image that can be used in the embed image                                                                |
+| Site Favicon        | The favicon image used in browser tabs                                                                              |
+| Maintenance Mode    | When enabled, unauthenticated visitors see a maintenance page. Logged-in admins can still access the site normally. |
+
+---
+
+## Theme
+
+**Required permission:** `manageTheme`
+
+Choose between preset themes or define a fully custom theme.
+
+### Preset Themes
+
+These are the preset DaisyUI themes:
+
+<ThemePreview />
+
+### Custom Theme
+
+Set individual CSS variable values for all DaisyUI color and style tokens:
+
+**Color tokens:** `primary`, `primaryContent`, `secondary`, `secondaryContent`, `accent`, `accentContent`, `neutral`, `neutralContent`, `base100`, `base200`, `base300`, `baseContent`, `info`, `infoContent`, `success`, `successContent`, `warning`, `warningContent`, `error`, `errorContent`
+
+**Shape/size tokens:** `radiusBox`, `radiusBtn`, `radiusSelector`, `radiusField`, `sizeSelector`, `sizeField`
+
+**Style tokens:** `border`, `depth`, `noise`
+
+You can easily generate and import custom themes via the [DaisyUI Theme Generator](https://daisyui.com/theme-generator).
+
+---
+
+## Custom CSS
+
+**Required permission:** `manageTheme`
+
+Inject arbitrary CSS that is applied site-wide. This CSS is loaded on every public page. Use with care, there is no sandboxing.
+
+---
+
+## Background
+
+**Required permission:** `manageTheme`
+
+| Type       | Description                                      |
+| ---------- | ------------------------------------------------ |
+| `theme`    | Uses the active theme's default background color |
+| `color`    | Solid custom color                               |
+| `gradient` | Two-color gradient with configurable direction   |
+| `image`    | Custom background image uploaded via the CDN     |
+
+---
+
+## Navbar
+
+**Required permission:** `manageSettings`
+
+- **Logo Display:** Show the site logo image, the site name text, or both
+- **Custom Nav Items:** Add, remove, and drag-reorder links in the navigation bar. Each item has a label and a URL.
+
+---
+
+## Footer
+
+**Required permission:** `manageSettings`
+
+- **Footer Columns:** Create custom columns of links for the footer
+- **Social Links:** Add links for up to 11 social platforms:
+  - Discord, Twitter/X, YouTube, Instagram, TikTok, GitHub, Twitch, Reddit, Facebook, LinkedIn, Email
+
+---
+
+## Email
+
+**Required permission:** `manageSettings`
+
+Configure your email provider for sending login codes and form submission notifications. See the [Email integration guide](/blogBuilder/integrations/email) for full setup details.
+
+---
+
+## SEO
+
+**Required permission:** `manageSettings`
+
+| Setting             | Description                                                          |
+| ------------------- | -------------------------------------------------------------------- |
+| Default OG Image    | Fallback Open Graph image used when a page has no specific image set |
+| Google Analytics ID | GA4 measurement ID (injected as a gtag script on every public page)  |
+| Default Robots      | Default `robots` meta tag directive (e.g. `index,follow`)            |
+
+---
+
+## Policies
+
+**Required permission:** `manageSettings`
+
+Edit your Privacy Policy and Terms of Service as markdown. These are published at:
+
+| Route      | Description           |
+| ---------- | --------------------- |
+| `/privacy` | Privacy Policy page   |
+| `/tos`     | Terms of Service page |
+
+---
+
+## Redirects
+
+**Required permission:** `manageSettings`
+
+Define URL redirect rules. Each rule has a source path and a destination URL. Redirects are applied server-side before the page is rendered.
+
+---
+
+## Pages
+
+**Required permission:** `manageSettings`
+
+Define what pages are enabled or disabled, such as `/gallery` or `/team`

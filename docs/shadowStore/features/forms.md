@@ -139,12 +139,9 @@ Notifications can include:
 
 ## Permissions
 
-To manage forms, users must have:
+| Permission    | Access                                                        |
+| ------------- | ------------------------------------------------------------- |
+| `owner`       | Full access                                                   |
+| `manageForms` | Create and edit forms, view submissions, manage form settings |
 
-- `owner` - Full store owner access
-- `manageForms` - Form management permissions
-
-Regular users can only:
-
-- Submit forms (if allowed)
-- View their own submissions
+Regular users can submit forms (if allowed) and view their own submissions.

@@ -69,6 +69,15 @@ Shadow Store includes the following admin permissions:
   - View invoice history
   - Send payment reminders
 
+### `manageQuotes`
+
+- **Description**: Manage customer quotes
+- **Access**:
+  - Create and edit quotes
+  - Cancel quotes
+  - Approve or reject customer revision requests
+  - Convert quotes to invoices (also requires `manageInvoices`)
+
 ### `manageReviews`
 
 - **Description**: Moderate product reviews
@@ -77,6 +86,23 @@ Shadow Store includes the following admin permissions:
   - Handle reported reviews
   - Configure review settings
   - View review analytics
+
+### `viewInsights`
+
+- **Description**: View analytics and reporting dashboards
+- **Access**:
+  - View the analytics dashboard
+  - View subscription analytics
+  - Export analytics data (CSV/JSON)
+
+### `manageReferral`
+
+- **Description**: Manage the referral program
+- **Access**:
+  - View referral analytics and events
+  - Create and manage partner codes
+  - Approve or reject user code requests
+  - Configure referral program settings
 
 ### `managePages`
 
@@ -286,9 +312,9 @@ Permissions: `managePages`, `manageForms`
 
 ### Customer Service
 
-Permissions: `manageReviews`, `manageInvoices`, `manageForms`
+Permissions: `manageReviews`, `manageInvoices`, `manageQuotes`, `manageForms`
 
-- Handles customer interactions
+- Handles customer interactions including reviews, invoices, and quotes
 - Cannot modify products or settings
 
 ### Developer/Designer

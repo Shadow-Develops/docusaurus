@@ -61,5 +61,7 @@ Individual products can override the global layout by adding their own sections 
 
 ## Permissions
 
-- `owner` - Full layout management
-- `managePages` - Edit global layout
+| Permission    | Access                     |
+| ------------- | -------------------------- |
+| `owner`       | Full access                |
+| `managePages` | Edit global product layout |

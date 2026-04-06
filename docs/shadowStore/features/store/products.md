@@ -410,3 +410,10 @@ Organize products with tags:
 - Group related products
 - Enhance search
 - Customer browsing
+
+## Permissions
+
+| Permission       | Access                                                           |
+| ---------------- | ---------------------------------------------------------------- |
+| `owner`          | Full access                                                      |
+| `manageProducts` | Create, edit, and delete products; manage releases and inventory |
