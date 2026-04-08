@@ -8,6 +8,25 @@ pagination_prev: null
 
 Keep your status page up-to-date with the latest features and fixes.
 
+## What to Preserve During Updates
+
+**Always keep your customizations in:**
+
+- `config.json` - Your site settings
+- `monitors.json` - Your monitor definitions
+- `static/CNAME` - Your custom domain (if set)
+- `static/img/` - Your custom images/logo
+- `data/` - Your history and state files
+
+**Files that may need updating:**
+
+- `scripts/` - Data updating scripts
+- `src/` - Frontend components
+- `package.json` - Dependencies
+- `.github/workflows/` - GitHub Actions workflows
+
+---
+
 ## If You Forked the Repository
 
 Syncing your fork with the upstream repository is the easiest way to get updates.
@@ -76,25 +95,6 @@ You'll need to manually apply updates since there's no direct link to the origin
 1. Check the [Shadow Status releases](https://github.com/Shadow-Develops/ShadowStatus/releases) for change notes
 2. Compare your files with the latest version
 3. Manually update changed files, preserving your configuration
-
----
-
-## What to Preserve During Updates
-
-**Always keep your customizations in:**
-
-- `config.json` - Your site settings
-- `monitors.json` - Your monitor definitions
-- `static/CNAME` - Your custom domain (if set)
-- `static/img/` - Your custom images/logo
-- `data/` - Your history and state files
-
-**Files that may need updating:**
-
-- `scripts/check-monitors.js` - Monitor checking logic
-- `src/` - Frontend components
-- `package.json` - Dependencies
-- `.github/workflows/` - GitHub Actions workflows
 
 ---
 

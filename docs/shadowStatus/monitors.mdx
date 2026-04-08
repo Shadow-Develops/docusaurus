@@ -7,7 +7,7 @@ sidebar_position: 3
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Configure what services to monitor in `monitors.json`. ShadowStatus supports 9 different monitor types for various use cases.
+Configure what services to monitor in `monitors.json`. ShadowStatus supports 10 different monitor types for various use cases.
 
 ## Basic Structure
 
@@ -193,6 +193,28 @@ Verify DNS resolution and optionally check for expected IP.
 
 ---
 
+### SSL
+
+Monitor SSL/TLS certificate expiry for a domain.
+
+```json
+{
+	"name": "Main Website SSL",
+	"type": "ssl",
+	"target": "example.com",
+	"warnDays": 14,
+	"criticalDays": 7
+}
+```
+
+| Property       | Type   | Default      | Description                                           |
+| -------------- | ------ | ------------ | ----------------------------------------------------- |
+| `target`       | string | **Required** | Domain name, optionally with port (`example.com:443`) |
+| `warnDays`     | number | `14`         | Days before expiry to show a warning status           |
+| `criticalDays` | number | `7`          | Days before expiry to show a critical/major status    |
+
+---
+
 ### JSON
 
 Check JSON API responses for specific values.
@@ -263,17 +285,15 @@ Monitor Steam game servers using A2S_INFO protocol.
 {
 	"name": "Game Server",
 	"type": "steam",
-	"target": "192.168.1.100",
-	"port": 27015,
+	"target": "192.168.1.100:27015",
 	"timeout": 5000
 }
 ```
 
-| Property  | Type   | Default      | Description                                     |
-| --------- | ------ | ------------ | ----------------------------------------------- |
-| `target`  | string | **Required** | Server IP or hostname                           |
-| `port`    | number | `27015`      | Query port (usually game port or game port + 1) |
-| `timeout` | number | `5000`       | Query timeout in milliseconds                   |
+| Property  | Type   | Default      | Description                                                       |
+| --------- | ------ | ------------ | ----------------------------------------------------------------- |
+| `target`  | string | **Required** | Server IP or hostname in `host:port` format (default port: 27015) |
+| `timeout` | number | `5000`       | Query timeout in milliseconds                                     |
 
 ---
 
@@ -285,17 +305,15 @@ Monitor Minecraft Java Edition servers.
 {
 	"name": "Minecraft Server",
 	"type": "minecraft",
-	"target": "mc.example.com",
-	"port": 25565,
+	"target": "mc.example.com:25565",
 	"timeout": 5000
 }
 ```
 
-| Property  | Type   | Default      | Description                        |
-| --------- | ------ | ------------ | ---------------------------------- |
-| `target`  | string | **Required** | Server IP or hostname              |
-| `port`    | number | `25565`      | Server port                        |
-| `timeout` | number | `5000`       | Connection timeout in milliseconds |
+| Property  | Type   | Default      | Description                                                       |
+| --------- | ------ | ------------ | ----------------------------------------------------------------- |
+| `target`  | string | **Required** | Server IP or hostname in `host:port` format (default port: 25565) |
+| `timeout` | number | `5000`       | Connection timeout in milliseconds                                |
 
 ---
 

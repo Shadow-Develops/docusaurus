@@ -194,9 +194,9 @@ To use a custom domain:
 
 ---
 
-## Step 7: Set Up 5-Minute Monitoring (Recommended)
+## Step 7: Set Up 15-Minute Monitoring (Recommended)
 
-By default, the GitHub Actions workflow runs every **30 minutes**. This is because GitHub Actions scheduled workflows can be delayed during high load periods, making shorter intervals unreliable.
+By default, the GitHub Actions workflow runs every **45 minutes**. This is because GitHub Actions scheduled workflows can be delayed during high load periods, making shorter intervals unreliable.
 
 For more frequent monitoring, use a free external cron service like [cron-job.org](https://cron-job.org) to trigger the workflow via GitHub's API.
 
@@ -218,7 +218,7 @@ For more frequent monitoring, use a free external cron service like [cron-job.or
 | ------------------ | ------------------------------------------------------------------------------------------------------ |
 | **Title**          | Status Page Monitor                                                                                    |
 | **URL**            | `https://api.github.com/repos/YOUR_USERNAME/YOUR_REPO/actions/workflows/monitor-checks.yml/dispatches` |
-| **Schedule**       | Every 5 minutes                                                                                        |
+| **Schedule**       | Every 15 minutes                                                                                       |
 | **Request Method** | POST                                                                                                   |
 
 3. Go to the **Advanced** tab and add these **Headers**:
@@ -238,5 +238,5 @@ Content-Type: application/json
 5. Click **Create** to save
 
 :::info
-The GitHub Actions workflow will continue running every 30 minutes as a fallback in case the external cron service fails.
+The GitHub Actions workflow will continue running every 45 minutes as a fallback in case the external cron service fails.
 :::

@@ -87,21 +87,38 @@ npm run preview
 
 ```
 ShadowStatus/
-├── .github/workflows/     # GitHub Actions workflows
-│   ├── deploy.yml         # Build and deploy to Pages
-│   └── monitor-checks.yml # Run monitor checks
+├── .github/workflows/
+│   ├── deploy.yml              # Build and deploy to Pages
+│   ├── monitor-checks.yml      # Run monitor checks
+│   └── incident-update.yml     # Sync incidents from GitHub Issues
 ├── src/
 │   ├── lib/
-│   │   ├── components/    # Svelte components
-│   │   ├── client/        # Client utilities
-│   │   └── config.js      # Config loader
-│   └── routes/            # SvelteKit routes
+│   │   ├── components/         # Svelte UI components
+│   │   ├── client/             # Client-side utilities
+│   │   └── config.js           # Config loader
+│   ├── routes/
+│   │   ├── +page.svelte        # Main status page
+│   │   ├── +layout.svelte      # Root layout
+│   │   ├── +layout.server.js   # Server-side data loading
+│   │   └── +error.svelte       # Error page
+│   ├── app.css                 # Global styles
+│   ├── app.html                # HTML template
+│   └── error.html              # Static error page
 ├── scripts/
-│   └── check-monitors.js  # Core monitoring script
-├── data/                  # Runtime data (history, state)
-├── static/                # Static assets
-│   └── data/status.json   # Generated status data
-├── config.json            # Site configuration
-├── monitors.json          # Monitor definitions
-└── package.json           # Dependencies
+│   ├── check-monitors.js       # Core monitoring script
+│   └── update-incidents.js     # Incident sync from GitHub Issues
+├── data/
+│   ├── history.json            # 90-day monitor history
+│   └── notification-state.json # Tracks sent notifications (prevents duplicates)
+├── static/
+│   ├── data/status.json        # Generated status data
+│   ├── img/                    # Images (logo, banner)
+│   ├── CNAME                   # Custom domain config
+│   ├── .nojekyll               # Bypasses Jekyll processing on GitHub Pages
+│   └── robots.txt              # Crawler rules
+├── config.json                 # Site configuration
+├── monitors.json               # Monitor definitions
+├── svelte.config.js            # SvelteKit config
+├── vite.config.js              # Vite build config
+└── package.json                # Dependencies
 ```
