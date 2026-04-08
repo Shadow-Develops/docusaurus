@@ -36,6 +36,11 @@ graph LR
     D --> E[GitHub Pages]
     E --> F[Status Page]
     C -->|Down?| G[Send Notifications]
+
+    H[GitHub Issues] -->|created/updated/closed/reopened| I[Incident Workflow]
+    I --> J[Update incidents.json]
+    J --> E
+    I -->|Status change?| G
 ```
 
 1. **GitHub Actions** runs the monitor script every 15 minutes
