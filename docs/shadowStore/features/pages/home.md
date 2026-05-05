@@ -14,7 +14,7 @@ Navigate to **Admin Panel > Pages > Home** to access the homepage customization 
 
 ## Section Types
 
-Shadow Store provides 13 built-in section types:
+Shadow Store provides 16 built-in section types:
 
 ### 1. Hero Section
 
@@ -153,6 +153,7 @@ Email subscription form.
 - Button text
 - Form action URL (defaults to `/api/newsletter`)
 - Optional disclaimer text
+- Success message shown after submission
 
 ### 10. Social Proof
 
@@ -162,7 +163,8 @@ Display partner logos or trust badges.
 
 - Section title
 - Grid columns (3, 4, 5, or 6)
-- Show/hide company names
+- Show/hide company names alongside logos
+- Auto-scroll toggle (scrolls left to right when there are more than 4 logos)
 - Multiple logos with:
   - Company name
   - Logo image URL
@@ -172,6 +174,11 @@ Display partner logos or trust badges.
 
 Image gallery with lightbox.
 
+**Image Source:**
+
+- **Manual**: Enter images directly in the builder
+- **From Gallery Page**: Pull images from the shared store gallery, optionally filtered by group
+
 **Configuration:**
 
 - Title and subtitle
@@ -179,27 +186,34 @@ Image gallery with lightbox.
   - Standard Grid
   - Multi-Image (auto-arranged)
 - Grid columns (2, 3, or 4) for standard
-- Image height customization
+- Image height customization (standard grid only)
 - Lightbox enable/disable
 - Show descriptions on hover
-- Images as clickable buttons option
-- Multiple images with:
+- Images as clickable buttons option (manual source only: if a link is set, opens link instead of lightbox)
+- Gallery groups filter (when using Gallery Page source)
+- Multiple images with (manual source):
   - Image URL
   - Alt text and title
   - Description
+  - Order number
   - Optional link (if buttons enabled)
-  - Custom ordering
 
 ### 12. Text Content
 
-Rich text content block.
+Rich text content block with optional media.
 
 **Configuration:**
 
-- Optional title
+- Optional heading
 - Markdown content
-- Max width selection (small to full width)
-- Automatic markdown rendering
+- Text alignment (left, center, right)
+- Max width (narrow, normal, wide, full)
+- Image / Video mode:
+  - **None**: text only
+  - **Single Image**: one image displayed beside the text
+  - **Image Carousel**: multiple images that cycle beside the text
+  - **Video**: YouTube URL or direct file URL beside the text
+- Media position (left or right of text, when media is set)
 
 ### 13. Video Showcase
 
@@ -213,6 +227,64 @@ Featured video with description.
 - Video URL (YouTube or MP4)
 - Video position (left or right)
 - Optional CTA button with text and URL
+
+### 14. Form Section
+
+Embeds a form created in the Forms feature.
+
+**Section Types:**
+
+- **Standalone**: Centered form with no surrounding content
+- **Content**: Form on one side, rich content on the other
+
+**Configuration:**
+
+- Form selector (pick from existing forms)
+- Section type (standalone or content)
+- Optional heading (leave blank to hide)
+- Form alignment: right or left side (content type only)
+- Content horizontal alignment: left, center, right (content type only)
+- Content vertical alignment: top, center, bottom (content type only)
+- Markdown content beside the form (content type only)
+- Buttons placed under the content: icon or text style (content type only)
+
+### 15. Embedded Page
+
+Embeds an external URL inside an iframe.
+
+**Configuration:**
+
+- Page URL to embed
+- Width (leave blank for 100%)
+- Height (leave blank for 850px default)
+
+### 16. Pure HTML/CSS
+
+Renders raw HTML and custom CSS directly on the page.
+
+**Configuration:**
+
+- HTML markup to render
+- CSS rules (applied globally to the page: use specific selectors to avoid conflicts)
+
+:::warning
+CSS written here applies to the whole page. Use specific IDs or class names to avoid unintended styling conflicts with other sections.
+:::
+
+## Section IDs
+
+Each section can be given an optional **Section ID**: a short, URL-safe anchor slug (lowercase letters, numbers, hyphens, and underscores only). When set, it appears as a badge in the section header and makes the section linkable from anywhere on the page.
+
+**Use case:** CTA buttons can target a section ID as a hash anchor, scrolling the visitor directly to that section. For example, if your Pricing section has the ID `pricing`, a CTA button URL of `#pricing` will scroll to it.
+
+**To set a Section ID:**
+
+1. Expand the section
+2. Find the **Section ID** field
+3. Enter a URL-safe value (e.g., `pricing`, `about-us`, `faq`)
+4. Save the page
+
+Section IDs are optional. Sections without an ID still display and function normally.
 
 ## Managing Sections
 
@@ -416,10 +488,10 @@ _You can find a full list of our supported markdown via the [Markdown page](/sha
 
 ## Permissions
 
-| Permission    | Access                      |
-| ------------- | --------------------------- |
-| `owner`       | Full access                 |
-| `managePages` | Edit and configure homepage |
+| Permission      | Access                      |
+| --------------- | --------------------------- |
+| `owner`         | Full access                 |
+| `MANAGE_LAYOUT` | Edit and configure homepage |
 
 ## Troubleshooting
 

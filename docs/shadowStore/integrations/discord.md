@@ -77,3 +77,31 @@ Within Admin Panel > Integration > Discord you will see notifications at the bot
 _Release notification can be configured with a different channel & ping, but the default will autofill for easy._
 
 Ping Role ID must be a role ID (`1088352657938317372`) or the word `everyone`/`here` for @everyone/@here.
+
+## Discord DM Notifications
+
+In addition to channel-based audit logs, Shadow Store sends **direct messages** to customers for key account events (if the customer has Discord linked and DMs are enabled):
+
+**Store events:**
+
+- Order completed (checkout)
+- Invoice created, paid, cancelled, or due
+- Quote created, updated, cancelled, or accepted
+- Purchase request approved or denied
+
+**Subscription events:**
+
+- Subscription created, updated, cancelled, renewed, or paused
+- Subscription payment due (7 days and 2 days before due date)
+
+**License events:**
+
+- License key generated, disabled, or revoked
+
+**Account events:**
+
+- Account banned or unbanned
+- Account disabled or re-enabled
+- Store credit added
+
+These notifications use the bot token configured in your `.env` and do not require separate channel configuration.

@@ -78,9 +78,10 @@ The redemption is processed immediately. Points are deducted and store credit is
 
 ### Manual Approval Mode
 
-Redemption requests are submitted and held for admin review. The customer can see their pending request on the loyalty page. Admins approve or reject from the admin panel.
+Redemption requests are submitted and held for admin review. The customer can see their pending request on the loyalty page. Admins approve or reject from **Admin Panel > Settings > Loyalty > Pending Redemptions**.
 
-If rejected, the admin can include a note explaining why. The customer sees the rejection reason on their loyalty page.
+- **Approve**: Points are deducted and store credit is instantly added to the customer's balance.
+- **Reject**: Points are returned to the customer. The admin can include a note explaining why. The customer sees the rejection reason on their loyalty page.
 
 :::info
 A tier's **Auto-Approve Redemptions** setting overrides the global approval mode. Customers in an auto-approve tier always get instant redemptions even when the global mode is set to manual.
@@ -144,6 +145,6 @@ Configure the loyalty program at **Admin Panel > Settings > Loyalty**.
 | Permission       | Access                                       |
 | ---------------- | -------------------------------------------- |
 | `owner`          | Full access including configuration          |
-| `manageSettings` | Configure loyalty program settings and tiers |
+| `MANAGE_LOYALTY` | Configure loyalty program settings and tiers |
 
 All logged-in customers can view and use the loyalty page with no special permissions required.

@@ -29,7 +29,29 @@ Since we use keys for payment processors, login methods, and similar we want to 
 8. `BOT_TOKEN=`
    1. You can find this on the [Discord Developer Application](https://discord.com/developers/applications) > Bot. It is the `Token`.
 9. `OWNERS=[""]`
-   1. This must always be an array (`[""]`), and should contain the Discord User IDs for people you want to login with owner permissions.
+   1. This must always be an array (`[""]`), and should contain the email for people you want to login with owner permissions.
+
+## OAuth Login Methods
+
+These are only required if you intend to enable the respective login method in **Admin Panel > Settings > Login Methods**.
+
+### GitHub
+
+10. `GITHUB_CLIENT_ID=`
+    1. From your GitHub OAuth App > General > Client ID.
+11. `GITHUB_CLIENT_SECRET=`
+    1. From your GitHub OAuth App > Generate a new client secret.
+
+> You can view the [GitHub Integration page](/shadowStore/integrations/login/github) to see how to setup this login method.
+
+### Google
+
+12. `GOOGLE_CLIENT_ID=`
+    1. From your Google Cloud Console OAuth 2.0 Client > Client ID.
+13. `GOOGLE_CLIENT_SECRET=`
+    1. From your Google Cloud Console OAuth 2.0 Client > Client Secret.
+
+> You can view the [Google Integration page](/shadowStore/integrations/login/google) to see how to setup this login method.
 
 ## Payment Processors
 
@@ -37,9 +59,9 @@ Since we use keys for payment processors, login methods, and similar we want to 
 
 This required you to have a [PayPal Business Account](https://www.paypal.com/business/getting-started) to be able to use their API in the required ways by Shadow Store.
 
-10. `PAYPAL_PUBLIC=`
+14. `PAYPAL_PUBLIC=`
     1. PayPal API Client ID
-11. `PAYPAL_SECRET=`
+15. `PAYPAL_SECRET=`
     1. PayPal API Secret Key
 
 <details>
@@ -61,9 +83,9 @@ Now that have the keys and have put them into your `.env`, you are ready to go. 
 
 You will need a [Stripe](https://stripe.com/) account if you wish to use this processor.
 
-12. `STRIPE_PUBLIC=`
+16. `STRIPE_PUBLIC=`
     1. Stripe API Publishable key
-13. `STRIPE_SECRET=`
+17. `STRIPE_SECRET=`
     1. Stripe API Secret Key
 
 <details>
@@ -84,30 +106,34 @@ Now that have the keys and have put them into your `.env`, you are ready to go. 
 
 ## Emails
 
-14. `SENDGRID_KEY=`
+18. `SENDGRID_KEY=`
     1. Head to the [SendGrid API Keys](https://app.sendgrid.com/settings/api_keys) page, create an API key, and then copy the key.
     2. If using SendGrid, then you don't need to put anything into the SMTP options.
-15. `SMTP_HOST=`
+19. `SMTP_HOST=`
     1. The host address for your SMTP server.
     2. Set to `null` if using Gmail SMTP.
-16. `SMTP_PORT=`
+20. `SMTP_PORT=`
     1. The port for your SMTP server.
     2. Set to `null` if using Gmail SMTP.
-17. `SMTP_USER=`
+21. `SMTP_USER=`
     1. The email user for your SMTP server. Ex: `support@example.com`
-18. `SMTP_PASS=`
+22. `SMTP_PASS=`
     1. The password or key for your SMTP server.
 
 ## License System
 
-19. `LICENSE_SYSTEM_KEY=`
+23. `LICENSE_SYSTEM_KEY=`
     1.  Use the [license key from our site](https://shadowdevs.com/license) that is given once you purchase the [Internal License System](https://shadowdevs.com/store/shadowstore-licensesystem) or [External License System](https://shadowdevs.com/store/licensesystem).
 
 ## Advanced
 
 These settings should remain the same way as seen below / provided in the download, unless you know what you are doing.
 
-20. `BODY_SIZE_LIMIT=5368709120`
+24. `BODY_SIZE_LIMIT=5368709120`
     1.  This increases the base SvelteKit body size limit to 10gbs.
-21. `HOST=localhost`
+25. `HOST=localhost`
     1.  This modifies how SvelteKit interacts with itself.
+26. `PRE_ORDER_CHECK_INTERVAL=60`
+    1.  How often (in minutes) Shadow Store checks for pre-orders that are ready to be released. Defaults to `60` (once per hour). Decrease for more frequent checks; increase to reduce background load.
+    1.  The system checks for releases half the allotted time ahead of each check so releases don't sit past their release time to long.
+        1. EX: With the default of 60 minutes, the system will check for any releases 30 minutes in the future and release those on that run.

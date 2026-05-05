@@ -14,25 +14,46 @@ Customize your Shadow Store's appearance with powerful theming options. Shadow S
 
 Navigate to **Admin Panel > Theme** to access all theming options.
 
+## Theme Mode
+
+Shadow Store supports two theme modes:
+
+### Single Theme
+
+One active theme is applied sitewide. No toggle is shown to visitors. This is the default mode.
+
+### Dual Mode
+
+Two themes are configured, a primary and a secondary, and visitors can switch between them using a toggle button. This is useful for offering a light and dark variant of your store.
+
+**Toggle Settings (Dual Mode only):**
+
+| Setting             | Options                           |
+| ------------------- | --------------------------------- |
+| **Toggle Position** | Navbar, Footer, Both, or Hidden   |
+| **Button Style**    | Icon only, Name only, Icon + Name |
+
+Each theme in Dual Mode is configured independently (Preset or Custom) with its own colors, custom CSS, and settings.
+
 ## Theme Types
 
-Shadow Store offers two approaches to theming:
+Shadow Store offers two approaches to theming for each configured theme:
 
 ### Preset Themes
 
-Choose from 29 professionally designed daisyUI themes:
+Choose from 32 professionally designed daisyUI themes:
 
 **Light Themes:**
 
-- Light, Cupcake, Bumblebee, Emerald, Corporate, Wireframe, Lofi, Pastel, Fantasy, Cmyk, Autumn, Lemonade, Winter
+- Light, Cupcake, Bumblebee, Emerald, Corporate, Wireframe, Lo-Fi, Pastel, Fantasy, CMYK, Autumn, Lemonade, Winter
 
 **Dark Themes:**
 
 - Dark, Synthwave, Retro, Cyberpunk, Halloween, Forest, Aqua, Black, Luxury, Dracula, Business, Acid, Night, Coffee, Dim, Nord, Sunset
 
-**Seasonal Themes:**
+**Other Themes:**
 
-- Valentine, Garden
+- Valentine, Garden, Corporate
 
 **To Use a Preset Theme:**
 
@@ -252,18 +273,30 @@ Add festive decorations to your site with seasonal effects:
 New seasonal effects are added periodically. Join the [Discord](https://discord.gg/shadowdevs) to suggest new effects!
 :::
 
-## Custom CSS
+## Per-Theme Custom CSS
 
-Inject custom CSS to further customize your store:
+Each configured theme (primary and secondary in Dual Mode) has its own **Custom CSS** field. CSS entered here only applies when that specific theme is active. This lets you make targeted adjustments per theme without affecting the other.
 
-**To Add Custom CSS:**
+**To Add Per-Theme Custom CSS:**
 
 1. Navigate to **Admin Panel > Theme**
-2. Scroll to "Custom CSS" section
+2. Expand the theme you want to customize
+3. Scroll to the **Custom CSS** field for that theme
+4. Enter your CSS
+5. Click "Save Theme Settings"
+
+## Global CSS
+
+Inject CSS that applies to all pages regardless of which theme is active:
+
+**To Add Global CSS:**
+
+1. Navigate to **Admin Panel > Theme**
+2. Scroll to the **Global CSS** section
 3. Enter your CSS in the textarea
 4. Click "Save Theme Settings"
 
-**Available CSS Variables:**
+**Available CSS Variables (usable in both per-theme and global CSS):**
 
 ```css
 /* Brand Colors */
@@ -357,10 +390,10 @@ Switching from Custom to Preset will not delete your custom theme data - it will
 
 ## Permissions
 
-| Permission    | Access                                             |
-| ------------- | -------------------------------------------------- |
-| `owner`       | Full access                                        |
-| `manageTheme` | Theme customization, custom CSS, branding settings |
+| Permission          | Access                                             |
+| ------------------- | -------------------------------------------------- |
+| `owner`             | Full access                                        |
+| `MANAGE_APPEARANCE` | Theme customization, custom CSS, branding settings |
 
 ## Troubleshooting
 

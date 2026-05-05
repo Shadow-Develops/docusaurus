@@ -107,7 +107,7 @@ For each submission, you can:
 
 ### User Access to Submissions
 
-Users who submitted a form can view their own submission at `/form-subs/[submission-id]`. They can see:
+Users who submitted a form can view their own submission at `/form/submission/[submission-id]`. They can see:
 
 - Their responses
 - Submission date
@@ -139,9 +139,10 @@ Notifications can include:
 
 ## Permissions
 
-| Permission    | Access                                                        |
-| ------------- | ------------------------------------------------------------- |
-| `owner`       | Full access                                                   |
-| `manageForms` | Create and edit forms, view submissions, manage form settings |
+| Permission              | Access                                      |
+| ----------------------- | ------------------------------------------- |
+| `owner`                 | Full access                                 |
+| `MANAGE_FORMS`          | Create and edit forms, manage form settings |
+| `VIEW_FORM_SUBMISSIONS` | View form submission data                   |
 
 Regular users can submit forms (if allowed) and view their own submissions.

@@ -8,139 +8,118 @@ pagination_prev: null
 
 The Staff Manager allows you to create a team of administrators with granular permissions. Control who can access different areas of your store's admin panel and delegate responsibilities safely.
 
-## Permission Types
+## Permissions
 
-Shadow Store includes the following admin permissions:
+Shadow Store has 35 distinct permissions organized into 8 groups. The **Owner** role bypasses all permission checks and has unrestricted access to everything.
 
-### `owner`
+### Store
 
-- **Description**: Full store owner access with unrestricted privileges
-- **Access**: Everything
-- **Special**: Can only be granted by users listed in the `OWNERS` environment variable
-- **Cannot be removed**: Once set via environment, protected from removal
+| Permission         | Description                                                          |
+| ------------------ | -------------------------------------------------------------------- |
+| `VIEW_ORDERS`      | View orders and order details                                        |
+| `MANAGE_ORDERS`    | Manage orders (update status, process refunds)                       |
+| `MANAGE_PRODUCTS`  | Create, edit, and delete products; manage releases and inventory     |
+| `MANAGE_STORE`     | Configure store settings, tax, and display options                   |
+| `MANAGE_DISCOUNTS` | Create discount codes, manage sales, create referral codes           |
+| `MANAGE_INVOICES`  | Create and edit invoices, process payments, view invoice history     |
+| `MANAGE_QUOTES`    | Create, edit, and cancel quotes; approve or reject revision requests |
 
-### `manageStaff`
+### Users
 
-- **Description**: Manage staff members and their permissions
-- **Access**: Add/remove staff, grant permissions (except owner)
-- **Restriction**: Cannot grant permissions they don't have themselves
+| Permission      | Description                                 |
+| --------------- | ------------------------------------------- |
+| `VIEW_USERS`    | View customer profiles and account details  |
+| `MANAGE_USERS`  | Edit customer profiles and account settings |
+| `BAN_USER`      | Ban and unban customers                     |
+| `DISABLE_USER`  | Disable and re-enable customer accounts     |
+| `EMAIL_USER`    | Send emails to customers                    |
+| `TRANSFER_USER` | Transfer purchases between accounts         |
 
-### `manageProducts`
+### Content
 
-- **Description**: Manage product catalog
-- **Access**:
-  - Create, edit, delete products
-  - Manage releases
-  - View product analytics
-  - Manage inventory
+| Permission              | Description                         |
+| ----------------------- | ----------------------------------- |
+| `MANAGE_CONTENT`        | Edit custom pages and page sections |
+| `MANAGE_BLOGS`          | Create and edit blog posts          |
+| `MANAGE_NEWSLETTERS`    | Create and send newsletters         |
+| `MANAGE_FORMS`          | Create and edit forms               |
+| `VIEW_FORM_SUBMISSIONS` | View form submission data           |
 
-### `manageProductSettings`
+### Analytics
 
-- **Description**: Configure store settings
-- **Access**:
-  - Store configuration
-  - Tax settings
-  - Shipping settings
-  - Product display options
+| Permission      | Description                                                           |
+| --------------- | --------------------------------------------------------------------- |
+| `VIEW_INSIGHTS` | View the analytics dashboard, subscription analytics, and export data |
 
-### `manageDiscounts`
+### Engagement
 
-- **Description**: Manage promotional tools
-- **Access**:
-  - Create discount codes
-  - Manage sales
-  - Create referral codes
-  - View discount analytics
+| Permission               | Description                                                   |
+| ------------------------ | ------------------------------------------------------------- |
+| `MANAGE_LOYALTY`         | Configure the loyalty program, tiers, and earning rules       |
+| `MANAGE_REFERRAL`        | View referral analytics, manage all codes, configure settings |
+| `MANAGE_REVIEWS`         | Approve, reject, and moderate product reviews                 |
+| `MANAGE_REVIEW_SETTINGS` | Configure review moderation settings                          |
+| `MANAGE_SUBSCRIPTIONS`   | View and manage customer subscriptions                        |
 
-### `manageForms`
+### Appearance & Layout
 
-- **Description**: Manage custom forms
-- **Access**:
-  - Create and edit forms
-  - View submissions
-  - Manage form settings
+| Permission          | Description                                            |
+| ------------------- | ------------------------------------------------------ |
+| `MANAGE_APPEARANCE` | Theme customization, branding, custom CSS              |
+| `MANAGE_LAYOUT`     | Homepage, product page, and store layout configuration |
 
-### `manageInvoices`
+### Settings
 
-- **Description**: Handle billing and invoices
-- **Access**:
-  - Create and edit invoices
-  - Process payments
-  - View invoice history
-  - Send payment reminders
+| Permission        | Description                                                                |
+| ----------------- | -------------------------------------------------------------------------- |
+| `MANAGE_SETTINGS` | Configure site-wide settings, email, integrations, and general preferences |
 
-### `manageQuotes`
+### System
 
-- **Description**: Manage customer quotes
-- **Access**:
-  - Create and edit quotes
-  - Cancel quotes
-  - Approve or reject customer revision requests
-  - Convert quotes to invoices (also requires `manageInvoices`)
+| Permission                 | Description                                                                       |
+| -------------------------- | --------------------------------------------------------------------------------- |
+| `LICENSE_SYSTEM`           | Manage license keys                                                               |
+| `VIEW_LOGS`                | Access audit logs                                                                 |
+| `MANAGE_PURCHASE_REQUESTS` | Review and act on purchase requests                                               |
+| `MANAGE_WEBHOOKS`          | Create and configure webhooks                                                     |
+| `MANAGE_STAFF`             | Add and remove staff, grant permissions (cannot grant permissions you don't have) |
+| `VIEW_PANEL`               | Access the admin panel (required for all staff)                                   |
 
-### `manageReviews`
+## Permission Presets
 
-- **Description**: Moderate product reviews
-- **Access**:
-  - Approve/reject reviews
-  - Handle reported reviews
-  - Configure review settings
-  - View review analytics
+When adding or editing a staff member, you can apply a preset to quickly fill in a common set of permissions:
 
-### `viewInsights`
+| Preset             | Included Permissions                                                                                                            |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Support Agent**  | `VIEW_ORDERS`, `VIEW_USERS`, `EMAIL_USER`, `MANAGE_REVIEWS`, `VIEW_FORM_SUBMISSIONS`, `VIEW_PANEL`                              |
+| **Content Editor** | `MANAGE_BLOGS`, `MANAGE_NEWSLETTERS`, `MANAGE_FORMS`, `VIEW_FORM_SUBMISSIONS`, `MANAGE_CONTENT`, `MANAGE_REVIEWS`, `VIEW_PANEL` |
+| **Store Manager**  | `VIEW_ORDERS`, `MANAGE_ORDERS`, `MANAGE_PRODUCTS`, `MANAGE_STORE`, `MANAGE_DISCOUNTS`, `VIEW_PANEL`                             |
+| **Client Manager** | `VIEW_ORDERS`, `MANAGE_INVOICES`, `MANAGE_QUOTES`, `VIEW_USERS`, `EMAIL_USER`, `VIEW_PANEL`                                     |
+| **Full Access**    | All permissions except `owner`                                                                                                  |
 
-- **Description**: View analytics and reporting dashboards
-- **Access**:
-  - View the analytics dashboard
-  - View subscription analytics
-  - Export analytics data (CSV/JSON)
+Presets pre-fill the permission checkboxes but do not save automatically: review and confirm before saving.
 
-### `manageReferral`
+## Staff Settings
 
-- **Description**: Manage the referral program
-- **Access**:
-  - View referral analytics and events
-  - Create and manage partner codes
-  - Approve or reject user code requests
-  - Configure referral program settings
+### Require 2FA for Staff
 
-### `managePages`
+You can require all staff members to have two-factor authentication enabled before accessing the admin panel.
 
-- **Description**: Manage website pages and content
-- **Access**:
-  - Edit homepage
-  - Manage custom pages
-  - Edit blog posts
-  - Manage partners and team pages
+1. Navigate to **Admin Panel > Staff**
+2. Toggle **Require 2FA for Staff**
+3. Save
 
-### `manageSettings`
-
-- **Description**: Configure site-wide settings
-- **Access**:
-  - Site configuration
-  - Email settings
-  - Integration settings
-  - General preferences
-
-### `manageTheme`
-
-- **Description**: Customize store appearance
-- **Access**:
-  - Theme customization
-  - Branding settings
-  - Custom CSS
-  - Logo and images
+Staff without 2FA set up will be prompted to enable it before they can access any admin features.
 
 ## Adding Staff Members
 
 1. Navigate to **Admin Panel > Staff**
-2. Click "Add Staff Member"
-3. Enter the user's email address (they must have an account)
-4. Select permissions to grant:
-   - Check the boxes for permissions you want to give
-   - You can only grant permissions you have yourself
-5. Click "Add Staff Member"
-6. The user immediately gains access to granted permissions
+2. Click **Add Staff Member**
+3. Enter the user's account ID
+4. Select permissions (or apply a preset and adjust)
+5. Click **Add Staff Member**
+
+The user immediately gains access to the granted permissions.
 
 :::info
 The user must have an existing account on your Shadow Store. If they don't, ask them to create one first.
@@ -152,216 +131,86 @@ The user must have an existing account on your Shadow Store. If they don't, ask 
 
 The staff list shows:
 
-- User name and email
-- Currently assigned permissions
-- Date added as staff
+- Username
+- 2FA status
+- Currently assigned permissions (as badges)
 - Actions (edit permissions, remove staff)
 
 ### Editing Permissions
 
 1. Navigate to **Admin Panel > Staff**
-2. Find the staff member
-3. Click "Edit Permissions"
-4. Add or remove permissions:
-   - Check to add a permission
-   - Uncheck to remove a permission
-5. Click "Save Changes"
+2. Find the staff member and click **Edit**
+3. Add or remove permissions
+4. Click **Save Changes**
 
-**Permission Validation:**
-
-- You cannot grant permissions you don't have
-- You cannot modify owner permissions (unless you're also an owner)
-- Changes apply immediately
+You cannot grant permissions you don't hold yourself.
 
 ### Removing Staff
 
 1. Navigate to **Admin Panel > Staff**
-2. Find the staff member
-3. Click "Remove Staff"
-4. Confirm removal
-5. All permissions are revoked immediately
+2. Find the staff member and click **Remove**
+3. Confirm removal
+
+All permissions are revoked immediately.
 
 :::warning
-Removing a staff member revokes all their admin access. They will no longer be able to access the admin panel.
+Removing a staff member revokes all their admin access immediately.
 :::
 
 ## Owner Management
 
-### Environment Owners
+Owners are defined via the `OWNERS` environment variable (an array of emails). They:
 
-Owners defined in the `OWNERS` environment variable:
-
-- Have permanent owner status
-- Cannot be removed via staff manager
-- Can grant owner status to others
-- Can manage all other owners
-
-### Granting Owner Status
-
-Only existing owners can grant owner permissions:
-
-1. Navigate to **Admin Panel > Staff**
-2. Add or edit a staff member
-3. Check the `owner` permission
-4. Save changes
+- Have permanent owner status that cannot be removed via the staff manager
+- Can grant owner status to other users via the staff manager
+- Bypass all permission checks
 
 :::danger
-Be very careful when granting owner permissions. Owners have unrestricted access to everything, including the ability to remove other staff members and change critical settings.
+Be very careful when granting owner permissions. Owners have unrestricted access to everything.
 :::
 
-## Permission Inheritance
+## Permission Rules
 
-### Hierarchy Rules
-
-The permission system follows these rules:
-
-1. **Owner Overrides**: Owners can access everything regardless of other permissions
-2. **No Self-Escalation**: Staff cannot grant themselves permissions
-3. **No Peer Escalation**: Staff cannot grant permissions they don't have
-4. **Owner Protection**: Only owners can manage other owners
-
-### Example Scenarios
-
-**Scenario 1: Product Manager**
-
-- **Permissions**: `manageProducts`, `manageProductSettings`
-- **Can**: Create products, edit products, configure store settings
-- **Cannot**: Manage staff, edit theme, moderate reviews
-
-**Scenario 2: Content Manager**
-
-- **Permissions**: `managePages`, `manageTheme`
-- **Can**: Edit website pages, customize theme
-- **Cannot**: Manage products, access invoices, moderate reviews
-
-**Scenario 3: Customer Support**
-
-- **Permissions**: `manageReviews`, `manageInvoices`, `manageForms`
-- **Can**: Moderate reviews, handle invoices, view form submissions
-- **Cannot**: Edit products, manage staff, change settings
+1. **Owner overrides all**: Owners can access everything regardless of other permissions
+2. **No self-escalation**: Staff cannot grant themselves permissions they don't have
+3. **No peer escalation**: Staff cannot grant permissions they don't hold
+4. **Owner protection**: Only owners can grant or modify owner status
 
 ## Discord Audit Logging
 
 All staff-related actions are logged to Discord (if configured):
 
-**Logged Actions:**
-
-- Staff member added
-- Permissions granted
-- Permissions revoked
-- Staff member removed
+- Staff member added or removed
+- Permissions granted or revoked
 - Failed permission attempts
 
-**Log Information:**
+Configure Discord logging at **Admin Panel > Integrations > Discord**.
 
-- Who performed the action
-- Target staff member
-- Permissions involved
-- Timestamp
-- Action result
-
-Configure Discord logging at **Admin Panel > Integrations > Discord**
-
-## Security Features
+## Security
 
 ### Self-Interaction Prevention
 
-Staff members cannot:
-
-- Grant themselves new permissions
-- Remove their own staff status
-- Modify their own permissions
-
-This prevents privilege escalation and requires admin oversight for permission changes.
-
-### Permission Validation
-
-Every admin action validates:
-
-- User has required permission
-- Permission is currently active
-- User is not banned
-- Session is valid
+Staff members cannot grant themselves new permissions or remove their own staff status. Changes to a staff member's permissions must be made by another admin.
 
 ### Audit Trail
 
-All admin actions are tracked:
-
-- Action performed
-- User who performed it
-- Timestamp
-- Result (success/failure)
-
-Access audit logs at **Admin Panel > Logs**
-
-## Common Permission Sets
-
-### Store Manager
-
-Permissions: `manageProducts`, `manageProductSettings`, `manageDiscounts`
-
-- Handles day-to-day store operations
-- Cannot access sensitive settings or staff management
-
-### Content Editor
-
-Permissions: `managePages`, `manageForms`
-
-- Manages website content
-- Cannot access products or billing
-
-### Customer Service
-
-Permissions: `manageReviews`, `manageInvoices`, `manageQuotes`, `manageForms`
-
-- Handles customer interactions including reviews, invoices, and quotes
-- Cannot modify products or settings
-
-### Developer/Designer
-
-Permissions: `manageTheme`, `managePages`
-
-- Customizes appearance
-- Cannot access business operations
-
-### Full Administrator
-
-Permissions: All except `owner`
-
-- Can manage most aspects
-- Cannot add/remove staff or other critical functions
+Every admin action is logged with who performed it, what the action was, and a timestamp. Access audit logs at **Admin Panel > Logs**.
 
 ## Troubleshooting
 
 ### Cannot Grant Permission
 
-**Possible Reasons:**
-
 - You don't have that permission yourself
 - You're trying to grant `owner` but you're not an owner
-- You're trying to modify your own permissions
-- The user is not registered
-
-**Solution:**
-
-- Contact an owner to grant the permission
-- Verify you have the necessary permissions
-- Ask another admin to modify your permissions
+- Contact an owner to grant the permission first
 
 ### Staff Member Can't Access Feature
 
-**Check:**
-
 1. Verify they have the correct permission
-2. Check if permission was recently revoked
-3. Ensure they're logged in
-4. Verify session hasn't expired
-5. Check audit logs for any issues
+2. Check if `VIEW_PANEL` is enabled (required for admin access)
+3. If 2FA enforcement is on, confirm they have 2FA set up
+4. Check audit logs for any issues
 
 ### Accidentally Removed Staff
 
-**Recovery:**
-
-- Re-add them via Staff Manager
-- Re-grant their previous permissions
-- Check audit logs to see what permissions they had
+Re-add them via **Admin Panel > Staff** and re-grant their permissions. Check audit logs to see what permissions they previously held.

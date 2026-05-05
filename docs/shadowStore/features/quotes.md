@@ -18,12 +18,28 @@ The Quotes system lets you send custom price quotes to customers. Customers can 
 | `expired`            | The expiration date has passed; quote can no longer be accepted |
 | `cancelled`          | Quote was cancelled by an admin                                 |
 
+## Claimable Quotes
+
+A quote can be created without assigning it to a specific customer. This is useful when you want to send a quote link to someone who does not yet have an account on your store.
+
+**How it works:**
+
+1. When creating a quote, leave the **Customer** field blank
+2. A unique claim token is generated and embedded in the quote link
+3. Share the quote link (`/quote/[id]`) with the client
+4. When the client opens the link and signs in (or creates an account), the quote is automatically claimed and assigned to their account
+5. Once claimed, the token is consumed and the client can interact with the quote normally (accept, suggest changes)
+
+:::info
+Once claimed, the quote can only be accessed by the assigned user.
+:::
+
 ## Creating a Quote
 
 1. Navigate to **Admin Panel > Quotes**
 2. Click **Create Quote**
 3. Fill in the quote details:
-   - **Customer**: search by email or user ID
+   - **Customer**: search by email or user ID. Leave blank to create a claimable quote.
    - **Expiration Date**: after this date the quote expires automatically
    - **Line Items**: add one or more items with name, price, and optional description
    - **Memo**: optional message to the customer
@@ -113,10 +129,10 @@ The resulting invoice inherits the quote's line items, client details, memo, and
 
 ## Permissions
 
-| Permission                        | Access                                                                 |
-| --------------------------------- | ---------------------------------------------------------------------- |
-| `owner`                           | Full access                                                            |
-| `manageQuotes`                    | Create, edit, cancel quotes; approve/reject revisions; view all quotes |
-| `manageQuotes` + `manageInvoices` | All of the above, plus convert quotes to invoices                      |
+| Permission                          | Access                                                                 |
+| ----------------------------------- | ---------------------------------------------------------------------- |
+| `owner`                             | Full access                                                            |
+| `MANAGE_QUOTES`                     | Create, edit, cancel quotes; approve/reject revisions; view all quotes |
+| `MANAGE_QUOTES` + `MANAGE_INVOICES` | All of the above, plus convert quotes to invoices                      |
 
 Customers can view and act on quotes they own without any special permissions.

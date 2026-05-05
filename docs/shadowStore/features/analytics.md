@@ -10,7 +10,7 @@ Shadow Store includes a built-in analytics dashboard that tracks store performan
 
 ## Accessing Analytics
 
-Navigate to **Admin Panel > Analytics**. Access requires the `viewInsights` or `owner` permission.
+Navigate to **Admin Panel > Analytics**. Access requires the `VIEW_INSIGHTS` or `owner` permission.
 
 ## Date Ranges
 
@@ -24,8 +24,7 @@ Select the time period to analyze using the date range selector. Available prese
 - Last 30 days
 - Last 90 days
 - Last 365 days
-- Last week
-- Last month
+- Last 12 months
 - **Custom**: pick any start and end date with the date picker
 
 Your selection is saved between sessions.
@@ -47,6 +46,15 @@ When a comparison is active, charts display both periods with the comparison as 
 ### Revenue & Sessions
 
 A dual-axis line chart showing daily Revenue (left axis) and Sessions (right axis) over the selected period. Comparison data is overlaid when enabled.
+
+### Key Counters
+
+Summary cards for the selected period:
+
+- **Gross Revenue**: total revenue from completed orders
+- **Order Count**: number of completed orders
+- **New Customers**: customers making their first purchase
+- **Returning Customer Rate**: percentage of orders placed by returning customers
 
 ### Average Order Value
 
@@ -84,7 +92,15 @@ Split of sessions by device type: Desktop, Mobile, Tablet.
 
 ### Top Products by Revenue
 
-Horizontal bar chart ranking products by revenue generated in the selected period.
+Horizontal bar chart ranking the top 10 products by revenue generated in the selected period.
+
+### Top Referrers
+
+Horizontal bar chart of the top 10 referring domains (e.g., `google.com`, `twitter.com`) by session count for the selected period.
+
+### Registrations by Provider
+
+Breakdown of new account registrations by authentication method: Email, Discord, GitHub, Google.
 
 ## Exporting Data
 
@@ -126,7 +142,7 @@ A table of the most recent subscriptions showing customer name, plan, price, sta
 
 ## Permissions
 
-| Permission     | Access                             |
-| -------------- | ---------------------------------- |
-| `owner`        | Full access                        |
-| `viewInsights` | View all analytics and export data |
+| Permission      | Access                             |
+| --------------- | ---------------------------------- |
+| `owner`         | Full access                        |
+| `VIEW_INSIGHTS` | View all analytics and export data |

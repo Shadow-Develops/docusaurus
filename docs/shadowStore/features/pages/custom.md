@@ -18,7 +18,6 @@ Navigate to **Admin Panel > Pages > Custom Pages** to access the custom pages ma
 2. In the "Create New Page" section, fill in:
    - **Page Title**: The heading shown on the page
    - **URL Slug**: Unique identifier for the page URL
-   - **Content**: Full page content in markdown
    - **Requires Login**: Toggle if page should require authentication
 3. Click "Create Page"
 
@@ -67,78 +66,6 @@ Creates the page's unique URL path.
 - Never change slugs after sharing links
 - Avoid conflicts with existing routes
 
-### Content
-
-The main body content of your custom page, written in markdown.
-
-**Markdown Support:**
-
-Full markdown syntax is supported:
-
-```markdown
-# Main Heading
-
-## Section Heading
-
-### Subsection
-
-**Bold text** and _italic text_
-
-- Bullet points
-- Another point
-
-1. Numbered lists
-2. Second item
-
-[Link text](https://example.com)
-
-![Image](https://example.com/image.jpg)
-
-> Blockquote text
-
-`Inline code`
-
-&grave;&grave;&grave;
-Code block
-&grave;&grave;&grave;
-```
-
-_You can find a full list of our supported markdown via the [Markdown page](/shadowStore/markdown)._
-
-**Content Examples:**
-
-**About Page:**
-
-```markdown
-# About Our Company
-
-Founded in 2024, we are dedicated to providing...
-
-## Our Mission
-
-To deliver exceptional...
-
-## Our Team
-
-Meet the people behind...
-```
-
-**Terms of Service:**
-
-```markdown
-# Terms of Service
-
-Last updated: January 1, 2024
-
-## 1. Acceptance of Terms
-
-By accessing this website...
-
-## 2. User Obligations
-
-You agree to...
-```
-
 ### Requires Login
 
 Toggle to require users to be logged in to view the page.
@@ -176,19 +103,300 @@ The pages table displays:
 - **Auth Required**: Badge showing if login is required
 - **Actions**: Customize and Edit buttons
 
-### Editing a Page
+### Customizing a Page (Section Builder)
 
-**From Admin Panel:**
+Click **Customize** on any page to open the full section builder: a drag-and-drop interface for building rich page layouts with multiple content sections.
 
-1. Click "Customize" to open the page customization interface
-2. Or click the Edit link to go to `/{slug}#edit`
+#### Section Builder Interface
 
-**Direct Editing:**
+- **Left panel**: All current sections, each collapsible and reorderable via drag-and-drop
+- **Right sidebar**: "Add Sections" panel: click any section type to add it to the bottom of the page
+
+Each section has:
+
+- **Drag handle**: Reorder sections by dragging
+- **Enable/Disable toggle**: Show or hide a section without deleting it
+- **Expand/Collapse arrow**: Open the section's settings
+- **Duplicate button**: Clone a section with all its settings
+- **Delete button**: Remove the section (confirmation required)
+
+#### Section ID (Anchor Links)
+
+Every section has an optional **Section ID** field. Setting this lets you link directly to that section from CTA buttons or other links using `#your-id` in the URL (e.g. `/about#team`). Must be lowercase letters, numbers, hyphens, or underscores only.
+
+## Section Types
+
+### Hero Section
+
+A full-width banner section at the top of a page.
+
+**Layout Types:**
+
+- **Centered**: Simple centered content with title, description, and CTA buttons
+- **Full Screen Image**: Background image fills the screen; content position can be left, right, or centered; optional content background overlay
+- **Full Screen Video**: Same as Full Screen Image but with a video background (YouTube or direct MP4 URL)
+- **Figure**: Centered layout with an image displayed to the left or right
+- **Image Carousel**: Rotating slides, each with its own image, title, description, and CTA buttons
+
+**Common Fields:**
+
+| Field            | Description                                                            |
+| ---------------- | ---------------------------------------------------------------------- |
+| Title            | Main heading (leave blank to use site/category name)                   |
+| Description      | Subheading text (leave blank to use site description on the home page) |
+| CTA Button 1 & 2 | Optional call-to-action buttons with text and URL                      |
+| Show Search Bar  | Toggle the search bar visibility                                       |
+| Show Categories  | Toggle the category links visibility                                   |
+
+**Carousel-Specific Fields:**
+
+| Field                          | Description                                                            |
+| ------------------------------ | ---------------------------------------------------------------------- |
+| Content Position               | Left, Right, or Center                                                 |
+| Content Background             | Overlay behind the text content                                        |
+| Auto Play                      | Automatically advance slides                                           |
+| Auto Play Interval             | Time between slides in milliseconds (default: 5000)                    |
+| Default Title/Description/CTAs | Fallback content used when a slide has no override                     |
+| Slides                         | Each slide has: Order, Image URL, Title, Description, CTA Button 1 & 2 |
+
+---
+
+### Statistics
+
+Displays live store statistics as a row of counters.
+
+| Field     | Description           |
+| --------- | --------------------- |
+| Products  | Toggle + custom label |
+| Sales     | Toggle + custom label |
+| Customers | Toggle + custom label |
+| Users     | Toggle + custom label |
+
+---
+
+### Featured Product
+
+Highlights a single product in a prominent display.
+
+| Field            | Description                                             |
+| ---------------- | ------------------------------------------------------- |
+| Featured Product | Select from your product catalog                        |
+| Section Title    | Heading above the product (default: "Featured Product") |
+| Button Text      | CTA button label (default: "View Product")              |
+
+---
+
+### Info Cards
+
+A header with a grid of icon cards below it.
+
+| Field          | Description                                                  |
+| -------------- | ------------------------------------------------------------ |
+| Section Header | Heading above the cards                                      |
+| Cards          | Each card has: Icon (emoji, URL, or SVG), Title, Description |
+
+---
+
+### CTA Banner
+
+A call-to-action strip with a title, description, and button.
+
+| Field           | Description                                          |
+| --------------- | ---------------------------------------------------- |
+| Title           | Banner heading                                       |
+| Description     | Short supporting text                                |
+| Button Link     | URL the button points to                             |
+| Button Text     | Label on the button                                  |
+| Background      | Use site background, custom color, or custom image   |
+| Background Blur | None, Extra Small, Small, Medium, Large, Extra Large |
+
+---
+
+### Testimonials
+
+A grid of customer reviews.
+
+| Field        | Description                                                     |
+| ------------ | --------------------------------------------------------------- |
+| Title        | Section heading                                                 |
+| Columns      | 2, 3, or 4 columns                                              |
+| Testimonials | Each item has: Name, Role, Text, Rating (1–5 stars), Avatar URL |
+
+---
+
+### FAQ
+
+An accordion-style list of questions and answers.
+
+| Field | Description                     |
+| ----- | ------------------------------- |
+| Title | Section heading                 |
+| FAQs  | Each item has: Question, Answer |
+
+---
+
+### Features Grid
+
+A grid showcasing features or highlights.
+
+| Field    | Description                                                                         |
+| -------- | ----------------------------------------------------------------------------------- |
+| Title    | Section heading                                                                     |
+| Subtitle | Optional subheading                                                                 |
+| Columns  | 2, 3, or 4 columns                                                                  |
+| Features | Each item has: Title, Description, Icon (emoji/URL/SVG), Link (optional), Link Text |
+
+---
+
+### Newsletter
+
+An email signup form.
+
+| Field           | Description                                |
+| --------------- | ------------------------------------------ |
+| Title           | Section heading                            |
+| Description     | Supporting text                            |
+| Placeholder     | Input placeholder text                     |
+| Button Text     | Submit button label                        |
+| Form Action URL | Endpoint that receives the form submission |
+| Disclaimer      | Optional small-print text below the form   |
+| Success Message | Shown after a successful submission        |
+
+---
+
+### Social Proof
+
+A logo wall displaying brand or partner logos.
+
+| Field     | Description                                         |
+| --------- | --------------------------------------------------- |
+| Title     | Section heading                                     |
+| Columns   | 3, 4, 5, or 6 columns                               |
+| Show Text | Show company name even when a logo image is present |
+| Scroll    | Auto-scroll logos when there are more than 4        |
+| Logos     | Each item has: Name, Image URL, Link (optional)     |
+
+---
+
+### Gallery
+
+An image gallery with lightbox support.
+
+**Image Source:**
+
+- **Manual**: Enter images directly in the builder
+- **From Gallery Page**: Pull images from the shared store gallery, optionally filtered by group
+
+| Field             | Description                                                                            |
+| ----------------- | -------------------------------------------------------------------------------------- |
+| Layout Type       | Standard Grid or Multi-Image Layout                                                    |
+| Title             | Section heading                                                                        |
+| Subtitle          | Optional subheading                                                                    |
+| Columns           | 2, 3, or 4 (grid layout only)                                                          |
+| Image Height      | Height in pixels (grid layout only, default: 256)                                      |
+| Enable Lightbox   | Click to expand images fullscreen                                                      |
+| Show Descriptions | Show description text on hover                                                         |
+| Images as Buttons | If a link is set, clicking opens the link instead of the lightbox (manual source only) |
+
+**Manual image fields:** URL, Order, Alt text, Title, Description, Link (when Images as Buttons is on)
+
+---
+
+### Text Content
+
+A flexible text section with optional media alongside the content.
+
+| Field          | Description                                   |
+| -------------- | --------------------------------------------- |
+| Heading        | Section title                                 |
+| Content        | Markdown body text                            |
+| Text Alignment | Left, Center, or Right                        |
+| Max Width      | Narrow, Normal, Wide, or Full                 |
+| Image / Video  | None, Single Image, Image Carousel, or Video  |
+| Media Position | Right or Left of the text (when media is set) |
+
+**Media options:**
+
+- **Single Image**: One image URL
+- **Image Carousel**: List of image URLs that cycle
+- **Video**: YouTube URL or direct file URL (select source type)
+
+---
+
+### Video Showcase
+
+A side-by-side video player and descriptive text.
+
+| Field           | Description                                  |
+| --------------- | -------------------------------------------- |
+| Label           | Small text displayed above the title         |
+| Title           | Section heading                              |
+| Description     | Markdown body text                           |
+| Video URL       | YouTube link or direct MP4 URL               |
+| Video Position  | Left (text on right) or Right (text on left) |
+| Show CTA Button | Toggle a call-to-action button               |
+| Button Text     | Button label (when shown)                    |
+| Button URL      | Button link (when shown)                     |
+
+---
+
+### Form Section
+
+Embeds a form created in the Forms feature.
+
+**Section Types:**
+
+- **Standalone**: Centered form, no surrounding content
+- **Content**: Form on one side, rich content on the other
+
+| Field                        | Description                                                       |
+| ---------------------------- | ----------------------------------------------------------------- |
+| Form                         | Select from your existing forms                                   |
+| Section Type                 | Standalone or Content                                             |
+| Heading                      | Optional heading above the form (leave blank to hide)             |
+| Form Alignment               | Right or Left side (Content type only)                            |
+| Content Horizontal Alignment | Left, Center, Right (Content type only)                           |
+| Content Vertical Alignment   | Top, Center, Bottom (Content type only)                           |
+| Content                      | Markdown text beside the form (Content type only)                 |
+| Buttons                      | Icon or text buttons placed under the content (Content type only) |
+
+---
+
+### Embedded Page
+
+Embeds an external page or URL inside an iframe.
+
+| Field    | Description                                  |
+| -------- | -------------------------------------------- |
+| Page URL | The URL to embed                             |
+| Width    | Frame width (leave blank for 100%)           |
+| Height   | Frame height (leave blank for 850px default) |
+
+---
+
+### Pure HTML/CSS
+
+Renders raw HTML and scoped CSS directly on the page.
+
+| Field | Description                                                               |
+| ----- | ------------------------------------------------------------------------- |
+| HTML  | Raw HTML markup to render                                                 |
+| CSS   | CSS rules applied to the page (use specific selectors to avoid conflicts) |
+
+:::warning
+CSS written here applies globally to the page. Use specific IDs or class names to avoid unintended styling conflicts.
+:::
+
+---
+
+## Editing a Page (Simple Mode)
+
+You can also edit the page title and login requirement directly:
 
 1. Visit the page at `/{slug}`
 2. Add `#edit` to the URL: `/{slug}#edit`
-3. Edit interface appears (if authorized)
-4. Modify title, content, or settings
+3. The edit interface appears (if authorized)
+4. Modify title or settings
 5. Click "Save Changes"
 
 **Edit Permissions:**
@@ -206,146 +414,17 @@ The pages table displays:
 :::warning
 Deleting a custom page is permanent and cannot be undone. This will:
 
-- Remove the page content
+- Remove the page content and all sections
 - Delete the URL route
 - Remove all associated data
   :::
 
-## Common Custom Page Types
-
-### About Us
-
-Introduce your company or organization:
-
-```markdown
-# About Us
-
-## Our Story
-
-Founded in 2024...
-
-## What We Do
-
-We specialize in...
-
-## Our Values
-
-- Quality
-- Innovation
-- Customer Service
-```
-
-### Privacy Policy
-
-Detail your data practices:
-
-```markdown
-# Privacy Policy
-
-Last Updated: January 1, 2024
-
-## Information We Collect
-
-We collect the following...
-
-## How We Use Information
-
-Your information is used to...
-
-## Data Protection
-
-We implement security measures...
-```
-
-### Terms of Service
-
-Outline usage terms:
-
-```markdown
-# Terms of Service
-
-## 1. Agreement to Terms
-
-By using our service...
-
-## 2. User Responsibilities
-
-You agree to...
-
-## 3. Intellectual Property
-
-All content is protected...
-```
-
-### FAQ
-
-Answer common questions:
-
-```markdown
-# Frequently Asked Questions
-
-## General
-
-### What is Shadow Store?
-
-Shadow Store is...
-
-### How do I get started?
-
-To begin...
-
-## Billing
-
-### What payment methods do you accept?
-
-We accept...
-```
-
-### Contact
-
-Provide contact information:
-
-```markdown
-# Contact Us
-
-## Get in Touch
-
-Have questions? Reach out to us:
-
-**Email:** support@example.com
-**Phone:** (555) 123-4567
-
-## Office Hours
-
-Monday-Friday: 9am-5pm PST
-```
-
-### Shipping & Returns
-
-Detail policies:
-
-```markdown
-# Shipping & Returns
-
-## Shipping Information
-
-We ship orders within...
-
-## Return Policy
-
-Items can be returned within 30 days...
-
-## Exchanges
-
-To exchange an item...
-```
-
 ## Permissions
 
-| Permission    | Access                          |
-| ------------- | ------------------------------- |
-| `owner`       | Full access                     |
-| `managePages` | Create, edit, and delete pages  |
+| Permission    | Access                         |
+| ------------- | ------------------------------ |
+| `owner`       | Full access                    |
+| `managePages` | Create, edit, and delete pages |
 
 ## Troubleshooting
 
@@ -359,15 +438,13 @@ To exchange an item...
 - Check if login is required
 - Verify user is logged in if required
 
-### Markdown Not Rendering
+### Section Not Showing
 
 **Solutions:**
 
-- Check markdown syntax is correct
-- Verify code blocks are properly closed
-- Test markdown in a preview tool
-- Check for special characters needing escape
-- Review markdown documentation
+- Check that the section's enable toggle is turned on
+- Verify the section has required fields filled in (e.g. a Featured Product must have a product selected)
+- Save the page after making changes
 
 ### Edit Button Not Showing
 
@@ -395,7 +472,6 @@ To exchange an item...
 
 - Check internet connection
 - Verify no special characters causing issues
-- Try saving in smaller sections
 - Clear browser cache
 - Check browser console for errors
 - Try different browser

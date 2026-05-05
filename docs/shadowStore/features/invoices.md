@@ -23,41 +23,64 @@ Invoices can have the following statuses:
 1. Navigate to **Admin Panel > Invoices**
 2. Click "Create Invoice"
 3. Fill in invoice details:
-   - **Customer**: Select or enter customer information
-   - **Due Date**: Set payment deadline
-   - **Line Items**: Add products/services with descriptions and prices
-   - **Notes**: Optional invoice notes or terms
-4. Review totals:
-   - Subtotal (auto-calculated)
-   - Tax (if applicable)
-   - Total amount
+   - **Customer** _(optional)_: Enter a user ID or email. Leave blank to create a claimable invoice (see below).
+   - **Company** _(optional)_: Client's business name
+   - **Address** _(optional)_: Billing address
+   - **Phone** _(optional)_: Client phone number
+   - **Tax ID / VAT Number** _(optional)_: For tax-exempt or international clients
+   - **Due Date** _(optional)_: Set payment deadline
+   - **Memo** _(optional)_: Invoice notes or message visible to the client
+   - **Invoice ToS** _(optional)_: Terms of service shown on the invoice
+   - **Internal Notes** _(optional)_: Admin-only notes, not visible to the client
+4. Add **Line Items** (right panel):
+   - Each item requires a **Name**, **Price**, and **Description**
+   - Click "Add Another Item" to add more; click "Remove Item" to delete extras
 5. Click "Create Invoice"
 
 :::tip
 Quotes can be converted directly into invoices. See the [Quotes](./quotes) documentation for details.
 :::
 
+## Claimable Invoices
+
+An invoice can be created without assigning it to a specific customer. This is useful when you want to send a payment link to someone who does not yet have an account on your store.
+
+**How it works:**
+
+1. When creating an invoice, leave the **Customer** field blank
+2. A unique claim token is generated and embedded in the invoice link
+3. Share the invoice link (`/invoice/[id]`) with the client
+4. When the client opens the link and signs in (or creates an account), the invoice is automatically claimed and assigned to their account
+5. Once claimed, the token is consumed and the invoice behaves like any other assigned invoice
+
+:::info
+Claimed invoices cannot be claimed a second time. Once assigned to a user, the invoice link requires that user to be logged in.
+:::
+
 ### Invoice Components
 
 **Customer Information:**
 
-- Name
-- Email address
-- User ID (if registered)
+- User ID or email (if assigned to an account)
+- Company name (optional)
 - Billing address (optional)
+- Phone number (optional)
+- Tax ID / VAT number (optional)
 
 **Line Items:**
 
-- Item description
-- Quantity
-- Unit price
-- Line total (auto-calculated)
+Each line item has:
 
-**Totals:**
+- Name
+- Price
+- Description
 
-- Subtotal (sum of line items)
-- Tax amount (if configured)
-- Grand total
+**Invoice Details:**
+
+- Memo (visible to client)
+- Terms of Service (visible to client)
+- Internal Notes (admin-only, not visible to client)
+- Due Date
 
 ## Managing Invoices
 
@@ -66,9 +89,10 @@ Quotes can be converted directly into invoices. See the [Quotes](./quotes) docum
 **Admin View:**
 
 - Access all invoices at `/admin/invoices`
-- Filter by status (all, pending, paid, overdue, cancelled)
-- Search by customer name, email, or invoice ID
-- Sort by date, amount, or status
+- Filter by status: **All**, **Due**, **Pending**, **Paid**, **Cancelled**
+- Search by invoice ID, due date, user ID, or user name
+- Sort by: **ID**, **User**, **Status**, **Due Date**, or **Creation Date**
+- Table columns: ID, User, Status, Actions (View/Edit), Due Date, Creation Date
 
 **Customer View:**
 
@@ -178,12 +202,14 @@ Access history from the invoice detail page.
 
 ## Custom Client Details
 
-When creating or editing an invoice, admins can attach optional client-specific information that appears on the invoice and PDF:
+When creating or editing an invoice, admins can attach optional details that appear on the invoice and PDF:
 
 - **Company Name**: The client's business name
 - **Billing Address**: Full multi-line address
 - **Phone Number**: Client contact number
 - **Tax ID / VAT Number**: For tax-exempt or international clients
+- **Memo**: A message or note visible to the client on the invoice
+- **Invoice ToS**: Terms of service displayed on the invoice
 - **Internal Notes**: Admin-only notes not visible to the customer
 
 These details are stored per-invoice and are independent of the customer's account profile, so they can be customized for each invoice.
@@ -204,9 +230,9 @@ Multi-currency symbols are correctly formatted across all supported currencies.
 
 ## Permissions
 
-| Permission       | Access                                                           |
-| ---------------- | ---------------------------------------------------------------- |
-| `owner`          | Full access                                                      |
-| `manageInvoices` | Create and edit invoices, process payments, view invoice history |
+| Permission        | Access                                                           |
+| ----------------- | ---------------------------------------------------------------- |
+| `owner`           | Full access                                                      |
+| `MANAGE_INVOICES` | Create and edit invoices, process payments, view invoice history |
 
 Customers can view their own invoices, make payments, and access their payment history.

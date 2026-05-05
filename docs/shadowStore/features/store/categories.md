@@ -4,24 +4,33 @@ sidebar_position: 3
 
 # Categories
 
-Product Categories allow you to organize products into logical groups, making it easier for customers to browse and find what they're looking for. Each category has its own page with customizable content and product listings.
+Product Categories allow you to organize products into logical groups, making it easier for customers to browse and find what they're looking for.
 
 ## Accessing Category Management
 
 Navigate to **Admin Panel > Products > Categories** to manage product categories.
+
+## Category Types
+
+Categories come in two types:
+
+| Type         | Description                                                                  |
+| ------------ | ---------------------------------------------------------------------------- |
+| **Pageless** | A filter tag only: groups products for store filtering but has no public URL |
+| **Page**     | Has a dedicated public page at `/{slug}` with customizable content           |
 
 ## Creating a Category
 
 1. Navigate to **Admin Panel > Products > Categories**
 2. In the "Create Category" section, fill in:
    - **Name**: Category display name
-   - **URL**: URL slug for the category page
-   - **Description**: Category description (markdown)
-   - **Icon** (optional): Category icon/image
-3. Assign products to the category
-4. Click "Create Category"
+   - **Type**: `Pageless` or `Page`
+   - **Slug** (Page type only): URL slug for the category page
+   - **Hidden from Home**: Hide this category from the home page
+   - **Hidden from Filter**: Hide this category from the store filter
+3. Click **Create Category**
 
-The category will be accessible at `/{url-slug}`
+Page-type categories are accessible at `/{slug}`.
 
 ## Category Fields
 
@@ -29,58 +38,41 @@ The category will be accessible at `/{url-slug}`
 
 The category display name shown throughout the site.
 
-**Examples:**
+### Type
 
-```
-Digital Products
-Software
-Templates
-Courses
-Services
-```
+- **Pageless**: tag-only category used for filtering; no public page
+- **Page**: category with a public-facing page and customizable layout
 
-### URL
+### Slug
 
-URL-safe slug for the category page.
+URL-safe slug for page-type categories.
 
 **Examples:**
 
 - `digital-products` → `/digital-products`
 - `software` → `/software`
-- `templates` → `/templates`
 
-### Description
+### Visibility
 
-Markdown-supported description explaining the category.
+Two independent visibility flags control where a category appears:
 
-**Example:**
+- **Hidden from Home**: hides the category from the home page
+- **Hidden from Filter**: hides the category from the store filter
 
-```markdown
-## Premium Digital Products
+## Managing Products
 
-Browse our collection of high-quality digital products including:
+### Assigning Products
 
-- Software tools
-- Templates
-- Design assets
-```
-
-### Products
-
-Assign products to appear in this category.
-
-**Adding Products:**
-
-1. View available products list
-2. Select products to add
-3. Products appear in category immediately
+1. Click the product assignment button on a category
+2. Search for products to add
+3. Click **Add** or **Remove** to assign/unassign products
 
 ## Managing Categories
 
 ### Editing Categories
 
-1. Click "Edit" on category
-2. Modify name, URL, description, or products
+1. Click **Edit** on a category
+2. Modify name, type, slug, or visibility settings
 3. Save changes
 
 ### Deleting Categories
@@ -89,30 +81,19 @@ Assign products to appear in this category.
 Deleting a category does not delete the products within it. Products become uncategorized.
 :::
 
-1. Click "Delete" on category
+1. Click **Delete** on a category
 2. Confirm deletion
-3. Category is removed
 
-## Category Pages
+## Page Layout Editor
 
-Each category has a dedicated page showing:
+For **Page**-type categories, a layout editor is available at `/{slug}` in the admin panel. It provides:
 
-- Category name and description
-- All assigned products
-- Product grid layout
-- Filtering options
-
-## Best Practices
-
-- Create 5-10 main categories
-- Use clear, descriptive names
-- Write helpful category descriptions
-- Assign products to relevant categories
-- Review and consolidate periodically
+- **Show Title** toggle: controls whether the category name appears as the page heading
+- **Page Sections**: drag-and-drop page builder (defaults to a product grid section on creation)
 
 ## Permissions
 
-| Permission       | Access                     |
-| ---------------- | -------------------------- |
-| `owner`          | Full access                |
-| `manageProducts` | Create and edit categories |
+| Permission    | Access                              |
+| ------------- | ----------------------------------- |
+| `owner`       | Full access                         |
+| `manageStore` | Create, edit, and delete categories |

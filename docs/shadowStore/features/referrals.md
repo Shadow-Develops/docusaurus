@@ -136,7 +136,7 @@ Configure the referral program:
 
 ## Permissions
 
-| Permission       | Access                                                                                   |
-| ---------------- | ---------------------------------------------------------------------------------------- |
-| `owner`          | Full access                                                                              |
-| `manageReferral` | View analytics and events, manage all codes, approve/reject requests, configure settings |
+| Permission         | Access                                                                                   |
+| ------------------ | ---------------------------------------------------------------------------------------- |
+| `owner`            | Full access                                                                              |
+| `MANAGE_REFERRAL`  | View analytics and events, manage all codes, approve/reject requests, configure settings |
