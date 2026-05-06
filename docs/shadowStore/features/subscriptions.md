@@ -100,7 +100,7 @@ Subscription-specific metrics are available at **Admin Panel > Analytics > Subsc
 - Average subscription lifetime in days
 - Recent subscriptions table
 
-See [Analytics](../analytics) for more details.
+See [Analytics](/shadowStore/features/analytics) for more details.
 
 ## Permissions
 
