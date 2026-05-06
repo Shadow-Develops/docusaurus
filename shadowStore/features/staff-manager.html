@@ -1,367 +1,348 @@
-<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-shadowStore/features/staff-manager" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.0"><title data-rh=true>Staff Manager | Shadow Devs Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:image content=https://docs.shadowdevs.com/img/Banner.png /><meta data-rh=true name=twitter:image content=https://docs.shadowdevs.com/img/Banner.png /><meta data-rh=true property=og:url content=https://docs.shadowdevs.com/shadowStore/features/staff-manager /><meta data-rh=true property=og:locale content=en /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="Staff Manager | Shadow Devs Docs"/><meta data-rh=true name=description content="The Staff Manager allows you to create a team of administrators with granular permissions. Control who can access different areas of your store's admin panel and delegate responsibilities safely."/><meta data-rh=true property=og:description content="The Staff Manager allows you to create a team of administrators with granular permissions. Control who can access different areas of your store's admin panel and delegate responsibilities safely."/><link data-rh=true rel=icon href=/img/favicon.ico /><link data-rh=true rel=canonical href=https://docs.shadowdevs.com/shadowStore/features/staff-manager /><link data-rh=true rel=alternate href=https://docs.shadowdevs.com/shadowStore/features/staff-manager hreflang=en /><link data-rh=true rel=alternate href=https://docs.shadowdevs.com/shadowStore/features/staff-manager hreflang=x-default /><link data-rh=true rel=preconnect href=https://KQKEAMJ226-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://docs.shadowdevs.com/shadowStore/features/","name":"Features","position":1},{"@type":"ListItem","item":"https://docs.shadowdevs.com/shadowStore/features/staff-manager","name":"Staff Manager","position":2}]}</script><link rel=search type=application/opensearchdescription+xml title="Shadow Devs Docs" href=/opensearch.xml><link rel=stylesheet href=/assets/css/styles.801a1231.css /><script src=/assets/js/runtime~main.bd27af70.js defer></script><script src=/assets/js/main.6206d51d.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-shadowStore/features/staff-manager" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.1"><title data-rh=true>Staff Manager | Shadow Devs Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:image content=https://docs.shadowdevs.com/img/Banner.png /><meta data-rh=true name=twitter:image content=https://docs.shadowdevs.com/img/Banner.png /><meta data-rh=true property=og:url content=https://docs.shadowdevs.com/shadowStore/features/staff-manager /><meta data-rh=true property=og:locale content=en /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="Staff Manager | Shadow Devs Docs"/><meta data-rh=true name=description content="The Staff Manager allows you to create a team of administrators with granular permissions. Control who can access different areas of your store's admin panel and delegate responsibilities safely."/><meta data-rh=true property=og:description content="The Staff Manager allows you to create a team of administrators with granular permissions. Control who can access different areas of your store's admin panel and delegate responsibilities safely."/><link data-rh=true rel=icon href=/img/favicon.ico /><link data-rh=true rel=canonical href=https://docs.shadowdevs.com/shadowStore/features/staff-manager /><link data-rh=true rel=alternate href=https://docs.shadowdevs.com/shadowStore/features/staff-manager hreflang=en /><link data-rh=true rel=alternate href=https://docs.shadowdevs.com/shadowStore/features/staff-manager hreflang=x-default /><link data-rh=true rel=preconnect href=https://KQKEAMJ226-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://docs.shadowdevs.com/shadowStore/features/","name":"Features","position":1},{"@type":"ListItem","item":"https://docs.shadowdevs.com/shadowStore/features/staff-manager","name":"Staff Manager","position":2}]}</script><link rel=search type=application/opensearchdescription+xml title="Shadow Devs Docs" href=/opensearch.xml><link rel=stylesheet href=/assets/css/styles.9447c4e2.css /><script src=/assets/js/runtime~main.7bb5c7ae.js defer></script><script src=/assets/js/main.2c9ca89c.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
-<script>!function(){var t;document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/img/Logo.png /><div role=region aria-label="Skip to main content"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/><div class=navbar__logo><img src=/img/Logo.png alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/img/Logo.png alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">Shadow Dev Docs</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href=https://shadowdevs.com target=_blank rel="noopener noreferrer" class="navbar__item navbar__link header-home-link" aria-label="Home Site"></a><a href=https://github.com/Shadow-Develops/docusaurus target=_blank rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><div class=navbarSearchContainer_Bca1><button type=button class="DocSearch DocSearch-Button" aria-label="Search (Meta+k)" aria-keyshortcuts=Meta+k><span class=DocSearch-Button-Container><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 24 24" aria-hidden=true><circle cx=11 cy=11 r=8 stroke=currentColor fill=none stroke-width=1.4 /><path d="m21 21-4.3-4.3" stroke=currentColor fill=none stroke-linecap=round stroke-linejoin=round /></svg><span class=DocSearch-Button-Placeholder>Search</span></span><span class=DocSearch-Button-Keys></span></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class="sidebar_njMd sidebarWithHideableNavbar_wUlq"><a tabindex=-1 class=sidebarLogo_isFc href=/><img src=/img/Logo.png alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/img/Logo.png alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/><b>Shadow Dev Docs</b></a><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/shadowStore><span title="Shadow Store" class=linkLabel_WmDU>Shadow Store</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/shadowStore/install><span title=Install class=categoryLinkLabel_W154>Install</span></a><button aria-label="Expand sidebar category 'Install'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/shadowStore/integrations><span title=Integrations class=categoryLinkLabel_W154>Integrations</span></a><button aria-label="Expand sidebar category 'Integrations'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href=/shadowStore/features><span title=Features class=categoryLinkLabel_W154>Features</span></a><button aria-label="Collapse sidebar category 'Features'" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul class=menu__list><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex=0 href=/shadowStore/features/store><span title=Store class=categoryLinkLabel_W154>Store</span></a><button aria-label="Expand sidebar category 'Store'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/releases><span title=Releases class=linkLabel_WmDU>Releases</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/discounts><span title="Discounts & Sales" class=linkLabel_WmDU>Discounts & Sales</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/invoices><span title=Invoices class=linkLabel_WmDU>Invoices</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/shadowStore/features/staff-manager><span title="Staff Manager" class=linkLabel_WmDU>Staff Manager</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/analytics><span title=Analytics class=linkLabel_WmDU>Analytics</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/forms><span title=Forms class=linkLabel_WmDU>Forms</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/quotes><span title=Quotes class=linkLabel_WmDU>Quotes</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/theme><span title="Theme & Branding" class=linkLabel_WmDU>Theme & Branding</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/referrals><span title=Referrals class=linkLabel_WmDU>Referrals</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/reviews><span title=Reviews class=linkLabel_WmDU>Reviews</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/loyalty><span title="Loyalty Program" class=linkLabel_WmDU>Loyalty Program</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex=0 href=/shadowStore/features/pages><span title=Pages class=categoryLinkLabel_W154>Pages</span></a><button aria-label="Expand sidebar category 'Pages'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/shadowStore/api><span title=API class=categoryLinkLabel_W154>API</span></a><button aria-label="Expand sidebar category 'API'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/shadowStore/addons><span title=Addons class=categoryLinkLabel_W154>Addons</span></a><button aria-label="Expand sidebar category 'Addons'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/shadowStore/markdown><span title=Markdown class=linkLabel_WmDU>Markdown</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/shadowStore/update><span title="Updating Shadow Store" class=linkLabel_WmDU>Updating Shadow Store</span></a></ul></nav><button type=button title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label=Breadcrumbs><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label="Home page" class=breadcrumbs__link href=/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><a class=breadcrumbs__link href=/shadowStore/features><span>Features</span></a><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>Staff Manager</span></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Staff Manager</h1></header>
+<script>!function(){var t;document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/img/Logo.png /><div role=region aria-label="Skip to main content"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/><div class=navbar__logo><img src=/img/Logo.png alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/img/Logo.png alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">Shadow Dev Docs</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href=https://shadowdevs.com target=_blank rel="noopener noreferrer" class="navbar__item navbar__link header-home-link" aria-label="Home Site"></a><a href=https://github.com/Shadow-Develops/docusaurus target=_blank rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><div class=navbarSearchContainer_Bca1><button type=button class="DocSearch DocSearch-Button" aria-label="Search (Meta+k)" aria-keyshortcuts=Meta+k><span class=DocSearch-Button-Container><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 24 24" aria-hidden=true><circle cx=11 cy=11 r=8 stroke=currentColor fill=none stroke-width=1.4 /><path d="m21 21-4.3-4.3" stroke=currentColor fill=none stroke-linecap=round stroke-linejoin=round /></svg><span class=DocSearch-Button-Placeholder>Search</span></span><span class=DocSearch-Button-Keys></span></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class="sidebar_njMd sidebarWithHideableNavbar_wUlq"><a tabindex=-1 class=sidebarLogo_isFc href=/><img src=/img/Logo.png alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/img/Logo.png alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/><b>Shadow Dev Docs</b></a><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/shadowStore><span title="Shadow Store" class=linkLabel_WmDU>Shadow Store</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/shadowStore/install><span title=Install class=categoryLinkLabel_W154>Install</span></a><button aria-label="Expand sidebar category 'Install'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/shadowStore/integrations><span title=Integrations class=categoryLinkLabel_W154>Integrations</span></a><button aria-label="Expand sidebar category 'Integrations'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href=/shadowStore/features><span title=Features class=categoryLinkLabel_W154>Features</span></a><button aria-label="Collapse sidebar category 'Features'" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul class=menu__list><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex=0 href=/shadowStore/features/store><span title=Store class=categoryLinkLabel_W154>Store</span></a><button aria-label="Expand sidebar category 'Store'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/releases><span title=Releases class=linkLabel_WmDU>Releases</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/discounts><span title="Discounts & Sales" class=linkLabel_WmDU>Discounts & Sales</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/invoices><span title=Invoices class=linkLabel_WmDU>Invoices</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/shadowStore/features/staff-manager><span title="Staff Manager" class=linkLabel_WmDU>Staff Manager</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/analytics><span title=Analytics class=linkLabel_WmDU>Analytics</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/forms><span title=Forms class=linkLabel_WmDU>Forms</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/quotes><span title=Quotes class=linkLabel_WmDU>Quotes</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/theme><span title="Theme & Branding" class=linkLabel_WmDU>Theme & Branding</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/referrals><span title=Referrals class=linkLabel_WmDU>Referrals</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/reviews><span title=Reviews class=linkLabel_WmDU>Reviews</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/loyalty><span title="Loyalty Program" class=linkLabel_WmDU>Loyalty Program</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex=0 href=/shadowStore/features/pages><span title=Pages class=categoryLinkLabel_W154>Pages</span></a><button aria-label="Expand sidebar category 'Pages'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/subscriptions><span title=Subscriptions class=linkLabel_WmDU>Subscriptions</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/webhooks><span title=Webhooks class=linkLabel_WmDU>Webhooks</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/shadowStore/features/purchase-requests><span title="Purchase Requests" class=linkLabel_WmDU>Purchase Requests</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/shadowStore/api><span title=API class=categoryLinkLabel_W154>API</span></a><button aria-label="Expand sidebar category 'API'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/shadowStore/addons><span title=Addons class=categoryLinkLabel_W154>Addons</span></a><button aria-label="Expand sidebar category 'Addons'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/shadowStore/markdown><span title=Markdown class=linkLabel_WmDU>Markdown</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/shadowStore/update><span title="Updating Shadow Store" class=linkLabel_WmDU>Updating Shadow Store</span></a></ul></nav><button type=button title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label=Breadcrumbs><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label="Home page" class=breadcrumbs__link href=/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><a class=breadcrumbs__link href=/shadowStore/features><span>Features</span></a><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>Staff Manager</span></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Staff Manager</h1></header>
 <p>The Staff Manager allows you to create a team of administrators with granular permissions. Control who can access different areas of your store's admin panel and delegate responsibilities safely.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=permission-types>Permission Types<a href=#permission-types class=hash-link aria-label="Direct link to Permission Types" title="Direct link to Permission Types" translate=no>​</a></h2>
-<p>Shadow Store includes the following admin permissions:</p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=owner><code>owner</code><a href=#owner class=hash-link aria-label="Direct link to owner" title="Direct link to owner" translate=no>​</a></h3>
-<ul>
-<li class=""><strong>Description</strong>: Full store owner access with unrestricted privileges</li>
-<li class=""><strong>Access</strong>: Everything</li>
-<li class=""><strong>Special</strong>: Can only be granted by users listed in the <code>OWNERS</code> environment variable</li>
-<li class=""><strong>Cannot be removed</strong>: Once set via environment, protected from removal</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=managestaff><code>manageStaff</code><a href=#managestaff class=hash-link aria-label="Direct link to managestaff" title="Direct link to managestaff" translate=no>​</a></h3>
-<ul>
-<li class=""><strong>Description</strong>: Manage staff members and their permissions</li>
-<li class=""><strong>Access</strong>: Add/remove staff, grant permissions (except owner)</li>
-<li class=""><strong>Restriction</strong>: Cannot grant permissions they don't have themselves</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=manageproducts><code>manageProducts</code><a href=#manageproducts class=hash-link aria-label="Direct link to manageproducts" title="Direct link to manageproducts" translate=no>​</a></h3>
-<ul>
-<li class=""><strong>Description</strong>: Manage product catalog</li>
-<li class=""><strong>Access</strong>:
-<ul>
-<li class="">Create, edit, delete products</li>
-<li class="">Manage releases</li>
-<li class="">View product analytics</li>
-<li class="">Manage inventory</li>
-</ul>
-</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=manageproductsettings><code>manageProductSettings</code><a href=#manageproductsettings class=hash-link aria-label="Direct link to manageproductsettings" title="Direct link to manageproductsettings" translate=no>​</a></h3>
-<ul>
-<li class=""><strong>Description</strong>: Configure store settings</li>
-<li class=""><strong>Access</strong>:
-<ul>
-<li class="">Store configuration</li>
-<li class="">Tax settings</li>
-<li class="">Shipping settings</li>
-<li class="">Product display options</li>
-</ul>
-</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=managediscounts><code>manageDiscounts</code><a href=#managediscounts class=hash-link aria-label="Direct link to managediscounts" title="Direct link to managediscounts" translate=no>​</a></h3>
-<ul>
-<li class=""><strong>Description</strong>: Manage promotional tools</li>
-<li class=""><strong>Access</strong>:
-<ul>
-<li class="">Create discount codes</li>
-<li class="">Manage sales</li>
-<li class="">Create referral codes</li>
-<li class="">View discount analytics</li>
-</ul>
-</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=manageforms><code>manageForms</code><a href=#manageforms class=hash-link aria-label="Direct link to manageforms" title="Direct link to manageforms" translate=no>​</a></h3>
-<ul>
-<li class=""><strong>Description</strong>: Manage custom forms</li>
-<li class=""><strong>Access</strong>:
-<ul>
-<li class="">Create and edit forms</li>
-<li class="">View submissions</li>
-<li class="">Manage form settings</li>
-</ul>
-</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=manageinvoices><code>manageInvoices</code><a href=#manageinvoices class=hash-link aria-label="Direct link to manageinvoices" title="Direct link to manageinvoices" translate=no>​</a></h3>
-<ul>
-<li class=""><strong>Description</strong>: Handle billing and invoices</li>
-<li class=""><strong>Access</strong>:
-<ul>
-<li class="">Create and edit invoices</li>
-<li class="">Process payments</li>
-<li class="">View invoice history</li>
-<li class="">Send payment reminders</li>
-</ul>
-</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=managequotes><code>manageQuotes</code><a href=#managequotes class=hash-link aria-label="Direct link to managequotes" title="Direct link to managequotes" translate=no>​</a></h3>
-<ul>
-<li class=""><strong>Description</strong>: Manage customer quotes</li>
-<li class=""><strong>Access</strong>:
-<ul>
-<li class="">Create and edit quotes</li>
-<li class="">Cancel quotes</li>
-<li class="">Approve or reject customer revision requests</li>
-<li class="">Convert quotes to invoices (also requires <code>manageInvoices</code>)</li>
-</ul>
-</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=managereviews><code>manageReviews</code><a href=#managereviews class=hash-link aria-label="Direct link to managereviews" title="Direct link to managereviews" translate=no>​</a></h3>
-<ul>
-<li class=""><strong>Description</strong>: Moderate product reviews</li>
-<li class=""><strong>Access</strong>:
-<ul>
-<li class="">Approve/reject reviews</li>
-<li class="">Handle reported reviews</li>
-<li class="">Configure review settings</li>
-<li class="">View review analytics</li>
-</ul>
-</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=viewinsights><code>viewInsights</code><a href=#viewinsights class=hash-link aria-label="Direct link to viewinsights" title="Direct link to viewinsights" translate=no>​</a></h3>
-<ul>
-<li class=""><strong>Description</strong>: View analytics and reporting dashboards</li>
-<li class=""><strong>Access</strong>:
-<ul>
-<li class="">View the analytics dashboard</li>
-<li class="">View subscription analytics</li>
-<li class="">Export analytics data (CSV/JSON)</li>
-</ul>
-</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=managereferral><code>manageReferral</code><a href=#managereferral class=hash-link aria-label="Direct link to managereferral" title="Direct link to managereferral" translate=no>​</a></h3>
-<ul>
-<li class=""><strong>Description</strong>: Manage the referral program</li>
-<li class=""><strong>Access</strong>:
-<ul>
-<li class="">View referral analytics and events</li>
-<li class="">Create and manage partner codes</li>
-<li class="">Approve or reject user code requests</li>
-<li class="">Configure referral program settings</li>
-</ul>
-</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=managepages><code>managePages</code><a href=#managepages class=hash-link aria-label="Direct link to managepages" title="Direct link to managepages" translate=no>​</a></h3>
-<ul>
-<li class=""><strong>Description</strong>: Manage website pages and content</li>
-<li class=""><strong>Access</strong>:
-<ul>
-<li class="">Edit homepage</li>
-<li class="">Manage custom pages</li>
-<li class="">Edit blog posts</li>
-<li class="">Manage partners and team pages</li>
-</ul>
-</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=managesettings><code>manageSettings</code><a href=#managesettings class=hash-link aria-label="Direct link to managesettings" title="Direct link to managesettings" translate=no>​</a></h3>
-<ul>
-<li class=""><strong>Description</strong>: Configure site-wide settings</li>
-<li class=""><strong>Access</strong>:
-<ul>
-<li class="">Site configuration</li>
-<li class="">Email settings</li>
-<li class="">Integration settings</li>
-<li class="">General preferences</li>
-</ul>
-</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=managetheme><code>manageTheme</code><a href=#managetheme class=hash-link aria-label="Direct link to managetheme" title="Direct link to managetheme" translate=no>​</a></h3>
-<ul>
-<li class=""><strong>Description</strong>: Customize store appearance</li>
-<li class=""><strong>Access</strong>:
-<ul>
-<li class="">Theme customization</li>
-<li class="">Branding settings</li>
-<li class="">Custom CSS</li>
-<li class="">Logo and images</li>
-</ul>
-</li>
-</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=permissions>Permissions<a href=#permissions class=hash-link aria-label="Direct link to Permissions" title="Direct link to Permissions" translate=no>​</a></h2>
+<p>Shadow Store has 35 distinct permissions organized into 8 groups. The <strong>Owner</strong> role bypasses all permission checks and has unrestricted access to everything.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=store>Store<a href=#store class=hash-link aria-label="Direct link to Store" title="Direct link to Store" translate=no>​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Permission<th>Description<tbody><tr><td><code>VIEW_ORDERS</code><td>View orders and order details<tr><td><code>MANAGE_ORDERS</code><td>Manage orders (update status, process refunds)<tr><td><code>MANAGE_PRODUCTS</code><td>Create, edit, and delete products; manage releases and inventory<tr><td><code>MANAGE_STORE</code><td>Configure store settings, tax, and display options<tr><td><code>MANAGE_DISCOUNTS</code><td>Create discount codes, manage sales, create referral codes<tr><td><code>MANAGE_INVOICES</code><td>Create and edit invoices, process payments, view invoice history<tr><td><code>MANAGE_QUOTES</code><td>Create, edit, and cancel quotes; approve or reject revision requests</table>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=users>Users<a href=#users class=hash-link aria-label="Direct link to Users" title="Direct link to Users" translate=no>​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Permission<th>Description<tbody><tr><td><code>VIEW_USERS</code><td>View customer profiles and account details<tr><td><code>MANAGE_USERS</code><td>Edit customer profiles and account settings<tr><td><code>BAN_USER</code><td>Ban and unban customers<tr><td><code>DISABLE_USER</code><td>Disable and re-enable customer accounts<tr><td><code>EMAIL_USER</code><td>Send emails to customers<tr><td><code>TRANSFER_USER</code><td>Transfer purchases between accounts</table>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=content>Content<a href=#content class=hash-link aria-label="Direct link to Content" title="Direct link to Content" translate=no>​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Permission<th>Description<tbody><tr><td><code>MANAGE_CONTENT</code><td>Edit custom pages and page sections<tr><td><code>MANAGE_BLOGS</code><td>Create and edit blog posts<tr><td><code>MANAGE_NEWSLETTERS</code><td>Create and send newsletters<tr><td><code>MANAGE_FORMS</code><td>Create and edit forms<tr><td><code>VIEW_FORM_SUBMISSIONS</code><td>View form submission data</table>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=analytics>Analytics<a href=#analytics class=hash-link aria-label="Direct link to Analytics" title="Direct link to Analytics" translate=no>​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Permission<th>Description<tbody><tr><td><code>VIEW_INSIGHTS</code><td>View the analytics dashboard, subscription analytics, and export data</table>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=engagement>Engagement<a href=#engagement class=hash-link aria-label="Direct link to Engagement" title="Direct link to Engagement" translate=no>​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Permission<th>Description<tbody><tr><td><code>MANAGE_LOYALTY</code><td>Configure the loyalty program, tiers, and earning rules<tr><td><code>MANAGE_REFERRAL</code><td>View referral analytics, manage all codes, configure settings<tr><td><code>MANAGE_REVIEWS</code><td>Approve, reject, and moderate product reviews<tr><td><code>MANAGE_REVIEW_SETTINGS</code><td>Configure review moderation settings<tr><td><code>MANAGE_SUBSCRIPTIONS</code><td>View and manage customer subscriptions</table>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=appearance--layout>Appearance & Layout<a href=#appearance--layout class=hash-link aria-label="Direct link to Appearance & Layout" title="Direct link to Appearance & Layout" translate=no>​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Permission<th>Description<tbody><tr><td><code>MANAGE_APPEARANCE</code><td>Theme customization, branding, custom CSS<tr><td><code>MANAGE_LAYOUT</code><td>Homepage, product page, and store layout configuration</table>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=settings>Settings<a href=#settings class=hash-link aria-label="Direct link to Settings" title="Direct link to Settings" translate=no>​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Permission<th>Description<tbody><tr><td><code>MANAGE_SETTINGS</code><td>Configure site-wide settings, email, integrations, and general preferences</table>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=system>System<a href=#system class=hash-link aria-label="Direct link to System" title="Direct link to System" translate=no>​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Permission<th>Description<tbody><tr><td><code>LICENSE_SYSTEM</code><td>Manage license keys<tr><td><code>VIEW_LOGS</code><td>Access audit logs<tr><td><code>MANAGE_PURCHASE_REQUESTS</code><td>Review and act on purchase requests<tr><td><code>MANAGE_WEBHOOKS</code><td>Create and configure webhooks<tr><td><code>MANAGE_STAFF</code><td>Add and remove staff, grant permissions (cannot grant permissions you don't have)<tr><td><code>VIEW_PANEL</code><td>Access the admin panel (required for all staff)</table>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=permission-presets>Permission Presets<a href=#permission-presets class=hash-link aria-label="Direct link to Permission Presets" title="Direct link to Permission Presets" translate=no>​</a></h2>
+<p>When adding or editing a staff member, you can apply a preset to quickly fill in a common set of permissions:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Preset<th>Included Permissions<tbody><tr><td><strong>Support Agent</strong><td><code>VIEW_ORDERS</code>, <code>VIEW_USERS</code>, <code>EMAIL_USER</code>, <code>MANAGE_REVIEWS</code>, <code>VIEW_FORM_SUBMISSIONS</code>, <code>VIEW_PANEL</code><tr><td><strong>Content Editor</strong><td><code>MANAGE_BLOGS</code>, <code>MANAGE_NEWSLETTERS</code>, <code>MANAGE_FORMS</code>, <code>VIEW_FORM_SUBMISSIONS</code>, <code>MANAGE_CONTENT</code>, <code>MANAGE_REVIEWS</code>, <code>VIEW_PANEL</code><tr><td><strong>Store Manager</strong><td><code>VIEW_ORDERS</code>, <code>MANAGE_ORDERS</code>, <code>MANAGE_PRODUCTS</code>, <code>MANAGE_STORE</code>, <code>MANAGE_DISCOUNTS</code>, <code>VIEW_PANEL</code><tr><td><strong>Client Manager</strong><td><code>VIEW_ORDERS</code>, <code>MANAGE_INVOICES</code>, <code>MANAGE_QUOTES</code>, <code>VIEW_USERS</code>, <code>EMAIL_USER</code>, <code>VIEW_PANEL</code><tr><td><strong>Full Access</strong><td>All permissions except <code>owner</code></table>
+<p>Presets pre-fill the permission checkboxes but do not save automatically: review and confirm before saving.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=staff-settings>Staff Settings<a href=#staff-settings class=hash-link aria-label="Direct link to Staff Settings" title="Direct link to Staff Settings" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=require-2fa-for-staff>Require 2FA for Staff<a href=#require-2fa-for-staff class=hash-link aria-label="Direct link to Require 2FA for Staff" title="Direct link to Require 2FA for Staff" translate=no>​</a></h3>
+<p>You can require all staff members to have two-factor authentication enabled before accessing the admin panel.</p>
+<ol>
+<li class="">Navigate to <strong>Admin Panel > Staff</strong></li>
+<li class="">Toggle <strong>Require 2FA for Staff</strong></li>
+<li class="">Save</li>
+</ol>
+<p>Staff without 2FA set up will be prompted to enable it before they can access any admin features.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=adding-staff-members>Adding Staff Members<a href=#adding-staff-members class=hash-link aria-label="Direct link to Adding Staff Members" title="Direct link to Adding Staff Members" translate=no>​</a></h2>
 <ol>
 <li class="">Navigate to <strong>Admin Panel > Staff</strong></li>
-<li class="">Click "Add Staff Member"</li>
-<li class="">Enter the user's email address (they must have an account)</li>
-<li class="">Select permissions to grant:
-<ul>
-<li class="">Check the boxes for permissions you want to give</li>
-<li class="">You can only grant permissions you have yourself</li>
-</ul>
-</li>
-<li class="">Click "Add Staff Member"</li>
-<li class="">The user immediately gains access to granted permissions</li>
+<li class="">Click <strong>Add Staff Member</strong></li>
+<li class="">Enter the user's account ID</li>
+<li class="">Select permissions (or apply a preset and adjust)</li>
+<li class="">Click <strong>Add Staff Member</strong></li>
 </ol>
+<p>The user immediately gains access to the granted permissions.</p>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>info</div><div class=admonitionContent_BuS1><p>The user must have an existing account on your Shadow Store. If they don't, ask them to create one first.</div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=managing-existing-staff>Managing Existing Staff<a href=#managing-existing-staff class=hash-link aria-label="Direct link to Managing Existing Staff" title="Direct link to Managing Existing Staff" translate=no>​</a></h2>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=viewing-staff-members>Viewing Staff Members<a href=#viewing-staff-members class=hash-link aria-label="Direct link to Viewing Staff Members" title="Direct link to Viewing Staff Members" translate=no>​</a></h3>
 <p>The staff list shows:</p>
 <ul>
-<li class="">User name and email</li>
-<li class="">Currently assigned permissions</li>
-<li class="">Date added as staff</li>
+<li class="">Username</li>
+<li class="">2FA status</li>
+<li class="">Currently assigned permissions (as badges)</li>
 <li class="">Actions (edit permissions, remove staff)</li>
 </ul>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=editing-permissions>Editing Permissions<a href=#editing-permissions class=hash-link aria-label="Direct link to Editing Permissions" title="Direct link to Editing Permissions" translate=no>​</a></h3>
 <ol>
 <li class="">Navigate to <strong>Admin Panel > Staff</strong></li>
-<li class="">Find the staff member</li>
-<li class="">Click "Edit Permissions"</li>
-<li class="">Add or remove permissions:
-<ul>
-<li class="">Check to add a permission</li>
-<li class="">Uncheck to remove a permission</li>
-</ul>
-</li>
-<li class="">Click "Save Changes"</li>
+<li class="">Find the staff member and click <strong>Edit</strong></li>
+<li class="">Add or remove permissions</li>
+<li class="">Click <strong>Save Changes</strong></li>
 </ol>
-<p><strong>Permission Validation:</strong></p>
-<ul>
-<li class="">You cannot grant permissions you don't have</li>
-<li class="">You cannot modify owner permissions (unless you're also an owner)</li>
-<li class="">Changes apply immediately</li>
-</ul>
+<p>You cannot grant permissions you don't hold yourself.</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=removing-staff>Removing Staff<a href=#removing-staff class=hash-link aria-label="Direct link to Removing Staff" title="Direct link to Removing Staff" translate=no>​</a></h3>
 <ol>
 <li class="">Navigate to <strong>Admin Panel > Staff</strong></li>
-<li class="">Find the staff member</li>
-<li class="">Click "Remove Staff"</li>
+<li class="">Find the staff member and click <strong>Remove</strong></li>
 <li class="">Confirm removal</li>
-<li class="">All permissions are revoked immediately</li>
 </ol>
-<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>warning</div><div class=admonitionContent_BuS1><p>Removing a staff member revokes all their admin access. They will no longer be able to access the admin panel.</div></div>
+<p>All permissions are revoked immediately.</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>warning</div><div class=admonitionContent_BuS1><p>Removing a staff member revokes all their admin access immediately.</div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=owner-management>Owner Management<a href=#owner-management class=hash-link aria-label="Direct link to Owner Management" title="Direct link to Owner Management" translate=no>​</a></h2>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=environment-owners>Environment Owners<a href=#environment-owners class=hash-link aria-label="Direct link to Environment Owners" title="Direct link to Environment Owners" translate=no>​</a></h3>
-<p>Owners defined in the <code>OWNERS</code> environment variable:</p>
+<p>Owners are defined via the <code>OWNERS</code> environment variable (an array of emails). They:</p>
 <ul>
-<li class="">Have permanent owner status</li>
-<li class="">Cannot be removed via staff manager</li>
-<li class="">Can grant owner status to others</li>
-<li class="">Can manage all other owners</li>
+<li class="">Have permanent owner status that cannot be removed via the staff manager</li>
+<li class="">Can grant owner status to other users via the staff manager</li>
+<li class="">Bypass all permission checks</li>
 </ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=granting-owner-status>Granting Owner Status<a href=#granting-owner-status class=hash-link aria-label="Direct link to Granting Owner Status" title="Direct link to Granting Owner Status" translate=no>​</a></h3>
-<p>Only existing owners can grant owner permissions:</p>
+<div class="theme-admonition theme-admonition-danger admonition_xJq3 alert alert--danger"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"/></svg></span>danger</div><div class=admonitionContent_BuS1><p>Be very careful when granting owner permissions. Owners have unrestricted access to everything.</div></div>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=permission-rules>Permission Rules<a href=#permission-rules class=hash-link aria-label="Direct link to Permission Rules" title="Direct link to Permission Rules" translate=no>​</a></h2>
 <ol>
-<li class="">Navigate to <strong>Admin Panel > Staff</strong></li>
-<li class="">Add or edit a staff member</li>
-<li class="">Check the <code>owner</code> permission</li>
-<li class="">Save changes</li>
+<li class=""><strong>Owner overrides all</strong>: Owners can access everything regardless of other permissions</li>
+<li class=""><strong>No self-escalation</strong>: Staff cannot grant themselves permissions they don't have</li>
+<li class=""><strong>No peer escalation</strong>: Staff cannot grant permissions they don't hold</li>
+<li class=""><strong>Owner protection</strong>: Only owners can grant or modify owner status</li>
 </ol>
-<div class="theme-admonition theme-admonition-danger admonition_xJq3 alert alert--danger"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"/></svg></span>danger</div><div class=admonitionContent_BuS1><p>Be very careful when granting owner permissions. Owners have unrestricted access to everything, including the ability to remove other staff members and change critical settings.</div></div>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=permission-inheritance>Permission Inheritance<a href=#permission-inheritance class=hash-link aria-label="Direct link to Permission Inheritance" title="Direct link to Permission Inheritance" translate=no>​</a></h2>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=hierarchy-rules>Hierarchy Rules<a href=#hierarchy-rules class=hash-link aria-label="Direct link to Hierarchy Rules" title="Direct link to Hierarchy Rules" translate=no>​</a></h3>
-<p>The permission system follows these rules:</p>
-<ol>
-<li class=""><strong>Owner Overrides</strong>: Owners can access everything regardless of other permissions</li>
-<li class=""><strong>No Self-Escalation</strong>: Staff cannot grant themselves permissions</li>
-<li class=""><strong>No Peer Escalation</strong>: Staff cannot grant permissions they don't have</li>
-<li class=""><strong>Owner Protection</strong>: Only owners can manage other owners</li>
-</ol>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=example-scenarios>Example Scenarios<a href=#example-scenarios class=hash-link aria-label="Direct link to Example Scenarios" title="Direct link to Example Scenarios" translate=no>​</a></h3>
-<p><strong>Scenario 1: Product Manager</strong></p>
-<ul>
-<li class=""><strong>Permissions</strong>: <code>manageProducts</code>, <code>manageProductSettings</code></li>
-<li class=""><strong>Can</strong>: Create products, edit products, configure store settings</li>
-<li class=""><strong>Cannot</strong>: Manage staff, edit theme, moderate reviews</li>
-</ul>
-<p><strong>Scenario 2: Content Manager</strong></p>
-<ul>
-<li class=""><strong>Permissions</strong>: <code>managePages</code>, <code>manageTheme</code></li>
-<li class=""><strong>Can</strong>: Edit website pages, customize theme</li>
-<li class=""><strong>Cannot</strong>: Manage products, access invoices, moderate reviews</li>
-</ul>
-<p><strong>Scenario 3: Customer Support</strong></p>
-<ul>
-<li class=""><strong>Permissions</strong>: <code>manageReviews</code>, <code>manageInvoices</code>, <code>manageForms</code></li>
-<li class=""><strong>Can</strong>: Moderate reviews, handle invoices, view form submissions</li>
-<li class=""><strong>Cannot</strong>: Edit products, manage staff, change settings</li>
-</ul>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=discord-audit-logging>Discord Audit Logging<a href=#discord-audit-logging class=hash-link aria-label="Direct link to Discord Audit Logging" title="Direct link to Discord Audit Logging" translate=no>​</a></h2>
 <p>All staff-related actions are logged to Discord (if configured):</p>
-<p><strong>Logged Actions:</strong></p>
 <ul>
-<li class="">Staff member added</li>
-<li class="">Permissions granted</li>
-<li class="">Permissions revoked</li>
-<li class="">Staff member removed</li>
+<li class="">Staff member added or removed</li>
+<li class="">Permissions granted or revoked</li>
 <li class="">Failed permission attempts</li>
 </ul>
-<p><strong>Log Information:</strong></p>
-<ul>
-<li class="">Who performed the action</li>
-<li class="">Target staff member</li>
-<li class="">Permissions involved</li>
-<li class="">Timestamp</li>
-<li class="">Action result</li>
-</ul>
-<p>Configure Discord logging at <strong>Admin Panel > Integrations > Discord</strong></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=security-features>Security Features<a href=#security-features class=hash-link aria-label="Direct link to Security Features" title="Direct link to Security Features" translate=no>​</a></h2>
+<p>Configure Discord logging at <strong>Admin Panel > Integrations > Discord</strong>.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=security>Security<a href=#security class=hash-link aria-label="Direct link to Security" title="Direct link to Security" translate=no>​</a></h2>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=self-interaction-prevention>Self-Interaction Prevention<a href=#self-interaction-prevention class=hash-link aria-label="Direct link to Self-Interaction Prevention" title="Direct link to Self-Interaction Prevention" translate=no>​</a></h3>
-<p>Staff members cannot:</p>
-<ul>
-<li class="">Grant themselves new permissions</li>
-<li class="">Remove their own staff status</li>
-<li class="">Modify their own permissions</li>
-</ul>
-<p>This prevents privilege escalation and requires admin oversight for permission changes.</p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=permission-validation>Permission Validation<a href=#permission-validation class=hash-link aria-label="Direct link to Permission Validation" title="Direct link to Permission Validation" translate=no>​</a></h3>
-<p>Every admin action validates:</p>
-<ul>
-<li class="">User has required permission</li>
-<li class="">Permission is currently active</li>
-<li class="">User is not banned</li>
-<li class="">Session is valid</li>
-</ul>
+<p>Staff members cannot grant themselves new permissions or remove their own staff status. Changes to a staff member's permissions must be made by another admin.</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=audit-trail>Audit Trail<a href=#audit-trail class=hash-link aria-label="Direct link to Audit Trail" title="Direct link to Audit Trail" translate=no>​</a></h3>
-<p>All admin actions are tracked:</p>
-<ul>
-<li class="">Action performed</li>
-<li class="">User who performed it</li>
-<li class="">Timestamp</li>
-<li class="">Result (success/failure)</li>
-</ul>
-<p>Access audit logs at <strong>Admin Panel > Logs</strong></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=common-permission-sets>Common Permission Sets<a href=#common-permission-sets class=hash-link aria-label="Direct link to Common Permission Sets" title="Direct link to Common Permission Sets" translate=no>​</a></h2>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=store-manager>Store Manager<a href=#store-manager class=hash-link aria-label="Direct link to Store Manager" title="Direct link to Store Manager" translate=no>​</a></h3>
-<p>Permissions: <code>manageProducts</code>, <code>manageProductSettings</code>, <code>manageDiscounts</code></p>
-<ul>
-<li class="">Handles day-to-day store operations</li>
-<li class="">Cannot access sensitive settings or staff management</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=content-editor>Content Editor<a href=#content-editor class=hash-link aria-label="Direct link to Content Editor" title="Direct link to Content Editor" translate=no>​</a></h3>
-<p>Permissions: <code>managePages</code>, <code>manageForms</code></p>
-<ul>
-<li class="">Manages website content</li>
-<li class="">Cannot access products or billing</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=customer-service>Customer Service<a href=#customer-service class=hash-link aria-label="Direct link to Customer Service" title="Direct link to Customer Service" translate=no>​</a></h3>
-<p>Permissions: <code>manageReviews</code>, <code>manageInvoices</code>, <code>manageQuotes</code>, <code>manageForms</code></p>
-<ul>
-<li class="">Handles customer interactions including reviews, invoices, and quotes</li>
-<li class="">Cannot modify products or settings</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=developerdesigner>Developer/Designer<a href=#developerdesigner class=hash-link aria-label="Direct link to Developer/Designer" title="Direct link to Developer/Designer" translate=no>​</a></h3>
-<p>Permissions: <code>manageTheme</code>, <code>managePages</code></p>
-<ul>
-<li class="">Customizes appearance</li>
-<li class="">Cannot access business operations</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=full-administrator>Full Administrator<a href=#full-administrator class=hash-link aria-label="Direct link to Full Administrator" title="Direct link to Full Administrator" translate=no>​</a></h3>
-<p>Permissions: All except <code>owner</code></p>
-<ul>
-<li class="">Can manage most aspects</li>
-<li class="">Cannot add/remove staff or other critical functions</li>
-</ul>
+<p>Every admin action is logged with who performed it, what the action was, and a timestamp. Access audit logs at <strong>Admin Panel > Logs</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=troubleshooting>Troubleshooting<a href=#troubleshooting class=hash-link aria-label="Direct link to Troubleshooting" title="Direct link to Troubleshooting" translate=no>​</a></h2>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=cannot-grant-permission>Cannot Grant Permission<a href=#cannot-grant-permission class=hash-link aria-label="Direct link to Cannot Grant Permission" title="Direct link to Cannot Grant Permission" translate=no>​</a></h3>
-<p><strong>Possible Reasons:</strong></p>
 <ul>
 <li class="">You don't have that permission yourself</li>
 <li class="">You're trying to grant <code>owner</code> but you're not an owner</li>
-<li class="">You're trying to modify your own permissions</li>
-<li class="">The user is not registered</li>
-</ul>
-<p><strong>Solution:</strong></p>
-<ul>
-<li class="">Contact an owner to grant the permission</li>
-<li class="">Verify you have the necessary permissions</li>
-<li class="">Ask another admin to modify your permissions</li>
+<li class="">Contact an owner to grant the permission first</li>
 </ul>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=staff-member-cant-access-feature>Staff Member Can't Access Feature<a href=#staff-member-cant-access-feature class=hash-link aria-label="Direct link to Staff Member Can't Access Feature" title="Direct link to Staff Member Can't Access Feature" translate=no>​</a></h3>
-<p><strong>Check:</strong></p>
 <ol>
 <li class="">Verify they have the correct permission</li>
-<li class="">Check if permission was recently revoked</li>
-<li class="">Ensure they're logged in</li>
-<li class="">Verify session hasn't expired</li>
+<li class="">Check if <code>VIEW_PANEL</code> is enabled (required for admin access)</li>
+<li class="">If 2FA enforcement is on, confirm they have 2FA set up</li>
 <li class="">Check audit logs for any issues</li>
 </ol>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=accidentally-removed-staff>Accidentally Removed Staff<a href=#accidentally-removed-staff class=hash-link aria-label="Direct link to Accidentally Removed Staff" title="Direct link to Accidentally Removed Staff" translate=no>​</a></h3>
-<p><strong>Recovery:</strong></p>
-<ul>
-<li class="">Re-add them via Staff Manager</li>
-<li class="">Re-grant their previous permissions</li>
-<li class="">Check audit logs to see what permissions they had</li>
-</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href=https://github.com/Shadow-Develops/docusaurus/tree/main/docs/shadowStore/features/staff-manager.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class=theme-last-updated>Last updated<!-- --> on <b><time datetime=2026-04-06T23:51:54.000Z itemprop=dateModified>Apr 6, 2026</time></b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#permission-types class="table-of-contents__link toc-highlight">Permission Types</a><ul><li><a href=#owner class="table-of-contents__link toc-highlight"><code>owner</code></a><li><a href=#managestaff class="table-of-contents__link toc-highlight"><code>manageStaff</code></a><li><a href=#manageproducts class="table-of-contents__link toc-highlight"><code>manageProducts</code></a><li><a href=#manageproductsettings class="table-of-contents__link toc-highlight"><code>manageProductSettings</code></a><li><a href=#managediscounts class="table-of-contents__link toc-highlight"><code>manageDiscounts</code></a><li><a href=#manageforms class="table-of-contents__link toc-highlight"><code>manageForms</code></a><li><a href=#manageinvoices class="table-of-contents__link toc-highlight"><code>manageInvoices</code></a><li><a href=#managequotes class="table-of-contents__link toc-highlight"><code>manageQuotes</code></a><li><a href=#managereviews class="table-of-contents__link toc-highlight"><code>manageReviews</code></a><li><a href=#viewinsights class="table-of-contents__link toc-highlight"><code>viewInsights</code></a><li><a href=#managereferral class="table-of-contents__link toc-highlight"><code>manageReferral</code></a><li><a href=#managepages class="table-of-contents__link toc-highlight"><code>managePages</code></a><li><a href=#managesettings class="table-of-contents__link toc-highlight"><code>manageSettings</code></a><li><a href=#managetheme class="table-of-contents__link toc-highlight"><code>manageTheme</code></a></ul><li><a href=#adding-staff-members class="table-of-contents__link toc-highlight">Adding Staff Members</a><li><a href=#managing-existing-staff class="table-of-contents__link toc-highlight">Managing Existing Staff</a><ul><li><a href=#viewing-staff-members class="table-of-contents__link toc-highlight">Viewing Staff Members</a><li><a href=#editing-permissions class="table-of-contents__link toc-highlight">Editing Permissions</a><li><a href=#removing-staff class="table-of-contents__link toc-highlight">Removing Staff</a></ul><li><a href=#owner-management class="table-of-contents__link toc-highlight">Owner Management</a><ul><li><a href=#environment-owners class="table-of-contents__link toc-highlight">Environment Owners</a><li><a href=#granting-owner-status class="table-of-contents__link toc-highlight">Granting Owner Status</a></ul><li><a href=#permission-inheritance class="table-of-contents__link toc-highlight">Permission Inheritance</a><ul><li><a href=#hierarchy-rules class="table-of-contents__link toc-highlight">Hierarchy Rules</a><li><a href=#example-scenarios class="table-of-contents__link toc-highlight">Example Scenarios</a></ul><li><a href=#discord-audit-logging class="table-of-contents__link toc-highlight">Discord Audit Logging</a><li><a href=#security-features class="table-of-contents__link toc-highlight">Security Features</a><ul><li><a href=#self-interaction-prevention class="table-of-contents__link toc-highlight">Self-Interaction Prevention</a><li><a href=#permission-validation class="table-of-contents__link toc-highlight">Permission Validation</a><li><a href=#audit-trail class="table-of-contents__link toc-highlight">Audit Trail</a></ul><li><a href=#common-permission-sets class="table-of-contents__link toc-highlight">Common Permission Sets</a><ul><li><a href=#store-manager class="table-of-contents__link toc-highlight">Store Manager</a><li><a href=#content-editor class="table-of-contents__link toc-highlight">Content Editor</a><li><a href=#customer-service class="table-of-contents__link toc-highlight">Customer Service</a><li><a href=#developerdesigner class="table-of-contents__link toc-highlight">Developer/Designer</a><li><a href=#full-administrator class="table-of-contents__link toc-highlight">Full Administrator</a></ul><li><a href=#troubleshooting class="table-of-contents__link toc-highlight">Troubleshooting</a><ul><li><a href=#cannot-grant-permission class="table-of-contents__link toc-highlight">Cannot Grant Permission</a><li><a href=#staff-member-cant-access-feature class="table-of-contents__link toc-highlight">Staff Member Can't Access Feature</a><li><a href=#accidentally-removed-staff class="table-of-contents__link toc-highlight">Accidentally Removed Staff</a></ul></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2026 <a href=https://shadowdevs.com>Shadow Development</a>. <i>Built with Docusaurus.</i></div></div></div></footer></div></body>
+<p>Re-add them via <strong>Admin Panel > Staff</strong> and re-grant their permissions. Check audit logs to see what permissions they previously held.</div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href=https://github.com/Shadow-Develops/docusaurus/tree/main/docs/shadowStore/features/staff-manager.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class=theme-last-updated>Last updated<!-- --> on <b><time datetime=2026-05-05T21:10:53.000Z itemprop=dateModified>May 5, 2026</time></b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#permissions class="table-of-contents__link toc-highlight">Permissions</a><ul><li><a href=#store class="table-of-contents__link toc-highlight">Store</a><li><a href=#users class="table-of-contents__link toc-highlight">Users</a><li><a href=#content class="table-of-contents__link toc-highlight">Content</a><li><a href=#analytics class="table-of-contents__link toc-highlight">Analytics</a><li><a href=#engagement class="table-of-contents__link toc-highlight">Engagement</a><li><a href=#appearance--layout class="table-of-contents__link toc-highlight">Appearance & Layout</a><li><a href=#settings class="table-of-contents__link toc-highlight">Settings</a><li><a href=#system class="table-of-contents__link toc-highlight">System</a></ul><li><a href=#permission-presets class="table-of-contents__link toc-highlight">Permission Presets</a><li><a href=#staff-settings class="table-of-contents__link toc-highlight">Staff Settings</a><ul><li><a href=#require-2fa-for-staff class="table-of-contents__link toc-highlight">Require 2FA for Staff</a></ul><li><a href=#adding-staff-members class="table-of-contents__link toc-highlight">Adding Staff Members</a><li><a href=#managing-existing-staff class="table-of-contents__link toc-highlight">Managing Existing Staff</a><ul><li><a href=#viewing-staff-members class="table-of-contents__link toc-highlight">Viewing Staff Members</a><li><a href=#editing-permissions class="table-of-contents__link toc-highlight">Editing Permissions</a><li><a href=#removing-staff class="table-of-contents__link toc-highlight">Removing Staff</a></ul><li><a href=#owner-management class="table-of-contents__link toc-highlight">Owner Management</a><li><a href=#permission-rules class="table-of-contents__link toc-highlight">Permission Rules</a><li><a href=#discord-audit-logging class="table-of-contents__link toc-highlight">Discord Audit Logging</a><li><a href=#security class="table-of-contents__link toc-highlight">Security</a><ul><li><a href=#self-interaction-prevention class="table-of-contents__link toc-highlight">Self-Interaction Prevention</a><li><a href=#audit-trail class="table-of-contents__link toc-highlight">Audit Trail</a></ul><li><a href=#troubleshooting class="table-of-contents__link toc-highlight">Troubleshooting</a><ul><li><a href=#cannot-grant-permission class="table-of-contents__link toc-highlight">Cannot Grant Permission</a><li><a href=#staff-member-cant-access-feature class="table-of-contents__link toc-highlight">Staff Member Can't Access Feature</a><li><a href=#accidentally-removed-staff class="table-of-contents__link toc-highlight">Accidentally Removed Staff</a></ul></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2026 <a href=https://shadowdevs.com>Shadow Development</a>. <i>Built with Docusaurus.</i></div></div></div></footer></div></body>
