@@ -119,21 +119,25 @@ Now that have the keys and have put them into your `.env`, you are ready to go. 
     1. The email user for your SMTP server. Ex: `support@example.com`
 22. `SMTP_PASS=`
     1. The password or key for your SMTP server.
+23. `PUBLIC_TURNSTILE_SITE_KEY=`
+    1. Your Cloudflare Turnstile **Site Key** (public). Required if you want to use Turnstile CAPTCHA on any form. Get it from the [Cloudflare Turnstile dashboard](https://dash.cloudflare.com/?to=/:account/turnstile).
+24. `TURNSTILE_SECRET_KEY=`
+    1. Your Cloudflare Turnstile **Secret Key**. Required server-side to verify CAPTCHA responses. Found alongside the site key in the Turnstile dashboard.
 
 ## License System
 
-23. `LICENSE_SYSTEM_KEY=`
+25. `LICENSE_SYSTEM_KEY=`
     1.  Use the [license key from our site](https://shadowdevs.com/license) that is given once you purchase the [Internal License System](https://shadowdevs.com/store/shadowstore-licensesystem) or [External License System](https://shadowdevs.com/store/licensesystem).
 
 ## Advanced
 
 These settings should remain the same way as seen below / provided in the download, unless you know what you are doing.
 
-24. `BODY_SIZE_LIMIT=5368709120`
+26. `BODY_SIZE_LIMIT=5368709120`
     1.  This increases the base SvelteKit body size limit to 10gbs.
-25. `HOST=localhost`
+27. `HOST=localhost`
     1.  This modifies how SvelteKit interacts with itself.
-26. `PRE_ORDER_CHECK_INTERVAL=60`
+28. `PRE_ORDER_CHECK_INTERVAL=60`
     1.  How often (in minutes) Shadow Store checks for pre-orders that are ready to be released. Defaults to `60` (once per hour). Decrease for more frequent checks; increase to reduce background load.
     1.  The system checks for releases half the allotted time ahead of each check so releases don't sit past their release time to long.
         1. EX: With the default of 60 minutes, the system will check for any releases 30 minutes in the future and release those on that run.

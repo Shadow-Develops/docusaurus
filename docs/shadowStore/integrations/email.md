@@ -55,8 +55,9 @@ API keys are only shown once. Save it securely immediately.
 
 1. Navigate to **Admin Panel > Integrations**
 2. Scroll to SendGrid section
-3. Enter your SendGrid API Key
-4. Save configuration
+3. Enter your **From Name** (display name shown to email recipients)
+4. Enter your SendGrid API Key
+5. Save configuration
 
 **Via Environment Variables:**
 
@@ -110,11 +111,12 @@ Shadow Store supports two SMTP modes:
 1. Navigate to **Admin Panel > Integrations**
 2. Select SMTP section
 3. Choose "Basic" mode
-4. Enter SMTP host
-5. Enter port number
-6. Enter username and password
-7. Select encryption method
-8. Save configuration
+4. Enter your **From Name** (display name shown to email recipients)
+5. Enter SMTP host
+6. Enter port number
+7. Enter username and password
+8. Select encryption method
+9. Save configuration
 
 **Via Environment Variables:**
 

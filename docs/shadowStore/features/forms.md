@@ -17,6 +17,8 @@ The Forms feature provides a custom form builder that allows you to create, mana
    - **URL Slug**: Unique identifier for the form URL (e.g., `application-form`)
    - **Description**: Optional description shown to users
    - **Form Fields**: Add custom fields (text, textarea, email, number, etc.)
+   - **Rate Limit Max**: Maximum submissions allowed per IP address per hour (`0` = disabled)
+   - **Turnstile CAPTCHA**: Toggle to require Cloudflare Turnstile verification on submission
 4. Configure field properties:
    - Field label
    - Field type (text, email, number, textarea, select, checkbox, radio)
@@ -113,6 +115,26 @@ Users who submitted a form can view their own submission at `/form/submission/[s
 - Submission date
 - Current status
 
+## Anti-Spam & Security
+
+Forms include built-in protections to prevent abuse and spam. Both are togglable per form.
+
+### Rate Limiting
+
+Limit how many times the same IP address can submit a form within a one-hour window.
+
+- Configure **Rate Limit Max** when creating or editing a form
+- Once a user's IP hits the limit, further submissions are blocked until the hour resets
+- Set to `0` to disable rate limiting for that form
+
+### Cloudflare Turnstile CAPTCHA
+
+Add an optional CAPTCHA challenge to any form using [Cloudflare Turnstile](https://www.cloudflare.com/products/turnstile/).
+
+- Toggle **Turnstile CAPTCHA** on a per-form basis
+- Requires `PUBLIC_TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY` in your `.env` — see [Configuration](/shadowStore/install/config#emails)
+- The widget renders automatically on the public form page
+
 ## Form Access Control
 
 Forms can be configured with different access levels:
@@ -134,7 +156,7 @@ Notifications can include:
 
 - Form name
 - Submission date
-- User information
+- User information (or "Guest" for non-logged-in submitters)
 - All form responses
 
 ## Permissions
