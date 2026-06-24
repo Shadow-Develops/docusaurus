@@ -176,13 +176,29 @@ Displays live store statistics as a row of counters.
 
 ### Featured Product
 
-Highlights a single product in a prominent display.
+Highlights one or more products. Two display modes are available:
+
+- **Standard**: Highlights a single product with its image and details.
+- **Carousel**: Cycles through multiple products in a scrolling carousel design.
+
+**Standard Fields:**
 
 | Field            | Description                                             |
 | ---------------- | ------------------------------------------------------- |
 | Featured Product | Select from your product catalog                        |
 | Section Title    | Heading above the product (default: "Featured Product") |
 | Button Text      | CTA button label (default: "View Product")              |
+
+**Carousel Fields:**
+
+| Field              | Description                                              |
+| ------------------ | -------------------------------------------------------- |
+| Products           | Select multiple products from your catalog               |
+| Section Title      | Heading above the carousel (default: "Featured Product") |
+| Button Text        | CTA button label (default: "View Product")               |
+| Auto Play Interval | Time between slides in milliseconds                      |
+| Show Dots          | Toggle navigation dot indicators                         |
+| Show Arrows        | Toggle previous/next navigation arrows                   |
 
 ---
 

@@ -69,14 +69,28 @@ Display store metrics and achievements.
 
 ### 3. Featured Product
 
-Highlight a specific product.
+Highlight one or more products. Two display modes are available:
 
-**Configuration:**
+**Modes:**
+
+- **Standard**: Highlights a single product with its image and details.
+- **Carousel**: Cycles through multiple products in a scrolling carousel design.
+
+**Standard Configuration:**
 
 - Product selector (dropdown)
 - Section title
 - Button text customization
 - Automatic product image and details display
+
+**Carousel Configuration:**
+
+- Multiple product selectors
+- Section title
+- Button text customization
+- Auto-play interval (milliseconds)
+- Show/hide navigation dots
+- Show/hide previous/next arrows
 
 ### 4. Info Cards
 

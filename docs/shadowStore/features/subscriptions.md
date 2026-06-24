@@ -37,22 +37,27 @@ Pausing suspends billing and access temporarily without cancelling. The customer
 1. Open the subscription detail page
 2. Click **Pause Subscription**
 3. The subscription status changes to **Paused**
-4. The customer receives a `SUBSCRIPTION_PAUSED` notification
+4. Any linked license key is suspended
+5. The customer receives a `SUBSCRIPTION_PAUSED` notification
 
 ### Resuming a Subscription
 
 1. Open the paused subscription detail page
 2. Click **Resume Subscription**
 3. Status returns to **Active**
-4. The customer receives a `SUBSCRIPTION_UPDATED` notification
+4. Any linked license key is re-enabled
+5. The customer receives a `SUBSCRIPTION_UPDATED` notification
 
 ### Cancelling a Subscription
 
 1. Open the subscription detail page
 2. Click **Cancel Subscription**
-3. Confirm cancellation
-4. Status changes to **Cancelled**
-5. The customer receives a `SUBSCRIPTION_CANCELLED` notification
+3. Choose a cancellation timing:
+   - **Cancel immediately**: the subscription is cancelled now; any linked license key is disabled right away
+   - **Cancel at end of current period**: access continues until the billing period ends, then the license is disabled
+4. Confirm cancellation
+5. Status changes to **Cancelled**
+6. The customer receives a `SUBSCRIPTION_CANCELLED` notification
 
 ### Plan Changes
 
@@ -71,6 +76,10 @@ Shadow Store runs a daily scheduled job at **00:00 UTC** to:
   - Invoice is created alongside the notification
 - Send payment due notifications **2 days** before the due date
 - Check for subscriptions that missed their due date on startup (catch-up on server restart)
+
+:::info[Invoice Generation]
+Subscriptions will auto-generate a new invoice for any active subscriptions on the day of their billing cycle renewal. Invoices marked as paused or cancelled will not receive a new invoice. If a subscription is active but the previous invoice was not paid, both the subscription and invoice will be cancelled.
+:::
 
 ### License Key Suspension
 

@@ -110,8 +110,8 @@ Shadow Store supports two SMTP modes:
 
 1. Navigate to **Admin Panel > Integrations**
 2. Select SMTP section
-3. Choose "Basic" mode
-4. Enter your **From Name** (display name shown to email recipients)
+3. Enter your **From Name** and **From email address**
+4. Choose "Basic" mode
 5. Enter SMTP host
 6. Enter port number
 7. Enter username and password
@@ -149,10 +149,11 @@ Use Gmail or Google Workspace for sending emails.
 **Via Admin Panel:**
 
 1. **Admin Panel > Integrations > SMTP**
-2. Select "Google Workspace" mode
-3. Enter your Gmail address
-4. Enter the app password
-5. Save configuration
+2. Enter your **From Name** and **From email address**
+3. Select "Google Workspace" mode
+4. Enter your Gmail address
+5. Enter the app password
+6. Save configuration
 
 **Via Environment Variables:**
 
