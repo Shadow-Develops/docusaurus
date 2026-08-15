@@ -677,4 +677,4 @@ _Not all of these will apply 1:1 because we have some custom stuff; however, the
 
 **Need Help?**
 
-Join the [Shadow Development Discord](https://discord.gg/shadowdevs) for support and tips on using markdown effectively in Shadow Store.
+Join the [Shadow Development Discord](https://discord.gg/fVrRa8z) for support and tips on using markdown effectively in Shadow Store.

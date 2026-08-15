@@ -34,4 +34,4 @@ Welcome to the official documentation for [Blog Builder](https://shadowdevs.com/
   - Yes. In addition to the main blog at `/blog`, any custom page with the "Has Blog" option enabled gets its own blog category at `/[page-slug]/blog`. Posts can be scoped to these categories independently.
 
 - **Where do I get support?**
-  - Join the [Shadow Development Discord](https://discord.gg/shadowdevs) or use the [Web Contact Page](https://shadowdevs.com/contactus) for support.
+  - Join the [Shadow Development Discord](https://discord.gg/fVrRa8z) or use the [Web Contact Page](https://shadowdevs.com/contactus) for support.

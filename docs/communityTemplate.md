@@ -21,4 +21,4 @@ Welcome to the official documentation for [Community Template](https://shadowdev
   - Yes. A valid license key from [shadowdevs.com](https://shadowdevs.com/license) is required. The application verifies the license on startup with a 72-hour grace period if the license server is temporarily unreachable.
 
 - **Where do I get support?**
-  - Join the [Shadow Development Discord](https://discord.gg/shadowdevs) or use our [Web Contact Page](https://shadowdevs.com/contactus) for support.
+  - Join the [Shadow Development Discord](https://discord.gg/fVrRa8z) or use our [Web Contact Page](https://shadowdevs.com/contactus) for support.
