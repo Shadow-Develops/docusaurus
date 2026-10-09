@@ -71,6 +71,7 @@ CDN Manager uses a **fully granular permission system** where you grant individu
 - `owner` - Full system access (bypasses all restrictions)
 - `admin.settings.manage` - Manage system settings
 - `admin.audit.view` - View audit logs
+- `admin.api.manage` - Manage remote API keys, limits, and usage logs
 
 **CDN/File Management Permissions:**
 
@@ -127,6 +128,7 @@ These roles are automatically recognized based on the individual permissions gra
 
 - Reserve `owner` permission for system administrators
 - Use specific admin permissions for limited admin roles
+- Grant `admin.api.manage` only to users who should create service credentials
 
 **Custom Access Levels:**
 
@@ -394,6 +396,42 @@ Filter by:
 - Action type
 - Target resource
 - Success/failure
+
+## Remote API Management
+
+Users with `admin.api.manage` can open **Admin Panel > Manage API** (`/admin/api`) to manage service credentials and review API activity.
+
+### Creating API Keys
+
+Each key requires:
+
+- A recognizable name
+- One or more allowed asset roots
+- One or more API scopes
+
+Optional controls include a future expiration, an IPv4/CIDR source allowlist, a per-key requests-per-minute override, and permission to bypass maintenance mode.
+
+The complete token is displayed only once after creation. Copy it immediately and store it in a secret manager. CDN Manager stores only a hash of the secret and cannot reveal it later.
+
+### Delegation Rules
+
+An API manager can grant only the access they already have. In addition to `admin.api.manage`, the manager must hold the matching CDN permission for every selected scope and allowed root. Selecting `/` requires the relevant permission at the root.
+
+Keys remain tied to their creator and stop working if that user is removed, banned, or loses `admin.api.manage`.
+
+### Editing and Revoking Keys
+
+Active keys can be updated without changing their token. You can change their name, expiration, roots, IP allowlist, rate override, maintenance access, and scopes.
+
+Revocation is permanent and takes effect on the next request. For credential rotation, create and deploy a replacement before revoking the old key.
+
+### Limits and Usage
+
+The global API rate limit defaults to 300 requests per minute and can be changed from 1 through 100,000. A per-key override must be at least the global limit.
+
+The API Usage table can be filtered by key, action, IP address, HTTP status group, and date range. It records request IDs, routes, targets, response status, duration, and error details. Usage records are retained for 90 days.
+
+For authentication, scopes, endpoints, and integration examples, see the [API documentation](/cdnManager/api/).
 
 ## Backup and Maintenance
 

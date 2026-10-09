@@ -18,6 +18,7 @@ Ready to get started? Check out our installation guides:
 2. [Installation](/cdnManager/install/getting-started) - Step-by-step server setup
 3. [Configuration](/cdnManager/install/config) - Environment variables and settings
 4. [Features](/cdnManager/features/) - Learn about all the features
+5. [API](/cdnManager/api/) - Automate asset management with the versioned remote API
 
 ## Support & Bug Reports
 

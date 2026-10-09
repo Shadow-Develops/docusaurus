@@ -35,29 +35,42 @@ Environment variables are stored securely in your `.env` file rather than the da
    - This allows for large file uploads
    - Adjust based on your maximum file size needs
 
+### Trusted Reverse Proxies
+
+5. `TRUSTED_PROXY_CIDRS=`
+   - Comma-separated IPv4 addresses or IPv4 CIDR ranges for reverse proxies that are allowed to provide the API client's forwarded address
+   - Example for a proxy on the same server: `TRUSTED_PROXY_CIDRS=127.0.0.1`
+   - Example with multiple trusted networks: `TRUSTED_PROXY_CIDRS=127.0.0.1,10.0.0.0/8`
+   - Leave this empty when CDN Manager receives requests directly
+   - Only add proxies you control; the resolved client address is used by API-key IP allowlists, bans, rate limiting, and usage logs
+
+:::info[Nginx and other proxies]
+Configure this setting when a trusted reverse proxy sits in front of CDN Manager. Ensure the proxy replaces, rather than blindly appends to, client-controlled forwarding headers.
+:::
+
 ### Database
 
-5. `MONGO_URL=`
+6. `MONGO_URL=`
    - The MongoDB connection URL for your database
    - If you do not add any password lock to your database and leave it as local only, you can use: `mongodb://127.0.0.1:27017/cdnmanager`
    - For production, consider using authentication: `mongodb://username:password@127.0.0.1:27017/cdnmanager`
 
 ### Domain Settings
 
-6. `ORIGIN=`
+7. `ORIGIN=`
 
    - Your full domain URL, including the protocol
    - Example: `https://cdn.yourdomain.com`
    - Must include `https://` (or `http://` for development)
 
-7. `PUBLIC_DOMAIN=`
+8. `PUBLIC_DOMAIN=`
    - Just your domain name without the protocol
    - Example: `cdn.yourdomain.com`
    - Used for email links and public CDN routes
 
 ## Owner Permissions
 
-8. `OWNERS=["email@example.com"]`
+9. `OWNERS=["email@example.com"]`
    - Must be a JSON array of email addresses
    - Users who log in with these emails will have full owner permissions
    - Example: `OWNERS=["admin@example.com","owner@example.com"]`
@@ -69,7 +82,7 @@ CDN Manager uses email for authentication. You can use either SendGrid or SMTP.
 
 ### Option 1: SendGrid (Recommended)
 
-9. `SENDGRID_KEY=`
+10. `SENDGRID_KEY=`
    - Head to the [SendGrid API Keys](https://app.sendgrid.com/settings/api_keys) page
    - Create an API key with "Mail Send" permissions
    - Copy and paste the key here
@@ -79,24 +92,24 @@ CDN Manager uses email for authentication. You can use either SendGrid or SMTP.
 
 If you're not using SendGrid, configure your SMTP server:
 
-10. `SMTP_HOST=`
+11. `SMTP_HOST=`
 
     - The host address for your SMTP server
     - Example: `smtp.gmail.com`
     - Set to `null` if using SendGrid
 
-11. `SMTP_PORT=`
+12. `SMTP_PORT=`
 
     - The port for your SMTP server
     - Common ports: `587` (TLS), `465` (SSL), `25` (unsecured)
     - Set to `null` if using SendGrid
 
-12. `SMTP_USER=`
+13. `SMTP_USER=`
 
     - The email address or username for your SMTP server
     - Example: `noreply@yourdomain.com`
 
-13. `SMTP_PASS=`
+14. `SMTP_PASS=`
     - The password or app-specific password for your SMTP account
     - For Gmail, use an [app password](https://support.google.com/accounts/answer/185833)
 
@@ -116,6 +129,7 @@ LICENSE_KEY=your-license-key-here
 PORT=5173
 HOST=localhost
 BODY_SIZE_LIMIT=5368709120
+TRUSTED_PROXY_CIDRS=127.0.0.1
 
 # Database
 MONGO_URL=mongodb://127.0.0.1:27017/cdnmanager

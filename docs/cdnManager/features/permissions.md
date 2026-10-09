@@ -24,6 +24,7 @@ The following individual permissions can be granted:
 - `owner` - Full unrestricted access (bypasses all checks)
 - `admin.settings.manage` - Manage system settings
 - `admin.audit.view` - View audit logs
+- `admin.api.manage` - Manage remote API keys, limits, and usage logs
 
 ### CDN/File Management Permissions
 - `cdn.admin` - CDN administrator access
@@ -146,7 +147,17 @@ Since permissions are fully granular, you can create custom access levels by gra
 **Audit Reviewer:**
 - `admin.audit.view`
 
+**API Manager:**
+- `admin.api.manage`
+- Add only the CDN permissions needed for the scopes and allowed roots this user may grant to API keys
+
 You can mix and match any permissions to create the exact access level you need for each user.
+
+### API Key Delegation
+
+The `admin.api.manage` permission allows a user to open the Remote API admin page, but it does not let them delegate CDN access they do not have. When creating or editing a key, the manager must also hold the permission that corresponds to every selected API scope at every selected allowed root.
+
+API keys remain tied to their creator. A key stops authenticating if its creator is removed, banned, or loses `admin.api.manage`.
 
 ## Permission Levels
 
