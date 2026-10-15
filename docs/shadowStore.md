@@ -30,4 +30,5 @@ _Note: Not all questions may be answered above, as some FAQ are on the [product'
 
 ## Addons
 
-Currently the only addon is the [Internal License System](https://shadowdevs.com/store/shadowstore-licensesystem). This addon allows you to attach a license key to purchases for certain products.
+- [Internal License System](https://shadowdevs.com/store/shadowstore-licensesystem). This addon allows you to attach a license key to purchases for certain products.
+- The [CDN Manager](https://shadowdevs.com/store/cdnmanager) integration lets Shadow Store administrators browse and select media from a CDN Manager installation without copying public URLs between applications.
