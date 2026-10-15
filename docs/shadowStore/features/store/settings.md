@@ -59,6 +59,8 @@ Configure which filters appear in the store:
 
 Enable or disable each filter independently.
 
+When filters are configured in a sidebar, desktop layouts keep the sidebar visible. On smaller screens, search, sorting, and filters move into a collapsible **Search, sort, and filter** control. Product cards and complex grid layouts also stack for touch-sized screens; flip cards open by tapping and include a control to return to the image.
+
 ## Product Tags
 
 Create and manage product tags for organization and filtering.

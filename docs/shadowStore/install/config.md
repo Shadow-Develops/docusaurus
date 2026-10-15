@@ -129,15 +129,26 @@ Now that have the keys and have put them into your `.env`, you are ready to go. 
 25. `LICENSE_SYSTEM_KEY=`
     1.  Use the [license key from our site](https://shadowdevs.com/license) that is given once you purchase the [Internal License System](https://shadowdevs.com/store/shadowstore-licensesystem) or [External License System](https://shadowdevs.com/store/licensesystem).
 
+## CDN Manager
+
+These values connect Shadow Store to a [CDN Manager](https://shadowdevs.com/store/cdnmanager) installation. Both values are server-only secrets and must not be exposed in browser code.
+
+26. `CDN_MANAGER_ORIGIN=`
+    1. The public origin of the CDN Manager installation, including `https://` and without `/api/v1`. Example: `https://cdn.example.com`
+27. `CDN_MANAGER_API_KEY=`
+    1. The complete CDN Manager remote API key. The key requires `assets.read`; read/write mode also requires `assets.upload` and `folders.create`.
+
+The key's allowed root must contain the **Base root** configured in **Admin Panel > Integrations > CDN Manager**. See the [Shadow Store CDN Manager integration guide](/shadowStore/addons/cdn-manager) for setup and the [CDN Manager API overview](/cdnManager/api/overview) for key creation and permissions.
+
 ## Advanced
 
 These settings should remain the same way as seen below / provided in the download, unless you know what you are doing.
 
-26. `BODY_SIZE_LIMIT=5368709120`
+28. `BODY_SIZE_LIMIT=5368709120`
     1.  This increases the base SvelteKit body size limit to 10gbs.
-27. `HOST=localhost`
+29. `HOST=localhost`
     1.  This modifies how SvelteKit interacts with itself.
-28. `PRE_ORDER_CHECK_INTERVAL=60`
+30. `PRE_ORDER_CHECK_INTERVAL=60`
     1.  How often (in minutes) Shadow Store checks for pre-orders that are ready to be released. Defaults to `60` (once per hour). Decrease for more frequent checks; increase to reduce background load.
     1.  The system checks for releases half the allotted time ahead of each check so releases don't sit past their release time to long.
         1. EX: With the default of 60 minutes, the system will check for any releases 30 minutes in the future and release those on that run.

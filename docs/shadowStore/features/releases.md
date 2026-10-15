@@ -24,8 +24,10 @@ Access to releases is automatically controlled based on product ownership:
    - **Title**: Release name (e.g., "Major Update", "Bug Fixes")
    - **Version**: Semantic version number (e.g., "1.0.0", "2.3.1")
    - **Description**: Detailed release notes (supports Markdown)
-   - **Files**: Upload release files (stored in `/static/files`)
-4. Click "Create Release"
+   - **File**: Select the release download file
+   - **Beta Version**: Mark an incomplete or prerelease build
+   - **Notifications**: Choose customer and Discord notification channels
+4. Click "Create Release". The file upload completes before the release record is created; if the upload fails, the release is not created.
 
 ## Managing Releases
 
@@ -53,21 +55,25 @@ Release files are automatically managed by the system:
 - Files are stored in `/static/files` directory
 - File uploads are processed and linked to the release
 - Download access is restricted based on product ownership
-- Multiple files can be attached to a single release
+- Each new release requires an uploaded file
 
 ## Discord Notifications
 
 When a new release is created, Shadow Store can automatically send notifications to your Discord server:
 
 1. Configure Discord integration in **Admin Panel > Integrations > Discord**
-2. Set up release notification settings:
+2. Set up the default release notification settings:
    - **Channel ID**: The Discord channel to post release announcements
    - **Ping Role**: Optional role to ping (role ID, `everyone`, or `here`)
-3. New releases will automatically post formatted announcements with:
+3. When creating a release, enable the Discord announcement and optionally override its channel or ping values. Multiple pings can be comma-separated.
+4. The formatted announcement includes:
    - Product name
    - Release title and version
    - Release notes
-   - Download link
+   - Links to the release and product
+   - A beta warning when the release is marked as beta
+
+Long release notes are shortened in Discord with a link to the full changelog. If the bot is offline, the server or channel is unavailable, or Discord rejects the message, the release is still created. Shadow Store displays the reason the announcement failed and records it in the audit log.
 
 ## Permissions
 

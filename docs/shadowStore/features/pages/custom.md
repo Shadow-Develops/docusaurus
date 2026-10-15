@@ -107,6 +107,8 @@ The pages table displays:
 
 Click **Customize** on any page to open the full section builder: a drag-and-drop interface for building rich page layouts with multiple content sections.
 
+When [CDN Manager](/shadowStore/addons/cdn-manager) is configured, supported image and direct-video fields include **Choose from CDN Manager**. Gallery and carousel fields support selecting multiple assets. With the **CDN Manager only** policy, new or changed direct media must come from the picker, while unchanged legacy URLs remain valid.
+
 #### Section Builder Interface
 
 - **Left panel**: All current sections, each collapsible and reorderable via drag-and-drop
@@ -150,14 +152,14 @@ A full-width banner section at the top of a page.
 
 **Carousel-Specific Fields:**
 
-| Field                          | Description                                                            |
-| ------------------------------ | ---------------------------------------------------------------------- |
-| Content Position               | Left, Right, or Center                                                 |
-| Content Background             | Overlay behind the text content                                        |
-| Auto Play                      | Automatically advance slides                                           |
-| Auto Play Interval             | Time between slides in milliseconds (default: 5000)                    |
-| Default Title/Description/CTAs | Fallback content used when a slide has no override                     |
-| Slides                         | Each slide has: Order, Image URL, Title, Description, CTA Button 1 & 2 |
+| Field                          | Description                                                                         |
+| ------------------------------ | ----------------------------------------------------------------------------------- |
+| Content Position               | Left, Right, or Center                                                              |
+| Content Background             | Overlay behind the text content                                                     |
+| Auto Play                      | Automatically advance slides                                                        |
+| Auto Play Interval             | Time between slides in milliseconds (default: 5000)                                 |
+| Default Title/Description/CTAs | Fallback content used when a slide has no override                                  |
+| Slides                         | Each slide has: Order, Image URL or CDN asset, Title, Description, CTA Button 1 & 2 |
 
 ---
 
@@ -223,7 +225,7 @@ A call-to-action strip with a title, description, and button.
 | Description     | Short supporting text                                |
 | Button Link     | URL the button points to                             |
 | Button Text     | Label on the button                                  |
-| Background      | Use site background, custom color, or custom image   |
+| Background      | Use site background, custom color, URL, or CDN image |
 | Background Blur | None, Extra Small, Small, Medium, Large, Extra Large |
 
 ---
@@ -284,13 +286,13 @@ An email signup form.
 
 A logo wall displaying brand or partner logos.
 
-| Field     | Description                                         |
-| --------- | --------------------------------------------------- |
-| Title     | Section heading                                     |
-| Columns   | 3, 4, 5, or 6 columns                               |
-| Show Text | Show company name even when a logo image is present |
-| Scroll    | Auto-scroll logos when there are more than 4        |
-| Logos     | Each item has: Name, Image URL, Link (optional)     |
+| Field     | Description                                                  |
+| --------- | ------------------------------------------------------------ |
+| Title     | Section heading                                              |
+| Columns   | 3, 4, 5, or 6 columns                                        |
+| Show Text | Show company name even when a logo image is present          |
+| Scroll    | Auto-scroll logos when there are more than 4                 |
+| Logos     | Each item has: Name, Image URL or CDN asset, Link (optional) |
 
 ---
 
@@ -314,7 +316,7 @@ An image gallery with lightbox support.
 | Show Descriptions | Show description text on hover                                                         |
 | Images as Buttons | If a link is set, clicking opens the link instead of the lightbox (manual source only) |
 
-**Manual image fields:** URL, Order, Alt text, Title, Description, Link (when Images as Buttons is on)
+**Manual image fields:** URL or CDN asset, Order, Alt text, Title, Description, Link (when Images as Buttons is on). **Choose from CDN Manager** can add multiple selected images to the list.
 
 ---
 
@@ -333,9 +335,9 @@ A flexible text section with optional media alongside the content.
 
 **Media options:**
 
-- **Single Image**: One image URL
-- **Image Carousel**: List of image URLs that cycle
-- **Video**: YouTube URL or direct file URL (select source type)
+- **Single Image**: One image URL or CDN Manager asset
+- **Image Carousel**: List of image URLs that cycle; the CDN picker can add several at once
+- **Video**: YouTube URL, direct file URL, or CDN Manager video (select source type)
 
 ---
 
@@ -343,16 +345,16 @@ A flexible text section with optional media alongside the content.
 
 A side-by-side video player and descriptive text.
 
-| Field           | Description                                  |
-| --------------- | -------------------------------------------- |
-| Label           | Small text displayed above the title         |
-| Title           | Section heading                              |
-| Description     | Markdown body text                           |
-| Video URL       | YouTube link or direct MP4 URL               |
-| Video Position  | Left (text on right) or Right (text on left) |
-| Show CTA Button | Toggle a call-to-action button               |
-| Button Text     | Button label (when shown)                    |
-| Button URL      | Button link (when shown)                     |
+| Field           | Description                                        |
+| --------------- | -------------------------------------------------- |
+| Label           | Small text displayed above the title               |
+| Title           | Section heading                                    |
+| Description     | Markdown body text                                 |
+| Video URL       | YouTube link, direct MP4 URL, or CDN Manager video |
+| Video Position  | Left (text on right) or Right (text on left)       |
+| Show CTA Button | Toggle a call-to-action button                     |
+| Button Text     | Button label (when shown)                          |
+| Button URL      | Button link (when shown)                           |
 
 ---
 

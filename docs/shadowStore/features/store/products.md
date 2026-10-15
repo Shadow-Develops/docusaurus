@@ -36,6 +36,8 @@ Navigate to **Admin Panel > Products** to access product management.
 
 ### Media Tab
 
+When [CDN Manager](/shadowStore/addons/cdn-manager) is configured, supported media fields include **Choose from CDN Manager**. You can continue entering URLs when the integration policy is **Allow any media URL**. Under **CDN Manager only**, new or changed direct media must be selected from the picker; unchanged legacy URLs remain valid.
+
 **Product Image** (Required):
 
 - Main product thumbnail
@@ -51,12 +53,12 @@ Navigate to **Admin Panel > Products** to access product management.
 **Gallery** (Optional):
 
 - Multiple product images
-- Comma-separated URLs
+- Add URLs individually or use **Add from CDN** to select multiple images at once
 - Displayed in product page gallery
 
 **Video** (Optional):
 
-- YouTube or direct video URL
+- YouTube or direct video URL, or a video selected from CDN Manager
 - Embedded on product page
 
 ### Type & Pricing Tab
@@ -276,6 +278,8 @@ Choose how the gallery and info panel are arranged:
 | **Layout 6: Mosaic**        | First image large on the left, remaining images in a grid on the right; info flows below |
 
 Each layout exposes its own set of options:
+
+All layouts adapt to small screens. Magazine cards move into the document flow, Minimal thumbnail strips become horizontally scrollable, Mosaic content stacks as needed, and gallery modals use the available mobile viewport.
 
 **Classic Split options:**
 

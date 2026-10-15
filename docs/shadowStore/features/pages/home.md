@@ -14,6 +14,8 @@ Navigate to **Admin Panel > Pages > Home** to access the homepage customization 
 
 ## Section Types
 
+When [CDN Manager](/shadowStore/addons/cdn-manager) is configured, image and direct-video fields in the section builder include **Choose from CDN Manager**. Gallery and carousel lists can add multiple selected assets at once. With the **CDN Manager only** policy, new or changed direct media must come from the picker, while unchanged legacy URLs remain valid.
+
 Shadow Store provides 16 built-in section types:
 
 ### 1. Hero Section
@@ -36,6 +38,7 @@ The main banner at the top of your homepage.
 - Search bar toggle
 - Category display toggle
 - Background image/video URL
+- CDN Manager picker for background images and direct video files
 - Content positioning (centered, left, right)
 - Content background overlay toggle
 - Auto-play settings for carousel
@@ -44,6 +47,7 @@ The main banner at the top of your homepage.
 **Carousel Specific:**
 
 - Multiple slides with custom images
+- Multi-select CDN asset picking for slide images
 - Per-slide title and description
 - Per-slide CTA buttons
 - Default fallback content
@@ -115,6 +119,7 @@ Call-to-action banner for promotions or announcements.
   - Default (site background)
   - Custom color picker
   - Custom background image
+- CDN Manager picker for the background image
 - Background blur amount (none to extra large)
 
 ### 6. Testimonials
@@ -181,7 +186,7 @@ Display partner logos or trust badges.
 - Auto-scroll toggle (scrolls left to right when there are more than 4 logos)
 - Multiple logos with:
   - Company name
-  - Logo image URL
+  - Logo image URL or CDN Manager asset
   - Optional link
 
 ### 11. Gallery
@@ -206,7 +211,7 @@ Image gallery with lightbox.
 - Images as clickable buttons option (manual source only: if a link is set, opens link instead of lightbox)
 - Gallery groups filter (when using Gallery Page source)
 - Multiple images with (manual source):
-  - Image URL
+  - Image URL or CDN Manager asset
   - Alt text and title
   - Description
   - Order number
@@ -225,8 +230,8 @@ Rich text content block with optional media.
 - Image / Video mode:
   - **None**: text only
   - **Single Image**: one image displayed beside the text
-  - **Image Carousel**: multiple images that cycle beside the text
-  - **Video**: YouTube URL or direct file URL beside the text
+  - **Image Carousel**: multiple images that cycle beside the text; the CDN picker can add several at once
+  - **Video**: YouTube URL, direct file URL, or CDN Manager video beside the text
 - Media position (left or right of text, when media is set)
 
 ### 13. Video Showcase
@@ -238,7 +243,7 @@ Featured video with description.
 - Label text (above title)
 - Main title
 - Description (supports markdown)
-- Video URL (YouTube or MP4)
+- Video URL (YouTube, MP4, or CDN Manager video)
 - Video position (left or right)
 - Optional CTA button with text and URL
 

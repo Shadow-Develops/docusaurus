@@ -34,8 +34,8 @@ Promotional codes that customers can enter at checkout to receive discounts.
 3. Configure the discount:
    - **Code**: Unique code customers will enter (e.g., "SAVE20")
    - **Type**: Percentage (%) or Fixed Amount ($)
-   - **Value**: Discount amount
-   - **Expiration**: Optional expiration date
+   - **Value**: Percentage from 0 through 100, or a non-negative fixed amount
+   - **Expiration**: Optional date and time, interpreted in your browser's local time
    - **Max Uses**: Total usage limit (optional)
    - **Per-User Limit**: Uses per customer (optional)
 4. Set restrictions (optional):
@@ -73,8 +73,8 @@ Site-wide or targeted sales that automatically apply to products.
 2. Click "Create Sale"
 3. Configure the sale:
    - **Name**: Internal sale name
-   - **Discount**: Percentage off (e.g., 25%)
-   - **Expiration**: Optional end date
+   - **Discount**: Percentage from 0 through 100 (e.g., 25%)
+   - **Expiration**: Optional end date and time, interpreted in your browser's local time
 4. Set scope:
    - **All Products**: Apply to entire store
    - **Specific Products**: Select products
@@ -155,6 +155,8 @@ Discount codes will fail if:
 - User doesn't have required role
 - Cart contains restricted products
 - User is excluded from the code
+- The amount is negative
+- A percentage is greater than 100
 
 ## Discord Integration
 
@@ -179,6 +181,10 @@ Discord notifications include:
 - Expiration date (if set)
 - Applicable products/categories
 - How to use the discount
+
+Targeted sale announcements show readable product and category names instead of stored identifiers. Ping settings accept a comma-separated combination of role IDs, `everyone`, and `here`.
+
+Creating the discount or sale and sending its Discord announcement are handled separately. If Discord is offline, misconfigured, or rejects an announcement, the promotion is still saved and the admin panel reports the announcement failure. Correct the Discord settings and announce the promotion manually if needed.
 
 ## Permissions
 
