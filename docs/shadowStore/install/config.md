@@ -67,7 +67,7 @@ This required you to have a [PayPal Business Account](https://www.paypal.com/bus
 <details>
   <summary>Instructions for getting PayPal API Keys</summary>
 
-1. Head to the [PayPal Developers Panel](https://developer.paypal.com/dashboard/), select live mode, and create a new app.
+1. Head to the [PayPal Developer Dashboard](https://developer.paypal.com/dashboard/), select the environment you are configuring, and create or open your REST app.
    ![paypal-createApp](/img/docs/paypal-createApp.png)
 2. Put in your app name and hit create app.
 3. Grab the `Client ID` & `Secret 1` and paste them into the `.env` in their respective place.
@@ -75,7 +75,35 @@ This required you to have a [PayPal Business Account](https://www.paypal.com/bus
 
 > **Make sure to NOT share your PayPal Client ID or Secret with anyone! This would give them FULL access to your API, which could let them transfer funds and more.**
 
-Now that have the keys and have put them into your `.env`, you are ready to go. Once you turn on your site and login to the admin panel, head to the settings page and hit the "Payment Details" button to enable PayPal or review/edit the keys (you can review/edit them via the `.env` file at anytime as well). _Note that editing the keys will require a site restart to go into effect._
+After saving the credentials in `.env`, progress to setting up your `PAYPAL_WEBHOOK_ID` before enabling PayPal as a payment processor.
+
+</details>
+
+16. `PAYPAL_WEBHOOK_ID=`
+    1. The ID assigned to the PayPal webhook registered for your Shadow Store payment endpoint. This is not your Client ID and is not an individual webhook event ID.
+
+<details>
+  <summary>Instructions for setting up the PayPal Webhook</summary>
+
+1. In the application you just created earlier, you will **scroll to the bottom of the app's page to access the webhook** settings for that app. Then hit **Add Webhook**.
+   ![paypal-addWebhook](/img/docs/paypal-addWebhook.png)
+2. Input your **Webhook URL** which should be: `https://yourdomain.com/api/webhooks/paypal`, where `yourdomain.com` is your `ORIGIN`.
+   ![paypal-webhookURL](/img/docs/paypal-webhookURL.png)
+3. Subscribe the webhook to exactly these events:
+   - `CHECKOUT.ORDER.APPROVED` = Checkout > **Checkout order approved**
+   - `CHECKOUT.ORDER.VOIDED` = Checkout > **Checkout order voided**
+   - `PAYMENT.CAPTURE.COMPLETED` = Payments & Payouts > **Payment capture declined**
+   - `PAYMENT.CAPTURE.DENIED` = Payments & Payouts > **Payment capture denied**
+4. Copy the webhook's **Webhook ID** into `PAYPAL_WEBHOOK_ID`.
+   ![paypal-webhookID](/img/docs/paypal-webhookID.png)
+
+For additional provider details, see PayPal's official [webhook integration guide](https://developer.paypal.com/api/rest/webhooks/rest/).
+
+:::warning[Environment must match]
+Use webhook and API credentials from the same PayPal environment. Local development uses PayPal Sandbox, while a production deployment uses PayPal Live. The production webhook URL must be publicly reachable over HTTPS.
+:::
+
+After saving `PAYPAL_WEBHOOK_ID` in `.env`, restart Shadow Store. Then log in to the admin panel, open **Settings > Payment Details**, and enable PayPal. Any environment-variable change requires a restart.
 
 </details>
 
@@ -83,59 +111,91 @@ Now that have the keys and have put them into your `.env`, you are ready to go. 
 
 You will need a [Stripe](https://stripe.com/) account if you wish to use this processor.
 
-16. `STRIPE_PUBLIC=`
+17. `STRIPE_PUBLIC=`
     1. Stripe API Publishable key
-17. `STRIPE_SECRET=`
+18. `STRIPE_SECRET=`
     1. Stripe API Secret Key
 
 <details>
   <summary>Instructions for getting Stripe API Keys</summary>
 
-1. Head to the "Developers" tab in the bottom right then the "API Keys" tab.
-2. Click create secret key and give it a name.
-   1. You can only view your secret key once, so ensure you save it.
-3. You will also need to grab the `Publishable Key`, so ensure you create it if it isn't already created.
-4. Once you have them both, head to your `.env` file and paste the keys into your respective slots.
-   ![stripe](/img/docs/stripe.png)
+1. Open the [Stripe Dashboard](https://dashboard.stripe.com/), hit **Developer** in the bottom left, then hit **API Keys**.
+   ![stripe-1](/img/docs/stripe-1.png)
+2. Click on **create a secret key**.
+   ![stripe-2](/img/docs/stripe-2.png)
+3. Click **Powering an integration you built** then **Create secret key**.
+   ![stripe-3](/img/docs/stripe-3.png)
+4. You will then input the app name (only matters for you) then will give you the secret key.
+   Make sure to copy it before closing the modal, page, reloading, or anything as it will only display once.
+5. You will also need to grab the `Publishable Key`, so ensure you create it if it isn't already created.
+6. Once you have them both, head to your `.env` file and paste the keys into your respective slots.
 
 > **Make sure to NOT share your Stripe Publishable or Secret key with anyone! This would give them FULL access to your API, which could let them transfer funds and more.**
 
-Now that have the keys and have put them into your `.env`, you are ready to go. Once you turn on your site and login to the admin panel, head to the settings page and hit the "Payment Details" button to enable Stripe or review/edit the keys (you can review/edit them via the `.env` file at anytime as well). _Note that editing the keys will require a site restart to go into effect._
+After saving the API keys in `.env`, progress to setting up your `STRIPE_WEBHOOK_SECRET` before enabling Stripe as a payment processor.
+
+</details>
+
+19. `STRIPE_WEBHOOK_SECRET=`
+    1. The endpoint signing secret beginning with `whsec_`. This is not your Stripe API secret key.
+
+<details>
+  <summary>Instructions for setting up the Stripe Webhook</summary>
+
+1. Open the [Stripe Dashboard](https://dashboard.stripe.com/), hit **Developer** in the bottom left, then hit **Webhooks**.
+   ![stripe-webhook-1](/img/docs/stripe-webhook-1.png)
+2. Click **Add destination**
+   ![stripe-webhook-2](/img/docs/stripe-webhook-2.png)
+3. Select **Your account** for event destination scope, then **Snapshot** and **2020-08-27** for payload style, search for **checkout** in events and select `checkout.session.completed`, `checkout.session.expired`, `checkout.session.async_payment_succeeded`, `checkout.session.async_payment_failed`.
+   ![stripe-webhook-3](/img/docs/stripe-webhook-3.png)
+4. Select **Webhook endpoint**
+   ![stripe-webhook-4](/img/docs/stripe-webhook-4.png)
+5. Type in the name you want (all matters to you) and input your **Endpoint URL** which should be: `https://yourdomain.com/api/webhooks/stripe`, where `yourdomain.com` is your `ORIGIN`.
+   ![stripe-webhook-5](/img/docs/stripe-webhook-5.png)
+6. You will be returned to webhooks page, **hit the 3 dots on the right for your webhook and hit edit**.
+7. Reveal the endpoint signing secret and copy the complete `whsec_` value into `STRIPE_WEBHOOK_SECRET`.
+   ![stripe-webhook-6](/img/docs/stripe-webhook-6.png)
+
+:::warning[Mode must match]
+Stripe creates different webhook signing secrets for test and live destinations. Use the signing secret from the destination that matches the API keys configured in Shadow Store. Live webhook endpoints must be publicly reachable over HTTPS.
+:::
+
+After saving the API keys in `.env`, restart Shadow Store. Then log in to the admin panel, open **Settings > Payment Details**, and enable Stripe. Any environment-variable change requires a restart.
 
 </details>
 
 ## Emails
 
-18. `SENDGRID_KEY=`
+20. `SENDGRID_KEY=`
     1. Head to the [SendGrid API Keys](https://app.sendgrid.com/settings/api_keys) page, create an API key, and then copy the key.
     2. If using SendGrid, then you don't need to put anything into the SMTP options.
-19. `SMTP_HOST=`
+21. `SMTP_HOST=`
     1. The host address for your SMTP server.
     2. Set to `null` if using Gmail SMTP.
-20. `SMTP_PORT=`
+22. `SMTP_PORT=`
     1. The port for your SMTP server.
     2. Set to `null` if using Gmail SMTP.
-21. `SMTP_USER=`
+23. `SMTP_USER=`
     1. The email user for your SMTP server. Ex: `support@example.com`
-22. `SMTP_PASS=`
+24. `SMTP_PASS=`
     1. The password or key for your SMTP server.
-23. `PUBLIC_TURNSTILE_SITE_KEY=`
+25. `PUBLIC_TURNSTILE_SITE_KEY=`
     1. Your Cloudflare Turnstile **Site Key** (public). Required if you want to use Turnstile CAPTCHA on any form. Get it from the [Cloudflare Turnstile dashboard](https://dash.cloudflare.com/?to=/:account/turnstile).
-24. `TURNSTILE_SECRET_KEY=`
+26. `TURNSTILE_SECRET_KEY=`
     1. Your Cloudflare Turnstile **Secret Key**. Required server-side to verify CAPTCHA responses. Found alongside the site key in the Turnstile dashboard.
 
 ## License System
 
-25. `LICENSE_SYSTEM_KEY=`
+27. `LICENSE_SYSTEM_KEY=`
     1.  Use the [license key from our site](https://shadowdevs.com/license) that is given once you purchase the [Internal License System](https://shadowdevs.com/store/shadowstore-licensesystem) or [External License System](https://shadowdevs.com/store/licensesystem).
 
 ## CDN Manager
 
 These values connect Shadow Store to a [CDN Manager](https://shadowdevs.com/store/cdnmanager) installation. Both values are server-only secrets and must not be exposed in browser code.
 
-26. `CDN_MANAGER_ORIGIN=`
+28. `CDN_MANAGER_ORIGIN=`
     1. The public origin of the CDN Manager installation, including `https://` and without `/api/v1`. Example: `https://cdn.example.com`
-27. `CDN_MANAGER_API_KEY=`
+29. `CDN_MANAGER_API_KEY=`
     1. The complete CDN Manager remote API key. The key requires `assets.read`; read/write mode also requires `assets.upload` and `folders.create`.
 
 The key's allowed root must contain the **Base root** configured in **Admin Panel > Integrations > CDN Manager**. See the [Shadow Store CDN Manager integration guide](/shadowStore/addons/cdn-manager) for setup and the [CDN Manager API overview](/cdnManager/api/overview) for key creation and permissions.
@@ -144,11 +204,11 @@ The key's allowed root must contain the **Base root** configured in **Admin Pane
 
 These settings should remain the same way as seen below / provided in the download, unless you know what you are doing.
 
-28. `BODY_SIZE_LIMIT=5368709120`
+30. `BODY_SIZE_LIMIT=5368709120`
     1.  This increases the base SvelteKit body size limit to 10gbs.
-29. `HOST=localhost`
+31. `HOST=localhost`
     1.  This modifies how SvelteKit interacts with itself.
-30. `PRE_ORDER_CHECK_INTERVAL=60`
+32. `PRE_ORDER_CHECK_INTERVAL=60`
     1.  How often (in minutes) Shadow Store checks for pre-orders that are ready to be released. Defaults to `60` (once per hour). Decrease for more frequent checks; increase to reduce background load.
     1.  The system checks for releases half the allotted time ahead of each check so releases don't sit past their release time to long.
         1. EX: With the default of 60 minutes, the system will check for any releases 30 minutes in the future and release those on that run.

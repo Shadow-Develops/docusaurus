@@ -8,6 +8,10 @@ pagination_prev: null
 
 Webhooks let you receive real-time HTTP POST notifications when events happen in your Shadow Store. Use them to integrate with external services, trigger automations, or build custom dashboards.
 
+:::info[Outbound notifications]
+This page documents **outbound Shadow Store webhooks** that you create in the admin panel. PayPal and Stripe send separate **inbound payment webhooks** to Shadow Store. Configure those provider endpoints in [Configuration](/shadowStore/install/config#payment-processors).
+:::
+
 ## Accessing Webhooks
 
 Navigate to **Admin Panel > Webhooks**. Requires the `MANAGE_WEBHOOKS` or `owner` permission.
@@ -50,15 +54,34 @@ All webhook payloads are JSON with a consistent envelope:
 
 ```json
 {
+  "id": "8b1c9937-75aa-41bf-ada3-e97223e3914c",
   "event": "CHECKOUT",
   "timestamp": "2024-11-15T14:32:00.000Z",
   "data": { ... }
 }
 ```
 
-The `data` object contains event-specific information relevant to the triggered event.
+The fields are:
 
-Test deliveries include an additional `"test": true` field.
+- `id`: unique delivery event ID used to identify retries of the same event
+- `event`: one of the subscribed event names
+- `timestamp`: time this delivery body was created
+- `data`: event-specific information
+
+Test deliveries include an additional `"test": true` field and do not include a live delivery ID.
+
+## Request Headers
+
+Live deliveries include these headers:
+
+| Header                    | Description                                                        |
+| ------------------------- | ------------------------------------------------------------------ |
+| `Content-Type`            | Always `application/json`                                          |
+| `X-ShadowStore-Event`     | Event name, such as `CHECKOUT`                                     |
+| `X-ShadowStore-Delivery`  | Unique delivery event ID; remains the same when a delivery retries |
+| `X-ShadowStore-Signature` | Present when a signing secret is configured                        |
+
+Test deliveries include `Content-Type`, `X-ShadowStore-Event`, and the optional signature header, but not `X-ShadowStore-Delivery`.
 
 ## Signature Verification
 
@@ -92,7 +115,10 @@ Use the **Test** button on any webhook to send a sample payload with `"test": tr
 
 ## Delivery Behavior
 
-- Webhooks are **fire-and-forget**: Shadow Store sends the request and does not retry on failure
+- `CHECKOUT`, `INVOICE_PAID`, and related `STORE_CREDIT_USED` order deliveries are tracked and retried by the payment recovery job when a destination fails
+- A retry keeps the same delivery ID, and destinations that already accepted that event are not called again
+- Other webhook events are **fire-and-forget** and are not retried on failure
+- Your endpoint should be idempotent and use `X-ShadowStore-Delivery` or the payload `id` to recognize repeat attempts
 - The **last HTTP status code** received is recorded per webhook (visible in the webhook list)
 - Each webhook has an **Active / Inactive** toggle. Inactive webhooks receive no deliveries
 

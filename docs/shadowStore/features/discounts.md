@@ -135,14 +135,17 @@ Discounts are applied in the following order:
 
 1. Customer adds items to cart
 2. Sales automatically applied to eligible items
-3. Customer enters discount code (optional)
-4. System validates code:
+3. Customer enters a discount code or an existing gift-card code (optional)
+4. Shadow Store validates the code on the server for the signed-in customer and current cart:
    - Checks expiration
    - Verifies usage limits
    - Confirms restrictions (products, categories, roles, users)
    - Validates per-user limit
-5. Discount applied to total
-6. Final price calculated
+   - Confirms the gift card belongs to the customer and has an available balance
+5. The discount is recalculated and revalidated when cart quantities or customer-selected prices change
+6. Shadow Store performs a final server-side validation before reserving the discount or gift-card value and opening the payment provider
+
+See [Cart & Checkout](/shadowStore/features/store/cart-checkout) for the complete pricing, reservation, and payment-confirmation flow.
 
 ### Validation Rules
 
