@@ -25,13 +25,14 @@ A quote can be created without assigning it to a specific customer. This is usef
 **How it works:**
 
 1. When creating a quote, leave the **Customer** field blank
-2. A unique claim token is generated and embedded in the quote link
-3. Share the quote link (`/quote/[id]`) with the client
-4. When the client opens the link and signs in (or creates an account), the quote is automatically claimed and assigned to their account
-5. Once claimed, the token is consumed and the client can interact with the quote normally (accept, suggest changes)
+2. In **Admin Panel > Quotes**, click **Access code** next to the claimable quote
+3. Share the quote link (`/quote/[id]`) and the access code with the client separately
+4. The client enters the access code before any quote details are shown
+5. The client signs in or creates an account, then clicks **Claim Quote** to assign it to that account
+6. Once claimed, the access code is consumed and the client can interact with the quote normally (accept or suggest changes)
 
 :::info
-Once claimed, the quote can only be accessed by the assigned user.
+Treat the access code as sensitive information. Once claimed, the quote can only be accessed by the assigned user.
 :::
 
 ## Creating a Quote
@@ -83,7 +84,7 @@ When a customer suggests changes, the quote moves to `revision_requested`. Admin
 
 ## Customer Experience
 
-Customers view their quote at `/quote/[id]`. Only the quote owner (or staff with `manageQuotes`) can access the page.
+Customers view their quote at `/quote/[id]`. An unassigned quote requires its access code. After the quote is claimed, only the quote owner (or staff with `manageQuotes`) can access the page.
 
 The quote page displays:
 

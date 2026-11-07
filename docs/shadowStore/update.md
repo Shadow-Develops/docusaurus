@@ -43,6 +43,12 @@ graph LR
 
    Store these backups in a safe location outside the installation directory
 
+2. Make sure your `.env` contains the required `DATABASE_ENCRYPTION_KEY`.
+
+   :::warning[Do Not Change]
+   Keep this base64 value in a secure backup. **Do not replace the key during update**; changing or losing it prevents Shadow Store from decrypting those values. See [Configuration](/shadowStore/install/config#basics) for details.
+   :::
+
 ### Update Process
 
 :::info[Note]

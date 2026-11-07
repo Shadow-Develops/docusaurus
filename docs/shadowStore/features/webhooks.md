@@ -19,12 +19,14 @@ Navigate to **Admin Panel > Webhooks**. Requires the `MANAGE_WEBHOOKS` or `owner
 ## Creating a Webhook
 
 1. Click **Create Webhook**
-2. Enter the **URL** to receive the webhook POST
+2. Enter the **HTTPS URL** to receive the webhook POST
 3. Optionally enter a **Signing Secret** for HMAC signature verification
 4. Select the **events** to subscribe to (see below)
 5. Click **Create**
 
 Each webhook can subscribe to any combination of events. Use the **Select All** / **Clear** buttons per category to quickly configure subscriptions.
+
+Webhook URLs must use HTTPS and cannot contain an embedded username or password. Shadow Store also rejects `localhost`, loopback, link-local, multicast, reserved, and other blocked system destinations. If a hostname resolves to a blocked address, delivery is rejected as well.
 
 ## Webhook Events
 
@@ -109,6 +111,8 @@ function verifyWebhook(rawBody, signatureHeader, secret) {
 
 Always verify the signature before processing webhook data.
 
+Signing secrets are encrypted before they are stored and are not returned to the admin page. When editing a webhook, leave the secret field blank to keep the current secret or enter a new value to replace it.
+
 ## Testing Webhooks
 
 Use the **Test** button on any webhook to send a sample payload with `"test": true`. This lets you verify your endpoint is reachable and handling payloads correctly without triggering real events.
@@ -119,12 +123,13 @@ Use the **Test** button on any webhook to send a sample payload with `"test": tr
 - A retry keeps the same delivery ID, and destinations that already accepted that event are not called again
 - Other webhook events are **fire-and-forget** and are not retried on failure
 - Your endpoint should be idempotent and use `X-ShadowStore-Delivery` or the payload `id` to recognize repeat attempts
+- Your endpoint must return a `2xx` response within 10 seconds; other responses and timeouts are treated as delivery failures
 - The **last HTTP status code** received is recorded per webhook (visible in the webhook list)
 - Each webhook has an **Active / Inactive** toggle. Inactive webhooks receive no deliveries
 
 ## Managing Webhooks
 
-- **Edit**: update the URL, signing secret, or subscribed events
+- **Edit**: update the URL, replace the signing secret, or change subscribed events; leave the secret blank to keep it unchanged
 - **Toggle**: activate or deactivate without deleting
 - **Delete**: permanently remove the webhook
 

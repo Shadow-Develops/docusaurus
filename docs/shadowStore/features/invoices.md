@@ -48,13 +48,14 @@ An invoice can be created without assigning it to a specific customer. This is u
 **How it works:**
 
 1. When creating an invoice, leave the **Customer** field blank
-2. A unique claim token is generated and embedded in the invoice link
-3. Share the invoice link (`/invoice/[id]`) with the client
-4. When the client opens the link and signs in (or creates an account), the invoice is automatically claimed and assigned to their account
-5. Once claimed, the token is consumed and the invoice behaves like any other assigned invoice
+2. In **Admin Panel > Invoices**, click **Access code** next to the claimable invoice
+3. Share the invoice link (`/invoice/[id]`) and the access code with the client separately
+4. The client enters the access code before any invoice details are shown
+5. The client signs in or creates an account, then clicks **Claim Invoice** to assign it to that account
+6. Once claimed, the access code is consumed and the invoice behaves like any other assigned invoice
 
 :::info
-Claimed invoices cannot be claimed a second time. Once assigned to a user, the invoice link requires that user to be logged in.
+Treat the access code as sensitive information. Claimed invoices cannot be claimed a second time. Once assigned to a user, the invoice link requires that user to be logged in.
 :::
 
 ### Invoice Components

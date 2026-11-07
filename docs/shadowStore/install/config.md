@@ -15,21 +15,30 @@ Since we use keys for payment processors, login methods, and similar we want to 
    1. By default its `5173`, but you can change it to any 4 character number.
 3. `MONGO_URL=`
    1. The MongoDB URL for your database. If you do not add any password lock to your database and leave it as local only, you can use something like this: `mongodb://127.0.0.1:27017/shadowstore`
-4. `ORIGIN=`
+4. `DATABASE_ENCRYPTION_KEY=`
+   1. A base64-encoded 32-byte key used to encrypt sensitive values stored in MongoDB, including webhook signing secrets. Generate one with:
+
+      ```bash
+      node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
+      ```
+
+   2. **Generate this key once, store it securely, and keep the same value across restarts and updates**. If the key is lost or changed after data has been encrypted, Shadow Store cannot recover those protected values.
+
+5. `ORIGIN=`
    1. Your full domain, include the `https://`. Ex: `https://shadowdevs.com`
-5. `PUBLIC_DOMAIN=`
+6. `PUBLIC_DOMAIN=`
    1. Just your domain name for the website. Ex: `shadowdevs.com`
 
 ## Discord
 
-6. `DISCORD_CLIENT_ID=`
+7. `DISCORD_CLIENT_ID=`
    1. You can find this on the [Discord Developer Application](https://discord.com/developers/applications) > General Information. It would be the `Application ID`.
-7. `DISCORD_CLIENT_SECRET=`
+8. `DISCORD_CLIENT_SECRET=`
    1. You can find this on the [Discord Developer Application](https://discord.com/developers/applications) > OAuth2. It will be the `Client Secret`.
-8. `BOT_TOKEN=`
+9. `BOT_TOKEN=`
    1. You can find this on the [Discord Developer Application](https://discord.com/developers/applications) > Bot. It is the `Token`.
-9. `OWNERS=[""]`
-   1. This must always be an array (`[""]`), and should contain the email for people you want to login with owner permissions.
+10. `OWNERS=[""]`
+11. This must always be an array (`[""]`), and should contain the email for people you want to login with owner permissions.
 
 ## OAuth Login Methods
 
@@ -37,18 +46,18 @@ These are only required if you intend to enable the respective login method in *
 
 ### GitHub
 
-10. `GITHUB_CLIENT_ID=`
+11. `GITHUB_CLIENT_ID=`
     1. From your GitHub OAuth App > General > Client ID.
-11. `GITHUB_CLIENT_SECRET=`
+12. `GITHUB_CLIENT_SECRET=`
     1. From your GitHub OAuth App > Generate a new client secret.
 
 > You can view the [GitHub Integration page](/shadowStore/integrations/login/github) to see how to setup this login method.
 
 ### Google
 
-12. `GOOGLE_CLIENT_ID=`
+13. `GOOGLE_CLIENT_ID=`
     1. From your Google Cloud Console OAuth 2.0 Client > Client ID.
-13. `GOOGLE_CLIENT_SECRET=`
+14. `GOOGLE_CLIENT_SECRET=`
     1. From your Google Cloud Console OAuth 2.0 Client > Client Secret.
 
 > You can view the [Google Integration page](/shadowStore/integrations/login/google) to see how to setup this login method.
@@ -59,9 +68,9 @@ These are only required if you intend to enable the respective login method in *
 
 This required you to have a [PayPal Business Account](https://www.paypal.com/business/getting-started) to be able to use their API in the required ways by Shadow Store.
 
-14. `PAYPAL_PUBLIC=`
+15. `PAYPAL_PUBLIC=`
     1. PayPal API Client ID
-15. `PAYPAL_SECRET=`
+16. `PAYPAL_SECRET=`
     1. PayPal API Secret Key
 
 <details>
@@ -79,7 +88,7 @@ After saving the credentials in `.env`, progress to setting up your `PAYPAL_WEBH
 
 </details>
 
-16. `PAYPAL_WEBHOOK_ID=`
+17. `PAYPAL_WEBHOOK_ID=`
     1. The ID assigned to the PayPal webhook registered for your Shadow Store payment endpoint. This is not your Client ID and is not an individual webhook event ID.
 
 <details>
@@ -92,7 +101,7 @@ After saving the credentials in `.env`, progress to setting up your `PAYPAL_WEBH
 3. Subscribe the webhook to exactly these events:
    - `CHECKOUT.ORDER.APPROVED` = Checkout > **Checkout order approved**
    - `CHECKOUT.ORDER.VOIDED` = Checkout > **Checkout order voided**
-   - `PAYMENT.CAPTURE.COMPLETED` = Payments & Payouts > **Payment capture declined**
+   - `PAYMENT.CAPTURE.COMPLETED` = Payments & Payouts > **Payment capture completed**
    - `PAYMENT.CAPTURE.DENIED` = Payments & Payouts > **Payment capture denied**
 4. Copy the webhook's **Webhook ID** into `PAYPAL_WEBHOOK_ID`.
    ![paypal-webhookID](/img/docs/paypal-webhookID.png)
@@ -111,9 +120,9 @@ After saving `PAYPAL_WEBHOOK_ID` in `.env`, restart Shadow Store. Then log in to
 
 You will need a [Stripe](https://stripe.com/) account if you wish to use this processor.
 
-17. `STRIPE_PUBLIC=`
+18. `STRIPE_PUBLIC=`
     1. Stripe API Publishable key
-18. `STRIPE_SECRET=`
+19. `STRIPE_SECRET=`
     1. Stripe API Secret Key
 
 <details>
@@ -136,7 +145,7 @@ After saving the API keys in `.env`, progress to setting up your `STRIPE_WEBHOOK
 
 </details>
 
-19. `STRIPE_WEBHOOK_SECRET=`
+20. `STRIPE_WEBHOOK_SECRET=`
     1. The endpoint signing secret beginning with `whsec_`. This is not your Stripe API secret key.
 
 <details>
@@ -166,36 +175,36 @@ After saving the API keys in `.env`, restart Shadow Store. Then log in to the ad
 
 ## Emails
 
-20. `SENDGRID_KEY=`
+21. `SENDGRID_KEY=`
     1. Head to the [SendGrid API Keys](https://app.sendgrid.com/settings/api_keys) page, create an API key, and then copy the key.
     2. If using SendGrid, then you don't need to put anything into the SMTP options.
-21. `SMTP_HOST=`
+22. `SMTP_HOST=`
     1. The host address for your SMTP server.
     2. Set to `null` if using Gmail SMTP.
-22. `SMTP_PORT=`
+23. `SMTP_PORT=`
     1. The port for your SMTP server.
     2. Set to `null` if using Gmail SMTP.
-23. `SMTP_USER=`
+24. `SMTP_USER=`
     1. The email user for your SMTP server. Ex: `support@example.com`
-24. `SMTP_PASS=`
+25. `SMTP_PASS=`
     1. The password or key for your SMTP server.
-25. `PUBLIC_TURNSTILE_SITE_KEY=`
+26. `PUBLIC_TURNSTILE_SITE_KEY=`
     1. Your Cloudflare Turnstile **Site Key** (public). Required if you want to use Turnstile CAPTCHA on any form. Get it from the [Cloudflare Turnstile dashboard](https://dash.cloudflare.com/?to=/:account/turnstile).
-26. `TURNSTILE_SECRET_KEY=`
+27. `TURNSTILE_SECRET_KEY=`
     1. Your Cloudflare Turnstile **Secret Key**. Required server-side to verify CAPTCHA responses. Found alongside the site key in the Turnstile dashboard.
 
 ## License System
 
-27. `LICENSE_SYSTEM_KEY=`
+28. `LICENSE_SYSTEM_KEY=`
     1.  Use the [license key from our site](https://shadowdevs.com/license) that is given once you purchase the [Internal License System](https://shadowdevs.com/store/shadowstore-licensesystem) or [External License System](https://shadowdevs.com/store/licensesystem).
 
 ## CDN Manager
 
 These values connect Shadow Store to a [CDN Manager](https://shadowdevs.com/store/cdnmanager) installation. Both values are server-only secrets and must not be exposed in browser code.
 
-28. `CDN_MANAGER_ORIGIN=`
+29. `CDN_MANAGER_ORIGIN=`
     1. The public origin of the CDN Manager installation, including `https://` and without `/api/v1`. Example: `https://cdn.example.com`
-29. `CDN_MANAGER_API_KEY=`
+30. `CDN_MANAGER_API_KEY=`
     1. The complete CDN Manager remote API key. The key requires `assets.read`; read/write mode also requires `assets.upload` and `folders.create`.
 
 The key's allowed root must contain the **Base root** configured in **Admin Panel > Integrations > CDN Manager**. See the [Shadow Store CDN Manager integration guide](/shadowStore/addons/cdn-manager) for setup and the [CDN Manager API overview](/cdnManager/api/overview) for key creation and permissions.
@@ -204,11 +213,11 @@ The key's allowed root must contain the **Base root** configured in **Admin Pane
 
 These settings should remain the same way as seen below / provided in the download, unless you know what you are doing.
 
-30. `BODY_SIZE_LIMIT=5368709120`
+31. `BODY_SIZE_LIMIT=5368709120`
     1.  This increases the base SvelteKit body size limit to 10gbs.
-31. `HOST=localhost`
+32. `HOST=localhost`
     1.  This modifies how SvelteKit interacts with itself.
-32. `PRE_ORDER_CHECK_INTERVAL=60`
+33. `PRE_ORDER_CHECK_INTERVAL=60`
     1.  How often (in minutes) Shadow Store checks for pre-orders that are ready to be released. Defaults to `60` (once per hour). Decrease for more frequent checks; increase to reduce background load.
     1.  The system checks for releases half the allotted time ahead of each check so releases don't sit past their release time to long.
         1. EX: With the default of 60 minutes, the system will check for any releases 30 minutes in the future and release those on that run.
